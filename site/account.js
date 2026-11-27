@@ -10,7 +10,7 @@ import { EFFORTS, MODELS, findPictures, partialSpec, specToView } from './ai.js'
 import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
-import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, listen as hear } from './voice.js';
+import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, isSlow, listen as hear } from './voice.js';
 export const CONFIG = {
   url: 'https://wwgmelafchslapxiccot.supabase.co',
   key: 'sb_publishable_IykysSfgNLw4CfaqxP2CqA_YNcfq0SW',
@@ -632,9 +632,9 @@ export function createAccount(app) {
     if (same) return;
     const me = { b, stop: () => {} };
     sample = me;
-    const loaded = app.speaker().ready() || b.dataset.sample === 'device';
+    const loaded = app.speaker().ready();
     b.classList.add(loaded ? 'on' : 'wait'); b.innerHTML = loaded ? HALT + '<span>Stop</span>' : '<span>Loading…</span>';
-    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Try “This device”.' : 'The voice could not be played. Try again.'); } });
+    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } });
     if (!loaded) { const t = setInterval(() => { if (sample !== me) return clearInterval(t); if (app.speaker().ready()) { clearInterval(t); b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } }, 300); }
   }
   function voiceMenu(anchor, row) {
@@ -643,11 +643,21 @@ export function createAccount(app) {
     const d = modal(`<form class="vo-form"><h2>${has ? 'Voiceover' : 'Generate a voiceover'}</h2>
       <p class="dlg-sub">${has ? `This timeline is told aloud while it plays, in ${has.lines.length} lines. Change the voice for free, or write the script again after you change the timeline.` : 'A narrator tells this timeline while it plays: an opening that fits its title, a line for each entry, and a closing. The music plays softly under the voice.'}</p>
       <div class="cap">Choose a voice</div>
-      <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map(([v, name, w]) => `<label class="vo-voice${v === 'device' ? ' dev' : ''}"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><i></i><span><b>${esc(name)}</b><small>${esc(w)}</small></span><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}">${PLAY}<span>Listen</span></button></label>`).join('')}</div>
+      <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map(([v, name, w]) => `<label class="vo-voice"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><i></i><span><b>${esc(name)}</b><small>${esc(w)}</small></span><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}">${PLAY}<span>Listen</span></button></label>`).join('')}</div>
+      <p class="vo-load" hidden></p>
+      ${isSlow() ? '<p class="vo-slow">This device makes the voice slowly. Play will pause at each card until its line is ready, so a long timeline may wait a while.</p>' : ''}
       <p class="dlg-err" role="alert"></p>
       <div class="dlg-row">${has ? '<button type="button" class="big" data-revoice>Use this voice</button><button type="submit" class="big pri">Write again</button>' : '<button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Generate voiceover</button>'}</div>
       ${has ? '<button type="button" class="linkish" data-unvoice>Remove the voiceover</button>' : ''}
-      <p class="dlg-fine center">Writing the script uses one of today's requests. The voices are made on your device for free; the first one downloads once (about 90 MB).</p></form>`, 'small vo');
+      <p class="dlg-fine center">Writing the script uses one of today's requests. The voice is made on your device for free; it downloads once, about 92 MB for both voices.</p></form>`, 'small vo');
+    // The voice starts downloading as the dialog opens, and the dialog says how far it has come.
+    app.speaker().warm();
+    const ld = d.querySelector('.vo-load'), tick = setInterval(() => {
+      if (!d.isConnected) return clearInterval(tick);
+      const l = app.voiceLoad();
+      ld.hidden = !l;
+      if (l) ld.innerHTML = `<span>Downloading the voice, first time only</span><b>${Math.round(l.part * 100)}% of ${l.mb} MB</b><i><u style="width: ${Math.round(l.part * 100)}%"></u></i>`;
+    }, 250);
     const err = d.querySelector('.dlg-err'), pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
     d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }); } });
     d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); voiceover(row, v); });

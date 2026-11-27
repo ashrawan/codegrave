@@ -512,5 +512,10 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .vo-form .linkish { display: block; margin: 12px auto 0; padding: 4px 8px; font-size: 13px; color: var(--muted); background: none; border: 0; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .vo-form .linkish:hover { color: #e58f8f; }
 .vo-voices { max-height: min(430px, 52vh); overflow-y: auto; }
-.vo-voice.dev { border-style: dashed; }
+.vo-slow { margin: 12px 0 0; padding: 8px 10px; border-radius: 8px; font-size: 12.5px; line-height: 1.45; color: var(--text); background: color-mix(in srgb, #e8a33c 16%, transparent); }
+.vo-load { display: grid; grid-template-columns: 1fr auto; gap: 6px 10px; margin: 12px 0 0; font-size: 12.5px; color: var(--muted); }
+.vo-load b { font-weight: 600; font-variant-numeric: tabular-nums; color: var(--text); }
+.vo-load i { grid-column: 1 / -1; height: 3px; background: var(--raised); border-radius: 2px; overflow: hidden; }
+.vo-load u { display: block; height: 100%; background: var(--acc); border-radius: 2px; transition: width .25s; }
+.vo-load[hidden] { display: none; }
 

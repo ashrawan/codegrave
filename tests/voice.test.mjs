@@ -1,20 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { voiceOf, lineKey, madeOrder, isVoice, DEFAULT_VOICE, VOICES } from '../site/voice.js';
+import { voiceOf, lineKey, madeOrder, isVoice, isSlow, DEFAULT_VOICE, VOICES } from '../site/voice.js';
 
 test('a stored voiceover is read, and a broken one is none', () => {
   assert.equal(voiceOf(null), null);
   assert.equal(voiceOf({ lines: [] }), null);
   assert.equal(voiceOf({ lines: [{ id: 'x', text: '  ' }] }), null);
-  const v = voiceOf({ at: 1, voice: 'bm_george', lines: [{ id: 'x', text: 'Hi' }, { id: 'y' }] });
+  const v = voiceOf({ at: 1, voice: 'am_michael', lines: [{ id: 'x', text: 'Hi' }, { id: 'y' }] });
   assert.equal(v.lines.length, 1);
-  assert.equal(v.voice, 'bm_george');
+  assert.equal(v.voice, 'am_michael');
   // A voice that is not offered (an older one) falls back to the first.
   assert.equal(voiceOf({ voice: 'Charon', lines: [{ id: 'x', text: 'Hi' }] }).voice, DEFAULT_VOICE);
 });
 
-test('the voices offered are known, and the device voice is among them', () => {
-  assert.ok(isVoice(DEFAULT_VOICE) && isVoice('device') && !isVoice('Charon'));
+test('the voices offered are known, and only Heart and Michael are offered', () => {
+  assert.ok(isVoice(DEFAULT_VOICE) && isVoice('am_michael') && !isVoice('Charon') && VOICES.length === 2);
   assert.equal(new Set(VOICES.map((v) => v[0])).size, VOICES.length);
 });
 
@@ -28,4 +28,10 @@ test('a line is kept under its voice and its words', () => {
 test('lines are made from where play starts, then the ones before', () => {
   assert.deepEqual(madeOrder(['intro', 'a', 'b', 'outro'], 'b'), ['b', 'outro', 'intro', 'a']);
   assert.deepEqual(madeOrder(['intro', 'a'], undefined), ['intro', 'a']);
+});
+
+test('a device slower than real time is warned about', () => {
+  assert.equal(isSlow(null), false);
+  assert.equal(isSlow(0.6), false);
+  assert.equal(isSlow(2), true);
 });

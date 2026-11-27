@@ -136,10 +136,13 @@ right, opens a list of voices, each with Listen, and then:
    the day's requests.
 2. The words and the chosen voice are written on the timeline's row under `voice`. Nothing else is kept on
    the server: there are no sound files.
-3. When anyone plays the timeline, their own browser speaks the lines. The voices are Kokoro's, a small free
-   voice model that runs on the device (downloaded once, about 90 MB, then kept by the browser), or the
-   device's own voice, which needs no download. Each line made is kept in that browser, so playing again is
-   instant. It costs nothing however many hours people listen.
+3. When anyone plays the timeline, their own browser speaks the lines. The voices, Heart (the default) and
+   Michael, are Kokoro's, a small free voice model that runs on the device: about 92 MB downloaded once, then
+   kept by the browser, with its progress shown while it comes; each voice adds about half a MB. Each line made
+   is kept in that browser, so playing again is instant. It costs nothing however many hours people listen.
+   Where the model cannot run, the device's own voice is used. A minute of speech takes from about a minute (a
+   good laptop) to two (a small one) to make; play only waits for the line in front. When the device turns out
+   slower than real time, the dialog warns and the foot says that play waits at each card.
 
 Changing the voice later is free ("Use this voice"); "Write again" writes a new script after the timeline
 changes; "Remove the voiceover" takes the words away. An entry without a line is simply shown without one.

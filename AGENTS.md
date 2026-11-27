@@ -309,9 +309,15 @@ How the page is put together:
   costs nothing. **The sound is made in the reader's own browser, never on the server and never stored there**
   (asked for, Nov 2026, after a first version recorded MP3s with Gemini into Supabase: no files on the server, and a
   cost that does not grow with the hours people listen). `createSpeaker()` runs Kokoro (82M, Apache 2.0; `kokoro-js`
-  from jsDelivr, the q8 model from Hugging Face, about 90 MB once, then kept by the browser) in a Web Worker, one
-  line at a time, the line asked for now first; each line made is kept in this browser's Cache Storage
-  (`lineKey()`), so playing again is instant. "This device" uses the browser's own voice instead (no download).
+  from jsDelivr, the q8 model from Hugging Face, about 92 MB once, then kept by the browser) in a Web Worker on the
+  CPU (wasm), one line at a time, the line asked for now first; each line made is kept in this browser's Cache
+  Storage (`lineKey()`), so playing again is instant. Two voices are offered, Heart (warm, American; the default)
+  and Michael (calm, American) (asked for, Nov 2026); they share the model and each adds about half a MB, fetched
+  only when used. The model starts downloading as soon as a timeline with a voiceover opens, or the voice dialog
+  does (`speaker.warm()`), and the foot and the dialog say how far it has come, first time only (asked for: "so
+  user know what's happening"). Each line made is timed (`cg-voice-speed`); on a device slower than real time
+  (`SLOW`) the dialog warns and the foot says play waits at each card (asked for). Where Kokoro cannot run, the
+  browser's own voice says the line. WebGPU (much faster, but a 320 MB full-precision model) is not used yet.
   Kokoro speaks English only. While play travels every line is made in order from where play is (`prepare()`), the
   line of the entry in front is said (`tell()`; the opening on the first entry, the closing after the last), the
   music sinks to `MUSIC_UNDER`, and the reader stops on each card until its line is said, then goes on, like Arrow
@@ -321,7 +327,7 @@ How the page is put together:
   said, at the foot (`#subs`; at the top on a phone, where the card stands at the foot). Only a road of one view is
   told, and play by the arrow keys says a line as its entry arrives without waiting. The script's prompt has many
   short examples by kind of timeline; add to them rather than cut them. Another engine (a cheaper paid voice, or
-  another free model) would go beside Kokoro and the device voice in `voice.js`, with its voices in `VOICES`.
+  another free model) would go beside Kokoro in `voice.js`, with its voices in `VOICES`.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

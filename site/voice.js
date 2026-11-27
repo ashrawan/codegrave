@@ -10,23 +10,25 @@
 // The first half is plain functions with tests (tests/voice.test.mjs); createSpeaker() makes the sound and
 // createVoice() plays it, a line at a time, as play reaches each card.
 
-// The voices offered: an id, a name and a few words. "kokoro:<id>" is one of Kokoro's (English only); "device"
-// is the browser's own. Kokoro's are listed best first by its own grades.
+// The voices offered: an id, a name and a few words, all Kokoro's (English only; the two he liked, Nov 2026, from
+// its best seven). Where Kokoro cannot run, the device's own voice says the line instead.
 export const VOICES = [
   ['af_heart', 'Heart', 'Warm, American'],
-  ['af_bella', 'Bella', 'Bright, American'],
   ['am_michael', 'Michael', 'Calm, American'],
-  ['am_fenrir', 'Fenrir', 'Deep, American'],
-  ['bf_emma', 'Emma', 'Clear, British'],
-  ['bm_george', 'George', 'Steady, British'],
-  ['af_nicole', 'Nicole', 'Soft, close to the ear'],
-  ['device', 'This device', 'Your device’s own voice: no download, quality varies'],
 ];
+// The model all of Kokoro's voices share, downloaded once (each voice adds about half a megabyte).
+export const MODEL_MB = 92;
 export const DEFAULT_VOICE = 'af_heart';
 export const SAMPLE = 'Every timeline has a story. This is how I would tell yours.';
 const KOKORO = 'https://cdn.jsdelivr.net/npm/kokoro-js@1.2.1/dist/kokoro.web.js';
 const MODEL = 'onnx-community/Kokoro-82M-v1.0-ONNX';
 const KEEP = 'cg-voice-lines';
+// This device's speed (seconds to make a second of speech). Above SLOW, play pauses at cards while lines are
+// made, and the page says so (asked for, Nov 2026: "just show a warning").
+const SPEED = 'cg-voice-speed';
+export const SLOW = 1.2;
+export function speedOf() { try { const v = Number(localStorage.getItem(SPEED)); return v > 0 ? v : null; } catch (e) { return null; } }
+export const isSlow = (r = speedOf()) => r != null && r > SLOW;
 
 export const isVoice = (v) => VOICES.some(([id]) => id === v);
 export const voiceLabel = (v) => (VOICES.find(([id]) => id === v) || VOICES[0])[1];
@@ -61,22 +63,26 @@ export function createSpeaker(status = () => {}) {
   function boot() {
     if (worker) return;
     const src = `import { KokoroTTS } from '${KOKORO}';
-      let tts = null;
+      let loading = null;
       const files = new Map();
       onmessage = async ({ data: { id, text, voice } }) => {
         try {
-          tts ??= await KokoroTTS.from_pretrained('${MODEL}', { dtype: 'q8', device: 'wasm', progress_callback: (p) => {
-            if (p.status === 'progress' && p.total) { files.set(p.file, [p.loaded, p.total]); let a = 0, b = 0; for (const [x, y] of files.values()) { a += x; b += y; } postMessage({ loading: a / b }); }
+          // One load, whoever asks first; the others wait for it.
+          loading ??= KokoroTTS.from_pretrained('${MODEL}', { dtype: 'q8', device: 'wasm', progress_callback: (p) => {
+            if (p.status === 'progress' && p.total) { files.set(p.file, [p.loaded, p.total]); let a = 0, b = 0; for (const [x, y] of files.values()) { a += x; b += y; } postMessage({ loading: a / b, bytes: b }); }
           } });
+          const tts = await loading;
           postMessage({ ready: true });
-          const got = await tts.generate(text, { voice });
-          postMessage({ id, audio: got.audio, rate: got.sampling_rate }, [got.audio.buffer]);
-        } catch (e) { postMessage({ id, error: String(e && e.message || e) }); }
+          if (text == null) return;
+          const t0 = performance.now(), got = await tts.generate(text, { voice });
+          postMessage({ id, audio: got.audio, rate: got.sampling_rate, ms: performance.now() - t0 }, [got.audio.buffer]);
+        } catch (e) { if (id === 0) loading = null; postMessage({ id, error: String(e && e.message || e) }); }
       };`;
     worker = new Worker(URL.createObjectURL(new Blob([src], { type: 'text/javascript' })), { type: 'module' });
     worker.onmessage = ({ data }) => {
-      if ('loading' in data) return status({ loading: data.loading });
+      if ('loading' in data) return status({ loading: data.loading, bytes: data.bytes });
       if (data.ready) { if (!booted) { booted = true; status({ ready: true }); } return; }
+      if (data.id === 0) { if (data.error) { warmed = false; status({ failed: data.error }); } return; }
       const job = queue.find((j) => j.id === data.id);
       busy = false;
       if (job) {
@@ -84,6 +90,7 @@ export function createSpeaker(status = () => {}) {
         if (data.error) { made.delete(job.key); job.no(new Error(data.error)); status({ failed: data.error }); }
         else {
           job.ok({ audio: data.audio, rate: data.rate });
+          timed(data.ms / 1000, data.audio.length / data.rate);
           opened().then((c) => c?.put(job.key, new Response(data.audio, { headers: { 'x-rate': String(data.rate) } }))).catch(() => {});
         }
       }
@@ -117,7 +124,20 @@ export function createSpeaker(status = () => {}) {
     made.set(key, p);
     return p;
   }
-  return { line, ready: () => booted };
+  // How fast this device makes speech: seconds to make one second of it, kept in this browser so the voice
+  // dialog can warn before the next time. The first line is left out: it is slow while the engine warms up.
+  let lines = 0;
+  function timed(took, secs) {
+    if (++lines < 2 || secs < 1) return;
+    const r = took / secs, was = speedOf();
+    const now = was ? was * 0.6 + r * 0.4 : r;
+    try { localStorage.setItem(SPEED, now.toFixed(2)); } catch (e) {}
+    status({ speed: now });
+  }
+  // Have the model ready before anything is said: when a timeline with a voiceover is opened.
+  let warmed = false;
+  function warm() { if (warmed || booted) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
+  return { line, warm, ready: () => booted };
 }
 
 // ---- playing it. `ctx()` gives the page's audio context once the reader has pressed play (null: no sound);
@@ -185,7 +205,7 @@ export function createVoice({ ctx, said, speaker }) {
         buf.copyToChannel(audio, 0);
         cur.buf = buf;
         if (!S.held) begin(cur, buf, 0);
-      }, () => end(cur));
+      }, () => { if (S.cur === cur && !cur.done) speakDevice(cur); });
       if (!cur.buf) said('', true);
       return true;
     },

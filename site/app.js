@@ -12,7 +12,7 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
-import { createVoice, createSpeaker } from './voice.js';
+import { createVoice, createSpeaker, MODEL_MB, isSlow } from './voice.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -1001,6 +1001,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     globe.show(steps);
     globePanes(steps);
     voice.set(voiceNow()); drawTold();
+    // A timeline with a voiceover gets its voice ready at once, so play need not wait for the download.
+    if (told.on && voice.any()) speaker.warm();
   }
   // With several views each has a globe and cards of its own, in a grid, and the one time line runs below them
   // (asked for, Nov 2026). A pane is kept while its view stays, so its map is not made again.
@@ -2518,14 +2520,18 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // starts; a line not made yet holds play at its card, with "Preparing the voice" at the foot. "Voiceover" in the three-dot menu turns it off (`cg-voice` in this browser), and
   // "Subtitles" writes each line at the foot while it is said (`cg-subs`). Only a road of one view is told.
   const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '', wait: false, load: null };
-  const speaker = createSpeaker((s) => { if ('loading' in s) told.load = s.loading; if (s.ready) told.load = null; if (told.wait) drawSubs(); });
+  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); drawSubs(); });
+  told.slow = isSlow();
   const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), speaker, said: (text, wait = false) => { told.text = text; told.wait = wait; drawSubs(); } });
   const voiceNow = () => (state.views.length === 1 && viewById.get(state.views[0])?.voice) || null;
   const telling = () => told.on && sound.on && voice.any();
   function drawSubs() {
-    // While the voice is made ready the foot says so, subtitles or not, since play waits for it.
-    const el = $('subs'), wait = told.wait && play.on && telling(), on = wait || (told.subs && !!told.text);
-    if (wait) el.textContent = told.load != null ? `Preparing the voice: ${Math.round(told.load * 100)}%` : 'Preparing the voice…';
+    // While the voice is downloaded (the first time in a browser) or a line is made, the foot says so, subtitles
+    // or not: play waits for it (asked for, Nov 2026: "so user know what's happening").
+    const loading = told.load != null && told.load < 1 && told.on && voice.any();
+    const el = $('subs'), wait = loading || (told.wait && play.on && telling()), on = wait || (told.subs && !!told.text);
+    if (loading) el.textContent = `Downloading the voice, first time only: ${Math.round(told.load * 100)}% of ${Math.round((told.bytes || 0) / 1e6) || MODEL_MB} MB`;
+    else if (wait) el.textContent = told.slow ? 'This device makes the voice slowly, so play waits at each card until its line is ready.' : 'Preparing the voice…';
     else if (on) el.textContent = told.text;
     el.classList.toggle('on', on);
     el.classList.toggle('wait', wait);
@@ -3111,6 +3117,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // What a voiceover tells: the entries in the order play meets them.
     // The voice made in this browser, and an audio context for hearing a voice before choosing it.
     speaker: () => speaker,
+    voiceLoad: () => (told.load != null && told.load < 1 ? { part: told.load, mb: Math.round((told.bytes || 0) / 1e6) || MODEL_MB } : null),
     audio: () => { try { const AC = window.AudioContext || window.webkitAudioContext; if (!sound.ctx && AC) sound.ctx = new AC(); if (sound.ctx?.state === 'suspended') sound.ctx.resume(); } catch { sound.ctx = null; } return sound.ctx; },
     told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), summary: p.t.summary || '' })) }; },
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
