@@ -6,7 +6,7 @@
    The page knows a stored timeline as "t/<its id>". Its address is
    /t/<id>, or /<username>/<slug> once it is public. */
 import { shardOf } from './keys.js';
-import { EFFORTS, MODELS, findPictures, partialSpec, specToView } from './ai.js';
+import { EFFORTS, MAX_ENTRIES, MODELS, findPictures, partialSpec, specToView, viewToSpec } from './ai.js';
 import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
@@ -188,6 +188,27 @@ export function createAccount(app) {
     const src = await rawView(from);
     const { id: _i, name: _n, author: _a, type: _t, topic: _o, count: _c, stored: _s, mine: _m, level: _l, ...meta } = src.view || {};
     return insert(title, src.view?.description, { view: meta, entries: src.entries || [] }, from);
+  }
+  // A timeline that is not the reader's own, made theirs (asked for, Nov 2026: "then it will be their own, and
+  // then they can make the edit by asking the AI, in their own space"): a private copy written as a spec, so the
+  // editor and Ask AI work on it. The wiki's own file never changes.
+  async function makeMine() {
+    const from = app.views()[0], v = from && app.view(from);
+    if (!v || working) return;
+    if (!user) return signIn('Sign in to make this timeline your own. Your copy is private until you publish it.');
+    const src = await rawView(from).catch(() => null), n = src?.entries?.length || 0;
+    if (!n) return toast('This timeline could not be copied. Try again.');
+    const a = await ask({ title: 'Make it your own', text: `A private copy of “${v.name}” that you can change in the editor or by asking AI. The original stays as it is.${n > MAX_ENTRIES ? ` A timeline of your own holds ${MAX_ENTRIES} entries for now, so the copy keeps the ${MAX_ENTRIES} best ranked of its ${n}.` : ''}`, label: 'Name', value: 'My ' + v.name, ok: 'Make a copy' });
+    if (!a.value) return;
+    a.busy();
+    try {
+      const file = specToView(viewToSpec(src, a.value, app.about), seed());
+      const id = await insert(a.value, file.spec.description, { view: file.view, entries: file.entries, spec: file.spec }, from);
+      closeLayer();
+      await refreshList();
+      app.show(id);
+      toast('This copy is yours. Ask AI at the foot, or open it in the editor.');
+    } catch (e) { a.fail(e.message); }
   }
   async function patch(row, body) {
     const got = await api(`/rest/v1/timelines?id=eq.${row.id}&select=id,slug,title,description,visibility,entries,updated_at`, { method: 'PATCH', headers: { Prefer: 'return=representation' }, body });
@@ -672,6 +693,7 @@ export function createAccount(app) {
       ${hold ? '<hr><div class="cap">Voiceover</div>' + item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', told ? 'Ready' : '', told ? '' : ' lit') : ''}
       <hr><div class="cap">This timeline</div>
       ${free && cur.text.includes('"spec":{') ? item('edit', TL.edit, 'Open in editor') : ''}
+      ${!cur && hold ? item('mine', TL.edit, 'Make it your own', 'Edit a copy') : ''}
       ${cur ? item('publish', TL.share, cur.visibility === 'private' ? 'Publish' : 'Share', `<i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}`) : ''}
       ${item('turn', TL.turn, esc($('reverse').textContent.trim() || 'Turn round'))}
       ${cur ? item('rename', TL.name, 'Rename') + item('delete', TL.bin, 'Delete', '', ' danger') : ''}`, 'menu tl');
@@ -684,6 +706,7 @@ export function createAccount(app) {
       if (a === 'publish') return publish(at);
       closeLayer();
       if (a === 'edit') { if (!editor.open(cur)) toast('This timeline cannot be opened in the editor.'); }
+      else if (a === 'mine') makeMine();
       else if (a === 'pdf') $('pdf').click();
       else if (a === 'turn') $('reverse').click();
       else if (a === 'rename') rename(cur);

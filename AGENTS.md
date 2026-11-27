@@ -441,6 +441,13 @@ How the page is put together:
   `site/account.js`, the same strip with two handles as the export's; not needed): then only those entries are
   sent and told. The opening is said on the first entry that has a line and the closing after the last that has
   one (`told.first`, `told.last` in `tell()`).
+- **Make it your own (Nov 2026, asked for).** Nobody changes a wiki timeline from the page: it is a file in the
+  repository. For a single timeline that is not the reader's own, the three dots at the top right have "Make it
+  your own" (`makeMine()` in `site/account.js`): a private copy, written as a spec (`viewToSpec()` in
+  `site/ai.js`, which the page helps with `app.about`: the kind's name, its branch, the place), so the editor and
+  Ask AI work on it as on a timeline made with AI. A spec holds `MAX_ENTRIES`, so a longer timeline keeps its
+  best ranked, and the dialog says so. The copy's entries are its own (`x…` ids): later changes to the wiki's
+  entries do not reach it.
 - **When an export is saved (Nov 2026, asked for)** a note stands at the top right, "Video downloaded" with the
   file's name, until the reader closes it with its cross (`exported()` in `site/account.js`, `#ex-done`); not a toast.
 - **Arrows during play (Nov 2026, asked for).** While automatic play travels, the left and right arrow keys glide

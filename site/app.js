@@ -3244,6 +3244,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     canExport, canSize, canFast,
     one: () => { const v = state.views.length === 1 ? viewById.get(state.views[0]) : null; return v ? { id: v.id, title: v.name || '', description: v.description || '', voice: voiceNow() } : null; },
     keepVoice: keepLocalVoice,
+    // What only the page knows of a base entry, for a copy of a timeline that becomes the reader's own.
+    about: (e) => { const c = catById.get(e.category), w = places[e.id]; return { kind: c?.name || e.category || '', type: c?.domain || e.domain || '', where: !e.where && w ? [w[0], w[1]] : null }; },
     first: () => { const p = (road.gorder || [])[0]; return p ? stepOf(p) : null; },
     voiceLoad: () => (told.load != null && told.load < 1 ? { part: told.load, mb: Math.round((told.bytes || 0) / 1e6) || MODEL_MB } : null),
     audio: () => { try { const AC = window.AudioContext || window.webkitAudioContext; if (!sound.ctx && AC) sound.ctx = new AC(); if (sound.ctx?.state === 'suspended') sound.ctx.resume(); } catch { sound.ctx = null; } return sound.ctx; },
