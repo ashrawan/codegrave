@@ -884,66 +884,66 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 /* Five ways, taken in turn two entries at a time (`data-pan`): across to the right coming closer, across to the
    left coming closer, drawing back while it rises, corner to corner, and a slow push in on the upper middle.
    Each starts already cut in (asked for, Nov 2026: "it doesn't always have to start with the full one"; the
-   whole picture is what a pause shows) and goes there and back. The picture is cut to between a half and three
-   quarters of itself; a gentler set still read as a still picture. The steps between keep the frame's edge
+   whole picture is what a pause shows) and goes there and back. The picture is cut to about three quarters of
+   itself: a first, gentler set still read as a still picture and a stronger one was "a little bit strong". The steps between keep the frame's edge
    still, since the cut-out does not run in a straight line against the zoom. */
 @keyframes g-pan {
-  0% { scale: 1.4000; translate: -16.00% 0.00%; clip-path: inset(14.286% 2.857% 14.286% 25.714% round 3px); }
-  20% { scale: 1.4700; translate: -9.60% 0.00%; clip-path: inset(15.986% 9.456% 15.986% 22.517% round 3px); }
-  40% { scale: 1.5400; translate: -3.20% 0.00%; clip-path: inset(17.532% 15.455% 17.532% 19.610% round 3px); }
-  60% { scale: 1.6100; translate: 3.20% 0.00%; clip-path: inset(18.944% 20.932% 18.944% 16.957% round 3px); }
-  80% { scale: 1.6800; translate: 9.60% 0.00%; clip-path: inset(20.238% 25.952% 20.238% 14.524% round 3px); }
-  100% { scale: 1.7500; translate: 16.00% 0.00%; clip-path: inset(21.429% 30.571% 21.429% 12.286% round 3px); }
+  0% { scale: 1.2200; translate: -9.00% 0.00%; clip-path: inset(9.016% 1.639% 9.016% 16.393% round 3px); }
+  20% { scale: 1.2520; translate: -5.40% 0.00%; clip-path: inset(10.064% 5.751% 10.064% 14.377% round 3px); }
+  40% { scale: 1.2840; translate: -1.80% 0.00%; clip-path: inset(11.059% 9.657% 11.059% 12.461% round 3px); }
+  60% { scale: 1.3160; translate: 1.80% 0.00%; clip-path: inset(12.006% 13.374% 12.006% 10.638% round 3px); }
+  80% { scale: 1.3480; translate: 5.40% 0.00%; clip-path: inset(12.908% 16.914% 12.908% 8.902% round 3px); }
+  100% { scale: 1.3800; translate: 9.00% 0.00%; clip-path: inset(13.768% 20.290% 13.768% 7.246% round 3px); }
 }
 @keyframes g-pan-b {
-  0% { scale: 1.4000; translate: 16.00% 0.00%; clip-path: inset(14.286% 25.714% 14.286% 2.857% round 3px); }
-  20% { scale: 1.4700; translate: 9.60% 0.00%; clip-path: inset(15.986% 22.517% 15.986% 9.456% round 3px); }
-  40% { scale: 1.5400; translate: 3.20% 0.00%; clip-path: inset(17.532% 19.610% 17.532% 15.455% round 3px); }
-  60% { scale: 1.6100; translate: -3.20% 0.00%; clip-path: inset(18.944% 16.957% 18.944% 20.932% round 3px); }
-  80% { scale: 1.6800; translate: -9.60% 0.00%; clip-path: inset(20.238% 14.524% 20.238% 25.952% round 3px); }
-  100% { scale: 1.7500; translate: -16.00% 0.00%; clip-path: inset(21.429% 12.286% 21.429% 30.571% round 3px); }
+  0% { scale: 1.2200; translate: 9.00% 0.00%; clip-path: inset(9.016% 16.393% 9.016% 1.639% round 3px); }
+  20% { scale: 1.2520; translate: 5.40% 0.00%; clip-path: inset(10.064% 14.377% 10.064% 5.751% round 3px); }
+  40% { scale: 1.2840; translate: 1.80% 0.00%; clip-path: inset(11.059% 12.461% 11.059% 9.657% round 3px); }
+  60% { scale: 1.3160; translate: -1.80% 0.00%; clip-path: inset(12.006% 10.638% 12.006% 13.374% round 3px); }
+  80% { scale: 1.3480; translate: -5.40% 0.00%; clip-path: inset(12.908% 8.902% 12.908% 16.914% round 3px); }
+  100% { scale: 1.3800; translate: -9.00% 0.00%; clip-path: inset(13.768% 7.246% 13.768% 20.290% round 3px); }
 }
 @keyframes g-pan-c {
-  0% { scale: 1.9000; translate: 0.00% 12.00%; clip-path: inset(17.368% 23.684% 30.000% 23.684% round 3px); }
-  20% { scale: 1.7900; translate: 0.00% 7.20%; clip-path: inset(18.045% 22.067% 26.089% 22.067% round 3px); }
-  40% { scale: 1.6800; translate: 0.00% 2.40%; clip-path: inset(18.810% 20.238% 21.667% 20.238% round 3px); }
-  60% { scale: 1.5700; translate: 0.00% -2.40%; clip-path: inset(19.682% 18.153% 16.624% 18.153% round 3px); }
-  80% { scale: 1.4600; translate: 0.00% -7.20%; clip-path: inset(20.685% 15.753% 10.822% 15.753% round 3px); }
-  100% { scale: 1.3500; translate: 0.00% -12.00%; clip-path: inset(21.852% 12.963% 4.074% 12.963% round 3px); }
+  0% { scale: 1.4500; translate: 0.00% 7.00%; clip-path: inset(10.690% 15.517% 20.345% 15.517% round 3px); }
+  20% { scale: 1.4000; translate: 0.00% 4.20%; clip-path: inset(11.286% 14.286% 17.286% 14.286% round 3px); }
+  40% { scale: 1.3500; translate: 0.00% 1.40%; clip-path: inset(11.926% 12.963% 14.000% 12.963% round 3px); }
+  60% { scale: 1.3000; translate: 0.00% -1.40%; clip-path: inset(12.615% 11.538% 10.462% 11.538% round 3px); }
+  80% { scale: 1.2500; translate: 0.00% -4.20%; clip-path: inset(13.360% 10.000% 6.640% 10.000% round 3px); }
+  100% { scale: 1.2000; translate: 0.00% -7.00%; clip-path: inset(14.167% 8.333% 2.500% 8.333% round 3px); }
 }
 @keyframes g-pan-d {
-  0% { scale: 1.5000; translate: -14.00% -12.00%; clip-path: inset(24.667% 7.333% 8.667% 26.000% round 3px); }
-  20% { scale: 1.5600; translate: -8.40% -7.20%; clip-path: inset(22.564% 12.564% 13.333% 23.333% round 3px); }
-  40% { scale: 1.6200; translate: -2.80% -2.40%; clip-path: inset(20.617% 17.407% 17.654% 20.864% round 3px); }
-  60% { scale: 1.6800; translate: 2.80% 2.40%; clip-path: inset(18.810% 21.905% 21.667% 18.571% round 3px); }
-  80% { scale: 1.7400; translate: 8.40% 7.20%; clip-path: inset(17.126% 26.092% 25.402% 16.437% round 3px); }
-  100% { scale: 1.8000; translate: 14.00% 12.00%; clip-path: inset(15.556% 30.000% 28.889% 14.444% round 3px); }
+  0% { scale: 1.2500; translate: -8.00% -6.00%; clip-path: inset(14.800% 3.600% 5.200% 16.400% round 3px); }
+  20% { scale: 1.2800; translate: -4.80% -3.60%; clip-path: inset(13.750% 7.188% 8.125% 14.688% round 3px); }
+  40% { scale: 1.3100; translate: -1.60% -1.20%; clip-path: inset(12.748% 10.611% 10.916% 13.053% round 3px); }
+  60% { scale: 1.3400; translate: 1.60% 1.20%; clip-path: inset(11.791% 13.881% 13.582% 11.493% round 3px); }
+  80% { scale: 1.3700; translate: 4.80% 3.60%; clip-path: inset(10.876% 17.007% 16.131% 10.000% round 3px); }
+  100% { scale: 1.4000; translate: 8.00% 6.00%; clip-path: inset(10.000% 20.000% 18.571% 8.571% round 3px); }
 }
 @keyframes g-pan-e {
-  0% { scale: 1.3500; translate: 0.00% 6.00%; clip-path: inset(8.519% 12.963% 17.407% 12.963% round 3px); }
-  20% { scale: 1.4800; translate: 0.00% 8.40%; clip-path: inset(10.541% 16.216% 21.892% 16.216% round 3px); }
-  40% { scale: 1.6100; translate: 0.00% 10.80%; clip-path: inset(12.236% 18.944% 25.652% 18.944% round 3px); }
-  60% { scale: 1.7400; translate: 0.00% 13.20%; clip-path: inset(13.678% 21.264% 28.851% 21.264% round 3px); }
-  80% { scale: 1.8700; translate: 0.00% 15.60%; clip-path: inset(14.920% 23.262% 31.604% 23.262% round 3px); }
-  100% { scale: 2.0000; translate: 0.00% 18.00%; clip-path: inset(16.000% 25.000% 34.000% 25.000% round 3px); }
+  0% { scale: 1.1800; translate: 0.00% 3.00%; clip-path: inset(5.085% 7.627% 10.169% 7.627% round 3px); }
+  20% { scale: 1.2440; translate: 0.00% 4.20%; clip-path: inset(6.431% 9.807% 13.183% 9.807% round 3px); }
+  40% { scale: 1.3080; translate: 0.00% 5.40%; clip-path: inset(7.645% 11.774% 15.902% 11.774% round 3px); }
+  60% { scale: 1.3720; translate: 0.00% 6.60%; clip-path: inset(8.746% 13.557% 18.367% 13.557% round 3px); }
+  80% { scale: 1.4360; translate: 0.00% 7.80%; clip-path: inset(9.749% 15.181% 20.613% 15.181% round 3px); }
+  100% { scale: 1.5000; translate: 0.00% 9.00%; clip-path: inset(10.667% 16.667% 22.667% 16.667% round 3px); }
 }
 /* A tall picture (`data-shape`, set when it loads) is moved along its height instead of across: down it coming
    closer, and up it drawing back. */
 @keyframes g-pan-t {
-  0% { scale: 1.5000; translate: 0.00% 16.00%; clip-path: inset(6.000% 16.667% 27.333% 16.667% round 3px); }
-  20% { scale: 1.5500; translate: 0.00% 9.60%; clip-path: inset(11.548% 17.742% 23.935% 17.742% round 3px); }
-  40% { scale: 1.6000; translate: 0.00% 3.20%; clip-path: inset(16.750% 18.750% 20.750% 18.750% round 3px); }
-  60% { scale: 1.6500; translate: 0.00% -3.20%; clip-path: inset(21.636% 19.697% 17.758% 19.697% round 3px); }
-  80% { scale: 1.7000; translate: 0.00% -9.60%; clip-path: inset(26.235% 20.588% 14.941% 20.588% round 3px); }
-  100% { scale: 1.7500; translate: 0.00% -16.00%; clip-path: inset(30.571% 21.429% 12.286% 21.429% round 3px); }
+  0% { scale: 1.2500; translate: 0.00% 10.00%; clip-path: inset(2.000% 10.000% 18.000% 10.000% round 3px); }
+  20% { scale: 1.2800; translate: 0.00% 6.00%; clip-path: inset(6.250% 10.938% 15.625% 10.938% round 3px); }
+  40% { scale: 1.3100; translate: 0.00% 2.00%; clip-path: inset(10.305% 11.832% 13.359% 11.832% round 3px); }
+  60% { scale: 1.3400; translate: 0.00% -2.00%; clip-path: inset(14.179% 12.687% 11.194% 12.687% round 3px); }
+  80% { scale: 1.3700; translate: 0.00% -6.00%; clip-path: inset(17.883% 13.504% 9.124% 13.504% round 3px); }
+  100% { scale: 1.4000; translate: 0.00% -10.00%; clip-path: inset(21.429% 14.286% 7.143% 14.286% round 3px); }
 }
 @keyframes g-pan-u {
-  0% { scale: 1.6000; translate: 0.00% -18.00%; clip-path: inset(30.000% 18.750% 7.500% 18.750% round 3px); }
-  20% { scale: 1.5600; translate: 0.00% -10.80%; clip-path: inset(24.872% 17.949% 11.026% 17.949% round 3px); }
-  40% { scale: 1.5200; translate: 0.00% -3.60%; clip-path: inset(19.474% 17.105% 14.737% 17.105% round 3px); }
-  60% { scale: 1.4800; translate: 0.00% 3.60%; clip-path: inset(13.784% 16.216% 18.649% 16.216% round 3px); }
-  80% { scale: 1.4400; translate: 0.00% 10.80%; clip-path: inset(7.778% 15.278% 22.778% 15.278% round 3px); }
-  100% { scale: 1.4000; translate: 0.00% 18.00%; clip-path: inset(1.429% 14.286% 27.143% 14.286% round 3px); }
+  0% { scale: 1.3500; translate: 0.00% -10.00%; clip-path: inset(20.370% 12.963% 5.556% 12.963% round 3px); }
+  20% { scale: 1.3240; translate: 0.00% -6.00%; clip-path: inset(16.767% 12.236% 7.704% 12.236% round 3px); }
+  40% { scale: 1.2980; translate: 0.00% -2.00%; clip-path: inset(13.020% 11.479% 9.938% 11.479% round 3px); }
+  60% { scale: 1.2720; translate: 0.00% 2.00%; clip-path: inset(9.119% 10.692% 12.264% 10.692% round 3px); }
+  80% { scale: 1.2460; translate: 0.00% 6.00%; clip-path: inset(5.056% 9.872% 14.687% 9.872% round 3px); }
+  100% { scale: 1.2200; translate: 0.00% 10.00%; clip-path: inset(0.820% 9.016% 17.213% 9.016% round 3px); }
 }
 @media (prefers-reduced-motion: no-preference) and (min-width: 700px) {
   body.playing #globe .g-card img { animation: g-pan 9s linear infinite alternate; }

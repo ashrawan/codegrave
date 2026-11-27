@@ -105,7 +105,7 @@ async function mix({ total, cues, sounds, music, voiced }) {
   if (music) {
     try {
       const data = await ctx.decodeAudioData(await (await fetch(music)).arrayBuffer());
-      const src = ctx.createBufferSource(), g = ctx.createGain(), vol = voiced ? 0.22 : 0.45;
+      const src = ctx.createBufferSource(), g = ctx.createGain(), vol = voiced ? 0.16 : 0.45;
       src.buffer = data; src.loop = true;
       g.gain.setValueAtTime(0, 0); g.gain.linearRampToValueAtTime(vol, 1.2);
       g.gain.setValueAtTime(vol, Math.max(1.2, total - 1.6)); g.gain.linearRampToValueAtTime(0, total);
