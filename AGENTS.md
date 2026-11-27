@@ -453,14 +453,14 @@ How the page is put together:
   within `GUESS_KM` of the place Wikipedia gave (asked for, Nov 2026: a model knows where famous spots are;
   its numbers only refine a known place and never stand alone), else the article of `place`, else the
   entry's article. An entry with no picture of its own shows the picture of its `place` (`findPictures()`).
+  Asked for, Nov 2026, after "events in Seattle and Bellevue" put every pin on the middle of its city. The
+  function does it after the pictures, and the editor (Wikipedia only) when an entry's article changes.
 - **Pictures for timelines made with AI** (asked for, Nov 2026: "Wikipedia goes first", then the model's own
   links, and the reader can always set one). `findPictures()` takes the article's free picture, else the picture
   of the `place`. Then `linkPictures()` opens every link the model gave (`pictures`: a Commons file page or a
   direct image) and keeps those that answer as a picture: the first is the entry's picture when Wikipedia had
   none, the others stand beside it (`more` on the spec's entry, `media` on the view's, at most `MORE_PICS`).
   In the editor "Picture link" sets any https picture. A picture that is not Wikimedia's is credited to its site.
-  Asked for, Nov 2026, after "events in Seattle and Bellevue" put every pin on the middle of its city. The
-  function does it after the pictures, and the editor (Wikipedia only) when an entry's article changes.
 - **Explore is a page over the road** (`#explore`; asked for, Nov 2026:
   "think it is like community posted, meaning even the admin ones", after a
   list in the sidebar was found "not professional"). Explore in the bar on

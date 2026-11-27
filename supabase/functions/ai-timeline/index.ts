@@ -92,7 +92,7 @@ Rules:
 - The news: tell the story up to today. Reading from Wikipedia, fetched now, may follow the request: trust it over your memory for recent facts and dates, use it only where it is about the subject, and never copy its sentences.
 - "events" are optional, at most 3 per entry, and only for the most important entries.
 - People: public figures and the public record only. Nothing hateful, sexual or defamatory. Only if the request cannot be laid out in time at all, answer {"error": "a short sentence saying why"}.
-- Write in the language of the request. Everything in the JSON is plain text: no Markdown, no links.`;
+- Write in the language of the request. Everything in the JSON is plain text: no Markdown, and no links outside "pictures".`;
 
 const CHANGE = `The reader already has the timeline below and asks for a change. Apply the change and answer with the whole timeline again in the same JSON shape, keeping everything they did not ask to change (the same names, dates and wording). Put a field "changed" first, before "title": one short sentence saying what you changed.`;
 
@@ -246,7 +246,7 @@ Deno.serve(async (req) => {
         if (typeof spec.error === "string") { await log(false, usage); send({ error: spec.error.slice(0, 200) }); return; }
         if (!Array.isArray(spec.entries) || !spec.entries.length) { await log(false, usage); send({ error: "The model wrote no entries. Try saying more about what you want." }); return; }
         send({ note: "Looking for pictures…" });
-        // Pictures are found here, never taken from the model; a change keeps the ones the timeline had.
+        // Pictures are found here; a link the model gave counts only when it opens. A change keeps the ones the timeline had.
         if (!current) for (const e of spec.entries as Record<string, unknown>[]) delete e.image;
         if (!current) for (const e of spec.entries as Record<string, unknown>[]) delete e.more;
         else {
@@ -258,7 +258,7 @@ Deno.serve(async (req) => {
           }
         }
         const pics = await findPictures(spec.entries, wiki) + await linkPictures(spec.entries, isPicture);
-        // Where each entry is on the Earth: from Wikipedia's coordinates, never from the model.
+        // Where each entry is on the Earth: the address in OpenStreetMap, Wikipedia's coordinates, the model's own only when they agree.
         const spots = await findPlaces(spec.entries, wiki, geo);
         console.log("places", spots);
         console.log("pictures", pics, "of", (spec.entries as unknown[]).length);
