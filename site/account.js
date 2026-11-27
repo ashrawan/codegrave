@@ -721,14 +721,14 @@ export function createAccount(app) {
       <div class="vo-list"><h2>Voiceover</h2><div class="cap">Voice</div>
         <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, 'row')).join('')}</div>${notes}</div>
       <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span><button type="submit" class="big" title="Writes the script again from the timeline as it is now. Uses one of today's requests.">Write again</button></div>
-        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · mostly about the people">${esc(has?.guide || '')}</textarea></label>
+        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>
         <ol>${has.lines.map(lineEl).join('')}</ol></div>
       <div class="exf"><span class="ex-say"><span>${has.lines.length} lines. Made on your device; changing the voice is free.</span></span><button type="button" class="big vo-rm" data-unvoice>Remove voiceover</button><button type="button" class="big pri" data-revoice>Use <span data-vname></span></button></div></form>`
       : `<form class="vo-form va">
       <div class="vo-head"><h2>Choose a voice</h2><p class="dlg-sub">It tells ${esc(row.title || 'this timeline')} while it plays: an opening, a line for each entry${byId.size ? ` (${byId.size})` : ''}, and a closing.${row.own ? '' : ' Kept in this browser, for you alone.'}</p></div>
       <div class="vo-body"><div class="vo-voices cards" role="radiogroup" aria-label="Voice">${kok.map((v) => voiceEl(v, 'card')).join('')}</div>
         ${voiceEl(dev, 'row dev')}
-        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · mostly about the people">${esc(has?.guide || '')}</textarea></label>${notes}</div>
+        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>${notes}</div>
       <div class="exf"><span class="ex-say"><span>Uses one of today's requests.</span></span><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Generate with <span data-vname></span></button></div></form>`, 'vodlg ' + (has ? 'vb' : 'va'));
     const nameIt = () => { const n = d.querySelector('[data-vname]'); if (n) n.textContent = voiceLabel(d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE); };
     nameIt(); d.addEventListener('change', nameIt);
