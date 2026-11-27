@@ -432,10 +432,13 @@ How the page is put together:
   browser) is Auto or Arrow keys: with Arrow keys, play sounds and takes the screen as ever but the reader stands
   still until an arrow is pressed, and then travels to the next entry or back to the one before at the pace of
   automatic play, and stops there (`playStep()`, `road.stepEnd`; a quick glide was tried first and found too fast).
-- **A view of one small area is told from close** (asked for, Nov 2026, after "things to do in Seattle" showed
-  every pin on one dot from far off). The camera keeps its distance from the globe (`NEARER`) unless all of a
-  view's places fit the frame at zoom `LOCAL` or closer (about 100 km across): then it comes as close as frames
-  them all (`fit` from `opening()`, at most `CLOSE`), and still steps back to keep neighbours in the frame.
+- **The camera comes down where places are near** (asked for, Nov 2026, after "things to do in Seattle" showed
+  every pin on one dot from far off, then: "little bit closer if upcoming 2 or more distances are closer"). This
+  replaces the `NEARER` limit above, which now holds only for a view of one place. In `cams()` a place's height is
+  the closest that keeps the two places either side of it in the frame, so a run of places in one town or one
+  country is told from over it and only far ones pull back to the globe; the height changes by at most `STEP`
+  from one place to the next. When all of a view's places fit the frame at zoom `LOCAL` or closer (about 100 km
+  across) it may come as close as frames them all (`fit` from `opening()`, at most `CLOSE`).
 - **Globe look** (three-dot menu: Atlas, Day, Dots; `cg-look` in this browser; asked for, Nov 2026). Atlas is the
   default. Day lays NASA's Blue Marble over the far globe (`DAY` in `site/globe.js`: NASA's own tiles, public
   domain); Dots draws the land as a field of points made in the browser from the coast file (`landDots()`). A look

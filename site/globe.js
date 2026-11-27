@@ -30,7 +30,7 @@ const DAY = 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_Shade
 const LOOKS = ['atlas', 'day', 'dots'];
 const NAMED = 5;          // pins this many steps either side of the one in front carry their name
 const LOCAL = 7;         // a view whose places all fit the frame at this zoom (about 100 km across) is told from close
-const NEARER = 0.4;      // how far in from the whole globe the camera may come, in zoom levels
+const NEARER = 0.4;      // how far in from the whole globe the camera comes for a view of one place, in zoom levels
 const TURN = 0.11;       // the part of the way over which one card goes and the next comes
 const STAY = 0.45;       // the part of the way from one place to the next that the camera rests before it goes
 const STARS = 240;        // stars that fly past in space
@@ -40,7 +40,7 @@ const STARS = 240;        // stars that fly past in space
 // each place and is quickest half way (no speed is ever jumped to: the pace of the classic "smooth and efficient
 // zooming and panning" path, made smooth at its ends); north stays up; and a light runs along the way from place
 // to place, so going on is seen even where the camera has little to do.
-const STEP = 0.5;         // zoom levels the height may change from one place to the next
+const STEP = 1;           // zoom levels the height may change from one place to the next
 const PAST = 4;           // small pictures of the entries just passed, in space
 const clamp01 = (v) => Math.max(0, Math.min(1, v));
 
@@ -281,10 +281,12 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     S.open = { at: [o.center[1], o.center[0]], zoom: farAt(f, o.center[1]) };
     const fit = (p, q) => (q && distance(q, p) > 0.5 ? zoomFor(distance(q, p), 0.4 * sz, p[0]) : 99);
     const zs = pl.map((p, k) => {
-      // Never so close that the Earth stops reading as a globe (asked for, Nov 2026: "show the globe from a bit far"),
-      // unless the whole view lies in one small area ("things to do in Seattle"): then it is told from as close as
-      // frames all its places, or every pin would stand on one dot (asked for, Nov 2026).
-      let z = Math.max(Math.min(levelZoom(p[2]), f + NEARER), pl.length > 1 && o.fit >= LOCAL ? o.fit : 0);
+      // As close as the place is exact, but with the two places either side of it in the frame: where the next places
+      // are near (one town, one country) the camera comes down to them, and only far ones pull back to the globe
+      // (asked for, Nov 2026: "little bit closer if upcoming 2 or more distances are closer"). A view of one small
+      // area is told from as close as frames all its places. A place with no other beside it keeps the globe in
+      // sight (`NEARER`).
+      let z = pl.length > 1 ? Math.max(levelZoom(p[2]), o.fit >= LOCAL ? o.fit : 0) : f + NEARER;
       for (let j = k - 2; j <= k + 2; j++) if (j !== k) z = Math.min(z, fit(p, pl[j]));
       return Math.max(farAt(f, p[0]), z);
     });
