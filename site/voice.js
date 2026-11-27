@@ -318,25 +318,34 @@ export function createVoice({ ctx, said, speaker }) {
 // `text` is what it says: the opening of the timeline's own script where there is one (asked for, Nov 2026: "the
 // script is already there. It can just speak that"), else the sample line.
 export function listen(speaker, voice, ctx, done, fail, text = SAMPLE) {
+  // Given several lines it says them one after another until stopped, so a script can be heard through in a
+  // voice (asked for, Nov 2026: "it should continue playing"). The line after the one being said is made meanwhile.
+  const lines = Array.isArray(text) ? text.filter(Boolean) : [text];
   let stopped = false, src = null, u = null;
   const stop = () => { stopped = true; if (src) { src.onended = null; try { src.stop(); } catch (e) { /* none */ } } if (u) { u.onend = null; try { speechSynthesis.cancel(); } catch (e) { /* none */ } } };
-  if (voice === 'device') {
-    if (typeof speechSynthesis === 'undefined') { fail(new Error('This browser has no voice of its own.')); return stop; }
-    u = new SpeechSynthesisUtterance(text);
-    const en = speechSynthesis.getVoices().filter((v) => /^en/i.test(v.lang));
-    u.voice = en.find((v) => /natural|neural|premium|enhanced/i.test(v.name)) || en.find((v) => v.default) || en[0] || null;
-    u.onend = () => { if (!stopped) done(); };
-    speechSynthesis.speak(u);
-    return stop;
-  }
-  speaker.line(text, voice, true).then(({ audio, rate }) => {
-    const c = ctx();
-    if (stopped || !c) return;
-    const buf = c.createBuffer(1, audio.length, rate);
-    buf.copyToChannel(audio, 0);
-    src = c.createBufferSource(); src.buffer = buf; src.connect(c.destination);
-    src.onended = () => { if (!stopped) done(); };
-    src.start();
-  }, (e) => { if (!stopped) fail(e); });
+  const say = (k) => {
+    if (stopped) return;
+    if (k >= lines.length) return done();
+    if (voice === 'device') {
+      if (typeof speechSynthesis === 'undefined') return fail(new Error('This browser has no voice of its own.'));
+      u = new SpeechSynthesisUtterance(lines[k]);
+      const en = speechSynthesis.getVoices().filter((v) => /^en/i.test(v.lang));
+      u.voice = en.find((v) => /natural|neural|premium|enhanced/i.test(v.name)) || en.find((v) => v.default) || en[0] || null;
+      u.onend = () => { if (!stopped) say(k + 1); };
+      speechSynthesis.speak(u);
+      return;
+    }
+    speaker.line(lines[k], voice, true).then(({ audio, rate }) => {
+      const c = ctx();
+      if (stopped || !c) return;
+      const buf = c.createBuffer(1, audio.length, rate);
+      buf.copyToChannel(audio, 0);
+      src = c.createBufferSource(); src.buffer = buf; src.connect(c.destination);
+      src.onended = () => { if (!stopped) setTimeout(() => say(k + 1), 350); };
+      src.start();
+      if (lines[k + 1]) speaker.line(lines[k + 1], voice, true).catch(() => {});
+    }, (e) => { if (!stopped) fail(e); });
+  };
+  say(0);
   return stop;
 }
