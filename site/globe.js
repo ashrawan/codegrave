@@ -110,7 +110,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   // How much the map says (asked for, Nov 2026, so the globe is less crowded; `cg-detail` in this browser):
   // 'full' names every country; 'medium' names and tints only the countries the timeline's entries fall in;
   // 'less' only the country of the entry in front, and shows only its pin.
-  try { const d = localStorage.getItem('cg-detail'); S.detail = d === 'less' || d === 'full' ? d : 'medium'; } catch (e) { S.detail = 'medium'; }
+  try { const d = localStorage.getItem('cg-detail'); S.detail = d === 'medium' || d === 'full' ? d : 'less'; } catch (e) { S.detail = 'less'; }
   // The countries (Natural Earth, public domain; one small file, fetched once): which one a place falls in.
   const inRing = (r, x, y) => { let c = false; for (let i = 0, j = r.length - 1; i < r.length; j = i++) if ((r[i][1] > y) !== (r[j][1] > y) && x < ((r[j][0] - r[i][0]) * (y - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) c = !c; return c; };
   const inPoly = (poly, x, y) => inRing(poly[0], x, y) && !poly.slice(1).some((h) => inRing(h, x, y));
@@ -303,17 +303,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     if (S.phone) { S.tx = 12; S.ty = Math.max(60, H - foot - ch - 10); put(); return; }
     const low = H - foot - ch - 30;
     S.tx = Math.round(Math.max(12, Math.min(W - cw - 12, W * midX() - cw / 2)));
-    S.ty = Math.round(Math.max(84, low)); put();
-    // A line from the place on the map to its card (asked for, Nov 2026): only on the globe, only for an entry
-    // with a place, and only while that place is on the near side.
-    if (!s.place || !S.ready || S.spv > 0.6 || !(S.vis > 0.02)) return;
-    const q = S.map.project([s.place[1], s.place[0]]), pic = card.querySelector('img');
-    const ex = S.tx - 10, ey = S.ty + (S.drop || 0) + (pic ? pic.offsetTop + pic.offsetHeight / 2 : ch / 2);
-    const dx = ex - q.x, dy = ey - q.y, len = Math.hypot(dx, dy);
-    if (!(len > 24) || dx < 0 || q.x < 0 || q.y < 0 || q.y > H) return;
-    lead.hidden = false; lead.style.setProperty('--c', s.col);
-    lead.style.width = len.toFixed(1) + 'px'; lead.style.opacity = (0.8 * S.vis * (1 - S.spv / 0.6)).toFixed(3);
-    lead.style.transform = `translate(${q.x.toFixed(1)}px, ${q.y.toFixed(1)}px) rotate(${Math.atan2(dy, dx).toFixed(4)}rad)`;
+    // The card stands in the middle of the stage, top to bottom (asked for, Nov 2026), clear of the strip.
+    S.ty = Math.round(Math.max(70, Math.min(low, (H - ch) / 2))); put();
   }
 
   // ---- the time line at the foot: it slides under a marker that stands still. The entries stand on it by name
@@ -421,12 +412,16 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     let vis = 0, scale = 1, drop = 0, grow = 1;
     if (S.steps[c]) {
       vis = 1;
-      if (S.playing && !still) {
+      // A pause leaves everything exactly where play had it (asked for, Nov 2026): the card keeps the size
+      // and place it had, until the reader moves on by hand.
+      const held = !S.playing && S.hold && S.hold.c === c && Math.abs(S.hold.pos - S.pos) < 0.004;
+      if ((S.playing || held) && !still) {
         const last = c >= S.steps.length - 1, a = clamp01((g + early) / TURN), z = last ? 0 : clamp01((g - (1 - early - TURN)) / TURN);
         vis = Math.min(a, 1 - z);
         if (!S.phone || S.stage === 'space') { scale = 0.82 + 0.18 * (1 - (1 - a) ** 2) + 0.45 * z * z; drop = 0.24 * z * z * host.clientHeight; }
         grow = 0.97 + 0.05 * clamp01(g + early) + 0.2 * z * z;
-      }
+        if (S.playing) S.hold = { c, pos: S.pos };
+      } else if (!held) S.hold = null;
     }
     S.vis = toward(S.vis, vis, still ? 1 : dt * 14);
     if (S.vis !== vis) busy = true;
@@ -466,7 +461,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   const ICON_GLOBE = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>';
   const ICON_FULL = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
   function drawMode() {
-    modeBtn.hidden = !S.placed.length;
+    modeBtn.hidden = true;      // the switch is in the three-dot menu (asked for, Nov 2026)
     modeBtn.innerHTML = (S.mode === 'full' ? ICON_FULL + '<span>Full view</span>' : ICON_GLOBE + '<span>Globe</span>');
     modeBtn.title = S.mode === 'full' ? 'Full view: show the globe' : 'Globe: switch to full view';
     modeBtn.setAttribute('aria-label', modeBtn.title);
@@ -534,6 +529,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       cams(); place(); run();
     },
     stage: () => S.stage,
+    // 'globe' (the map where entries have places) or 'full' (the stars for every entry). Kept in this browser.
+    mode(v) {
+      if ((v === 'globe' || v === 'full') && v !== S.mode) { S.mode = v; try { localStorage.setItem('cg-stage', v); } catch (e) { /* fine */ } S.now = -2; run(); }
+      return S.mode;
+    },
     // How much the map says: 'less', 'medium' or 'full'. Given one, it is kept in this browser.
     detail(v) {
       if (v === 'less' || v === 'medium' || v === 'full') { S.detail = v; try { localStorage.setItem('cg-detail', v); } catch (e) { /* fine */ } S.said = null; pins(); run(); }

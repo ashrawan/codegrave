@@ -125,7 +125,7 @@
   </button>
 </header>
 
-<button id="film-menu" type="button" aria-label="Show or hide the sidebar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 8h14M5 16h14"/></svg></button>
+<button id="film-menu" type="button" aria-label="Show or hide the sidebar"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h11"/></svg></button>
 <main id="stage">
   <!-- The timeline in depth: the ground on a canvas, the year and the views at the top left, the names standing on the road -->
   <div id="road" aria-label="Timeline">
@@ -187,6 +187,11 @@
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17a8.5 8.5 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.5" r="1.2"/></svg>
     <span class="lbl">Play speed</span><input id="pace" type="range" min="0.25" max="2" step="0.25" value="1" aria-label="Play speed"><small id="pace-now" class="state">1x</small>
   </label>
+  <div id="mode-row" class="nv pace">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 15l4.5-4 4 3.5 3-2.5 5.5 4.5"/></svg>
+    <span class="lbl">View</span>
+    <span id="mode" class="seg" role="group" aria-label="View"><button type="button" data-v="globe">Globe</button><button type="button" data-v="full">Full view</button></span>
+  </div>
   <div id="detail-row" class="nv pace">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>
     <span class="lbl">Globe detail</span>

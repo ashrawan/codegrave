@@ -745,19 +745,22 @@ body.globe.playing #wall .w-scene { opacity: 0; }
 body.playing.idle #globe .g-mode { opacity: 0; pointer-events: none; }
 /* Play is watched like a film (asked for, Nov 2026): the bar on the left and the strip at the foot step
    away, and the buttons fade while the pointer rests. */
-body.playing:not(.unfilm), body.playing.sb-open:not(.unfilm) { --sb: 0px; }
-body.playing:not(.unfilm) #sb, body.playing:not(.unfilm) #sb-scrim { display: none; }
-body.playing:not(.unfilm) #dock, body.playing.peek:not(.unfilm) #dock { transform: translateY(100%); opacity: 0; pointer-events: none; }
-body.playing:not(.unfilm) #stage, body.playing.peek:not(.unfilm) #stage { bottom: 0; }
-body.globe.playing:not(.unfilm) #axisbar { bottom: 18px; }
+body.film, body.film.sb-open { --sb: 0px; }
+body.film #sb, body.film #sb-scrim { display: none; }
+body.film #dock, body.film.peek #dock { transform: translateY(100%); opacity: 0; pointer-events: none; }
+body.film #stage, body.film.peek #stage { bottom: 0; }
+body.globe.film #axisbar { bottom: 18px; }
 #axisbar { transition: opacity .3s; }
 body.playing.idle #axisbar { opacity: 0; }
 body.playing.idle #stage { cursor: none; }
-/* With the buttons comes a menu button at the top left: it brings the bar on the left and the strip back
-   (and takes them away again), so the reader can leave the film without stopping it. */
-#film-menu { position: fixed; left: 12px; top: 12px; z-index: 46; display: none; width: 42px; height: 42px; align-items: center; justify-content: center; padding: 0; color: var(--text); background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 50%; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); cursor: pointer; transition: opacity .3s; }
-body.playing #film-menu { display: inline-flex; left: calc(var(--sb) + 12px); }
+/* The film layout stays through a pause. A menu button stands at the top left, the same height and glass as
+   the search beside it: it brings the bar on the left and the strip back, and takes them away again. */
+#film-menu { position: fixed; left: calc(var(--sb) + 16px); top: 12px; z-index: 46; display: none; width: 38px; height: 38px; align-items: center; justify-content: center; padding: 0; color: var(--muted); background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 19px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); cursor: pointer; transition: opacity .3s, color .15s; }
+#film-menu:hover { color: var(--text); }
+body.film #film-menu, body.playing #film-menu { display: inline-flex; }
 body.playing.idle #film-menu { opacity: 0; pointer-events: none; }
+@media (min-width: 700px) { body.film .tsearch, body.playing .tsearch { left: calc(var(--sb) + 62px); } }
+@media (max-width: 699px) { #film-menu { left: 10px; top: 7px; } body:not(.playing) #film-menu { display: none; } }
 #full[aria-pressed="true"] { color: var(--text); }
 #full[hidden] { display: none; }
 @media (max-width: 699px) { #globe .g-past { display: none; } #globe .g-bimg { left: 50%; top: 36%; max-width: 96%; max-height: 50%; box-shadow: none; } #globe .g-card.bare { background: rgba(7, 10, 16, .72); } #globe .g-mode { right: 10px; top: 84px; } }

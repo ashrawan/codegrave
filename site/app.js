@@ -2308,15 +2308,16 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (from != null || camAtEnd()) { turnsOver(); musicAgain(); }
     if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
-    play.on = true; road.pace = 1;
+    play.on = true; road.pace = 1; document.body.classList.add('film');
     soundReady();
     drawPlay();
     roadKick();
   }
   // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
   // pointer nears the top edge, when anything in it has focus, and when play stops.
-  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) document.body.classList.remove('peek', 'idle', 'unfilm'); else dispatchEvent(new Event('pointermove')); }
-  function pausePlay() { play.on = false; drawPlay(); }
+  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
+  // On the globe a pause stops dead, exactly where play was (asked for, Nov 2026); the road eased to a stop.
+  function pausePlay() { play.on = false; if (GLOBE) road.vel = 0; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
   function playWith(own) {
@@ -2472,10 +2473,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     addEventListener('pointermove', stir, { passive: true, capture: true });
     addEventListener('pointerdown', stir, { passive: true, capture: true });
     addEventListener('keydown', stir);
+    // The film layout stays through a pause, so nothing moves when play stops (asked for, Nov 2026). The menu
+    // button beside the search brings the bar on the left and the strip back, and takes them away again.
     $('film-menu').addEventListener('click', () => {
-      const on = document.body.classList.toggle('unfilm');
-      // On a phone the bar on the left is a drawer: open it.
-      if (on && innerWidth < 700 && !document.body.classList.contains('sb-open')) $('sb-btn').click();
+      const film = document.body.classList.toggle('film');
+      if (!film && innerWidth < 700 && !document.body.classList.contains('sb-open')) $('sb-btn').click();
     });
     const fullBtn = $('full'), root = document.documentElement;
     const fullOn = () => !!(document.fullscreenElement || document.webkitFullscreenElement);
@@ -2588,9 +2590,19 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     paceShow();
     $('pace').addEventListener('input', () => { play.speed = clamp(Number($('pace').value) || 1, 0.25, 2); store.set('cg-pace', String(play.speed)); paceShow(); });
     $('pace-row').addEventListener('click', (e) => e.stopPropagation());
+    // Globe, or Full view: the stars for every entry (cg-stage in this browser, kept by the globe).
+    const modeShow = (v) => { for (const b of $('mode').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
+    modeShow(store.get('cg-stage') === 'full' ? 'full' : 'globe');
+    $('mode-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      if (globe) globe.mode(b.dataset.v); else store.set('cg-stage', b.dataset.v);
+      modeShow(b.dataset.v);
+    });
     // How much the map says (Less, Medium, Full; cg-detail in this browser, kept by the globe).
     const detailShow = (v) => { for (const b of $('detail').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
-    { const d = store.get('cg-detail'); detailShow(d === 'less' || d === 'full' ? d : 'medium'); }
+    { const d = store.get('cg-detail'); detailShow(d === 'medium' || d === 'full' ? d : 'less'); }
     $('detail-row').addEventListener('click', (e) => {
       e.stopPropagation();
       const b = e.target.closest('button[data-v]');

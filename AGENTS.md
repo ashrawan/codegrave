@@ -398,7 +398,14 @@ How the page is put together:
   runs from the place on the map to the card (`.g-lead`, drawn in `place()`). On a phone the period stands in
   the top corner. With the buttons of play comes a menu button at the top left (`#film-menu`): it brings the
   bar on the left and the strip back while play goes on (`body.unfilm`), and takes them away again.
-- **Globe detail** (three-dot menu: Less, Medium, Full; `cg-detail` in this browser, Medium by default; asked
+- **Round 3 of the same asks (Nov 2026), which replace what the points above say where they differ.** There is
+  no line from the place to the card (tried, not wanted). The card stands in the middle of the stage top to
+  bottom. Globe or Full view is chosen in the three-dot menu ("View", `globe.mode()`), not by a pill on the
+  stage. A pause stops dead and leaves everything where play had it: the card keeps its size and place
+  (`S.hold`), and the film layout stays (`body.film`, set when play starts) until the menu button at the top
+  left, which is the search's height and glass and stands just before it, brings the bar and the strip back.
+  Globe detail is Less by default.
+- **Globe detail** (three-dot menu: Less, Medium, Full; `cg-detail` in this browser; asked
   for, Nov 2026, so the globe is less crowded). Full names every country, as the map's tiles do. Medium names
   and tints only the countries the timeline's entries fall in. Less names and tints only the country of the
   entry in front and shows only its pin. The countries are Natural Earth's (`site/media/countries.json`, public
