@@ -1,0 +1,32 @@
+{
+  "name": "long-chronicle",
+  "description": "A landscape chronicle: card after card in the order of their dates, like the arrow keys, with the time line and the year in sight.",
+  "format": "landscape",
+  "look": "atlas",
+  "detail": "less",
+  "safe": "none",
+  "layers": {
+    "strip": true,
+    "clock": true,
+    "title": true
+  },
+  "label": "plain",
+  "pace": {
+    "open": 1.5,
+    "travel": 1.4,
+    "hold": 8,
+    "picture": 0
+  },
+  "defaults": {
+    "all": {
+      "ease": "smooth"
+    },
+    "hold": {
+      "in": 0.45,
+      "out": 0.4
+    },
+    "step": {
+      "travel": 1.4
+    }
+  }
+}

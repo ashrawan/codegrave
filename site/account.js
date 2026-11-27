@@ -385,7 +385,7 @@ export function createAccount(app) {
     const r = await fetch(CONFIG.url + '/functions/v1/ai-timeline', {
       method: 'POST',
       headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...body, model, effort }),
+      body: JSON.stringify({ model, effort, ...body }),
     });
     if (!/event-stream/.test(r.headers.get('content-type') || '')) {
       const d = await r.json().catch(() => null);
@@ -978,5 +978,5 @@ export function createAccount(app) {
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { boot, start, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
+  return { boot, start, api, ask: ask_ai, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
 }

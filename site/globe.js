@@ -130,7 +130,10 @@ function landDots() {
 
 // With `pane`, this is one view's own globe in a grid of several (asked for, Nov 2026: each view its own globe and
 // cards, the one time line below): it has no time line of its own, and its card and camera suit a small box.
-export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane }) {
+// `clock` says where time and frames come from: the browser's own for a reader. Film mode (site/film/) hands in
+// its own, so a frame is drawn when it says and not when the screen is ready.
+export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, clock }) {
+  const K = clock || { now: () => performance.now(), raf: (f) => requestAnimationFrame(f), caf: (i) => cancelAnimationFrame(i) };
   if (pane) host.classList.add('g-pane');
   host.dataset.card = 'b';      // the card is a label written on the map (design B, picked from three)
   host.innerHTML = '<canvas class="g-space"></canvas><div class="g-back"><img class="g-bimg" alt="" hidden><div class="g-past"></div></div><div class="g-map"></div><div class="g-ov"><span class="g-lead"></span><button type="button" class="g-card" hidden></button></div>' +
@@ -316,12 +319,14 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
   // The way from the last place to the next, and the light that runs along it as far as the reader has come.
   function trail(pos) {
     const { P, Q, e } = leg(pos), A = P < 0 ? null : S.steps[P].place, B = Q < 0 ? null : S.steps[Q].place;
-    const key = A && B ? `${P} ${Q} ${Math.round(e * 400)}` : '';
+    light(A, B, e, A && B ? `${P} ${Q} ${Math.round(e * 400)}` : '', Q < 0 ? '' : S.steps[Q].rgb);
+  }
+  function light(A, B, e, key, c) {
     if (key === S.trail) return;
     S.trail = key;
     const feats = [];
     if (key && distance(A, B) > 1) {
-      const N = 48, c = S.steps[Q].rgb, way = greatCircle(A, B, N), n = Math.min(N, Math.floor(e * N));
+      const N = 48, way = greatCircle(A, B, N), n = Math.min(N, Math.floor(e * N));
       const last = way[n], h = between(A, B, e);
       let lon = h[1]; while (lon - last[0] > 180) lon -= 360; while (lon - last[0] < -180) lon += 360;
       const done = way.slice(0, n + 1).concat([[lon, h[0]]]);
@@ -415,14 +420,15 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
   function stars(dt) {
     const W = host.clientWidth, H = host.clientHeight, dpr = Math.min(2, window.devicePixelRatio || 1);
     if (sky.width !== Math.round(W * dpr) || sky.height !== Math.round(H * dpr)) { sky.width = Math.round(W * dpr); sky.height = Math.round(H * dpr); }
-    if (!S.stars) S.stars = Array.from({ length: STARS }, (_, i) => ({ x: (((i * 0.61803) % 1) * 2 - 1) * 1.6, y: (((i * 0.75488) % 1) * 2 - 1) * 1.6, z: ((i * 0.56984) % 1) * 0.95 + 0.05 }));
+    if (!S.stars) S.stars = Array.from({ length: STARS }, (_, i) => ({ x: (((i * 0.61803) % 1) * 2 - 1) * 1.6, y: (((i * 0.75488) % 1) * 2 - 1) * 1.6, z: ((i * 0.56984) % 1) * 0.95 + 0.05, b: ((i * 0.56984) % 1) * 0.95 + 0.05 }));
     const c = sky.getContext('2d'), cx = W / 2, cy = H * 0.46, f = Math.max(W, H) * 0.5;
     c.setTransform(dpr, 0, 0, dpr, 0, 0);
     c.clearRect(0, 0, W, H);
     c.lineCap = 'round';
     for (const st of S.stars) {
-      const z0 = st.z;
-      st.z -= S.warp * dt;
+      // Told where the reader is (`S.over`), a star's place follows from that alone, so a frame can be drawn again.
+      const z0 = S.over ? ((((st.b - S.over.fly) % 0.98) + 0.98) % 0.98) + 0.02 : st.z;
+      st.z = z0 - S.warp * dt;
       if (st.z <= 0.02) { st.z += 0.98; continue; }
       if (st.z > 1) { st.z -= 0.98; continue; }
       const x = cx + (st.x / st.z) * f * 0.5, y = cy + (st.y / st.z) * f * 0.5;
@@ -440,11 +446,13 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
   const toward = (v, to, k) => (Math.abs(to - v) < 0.004 ? to : v + (to - v) * Math.min(1, k));
   function frame(now) {
     S.raf = 0;
-    const dt = Math.min(0.05, Math.max(0.001, (now - S.then) / 1000)); S.then = now;
-    const still = calm(), goal = S.cur + S.frac;
+    // `o` is set only by film mode (site/film/): it tells the frame everything, so nothing eases by the clock
+    // and the same `o` always draws the same picture.
+    const o = S.over, dt = o ? o.dt : Math.min(0.05, Math.max(0.001, (now - S.then) / 1000)); S.then = now;
+    const still = calm(), snap = still || !!o, goal = o ? o.pos : S.cur + S.frac;
     let busy = false;
     // The reader's place follows the page's a moment behind, so a jump to a far entry is travelled, not cut to.
-    if (S.pos == null || still) S.pos = goal; else S.pos = Math.abs(goal - S.pos) < 0.0004 ? goal : S.pos + (goal - S.pos) * Math.min(1, dt * 7);
+    if (S.pos == null || snap) S.pos = goal; else S.pos = Math.abs(goal - S.pos) < 0.0004 ? goal : S.pos + (goal - S.pos) * Math.min(1, dt * 7);
     if (S.pos !== goal) busy = true;
     const speed = (S.pos - S.was) / dt; S.was = S.pos;
 
@@ -452,15 +460,15 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     // camera has left its place behind.
     // In space nothing else is in sight, so the next card is on its way sooner and the last one gone later.
     const early = 0.2;
-    const c = Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
-    if (c !== S.now) {
+    const c = o ? o.c : Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
+    if (c !== S.now || (o && o.stage !== S.stage)) {
       S.now = c;
-      S.stage = S.mode === 'full' ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.bare ? 'bare' : S.stage;
+      S.stage = o ? o.stage : S.mode === 'full' ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.bare ? 'bare' : S.stage;
       pins(); markShelf(); build(c);
     }
 
     // The stage: the map dims for an entry with no place, and goes out of sight for space.
-    const dim = toward(S.dimv, S.stage === 'dim' ? 1 : 0, still ? 1 : dt * 3), sp = toward(S.spv, S.stage === 'space' ? 1 : 0, still ? 1 : dt * 2.2);
+    const dim = o ? o.dim : toward(S.dimv, S.stage === 'dim' ? 1 : 0, still ? 1 : dt * 3), sp = o ? o.sp : toward(S.spv, S.stage === 'space' ? 1 : 0, still ? 1 : dt * 2.2);
     if (dim !== S.dimv || sp !== S.spv || S.styled == null) {
       S.dimv = dim; S.spv = sp; S.styled = 1; busy = true;
       box.style.opacity = (1 - sp).toFixed(3); box.style.pointerEvents = sp > 0.5 ? 'none' : '';
@@ -468,13 +476,13 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
       sky.style.opacity = sp.toFixed(3); host.style.setProperty('--sp', sp.toFixed(3));
     }
     if (S.ready && !S.bare && sp < 0.995) {
-      const cam = camAt(S.pos);
+      const cam = o ? o.cam : camAt(S.pos);
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
-      trail(S.pos);
+      if (o) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }
     if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
-      S.warp = still ? 0 : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
+      S.warp = still ? 0 : o ? o.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);
       if (S.warp) busy = true;
     }
@@ -488,23 +496,23 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
       // A pause leaves everything exactly where play had it (asked for, Nov 2026): the card keeps the size
       // and place it had, until the reader moves on by hand.
       const held = !S.playing && S.hold && S.hold.c === c && Math.abs(S.hold.pos - S.pos) < 0.004;
-      if ((S.playing || held) && !still) {
-        const last = c >= S.steps.length - 1, a = clamp01((g + early) / TURN), z = last ? 0 : clamp01((g - (1 - early - TURN)) / TURN);
+      if (o || ((S.playing || held) && !still)) {
+        const last = c >= S.steps.length - 1, a = o ? o.a : clamp01((g + early) / TURN), z = o ? o.z : last ? 0 : clamp01((g - (1 - early - TURN)) / TURN);
         vis = Math.min(a, 1 - z);
         if (!S.phone || S.stage === 'space') { scale = 0.82 + 0.18 * (1 - (1 - a) ** 2) + 0.45 * z * z; drop = 0.24 * z * z * host.clientHeight; }
-        grow = 0.97 + 0.05 * clamp01(g + early) + 0.2 * z * z;
+        grow = 0.97 + 0.05 * (o ? o.g : clamp01(g + early)) + 0.2 * z * z;
         if (S.playing) S.hold = { c, pos: S.pos };
       } else if (!held) S.hold = null;
     }
-    S.vis = toward(S.vis, vis, still ? 1 : dt * 14);
+    S.vis = toward(S.vis, vis, snap ? 1 : dt * 14);
     if (S.vis !== vis) busy = true;
     card.style.opacity = S.vis.toFixed(3); S.sc = scale; S.drop = drop; card.style.pointerEvents = S.vis > 0.5 ? '' : 'none';
     back.style.opacity = '1';
     bimg.style.opacity = ((0.8 + 0.12 * (1 - sp)) * S.vis).toFixed(3); bimg.style.scale = grow.toFixed(4);
     place();
-    if (busy) run();
+    if (busy && !o) run();
   }
-  function run() { if (!S.raf) { S.then = performance.now(); S.raf = requestAnimationFrame(frame); } }
+  function run() { if (!S.raf) { S.then = K.now(); S.raf = K.raf(frame); } }
 
   // The time line is dragged like a strip of paper under the marker: the reader goes where it is pulled to.
   const drag = { on: false, moved: false, x: 0, at: 0 };
@@ -578,7 +586,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     },
     // A pane's heading: the name of its view, in its colour.
     title(name, col) { if (title) { title.textContent = name; title.style.color = col; } },
-    remove() { S.gone = true; if (S.raf) cancelAnimationFrame(S.raf); S.raf = -1; if (S.map) S.map.remove(); host.remove(); },
+    remove() { S.gone = true; if (S.raf) K.caf(S.raf); S.raf = -1; if (S.map) S.map.remove(); host.remove(); },
     // The entries on the timeline, in the order play meets them. Each step: id, name, kind, when, mark (its year, short),
     // summary, img, col (a CSS colour), rgb (the same for the map), place ([lat, lon, level, name] or null).
     show(steps) {
@@ -632,5 +640,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
       return S.detail;
     },
     zoom: () => (S.map ? S.map.getZoom() : null),
+    // For film mode (site/film/) only: one frame drawn now from what `o` says, and what it needs to say it.
+    drive(o) { S.over = o; if (S.raf) K.caf(S.raf); S.raf = 0; frame(K.now()); },
+    film: () => ({ map: S.ready ? S.map : null, lands: !!S.lands, far: far(), open: S.open, cams: S.cam }),
   };
 }
