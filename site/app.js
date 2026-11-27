@@ -2672,6 +2672,16 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // How much the map says (Less, Medium, Full; cg-detail in this browser, kept by the globe).
     const detailShow = (v) => { for (const b of $('detail').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
     { const d = store.get('cg-detail'); detailShow(d === 'medium' || d === 'full' ? d : 'less'); }
+    // The look of the globe (Atlas, Day, Dots; cg-look in this browser, kept by the globe).
+    const lookShow = (v) => { for (const b of $('look').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
+    { const l = store.get('cg-look'); lookShow(l === 'day' || l === 'dots' ? l : 'atlas'); }
+    $('look-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      if (globe) { globe.look(b.dataset.v); for (const pn of panes.values()) pn.g.look(b.dataset.v); } else store.set('cg-look', b.dataset.v);
+      lookShow(b.dataset.v);
+    });
     // Several views: each on a globe of its own in a grid, or all on one globe.
     const gridShow = (v) => { for (const b of $('grid-seg').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
     gridShow(store.get('cg-grid') === 'one' ? 'one' : 'grid');

@@ -424,6 +424,12 @@ How the page is put together:
   with an entry at the same date light together); the others dim and put their card away, so it is plain which
   globe is being told about (asked for). The film layout belongs to full screen: leaving full screen brings the
   bar on the left and the strip of views back, playing or not (asked for).
+- **Globe look** (three-dot menu: Atlas, Day, Dots; `cg-look` in this browser; asked for, Nov 2026). Atlas is the
+  default. Day lays NASA's Blue Marble over the far globe (`DAY` in `site/globe.js`: NASA's own tiles, public
+  domain); Dots draws the land as a field of points made in the browser from the coast file (`landDots()`). A look
+  is layers put on the one map by `look()`, never another style, and what it needs is fetched only when it is
+  picked. From country height down every look is the same map of streets. Over Day a country is shown by its
+  outline alone.
 - **Globe detail** (three-dot menu: Less, Medium, Full; `cg-detail` in this browser; asked
   for, Nov 2026, so the globe is less crowded). Full names every country, as the map's tiles do. Medium names
   and tints only the countries the timeline's entries fall in. Less names and tints only the country of the
