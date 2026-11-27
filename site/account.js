@@ -733,10 +733,15 @@ export function createAccount(app) {
     if (same) return;
     const me = { b, stop: () => {} };
     sample = me;
-    const loaded = app.speaker().ready();
-    b.classList.add(loaded ? 'on' : 'wait'); b.innerHTML = loaded ? HALT + '<span>Stop</span>' : '<span>Loading…</span>';
-    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } }, text || undefined);
-    if (!loaded) { const t = setInterval(() => { if (sample !== me) return clearInterval(t); if (app.speaker().ready()) { clearInterval(t); b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } }, 300); }
+    // The button turns until the sound starts: the model may still be coming, and a voice not used before
+    // fetches its own small file first (asked for, Nov 2026: "it's not showing that loading").
+    b.classList.add('wait'); b.innerHTML = '<span>Loading…</span>';
+    const note = b.closest('.dlg, form')?.querySelector('.vo-fetch');
+    if (note && b.dataset.sample !== 'device') { note.textContent = `Getting ${voiceLabel(b.dataset.sample)} ready…`; note.hidden = false; }
+    const quiet = () => { if (note) note.hidden = true; };
+    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { quiet(); if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } }, text || undefined,
+      () => { quiet(); if (sample === me) { b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } });
+    const stop = me.stop; me.stop = () => { quiet(); stop(); };
   }
   // The part of the timeline a voiceover tells: the same strip with two handles as in the export dialog.
   function spanPick(ents) {
@@ -775,6 +780,7 @@ export function createAccount(app) {
     const voiceEl = ([v, name, w], cls = '') => `<label class="vo-voice ${cls}"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}" title="Listen">${PLAY}<span>Listen</span></button><span><b>${esc(name)}</b><small>${esc(w)}</small></span><i aria-hidden="true"></i></label>`;
     const notes = `<label class="vo-gpu" hidden><input type="checkbox"><span><b>Faster voice</b><small>Uses your graphics card: a one-time ${GPU_MB} MB download instead of ${MODEL_MB} MB.</small></span></label>
       <p class="vo-load" hidden></p>
+      <p class="vo-fetch" hidden></p>
       <p class="vo-slow" hidden>This device makes the voice slowly. Play will pause at each card until its line is ready.</p>
       <p class="dlg-err" role="alert"></p>`;
     const ents = app.told()?.entries || [], span = spanPick(ents);

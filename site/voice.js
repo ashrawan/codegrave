@@ -330,7 +330,9 @@ export function createVoice({ ctx, said, speaker }) {
 // A few words in one voice, to choose by ear: `done()` is called when they end. Returns a way to stop them.
 // `text` is what it says: the opening of the timeline's own script where there is one (asked for, Nov 2026: "the
 // script is already there. It can just speak that"), else the sample line.
-export function listen(speaker, voice, ctx, done, fail, text = SAMPLE) {
+export function listen(speaker, voice, ctx, done, fail, text = SAMPLE, began = () => {}) {
+  // `began()` is called when the first sound starts: until then the voice may still be fetching its own file
+  // or making the line, and the button shows that it is working (asked for, Nov 2026).
   // Given several lines it says them one after another until stopped, so a script can be heard through in a
   // voice (asked for, Nov 2026: "it should continue playing"). The line after the one being said is made meanwhile.
   const lines = Array.isArray(text) ? text.filter(Boolean) : [text];
@@ -346,6 +348,7 @@ export function listen(speaker, voice, ctx, done, fail, text = SAMPLE) {
       u.voice = en.find((v) => /natural|neural|premium|enhanced/i.test(v.name)) || en.find((v) => v.default) || en[0] || null;
       u.onend = () => { if (!stopped) say(k + 1); };
       speechSynthesis.speak(u);
+      if (!k) began();
       return;
     }
     speaker.line(lines[k], voice, true).then(({ audio, rate }) => {
@@ -356,6 +359,7 @@ export function listen(speaker, voice, ctx, done, fail, text = SAMPLE) {
       src = c.createBufferSource(); src.buffer = buf; src.connect(c.destination);
       src.onended = () => { if (!stopped) setTimeout(() => say(k + 1), 350); };
       src.start();
+      if (!k) began();
       if (lines[k + 1]) speaker.line(lines[k + 1], voice, true).catch(() => {});
     }, (e) => { if (!stopped) fail(e); });
   };
