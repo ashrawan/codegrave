@@ -61,7 +61,7 @@ export const voiceLabel = (v) => (VOICES.find(([id]) => id === v) || VOICES[0])[
 export function voiceOf(v) {
   if (!v || typeof v !== 'object' || !Array.isArray(v.lines)) return null;
   const lines = v.lines.filter((l) => l && typeof l.id === 'string' && typeof l.text === 'string' && l.text.trim()).map((l) => ({ id: l.id, text: l.text }));
-  return lines.length ? { at: v.at || 0, voice: isVoice(v.voice) ? v.voice : DEFAULT_VOICE, style: typeof v.style === 'string' ? v.style : '', lines } : null;
+  return lines.length ? { at: v.at || 0, voice: isVoice(v.voice) ? v.voice : DEFAULT_VOICE, style: typeof v.style === 'string' ? v.style : '', ...(typeof v.guide === 'string' && v.guide ? { guide: v.guide.slice(0, 400) } : {}), lines } : null;
 }
 
 // A line's name in this browser's store: the voice and a hash of the words.

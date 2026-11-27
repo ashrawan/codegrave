@@ -560,15 +560,17 @@ export function createAccount(app) {
     return o ? { own: false, title: o.title, description: o.description, get: () => app.one()?.voice, set: async (v) => app.keepVoice(v) } : null;
   }
   const onNow = () => app.views().join();
-  async function voiceover(row, voice) {
+  // `guide` is the reader's own words on how to tell it (asked for, Nov 2026; not needed): the function gives
+  // them to the writer, and they are kept beside the script so Write again starts from them.
+  async function voiceover(row, voice, guide = '') {
     if (voicing || working) return;
     voicing = { key: onNow(), step: 1, note: 'Writing the script…', open: true };
     draw();
     try {
       const src = app.told();
       if (!src || !src.entries.length) throw new Error('There is nothing to tell yet.');
-      const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries } });
-      await row.set({ at: Date.now(), voice, style: script.style || '', lines: script.lines });
+      const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries, ...(guide ? { guide } : {}) } });
+      await row.set({ at: Date.now(), voice, style: script.style || '', ...(guide ? { guide } : {}), lines: script.lines });
       await record(voice, script.lines);
       if (!voicing.early) toast('The voiceover is ready. Press play to hear it.');
     } catch (e) {
@@ -719,12 +721,14 @@ export function createAccount(app) {
       <div class="vo-list"><h2>Voiceover</h2><div class="cap">Voice</div>
         <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, 'row')).join('')}</div>${notes}</div>
       <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span><button type="submit" class="big" title="Writes the script again from the timeline as it is now. Uses one of today's requests.">Write again</button></div>
+        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · mostly about the people">${esc(has?.guide || '')}</textarea></label>
         <ol>${has.lines.map(lineEl).join('')}</ol></div>
       <div class="exf"><span class="ex-say"><span>${has.lines.length} lines. Made on your device; changing the voice is free.</span></span><button type="button" class="big vo-rm" data-unvoice>Remove voiceover</button><button type="button" class="big pri" data-revoice>Use <span data-vname></span></button></div></form>`
       : `<form class="vo-form va">
       <div class="vo-head"><h2>Choose a voice</h2><p class="dlg-sub">It tells ${esc(row.title || 'this timeline')} while it plays: an opening, a line for each entry${byId.size ? ` (${byId.size})` : ''}, and a closing.${row.own ? '' : ' Kept in this browser, for you alone.'}</p></div>
       <div class="vo-body"><div class="vo-voices cards" role="radiogroup" aria-label="Voice">${kok.map((v) => voiceEl(v, 'card')).join('')}</div>
-        ${voiceEl(dev, 'row dev')}${notes}</div>
+        ${voiceEl(dev, 'row dev')}
+        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · mostly about the people">${esc(has?.guide || '')}</textarea></label>${notes}</div>
       <div class="exf"><span class="ex-say"><span>Uses one of today's requests.</span></span><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Generate with <span data-vname></span></button></div></form>`, 'vodlg ' + (has ? 'vb' : 'va'));
     const nameIt = () => { const n = d.querySelector('[data-vname]'); if (n) n.textContent = voiceLabel(d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE); };
     nameIt(); d.addEventListener('change', nameIt);
@@ -750,7 +754,7 @@ export function createAccount(app) {
     }, 250);
     const err = d.querySelector('.dlg-err');
     d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }, has && has.lines.length ? has.lines.map((l) => l.text) : ''); } });
-    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v); });
+    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v, d.querySelector('[name=guide]')?.value.trim().slice(0, 400) || ''); });
     d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });
     d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
   }
@@ -820,7 +824,7 @@ export function createAccount(app) {
         <button type="button" class="big" data-ex-cancel>Cancel</button><button type="submit" class="big pri"${can ? '' : ' disabled'}>Export video</button>
       </div></form>`, 'exdlg');
     const q = (x) => d.querySelector(x), all = (x) => d.querySelectorAll(x);
-    let busy = false;
+    let busy = false, asking = false;
     function show() {
       const audio = false, voiceOn = st.voice && told, subsOn = voiceOn && st.subs, count = st.to - st.from + 1;
       if (q('.ex-span')) {
@@ -853,7 +857,13 @@ export function createAccount(app) {
     show();
     d.addEventListener('click', (e) => {
       // The left button of the foot: Cancel before the export, then the way to stop it.
-      if (e.target.closest('[data-ex-cancel]')) { if (busy && voicing) { voicing.stop = true; q('.ex-say span').textContent = 'Stopping…'; } else closeLayer(); return; }
+      if (e.target.closest('[data-ex-cancel]')) {
+        if (!(busy && voicing)) { closeLayer(); return; }
+        // Stopping is asked once more first (asked for, Nov 2026): the export goes on meanwhile.
+        if (!asking) { asking = true; d.querySelector('form').classList.add('asking'); q('.ex-say span').textContent = 'Stop the export? What is made so far is lost.'; q('[data-ex-cancel]').textContent = 'Yes, stop'; q('button[type=submit]').textContent = 'Keep exporting'; }
+        else { asking = false; d.querySelector('form').classList.remove('asking'); voicing.stop = true; q('.ex-say span').textContent = 'Stopping…'; q('[data-ex-cancel]').disabled = true; q('button[type=submit]').textContent = 'Hide'; }
+        return;
+      }
       const b = e.target.closest('[data-shape], [data-scene], [data-short], [data-sw]');
       if (!b || b.disabled || busy) return;
       if (b.dataset.shape) st.shape = b.dataset.shape; else if (b.dataset.scene) st.scene = b.dataset.scene;
@@ -868,6 +878,7 @@ export function createAccount(app) {
     });
     d.querySelector('form').addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (busy && asking) { asking = false; d.querySelector('form').classList.remove('asking'); q('[data-ex-cancel]').textContent = 'Stop'; q('button[type=submit]').textContent = 'Hide'; q('.ex-say span').textContent = voicing?.note || 'Exporting…'; return; }
       if (busy) { closeLayer(); return; }      // "Hide": the export goes on, and the pill at the top right says how far
       const voiceOn = st.voice && told, kind = voiceOn ? 'both' : 'video';
       const o = { kind, shape: st.shape, scene: st.scene, subs: voiceOn && st.subs, short: st.short, from: st.from, to: st.to };
@@ -875,7 +886,7 @@ export function createAccount(app) {
       // (asked for, Nov 2026). It can be hidden: the export goes on behind the pill at the top right.
       busy = true; d.querySelector('form').classList.add('busy');
       q('[data-ex-cancel]').textContent = 'Stop'; q('button[type=submit]').textContent = 'Hide';
-      const say = (text, part) => { if (!d.isConnected) return; q('.ex-say span').textContent = text; q('.ex-run u').style.width = Math.round(part * 100) + '%'; };
+      const say = (text, part) => { if (!d.isConnected) return; if (!asking) q('.ex-say span').textContent = text; q('.ex-run u').style.width = Math.round(part * 100) + '%'; };
       say('Starting…', 0);
       voicing = { key: onNow(), exporting: true, note: 'Exporting…', part: 0, open: false, stop: false };
       draw();
@@ -1132,7 +1143,7 @@ export function createAccount(app) {
       if (el('#sb-in')) return signIn();
       if (el('#publish')) return publish(el('#publish'));
       if (el('#tl-more')) return timelineMenu(el('#tl-more'));
-      if (el('#ex-stop')) { if (voicing) { voicing.stop = true; voicing.note = 'Stopping…'; draw(); } return undefined; }
+      if (el('#ex-stop')) { ask({ title: 'Stop the export?', text: 'What is made so far is lost. The export goes on until you answer.', ok: 'Stop the export', danger: true }).then(() => { closeLayer(); if (voicing && voicing.exporting) { voicing.stop = true; voicing.note = 'Stopping…'; draw(); } }); return undefined; }
       if (el('#vo-pill')) { if (voicing) { voicing.open = !voicing.open; draw(); } return undefined; }
       const open = el('[data-open]');
       if (open) { if (phone()) setOpen(false); return app.show('t/' + open.dataset.open); }

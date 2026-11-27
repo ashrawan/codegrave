@@ -560,6 +560,12 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .vo-shead small { font-size: 12px; font-weight: 600; color: var(--muted); }
 .vo-shead b { font-family: var(--serif, 'Instrument Serif', serif); font-size: 24px; font-weight: 400; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .vo-shead .big { flex: none; width: auto; height: 34px; margin: 0; padding: 0 14px; font-size: 13px; border-radius: 9px; }
+.vo-guide { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: var(--muted); }
+.vo-guide small { margin-left: 6px; font-weight: 400; }
+.vo-guide textarea { width: 100%; min-height: 44px; max-height: 96px; box-sizing: border-box; padding: 9px 12px; resize: vertical; font: inherit; font-size: 13.5px; font-weight: 400; line-height: 1.45; color: var(--text); background: color-mix(in srgb, var(--text) 5%, transparent); border: 1px solid var(--rule2); border-radius: 10px; outline: 0; }
+.vo-guide textarea:focus { border-color: color-mix(in srgb, var(--acc) 70%, transparent); }
+.vo-script .vo-guide { margin: 0 26px 12px 0; }
+.vo-body > .vo-guide { margin-top: 2px; }
 .vo-script ol { flex: 1; min-height: 0; margin: 0; padding: 0 26px 16px 0; overflow-y: auto; list-style: none; }
 .vo-script li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-top: 1px solid var(--rule); }
 .vo-script li > span { padding-top: 2px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -700,3 +706,6 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .vo-form .exf .big { gap: .3em; }
 
 .ex-say.fast svg { color: var(--acc); }
+
+.ex.asking [data-ex-cancel] { color: #e58a7a; border-color: color-mix(in srgb, #e58a7a 50%, transparent); }
+.ex.asking .ex-say { color: var(--text); }

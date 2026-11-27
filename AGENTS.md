@@ -426,6 +426,14 @@ How the page is put together:
   that has a voiceover, Listen says its own script in that voice, from the opening on, line after line until stopped or another voice is tried, not the sample sentence
   (`listen()` takes the text). "Faster voice" is no longer offered, in the menu by play or in the dialog (its rows
   stay hidden; the graphics-card engine is still in `site/voice.js`, used only by someone who turned it on before).
+- **Stopping an export is asked once more (Nov 2026, asked for).** In the export dialog Stop turns the foot into
+  "Stop the export?" with "Yes, stop" and "Keep exporting"; from the note under the pill it is a small dialog.
+  The export goes on until the reader answers.
+- **A prompt for the voiceover (Nov 2026, asked for; not needed).** Both voice dialogs have "How should it be
+  told?" (`.vo-guide`): the reader's own words on tone, length, audience or what to dwell on. The page sends them
+  as `guide` with the script request, the function `voiceover` gives them to the writer as guidance that never
+  changes the facts or the shape of the answer, and they are kept beside the script (`voice.guide`) so Write again
+  starts from them. The quick Generate in the menu by play sends none.
 - **When an export is saved (Nov 2026, asked for)** a note stands at the top right, "Video downloaded" with the
   file's name, until the reader closes it with its cross (`exported()` in `site/account.js`, `#ex-done`); not a toast.
 - **Arrows during play (Nov 2026, asked for).** While automatic play travels, the left and right arrow keys glide
