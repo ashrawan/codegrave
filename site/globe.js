@@ -374,9 +374,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     if (!s) { card.hidden = true; lead.hidden = true; return; }
     card.hidden = false; card.classList.toggle('bare', !!pic);
     card.dataset.id = s.id; card.style.setProperty('--c', s.col);
-    // How its picture moves in play: three ways, two entries each in turn, so it never reads as one effect on a
+    // How its picture moves in play: five ways, two entries each in turn, so it never reads as one effect on a
     // loop (asked for, Nov 2026: "2 3 variations of style"). By the entry's number, never by chance.
-    card.dataset.pan = Math.floor(i / 2) % 3;
+    card.dataset.pan = Math.floor(i / 2) % 5;
     card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}`;
     const img = card.querySelector('img');
     if (img) { img.addEventListener('error', () => { if (S.picI) return; img.remove(); place(); }); img.addEventListener('load', place); }
