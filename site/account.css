@@ -639,7 +639,7 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .ex-tog[aria-checked="true"] { background: var(--acc); }
 .ex-tog[aria-checked="true"] i { translate: 16px 0; }
 .ex-tog:disabled { opacity: .4; cursor: default; }
-.ex-q { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border-radius: 9px; }
+.ex-q { display: grid; grid-template-columns: 1.7fr 1fr 1fr; gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border-radius: 9px; }
 .ex-q button:disabled { opacity: .35; cursor: default; }
 .ex-qnote { min-height: 16px; margin: 6px 0 0; font-size: 11.5px; color: var(--muted); }
 .ex-q button { height: 30px; padding: 0 12px; font-size: 12px; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; }

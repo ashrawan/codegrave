@@ -402,7 +402,7 @@ How the page is put together:
   voice follows. Under a voice the music is louder than it first was (`MUSIC_UNDER` 0.14 on the page, 0.16 in a
   film; it was found "a little bit too subtle"). The export dialog has no "Audio only" (the engine can still
   make the WAV). Scene is "Default" (as play shows it: the globe, and the stars where entries have no place)
-  or "Full view". Quality is 720p, 1080p, 4K or 8K (`QUALITY`; `canSize()` in `site/export.js` asks the
+  or "Full view". Quality is Quick test (480p, small and fast, for checking a film first), 720p or 1080p (4K and 8K were offered and then removed on request, Nov 2026; `QUALITY`; `canSize()` in `site/export.js` asks the
   browser's encoder, and a size it cannot make is not offered). The dialog has a foot of its own (`.exf`):
   "Made on your device. Nothing is uploaded." at its left, Cancel and Export at its right. The dialog stays
   open while the film is made: a line runs along the foot's top edge, the note becomes the step and how far

@@ -82,7 +82,7 @@ export async function canFast(shape, short) {
   const { w, h } = sizeOf(shape, short);
   return !!(await pick(VIDEO, (codec) => VideoEncoder.isConfigSupported({ codec, width: w, height: h, bitrate: bitsFor(w, h), framerate: FPS, hardwareAcceleration: 'prefer-hardware' })));
 }
-// Whether this browser can encode a film of that shape and size (asked for, Nov 2026: 4K and 8K where the device can).
+// Whether this browser can encode a film of that shape and size (a size the device cannot make is not offered).
 export async function canSize(shape, short) {
   if (!canExport()) return false;
   const { w, h } = sizeOf(shape, short);

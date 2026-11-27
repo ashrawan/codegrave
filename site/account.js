@@ -766,7 +766,8 @@ export function createAccount(app) {
     ['globe', 'Default', 'As play shows it: the globe from place to place, the stars where there is none', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>'],
     ['full', 'Full view', 'Every card large, among the stars', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 15h8M10 9.5h4"/></svg>'],
   ];
-  const QUALITY = [[720, '720p'], [1080, '1080p'], [2160, '4K'], [4320, '8K']];
+  // 480p is the quick test (asked for, Nov 2026, in place of 4K and 8K): small and fast, to check a film before the real one.
+  const QUALITY = [[480, 'Quick test · 480p'], [720, '720p'], [1080, '1080p']];
   const EX_STEP = { voice: 'Making the voice', sound: 'Mixing the sound', pictures: 'Fetching the pictures', map: 'Getting the map ready', video: 'Drawing the video', saving: 'Saving the file' };
   const LOCK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>';
   // Export (asked for, Nov 2026, twice: first the choices, then "a standard UI ... like the Canva standard"):
@@ -825,8 +826,8 @@ export function createAccount(app) {
       const [, , , , w, h] = SHAPES.find(([k]) => k === st.shape), k = st.short / Math.min(w, h), secs = count * (voiceOn || audio ? 9 : 4.2);
       const long = secs < 90 ? `about ${Math.max(5, Math.round(secs / 5) * 5)} seconds` : `about ${Math.round(secs / 60)} minutes`;
       q('.ex-meta').innerHTML = audio ? `<b>WAV</b> · the voice alone · ${long}` : `<b>${Math.round(w * k)} × ${Math.round(h * k)}</b> · MP4 · ${long}`;
-      q('.ex-qnote').textContent = st.short >= 4320 ? '8K is a very large file and takes long to make. Few devices can play it.' : st.short >= 2160 ? '4K takes about four times as long to make as 1080p.' : st.short === 720 ? '720p is the quickest to make.' : '';
-      // What this device's encoder cannot make at this shape is not offered (asked for, Nov 2026: 4K and 8K).
+      q('.ex-qnote').textContent = st.short === 480 ? 'Small and fast: for checking the film before the real export.' : st.short === 720 ? '720p is quicker to make than 1080p.' : '';
+      // What this device's encoder cannot make at this shape is not offered.
       const shape = st.shape;
       // Where the device's graphics hardware makes the film, the foot says so (asked for, Nov 2026).
       const short = st.short;
