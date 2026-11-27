@@ -183,6 +183,8 @@
 <!-- Beside play: the voiceover of this timeline and how fast it plays (moved here from the settings on request, Nov 2026) -->
 <div id="vo-menu" role="menu" hidden>
   <p class="cap" id="vo-cap">Play</p>
+  <div id="gen-row" class="set" hidden><span class="lbl">Voiceover</span><button type="button" id="vo-gen" class="vo-gen">Generate</button></div>
+  <div id="pick-row" class="set" hidden><span class="lbl">Voice</span><button type="button" id="vo-change" class="vo-gen quiet"><span id="vo-name"></span> · Change</button></div>
   <div id="voice-row" class="set" hidden><span class="lbl">Voiceover</span><span id="voice-seg" class="seg" role="group" aria-label="Voiceover"><button type="button" data-v="on">On</button><button type="button" data-v="off">Off</button></span></div>
   <div id="subs-row" class="set" hidden><span class="lbl">Subtitles</span><span id="subs-seg" class="seg" role="group" aria-label="Subtitles"><button type="button" data-v="on">On</button><button type="button" data-v="off">Off</button></span></div>
   <label id="pace-row" class="set"><span class="lbl">Speed</span><span class="rng"><input id="pace" type="range" min="0.25" max="2" step="0.25" value="1" aria-label="Play speed"><small id="pace-now" class="state">1x</small></span></label>

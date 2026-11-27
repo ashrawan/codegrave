@@ -846,11 +846,18 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 .vochip b { font-weight: 600; font-variant-numeric: tabular-nums; }
 .vochip i { width: 6px; height: 6px; border-radius: 50%; border: 1.5px solid var(--acc); }
 .vochip.ready i { background: var(--acc); }
-.vochip:not(.voiced) svg, .vochip:not(.voiced) i { display: none; }
+.vochip:not(.voiced):not(.can) svg, .vochip:not(.voiced) i { display: none; }
+.vochip.can svg { opacity: .55; }
+.vochip.can.x1 b { display: none; }
+.vo-gen { justify-self: end; height: 28px; padding: 0 14px; font-size: 12.5px; font-weight: 600; color: var(--bg); background: var(--acc); border: 0; border-radius: 8px; cursor: pointer; }
+.vo-gen:hover { filter: brightness(1.08); }
+.vo-gen.quiet { padding: 0 4px; font-weight: 500; color: var(--muted); background: none; }
+.vo-gen.quiet:hover { color: var(--text); filter: none; }
 .vochip.voiced.x1 b { display: none; }
 .vochip.voiced { color: var(--text); }
 .vochip.off svg { opacity: .45; }
 .vochip.off i { border-color: var(--faint); background: none; }
 #vo-menu { bottom: 104px; width: 300px; }
 #vo-menu .set { grid-template-columns: minmax(0, 1fr) 170px; }
+#vo-menu :is(#gen-row, #pick-row) { grid-template-columns: minmax(0, 1fr) auto; }
 @media (max-width: 699px) { #vo-menu { bottom: 150px; } }

@@ -383,6 +383,19 @@ How the page is put together:
   (`S.face`), not only which entries there are, so a new picture link shows without a reload. An entry with
   several pictures (`imgs` on its step) shows them in turn while its card is up in play, `PIC_SECS` each; the
   card gets no more time for it.
+- **Voiceover and export, round 4 (Nov 2026, asked for), which replaces round 3 where they differ.** The
+  speaking icon by play shows on every single view, dim while there is no voiceover. Its menu then has
+  "Voiceover: Generate" (`#gen-row`, `account.voiceQuick()`): it writes the script at once in the voice the
+  reader chose last (`cg-voice-name`), and shows the voices first only to someone who never chose one ("the
+  user doesn't even need to go over click on the 3 dot"); with a voiceover the row is "Voice: <name> · Change".
+  Making the voice no longer has to be waited for: after `READY_AT` (3) lines the note folds to its pill, which
+  reads "Ready to play", and the rest is made in the background, the line play needs next always first
+  ("should be able to play while the rest could happen in the background"). The export dialog was rebuilt after
+  the first was called junior work ("like the Canva standard"): on the left the film as it will look, drawn in
+  CSS from the timeline's own title and first entry and following every choice (`.ex-frame`, `data-shape`,
+  `data-scene`), with its size and length under it; on the right the tabs Video and Audio only, Format and
+  Scene as tiles, Voiceover and Subtitles as switches, Quality as a pair, and one lit button. Keep new export
+  choices in those shapes.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

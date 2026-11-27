@@ -2587,17 +2587,21 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     told.kept = n; told.lines = texts.length; drawChip();
   }, 300); }
   function drawChip() {
-    const el = $('vo-chip'), any = voice.any() && state.views.length === 1, ready = any && told.kept >= told.lines;
+    const el = $('vo-chip'), one = state.views.length === 1, any = voice.any() && one, ready = any && told.kept >= told.lines;
     el.classList.toggle('voiced', any); el.classList.toggle('ready', ready); el.classList.toggle('off', any && !told.on);
-    el.classList.toggle('x1', play.speed === 1);
+    el.classList.toggle('x1', play.speed === 1); el.classList.toggle('can', one && !any);
     $('vo-x').textContent = String(play.speed) + 'x';
     $('vo-cap').textContent = any ? 'Voiceover' : 'Play';
-    el.title = !any ? `Play speed: ${play.speed}x` : !told.on ? 'This timeline has a voiceover. It is off.' : ready ? 'This timeline has a voiceover, ready on this device.' : `This timeline has a voiceover. Its voice is made on this device as it plays (${told.kept || 0} of ${told.lines || 0} lines ready).`;
+    el.title = !any ? (one ? `No voiceover yet. Play speed: ${play.speed}x.` : `Play speed: ${play.speed}x`) : !told.on ? 'This timeline has a voiceover. It is off.' : ready ? 'This timeline has a voiceover, ready on this device.' : `This timeline has a voiceover. Its voice is made on this device as it plays (${told.kept || 0} of ${told.lines || 0} lines ready).`;
     el.setAttribute('aria-label', el.title + ' Open the voiceover and speed.');
   }
   function drawTold() {
     const any = voice.any();
-    $('voice-row').hidden = $('subs-row').hidden = !any;
+    $('voice-row').hidden = $('subs-row').hidden = $('pick-row').hidden = !any;
+    // With no voiceover yet, the menu by play offers to make one there and then (asked for, Nov 2026: "the user
+    // doesn't even need to go over click on the 3 dot").
+    $('gen-row').hidden = any || state.views.length !== 1;
+    if (any) $('vo-name').textContent = voice.name() || 'Voice';
     drawChip(); keptSoon();
     $('gpu-row').hidden = !any || !told.gpuOk || voice.device();
     for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
@@ -2826,6 +2830,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     };
     $('vo-chip').addEventListener('click', (e) => { e.stopPropagation(); const on = $('vo-menu').hidden; document.body.click(); voMenu(on); });
     $('vo-menu').addEventListener('click', (e) => e.stopPropagation());
+    for (const id of ['vo-gen', 'vo-change']) $(id).addEventListener('click', () => { voMenu(false); account.voiceQuick(); });
     document.addEventListener('click', () => voMenu(false));
     $('gpu-row').addEventListener('click', (e) => {
       e.stopPropagation();
@@ -3181,6 +3186,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     canExport,
     one: () => { const v = state.views.length === 1 ? viewById.get(state.views[0]) : null; return v ? { id: v.id, title: v.name || '', description: v.description || '', voice: voiceNow() } : null; },
     keepVoice: keepLocalVoice,
+    first: () => { const p = (road.gorder || [])[0]; return p ? stepOf(p) : null; },
     voiceLoad: () => (told.load != null && told.load < 1 ? { part: told.load, mb: Math.round((told.bytes || 0) / 1e6) || MODEL_MB } : null),
     audio: () => { try { const AC = window.AudioContext || window.webkitAudioContext; if (!sound.ctx && AC) sound.ctx = new AC(); if (sound.ctx?.state === 'suspended') sound.ctx.resume(); } catch { sound.ctx = null; } return sound.ctx; },
     told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), summary: p.t.summary || '' })) }; },

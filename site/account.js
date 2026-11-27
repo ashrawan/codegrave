@@ -541,6 +541,7 @@ export function createAccount(app) {
   // The function writes the script (one of the day's requests) and only the words are kept on the row, with
   // the voice; the sound is made in the reader's browser while play goes, so nothing else is stored.
   const MIC = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v2.5"/></svg>';
+  const READY_AT = 3;          // lines made before play may begin
   let voicing = null;
   async function voiceFn(body) {
     const t = await token();
@@ -569,7 +570,7 @@ export function createAccount(app) {
       const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries } });
       await row.set({ at: Date.now(), voice, style: script.style || '', lines: script.lines });
       await record(voice, script.lines);
-      toast('The voiceover is ready. Press play to hear it.');
+      if (!voicing.early) toast('The voiceover is ready. Press play to hear it.');
     } catch (e) {
       toast(e.message || 'The voiceover could not be made. Try again.');
     } finally { voicing = null; draw(true); }
@@ -585,12 +586,16 @@ export function createAccount(app) {
       for (const l of lines) {
         await app.speaker().line(l.text, voice).catch(() => null);
         voicing.made++;
+        // Three lines are enough to start (asked for, Nov 2026: "should be able to play while the rest could
+        // happen in the background"): the note folds away to its pill, and the rest is made as play goes,
+        // the line play needs next always first.
+        if (voicing.made === Math.min(READY_AT, lines.length) && lines.length > READY_AT) { voicing.open = false; voicing.early = true; toast('The voiceover is ready to play. The rest is made in the background.'); draw(true); }
       }
     } finally { clearInterval(tick); }
   }
   function noteOf() {
     const l = app.voiceLoad();
-    voicing.note = l ? `Downloading the voice: ${Math.round(l.part * 100)}%` : `Making the voice: ${voicing.made} of ${voicing.total}`;
+    voicing.note = l ? `Downloading the voice: ${Math.round(l.part * 100)}%` : voicing.early ? `Ready to play · voice ${voicing.made} of ${voicing.total}` : `Making the voice: ${voicing.made} of ${voicing.total}`;
   }
   // Another voice for the same words: nothing is asked of the server but the change to the row, then the voice.
   async function revoice(row, voice) {
@@ -609,6 +614,17 @@ export function createAccount(app) {
       await row.set(null);
       toast('The voiceover is removed.');
     } catch (e) { toast(e.message); } finally { draw(true); }
+  }
+  // From the menu by play (asked for, Nov 2026): with no voiceover yet it is made at once in the voice the
+  // reader chose last; only someone who never chose one is shown the voices first. A timeline that has one
+  // opens its dialog (another voice, write again, remove).
+  function voiceQuick() {
+    const h = working ? null : holder();
+    if (!h || voicing) return;
+    let v = null; try { v = localStorage.getItem('cg-voice-name'); } catch (e) { /* private window */ }
+    if (voiceOf(h.get()) || !isVoice(v)) return voiceMenu($('tl-more'), h);
+    if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.');
+    voiceover(h, v);
   }
   // Under the pill while the script is written.
   function drawVoicing(on) {
@@ -724,51 +740,89 @@ export function createAccount(app) {
   }
   // Export video (site/export.js): one press makes the file in this browser; the pill at the top right says how
   // far it has come and the timeline can be used meanwhile (asked for, Nov 2026: three files to choose from).
-  const EXPORTS = [
-    ['both', 'Video with voiceover', 'The film with its voice and music.'],
-    ['video', 'Video only', 'The film with its music and no voice.'],
-    ['voice', 'Voiceover only', 'The voice alone, as a sound file (WAV).'],
-  ];
-  // The shape of the film (asked for, Nov 2026: "the first important thing is the format"): each is drawn as its
-  // own small frame, with where it is usually watched.
+  // The shape of the film (asked for, Nov 2026: "the first important thing is the format"), with where each is watched.
   const SHAPES = [
-    ['wide', 'Landscape', '16:9', 'YouTube, a screen', 44, 25],
-    ['tall', 'Vertical', '9:16', 'Shorts, Reels, TikTok', 20, 36],
-    ['square', 'Square', '1:1', 'A feed', 30, 30],
+    ['wide', 'Landscape', '16:9', 'YouTube, a screen', 16, 9],
+    ['tall', 'Vertical', '9:16', 'Shorts, Reels, TikTok', 9, 16],
+    ['square', 'Square', '1:1', 'A feed', 1, 1],
+  ];
+  const SCENES = [
+    ['globe', 'Globe', 'The map travels from place to place', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>'],
+    ['full', 'Full view', 'Each card large, among the stars', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 15h8M10 9.5h4"/></svg>'],
   ];
   const EX_STEP = { voice: 'Making the voice', sound: 'Mixing the sound', pictures: 'Fetching the pictures', map: 'Getting the map ready', video: 'Drawing the video', saving: 'Saving the file' };
   const exKept = () => { try { return JSON.parse(localStorage.getItem('cg-export')) || {}; } catch (e) { return {}; } };
+  // Export (asked for, Nov 2026, twice: first the choices, then "a standard UI ... like the Canva standard"):
+  // the film as it will look on the left, drawn from the timeline's own first entry and following every choice;
+  // the choices on the right; one button. Nothing here asks the server for anything.
   function videoMenu() {
     if (voicing) return;
     const can = app.canExport(), cur = holder(), has = !!cur && voiceOf(cur.get()), dev = has && has.voice === 'device', told = !!has && !dev;
-    const off = (k) => (k !== 'video' && !told) || (k !== 'voice' && !can);
-    const was = exKept(), first = (!off(was.kind) && EXPORTS.some(([k]) => k === was.kind) ? was.kind : null) || EXPORTS.find(([k]) => !off(k))?.[0];
-    const seg = (name, list, on) => `<div class="seg" data-seg="${name}">${list.map(([v, label]) => `<button type="button" data-v="${v}" aria-pressed="${v === on}">${label}</button>`).join('')}</div>`;
-    const shape = SHAPES.some(([k]) => k === was.shape) ? was.shape : 'wide';
-    const d = modal(`<form class="vo-form ex-form"><h2>Export</h2>
-      <p class="dlg-sub">The file is made on your device and downloaded. Nothing is uploaded, and you can keep using the timeline while it works.</p>
-      <div class="cap">What</div>
-      <div class="vo-voices" role="radiogroup" aria-label="What to export">${EXPORTS.map(([k, name, w]) => `<label class="vo-voice${off(k) ? ' off' : ''}"><input type="radio" name="kind" value="${k}"${k === first ? ' checked' : ''}${off(k) ? ' disabled' : ''}><i></i><span><b>${name}</b><small>${w}</small></span></label>`).join('')}</div>
-      <div class="ex-video">
-        <div class="cap">Format</div>
-        <div class="ex-shapes" role="radiogroup" aria-label="Format">${SHAPES.map(([k, name, ratio, where, w, h]) => `<label class="ex-shape"><input type="radio" name="shape" value="${k}"${k === shape ? ' checked' : ''}><span class="ex-fr"><i style="width: ${w}px; height: ${h}px"></i></span><b>${name} <small>${ratio}</small></b><small>${where}</small></label>`).join('')}</div>
-        <div class="set"><span class="lbl">Scene</span>${seg('scene', [['globe', 'Globe'], ['full', 'Full view']], was.scene === 'full' ? 'full' : 'globe')}</div>
-        <div class="set ex-subs"><span class="lbl">Subtitles</span>${seg('subs', [['1', 'On'], ['0', 'Off']], was.subs ? '1' : '0')}</div>
-        <div class="set"><span class="lbl">Quality</span>${seg('short', [['1080', '1080p'], ['720', '720p, quicker']], was.short === 720 ? '720' : '1080')}</div>
+    const was = exKept(), first = app.first() || {}, count = app.told()?.entries.length || 0;
+    const st = {
+      mode: !can ? 'audio' : was.kind === 'voice' && told ? 'audio' : 'video',
+      voice: told && was.kind !== 'video', subs: !!was.subs,
+      shape: SHAPES.some(([k]) => k === was.shape) ? was.shape : 'wide', scene: was.scene === 'full' ? 'full' : 'globe', short: was.short === 720 ? 720 : 1080,
+    };
+    const sw = (name, label, hint) => `<div class="ex-opt"><span><b>${label}</b><small data-hint="${name}">${hint}</small></span><button type="button" class="ex-sw" role="switch" data-sw="${name}" aria-label="${label}"><i></i></button></div>`;
+    const d = modal(`<form class="ex">
+      <div class="ex-prev" aria-hidden="true">
+        <div class="ex-stage"><div class="ex-frame">
+          <i class="ex-globe"><u></u></i>
+          <span class="ex-title">${esc(cur?.title || 'Timeline')}</span><span class="ex-year">${esc(first.mark || '')}</span>
+          <div class="ex-card">${first.img ? `<span class="ex-img" style="background-image: url('${esc(first.img)}')"></span>` : ''}<small>${esc(first.kind || 'Entry')}</small><b>${esc(first.name || 'The first entry')}</b><i></i><i></i></div>
+          <span class="ex-sub">The line being said is written here</span>
+          <span class="ex-bar"><u></u></span>
+        </div></div>
+        <p class="ex-meta"></p>
       </div>
-      <p class="dlg-err" role="alert">${!can ? 'This browser cannot make a video file. Try Chrome or Edge.' : dev ? 'The voice of This device cannot be saved to a file. Choose another voice for a video with the voiceover.' : !has ? 'Generate a voiceover first to export with a voice.' : ''}</p>
-      <div class="dlg-row"><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri"${first ? '' : ' disabled'}>Export</button></div></form>`, 'small vo');
-    const kindNow = () => d.querySelector('input[name=kind]:checked')?.value, segNow = (n) => d.querySelector(`[data-seg=${n}] [aria-pressed=true]`)?.dataset.v;
-    // The voice alone has no picture to choose, and subtitles are the voice's words.
-    const show = () => { const k = kindNow(); d.querySelector('.ex-video').hidden = k === 'voice'; d.querySelector('.ex-subs').hidden = k !== 'both'; d.querySelector('button[type=submit]').textContent = k === 'voice' ? 'Export WAV' : 'Export MP4'; };
+      <div class="ex-side">
+        <h2>Export</h2>
+        <div class="ex-tabs" role="tablist"><button type="button" role="tab" data-mode="video"${can ? '' : ' disabled'}>Video</button><button type="button" role="tab" data-mode="audio"${told ? '' : ' disabled'}>Audio only</button></div>
+        <div class="ex-video">
+          <h3>Format</h3>
+          <div class="ex-shapes" role="radiogroup" aria-label="Format">${SHAPES.map(([k, name, ratio, where, w, h]) => `<button type="button" role="radio" class="ex-tile" data-shape="${k}" title="${where}"><span class="ex-fr"><i style="aspect-ratio: ${w} / ${h}; ${w >= h ? 'width: 30px' : 'height: 30px'}"></i></span><b>${name}</b><small>${ratio}</small></button>`).join('')}</div>
+          <h3>Scene</h3>
+          <div class="ex-scenes" role="radiogroup" aria-label="Scene">${SCENES.map(([k, name, w, icon]) => `<button type="button" role="radio" class="ex-tile row" data-scene="${k}">${icon}<span><b>${name}</b><small>${w}</small></span></button>`).join('')}</div>
+          <h3>Sound and text</h3>
+          ${sw('voice', 'Voiceover', '')}
+          ${sw('subs', 'Subtitles', 'Each line written at the foot while it is said')}
+          <div class="ex-opt"><span><b>Quality</b><small>720p is quicker to make</small></span><div class="ex-q" role="radiogroup" aria-label="Quality"><button type="button" role="radio" data-short="1080">1080p</button><button type="button" role="radio" data-short="720">720p</button></div></div>
+        </div>
+        <div class="ex-audio"><p>The narration alone, every line in order, as a WAV sound file. Use it in your own editor, or to check how the script sounds.</p></div>
+        <p class="dlg-err" role="alert">${!can ? 'This browser cannot make a video file. Try Chrome or Edge.' : ''}</p>
+        <div class="ex-foot"><span>Made on your device. Nothing is uploaded.</span><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Export</button></div>
+      </div></form>`, 'exdlg');
+    const q = (x) => d.querySelector(x), all = (x) => d.querySelectorAll(x);
+    function show() {
+      const audio = st.mode === 'audio', voiceOn = st.voice && told, subsOn = voiceOn && st.subs;
+      all('[data-mode]').forEach((b) => b.setAttribute('aria-selected', b.dataset.mode === st.mode));
+      q('.ex-video').hidden = audio; q('.ex-audio').hidden = !audio; q('.ex-prev').classList.toggle('audio', audio);
+      all('[data-shape]').forEach((b) => b.setAttribute('aria-checked', b.dataset.shape === st.shape));
+      all('[data-scene]').forEach((b) => b.setAttribute('aria-checked', b.dataset.scene === st.scene));
+      all('[data-short]').forEach((b) => b.setAttribute('aria-checked', Number(b.dataset.short) === st.short));
+      const v = q('[data-sw=voice]'), sb = q('[data-sw=subs]');
+      v.setAttribute('aria-checked', voiceOn); v.disabled = !told;
+      q('[data-hint=voice]').textContent = told ? `Told by ${voiceLabel(has.voice)}, with the music soft under it` : dev ? 'The voice of This device cannot be saved. Choose another voice first.' : 'This timeline has no voiceover yet. Generate one first.';
+      sb.setAttribute('aria-checked', subsOn); sb.disabled = !voiceOn;
+      const f = q('.ex-frame'); f.dataset.shape = st.shape; f.dataset.scene = st.scene; f.classList.toggle('subs', subsOn);
+      const [, , , , w, h] = SHAPES.find(([k]) => k === st.shape), k = st.short / Math.min(w, h), secs = count * (voiceOn || audio ? 9 : 4.2);
+      const long = secs < 90 ? `about ${Math.max(5, Math.round(secs / 5) * 5)} seconds` : `about ${Math.round(secs / 60)} minutes`;
+      q('.ex-meta').innerHTML = audio ? `<b>WAV</b> · the voice alone · ${long}` : `<b>${Math.round(w * k)} × ${Math.round(h * k)}</b> · MP4 · ${long}`;
+      q('button[type=submit]').textContent = audio ? 'Export audio' : 'Export video';
+    }
     show();
-    d.addEventListener('change', show);
-    d.addEventListener('click', (e) => { const b = e.target.closest('[data-seg] button'); if (!b) return; e.preventDefault(); b.parentNode.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b)); });
+    d.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-mode], [data-shape], [data-scene], [data-short], [data-sw]');
+      if (!b || b.disabled) return;
+      if (b.dataset.mode) st.mode = b.dataset.mode; else if (b.dataset.shape) st.shape = b.dataset.shape; else if (b.dataset.scene) st.scene = b.dataset.scene;
+      else if (b.dataset.short) st.short = Number(b.dataset.short); else st[b.dataset.sw] = !(b.getAttribute('aria-checked') === 'true');
+      show();
+    });
     d.querySelector('form').addEventListener('submit', async (e) => {
       e.preventDefault();
-      const kind = kindNow();
-      if (!kind) return;
-      const o = { kind, shape: d.querySelector('input[name=shape]:checked')?.value || 'wide', scene: segNow('scene') || 'globe', subs: kind === 'both' && segNow('subs') === '1', short: Number(segNow('short')) || 1080 };
+      const voiceOn = st.voice && told, kind = st.mode === 'audio' ? 'voice' : voiceOn ? 'both' : 'video';
+      const o = { kind, shape: st.shape, scene: st.scene, subs: voiceOn && st.subs, short: st.short };
       try { localStorage.setItem('cg-export', JSON.stringify(o)); } catch (x) { /* private window */ }
       closeLayer();
       voicing = { key: onNow(), exporting: true, note: 'Exporting…', part: 0, open: true, stop: false };
@@ -1089,5 +1143,5 @@ export function createAccount(app) {
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { boot, start, api, ask: ask_ai, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
+  return { voiceQuick, boot, start, api, ask: ask_ai, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
 }
