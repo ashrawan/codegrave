@@ -824,3 +824,15 @@ body.multi #road-views, body.multi #wall .w-scene { display: none; }
    come back while the pointer is at the top edge, after a click on the stage, or while the search is used. */
 .tsearch, #film-menu, .top { transition: opacity .3s, transform .3s; }
 body.fullscreen:not(.peek) .tsearch:not(:focus-within), body.fullscreen:not(.peek) #film-menu, body.fullscreen:not(.peek) .top:not(:focus-within) { opacity: 0; pointer-events: none; }
+
+/* The voiceover: its two settings show only for a timeline that has one, and the line being said is written
+   at the foot while it is said (subtitles), over the map and under nothing. */
+#more-menu .set[hidden] { display: none; }
+#subs { position: fixed; left: calc(var(--sb) + (100vw - var(--sb)) / 2); bottom: 96px; z-index: 18; width: max-content; max-width: min(760px, calc(100vw - var(--sb) - 48px)); margin: 0; padding: 8px 16px; transform: translateX(-50%); font-size: 17px; line-height: 1.45; text-align: center; text-wrap: balance; color: #fff; background: rgba(8, 10, 16, .72); border-radius: 10px; opacity: 0; pointer-events: none; transition: opacity .25s; }
+#subs.on { opacity: 1; }
+body.globe:has(.g-shelf:not([hidden])):not(.film) #subs { bottom: 150px; }
+body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
+@media (max-width: 699px) {
+  #subs { top: 108px; bottom: auto; left: 50%; max-width: calc(100vw - 24px); font-size: 14.5px; padding: 6px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { #subs { transition: none; } }

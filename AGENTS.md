@@ -54,6 +54,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | The bar on the left, signing in, and the timelines people keep | `site/account.js`, `site/account.css`, then `tests/account.test.mjs` and `docs/ACCOUNTS.md` | |
 | Open in editor (a timeline of one's own as rows, the road live beside it) | `site/editor.js`, `site/editor.css`; the date reading and checks in `site/ai.js`, then `tests/ai.test.mjs` and `docs/ACCOUNTS.md` | |
 | The full picture (a picture in the panel opened over the page) | `site/picture.js`, its styles at the end of `site/styles.css` | |
+| Voiceover (a timeline told aloud: the script, the speech, the clips, how play waits for a line) | `site/voice.js` (arithmetic and the player), `site/account.js` (making one), `site/app.js` (`tell()`, `toldPace`), then `tests/voice.test.mjs` and `docs/ACCOUNTS.md`; the server side is `supabase/functions/voiceover/index.ts`, deployed to the Supabase project | |
 | Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
@@ -298,6 +299,22 @@ How the page is put together:
   its entry and play goes on (asked for, Nov 2026). Standing still, nothing
   takes turns: a card stays while someone reads it. Keep it this simple: no
   queue, no timers, no turns.
+- **Voiceover** (`site/voice.js`, `docs/ACCOUNTS.md`; asked for, Nov 2026: "voiceover will be main", the music "should
+  be subtle", play "should wait on the cards if its corresponding voiceover not done", "and also a subtitle. if
+  its on"). On a timeline of the reader's own, "Generate voiceover" stands beside Publish (`#vo-open`): the
+  function `voiceover` writes an opening that fits the title, a line for each entry in the order play meets
+  them (`told` lent by the page) and a closing, and Gemini's cheapest Flash text to speech says them a few
+  lines at a time. The page cuts each piece of speech at its pauses into one clip a line (`cuts()`), makes
+  MP3 of them (lamejs, from cdnjs only then) and keeps them in the account's own folder; the words, the
+  clips' names and lengths are written on the row (`voice`), so opening the timeline is still one request. It
+  counts as one of the day's requests. While play travels the line of the entry in front is said (`tell()`;
+  the opening on the first entry, the closing after the last), the music sinks to `MUSIC_UNDER`, and the
+  reader goes no faster than the line and waits where it is not over when its card would go (`toldPace()`,
+  `TOLD`), then goes on at the usual pace. A pause holds the line where it is. "Voiceover" and "Subtitles"
+  in the three-dot menu (`cg-voice`, on; `cg-subs`, off) show only for a timeline that has one; the subtitle
+  is the line being said, at the foot (`#subs`; at the top on a phone, where the card stands at the foot).
+  Only a road of one view is told, and play by the arrow keys says a line as its entry arrives without
+  waiting. The script's prompt has many short examples by kind of timeline; add to them rather than cut them.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

@@ -86,6 +86,8 @@
 <!-- New timeline: a page over the road with one box to say what it is about (account.js fills it) -->
 <section id="create" aria-label="New timeline" hidden></section>
 <!-- Ask for a change: under the road, for a timeline the reader made with AI -->
+<!-- The line of the voiceover being said, when subtitles are on -->
+<p id="subs" aria-live="off"></p>
 <form id="ask" hidden></form>
 <!-- The year range: a quiet pill at the bottom right of the road; pressed, it opens the range with its picture of busy years -->
 <div id="filters" class="yr">
@@ -180,6 +182,8 @@
   <hr>
   <p class="cap">Play</p>
   <label id="pace-row" class="set"><span class="lbl">Speed</span><span class="rng"><input id="pace" type="range" min="0.25" max="2" step="0.25" value="1" aria-label="Play speed"><small id="pace-now" class="state">1x</small></span></label>
+  <div id="voice-row" class="set" hidden><span class="lbl">Voiceover</span><span id="voice-seg" class="seg" role="group" aria-label="Voiceover"><button type="button" data-v="on">On</button><button type="button" data-v="off">Off</button></span></div>
+  <div id="subs-row" class="set" hidden><span class="lbl">Subtitles</span><span id="subs-seg" class="seg" role="group" aria-label="Subtitles"><button type="button" data-v="on">On</button><button type="button" data-v="off">Off</button></span></div>
   <div id="step-row" class="set"><span class="lbl">Advance</span><span id="step" class="seg" role="group" aria-label="Play"><button type="button" data-v="auto">Auto</button><button type="button" data-v="keys">Arrow keys</button></span></div>
   <hr>
   <p class="cap">Globe</p>

@@ -126,6 +126,31 @@ would need one key per account (OpenRouter's key-provisioning API); that
 is not built. Entries made this way are not reviewed: they are marked
 unverified and carry a link to their Wikipedia article as the source.
 
+## Voiceover
+
+A timeline of your own can be told aloud while it plays. "Generate voiceover", beside Publish, asks for a
+voice (six of Gemini's) and then:
+
+1. The function `voiceover` has a model write the script: an opening that fits the title, one line for each
+   entry in the order play meets them, and a closing, in a tone that suits the subject. This counts as one of
+   the day's requests.
+2. The same function has Gemini's text to speech say the script, a few lines at a time with a long pause
+   between lines. It speaks only words it wrote itself: each part of the script is signed.
+3. The page cuts each piece of speech at the pauses into one clip a line (`cuts()` in `site/voice.js`),
+   makes a small MP3 of each and keeps them in the account's own folder of the `voice` bucket. Anyone who
+   can open the timeline can hear them; only the owner can write there.
+4. The words, and each clip's name and length, are written on the timeline's row under `voice`.
+
+Recording again replaces the clips; "Remove voiceover" takes them away. A change to the timeline keeps the
+voiceover: an entry without a line is simply shown without one, so record again after a large change.
+
+While play travels, the line of the entry in front is said, the music plays softly under it, and play goes no
+faster than the line: it waits at a card whose line is not over. "Voiceover" and "Subtitles" in the three-dot
+menu turn the voice off and write each line at the foot while it is said.
+
+The function needs the secrets `GEMINI_API_KEY` and `OPENROUTER_API_KEY`. `VOICE_MODEL` names another
+text-to-speech model; by default the cheapest Flash one is tried first.
+
 ## Who is signed in, and where they publish
 
 The bar on the left and the account menu show the person who signed in:

@@ -10,6 +10,7 @@ import { EFFORTS, MODELS, findPictures, partialSpec, specToView } from './ai.js'
 import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
+import { VOICES, pcmOf, cuts, voiceOf } from './voice.js';
 export const CONFIG = {
   url: 'https://wwgmelafchslapxiccot.supabase.co',
   key: 'sb_publishable_IykysSfgNLw4CfaqxP2CqA_YNcfq0SW',
@@ -138,6 +139,9 @@ export function createAccount(app) {
     const d = JSON.parse(row.text);
     const view = { ...(d.view || {}), id: 't/' + row.id, name: row.title, description: row.description || '', author: row.username || 'you', type: 'community', picked: true, count: (d.entries || []).length, stored: true };
     delete view.topic;
+    // Its voiceover, if it has one, with the full address of its clips.
+    const vo = voiceOf(d.voice);
+    if (vo) view.voice = { ...vo, base: CLIPS + 'public/voice/' + vo.base };
     return { view, entries: d.entries || [] };
   }
   // One stored timeline by "t/<id>" or "<username>/<slug>": what loadView() asks for.
@@ -524,7 +528,7 @@ export function createAccount(app) {
       const file = specToView(got.spec, seed());
       if (!file.entries.length) throw new Error('That change would leave the timeline empty.');
       const before = { title: row.title, description: row.description, data: JSON.parse(row.text) };
-      await patch(row, { title: file.spec.title, description: file.spec.description, data: { view: file.view, entries: file.entries, spec: file.spec, prompt: before.data.prompt } });
+      await patch(row, { title: file.spec.title, description: file.spec.description, data: { view: file.view, entries: file.entries, spec: file.spec, prompt: before.data.prompt, ...(before.data.voice ? { voice: before.data.voice } : {}) } });
       live(null);
       $('ask-q').value = '';
       toast(got.changed || 'Changed.', { undo: () => patch(row, before).catch((e) => toast(e.message)) });
@@ -533,6 +537,107 @@ export function createAccount(app) {
     working = false; document.body.classList.remove('ai-busy');
   }
   // The requests offered under one kind: pressing the kind again folds them away.
+  // ---- voiceover (site/voice.js, the function `voiceover`): a timeline of the reader's own, told aloud.
+  // The function writes the script and speaks it a few lines at a time; here each piece of speech is cut into
+  // one clip a line, made into MP3 (lamejs, fetched from cdnjs only now) and kept in the account's own folder,
+  // and the words and the clips' names are written on the timeline's row. It counts as one of the day's requests.
+  const CLIPS = CONFIG.url + '/storage/v1/object/';
+  const LAME = 'https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.min.js';
+  const MIC = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v2.5"/></svg>';
+  let voicing = null, lameReady = null;
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+  async function voiceFn(body, tries = 1) {
+    for (let i = 0; ; i++) {
+      const t = await token();
+      const r = await fetch(CONFIG.url + '/functions/v1/voiceover', { method: 'POST', headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      const d = await r.json().catch(() => null);
+      if (r.ok && d) return d;
+      // The voice may be busy for a moment: a part is asked for again after a pause.
+      if (i + 1 < tries && (r.status === 429 || r.status >= 500) && d?.code !== 'limit' && d?.code !== 'not_configured') { await wait(6000 * (i + 1) * (i + 1)); continue; }
+      const err = new Error(d?.error || (r.status === 404 ? 'Voiceover is not switched on yet.' : 'That did not work. Try again.')); err.status = r.status; throw err;
+    }
+  }
+  function lame() {
+    if (!lameReady) lameReady = new Promise((res, rej) => { const s = document.createElement('script'); s.src = LAME; s.onload = () => (window.lamejs ? res(window.lamejs) : rej(new Error('The sound could not be packed.'))); s.onerror = () => { lameReady = null; rej(new Error('The sound could not be packed. Check the connection and try again.')); }; document.head.appendChild(s); });
+    return lameReady;
+  }
+  // One line as an MP3 file: its ends eased so a cut is never heard.
+  function mp3(L, pcm, rate) {
+    const fade = Math.min(Math.round(rate * 0.012), pcm.length >> 1);
+    for (let i = 0; i < fade; i++) { pcm[i] = pcm[i] * i / fade; pcm[pcm.length - 1 - i] = pcm[pcm.length - 1 - i] * i / fade; }
+    const enc = new L.Mp3Encoder(1, rate, 48), out = [];
+    for (let i = 0; i < pcm.length; i += 1152) { const b = enc.encodeBuffer(pcm.subarray(i, i + 1152)); if (b.length) out.push(new Uint8Array(b)); }
+    const end = enc.flush(); if (end.length) out.push(new Uint8Array(end));
+    return new Blob(out, { type: 'audio/mpeg' });
+  }
+  async function putClip(path, blob) {
+    const t = await token();
+    const r = await fetch(CLIPS + 'voice/' + path, { method: 'POST', headers: { apikey: CONFIG.key, Authorization: 'Bearer ' + t, 'Content-Type': 'audio/mpeg', 'cache-control': 'max-age=31536000', 'x-upsert': 'true' }, body: blob });
+    if (!r.ok) throw new Error(r.status === 404 || r.status === 400 ? 'Voiceover is not switched on yet.' : 'A clip could not be saved. Try again.');
+  }
+  // The clips of one timeline are taken away, but for those of the voiceover in use (`keep`: the start of their names).
+  async function clips(id, keep = null) {
+    const prefix = `${user.id}/${id}/`;
+    const got = await api('/storage/v1/object/list/voice', { method: 'POST', body: { prefix, limit: 1000 } });
+    const old = (got || []).map((o) => o.name).filter((n) => n && (keep == null || !n.startsWith(keep)));
+    if (old.length) await api('/storage/v1/object/voice', { method: 'DELETE', body: { prefixes: old.map((n) => prefix + n) } });
+  }
+  async function voiceover(row, voice) {
+    if (voicing || working) return;
+    const say = (note) => { voicing = { row, note }; draw(); };
+    try {
+      const src = app.told();
+      if (!src || !src.entries.length) throw new Error('There is nothing to tell yet.');
+      say('Writing the script…');
+      const [script, L] = await Promise.all([voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries } }), lame()]);
+      const at = Date.now(), base = `${user.id}/${row.id}/`, lines = [];
+      for (let k = 0; k < script.parts.length; k++) {
+        const part = script.parts[k];
+        say(`Recording ${k + 1} of ${script.parts.length}…`);
+        const got = await voiceFn({ speak: { texts: part.texts, sig: part.sig }, voice, style: script.style }, 3);
+        const bytes = new Uint8Array(await (await fetch('data:application/octet-stream;base64,' + got.audio)).arrayBuffer());
+        const m = /rate=(\d+)/.exec(got.mime || ''), { pcm, rate } = pcmOf(bytes, m ? Number(m[1]) : 24000);
+        const at2 = cuts(pcm, rate, part.texts.map((t) => t.length + 12));
+        const first = lines.length;
+        lines.push(...await Promise.all(part.ids.map((id, i) => {
+          const [a, b] = at2[i], name = `${at}-${first + i}.mp3`;
+          return putClip(base + name, mp3(L, pcm.slice(a, b), rate)).then(() => ({ id, text: part.texts[i], src: name, secs: Math.round((b - a) / rate * 100) / 100 }));
+        })));
+      }
+      say('Saving…');
+      const data = JSON.parse(row.text);
+      await patch(row, { data: { ...data, voice: { at, voice, style: script.style, base, lines } } });
+      clips(row.id, at + '-').catch(() => {});
+      toast('The voiceover is ready. Press play to hear it.');
+    } catch (e) {
+      toast(e.message || 'The voiceover could not be made. Try again.');
+    } finally { voicing = null; draw(true); }
+  }
+  async function unvoice(row) {
+    try {
+      const data = JSON.parse(row.text); delete data.voice;
+      await patch(row, { data });
+      clips(row.id).catch(() => {});
+      toast('The voiceover is removed.');
+    } catch (e) { toast(e.message); } finally { draw(true); }
+  }
+  function voiceMenu(anchor, row) {
+    if (voicing) return;
+    const has = voiceOf(JSON.parse(row.text).voice), was = has?.voice || (() => { try { return localStorage.getItem('cg-voice-name'); } catch (e) { return null; } })() || VOICES[0][0];
+    const d = popover(anchor, `<form class="vo-form"><h2>Voiceover</h2>
+      <p class="dlg-sub">${has ? `This timeline is told aloud while it plays: ${has.lines.length} lines. Change the timeline, and you can record it again.` : 'A narrator tells this timeline while it plays: an opening that fits its title, a line for each entry, and a closing. The music plays softly under the voice.'}</p>
+      <label class="fld"><span>Voice</span><select name="voice">${VOICES.map(([v, w]) => `<option value="${v}"${v === was ? ' selected' : ''}>${v} · ${w}</option>`).join('')}</select></label>
+      <button type="submit" class="big pri">${has ? 'Record again' : 'Generate voiceover'}</button>
+      ${has ? '<button type="button" class="big" data-unvoice>Remove voiceover</button>' : ''}
+      <p class="dlg-sub">Uses one of today's requests.</p></form>`);
+    d.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const v = d.querySelector('select').value;
+      try { localStorage.setItem('cg-voice-name', v); } catch (x) { /* private window */ }
+      closeLayer(); voiceover(row, v);
+    });
+    d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
+  }
   function showKind(id) {
     const list = $('cr-list'), k = KINDS.find((x) => x.id === id), same = !list.hidden && list.dataset.kind === id;
     document.querySelectorAll('.cr-ideas [data-kind]').forEach((b) => b.setAttribute('aria-expanded', !same && b.dataset.kind === id));
@@ -577,6 +682,7 @@ export function createAccount(app) {
     a.busy();
     try {
       await api(`/rest/v1/timelines?id=eq.${row.id}`, { method: 'DELETE' });
+      clips(row.id).catch(() => {});
       const id = 't/' + row.id, on = app.views().includes(id);
       rows.delete(row.id); app.forget(id);
       closeLayer();
@@ -687,7 +793,7 @@ export function createAccount(app) {
       .catch(() => { asked = false; });
   }
   function draw(force) {
-    const on = app.views(), cur = current(), key = [user?.id, profile?.username, listed, on.join(), list.map((t) => t.id + t.title + t.visibility).join(), cur?.visibility].join('|');
+    const on = app.views(), cur = current(), key = [user?.id, profile?.username, listed, on.join(), list.map((t) => t.id + t.title + t.visibility).join(), cur?.visibility, voicing?.note, cur && cur.text.includes('"voice":{')].join('|');
     if (!force && key === drawn) return;
     drawn = key;
     // "Create timeline" stands first under "Your timelines", as a lit button so it is seen (asked for, Nov 2026).
@@ -701,7 +807,9 @@ export function createAccount(app) {
     // Beside the search: what this timeline is, and the way to publish it.
     if (editor.isOpen() && editor.row() !== cur) editor.close();
     const editable = !!cur && !working && cur.text.includes('"spec":{');
-    $('tl-state').innerHTML = cur ? `${editable ? '<button type="button" class="ebtn" id="ed-open"><span class="wide">Open in editor</span><span class="narrow">Edit</span></button>' : ''}<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
+    const told = !!cur && cur.text.includes('"voice":{'), busyHere = voicing && voicing.row === cur;
+    const VO = cur && !working ? `<button type="button" class="ebtn vo${told ? ' has' : ''}" id="vo-open" title="${told ? 'This timeline has a voiceover' : 'Have this timeline told aloud while it plays'}"${busyHere ? ' disabled' : ''}>${MIC}<span class="wide">${busyHere ? esc(voicing.note) : told ? 'Voiceover' : 'Generate voiceover'}</span></button>` : '';
+    $('tl-state').innerHTML = cur ? `${VO}${editable ? '<button type="button" class="ebtn" id="ed-open"><span class="wide">Open in editor</span><span class="narrow">Edit</span></button>' : ''}<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
     document.body.classList.toggle('mine', !!cur);
     const canAsk = !!cur && cur.text.includes('"spec":{');
     if ($('ask').hidden === canAsk) {
@@ -750,6 +858,7 @@ export function createAccount(app) {
       if (el('[data-sb-home]')) return explore(false);
       if (el('#sb-in')) return signIn();
       if (el('#publish')) return publish(el('#publish'));
+      if (el('#vo-open')) { const r = current(); if (r) voiceMenu(el('#vo-open'), r); return undefined; }
       if (el('#ed-open')) { const r = current(); if (r && !editor.open(r)) toast('This timeline cannot be opened in the editor.'); return undefined; }
       const open = el('[data-open]');
       if (open) { if (phone()) setOpen(false); return app.show('t/' + open.dataset.open); }

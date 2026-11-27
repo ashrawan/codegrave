@@ -12,6 +12,7 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
+import { createVoice, toldPace } from './voice.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -947,7 +948,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // On the globe, play takes each stretch between two entries in a set time (globe.legSecs()), whatever its
       // length, so the camera, which follows the reader, travels evenly and never waits.
       const stepping = play.on && play.step && road.stepEnd != null, back = stepping && dir * (road.stepEnd - road.t) < 0;
-      const want = !play.on || (play.step && !stepping) ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
+      let want = !play.on || (play.step && !stepping) ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
+      // With a voiceover, the reader goes no faster than the line being said, and waits where it is not over
+      // when its card would go (toldPace; asked for, Nov 2026).
+      if (want && !play.step && telling() && voice.busy()) want = road.gleg ? road.gleg / L.D * toldPace(play.speed / globe.legSecs(), road.gfrac, voice.left()) : 0;
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       if (play.on && play.step && !stepping) road.vel = 0;
@@ -996,6 +1000,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     road.gcur = undefined;
     globe.show(steps);
     globePanes(steps);
+    voice.set(voiceNow(), ''); drawTold();
   }
   // With several views each has a globe and cards of its own, in a grid, and the one time line runs below them
   // (asked for, Nov 2026). A pane is kept while its view stays, so its map is not made again.
@@ -1052,7 +1057,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // How far on from the entry in front towards the next: the camera and the time line at the foot go by it.
     const from = cur ? cur.a : dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D;
     road.gleg = next && next.a !== from ? Math.abs(next.a - from) : 0;
-    const fresh = globe.at(id, road.gleg ? clamp((edge - from) / (next.a - from), 0, 1) : 0, play.on);
+    road.gfrac = road.gleg ? clamp((edge - from) / (next.a - from), 0, 1) : 0;
+    const fresh = globe.at(id, road.gfrac, play.on);
+    tell(id, next);
     // Each view's own globe goes by the same reader: its entry in front is the last of its own the reader has come to.
     for (const pn of panes.values()) {
       let c = !play.on && state.open && state.open !== road.gfree ? pn.order.find((p) => p.t.id === state.open) || null : null, n = null;
@@ -2375,7 +2382,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!L) return;
     if (matchMedia(PHONE).matches) showSide(false);
     road.target = null;
-    if (from != null || camAtEnd()) { turnsOver(); musicAgain(); }
+    if (from != null || camAtEnd()) { turnsOver(); musicAgain(); voice.stop(); told.cue = undefined; }
     if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
     play.on = true; road.pace = 1; document.body.classList.add('film');
@@ -2386,7 +2393,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
   // pointer nears the top edge, when anything in it has focus, and when play stops.
-  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
+  function drawPlay() { if (L) roadHud(true); tune(); if (play.on) voice.resume(); else voice.pause(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
   // On the globe a pause stops dead, exactly where play was (asked for, Nov 2026); the road eased to a stop.
   function pausePlay() { play.on = false; road.stepEnd = null; if (GLOBE) road.vel = 0; drawPlay(); }
   // Play by the arrow keys ("Play" in the three-dot menu, `cg-step` in this browser; asked for, Nov 2026): play
@@ -2473,7 +2480,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // when play is first pressed with the sound on, it eases in and out so nothing starts or stops with a
   // jolt, and pausing keeps its place. Showing another view, or playing again from the beginning, starts
   // the track from its beginning too. The sound button silences it.
-  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4;
+  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.09;   // under a voiceover the music is only a background
   const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
   // The track for what is on the road: the view's own when its play was pressed, else the house track.
   function trackNow() {
@@ -2482,7 +2489,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   const musicAgain = () => { music.fresh = true; };
   function tune() {
-    music.want = play.on && sound.on ? MUSIC_VOL : 0;
+    music.want = play.on && sound.on ? (telling() ? MUSIC_UNDER : MUSIC_VOL) : 0;
     if (music.want) {
       const src = trackNow();
       try {
@@ -2504,6 +2511,43 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
         if (!music.want) el.pause();
       }
     }, 50);
+  }
+  // The voiceover (voice.js): a timeline someone keeps may be told aloud, a line for each entry. While play
+  // travels the line of the entry in front is said, the music sinks under it, and the reader waits where a
+  // line is not over yet. "Voiceover" in the three-dot menu turns it off (`cg-voice` in this browser), and
+  // "Subtitles" writes each line at the foot while it is said (`cg-subs`). Only a road of one view is told.
+  const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '' };
+  const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), said: (text) => { told.text = text; drawSubs(); } });
+  const voiceNow = () => (state.views.length === 1 && viewById.get(state.views[0])?.voice) || null;
+  const telling = () => told.on && sound.on && voice.any();
+  function drawSubs() {
+    const el = $('subs'), on = told.subs && !!told.text;
+    if (on) el.textContent = told.text;
+    el.classList.toggle('on', on);
+  }
+  // Called whenever the reader moves: `id` is the entry in front (null before the first), `next` the one after.
+  function tell(id, next) {
+    if (!telling()) { if (told.cue !== undefined) { voice.stop(); told.cue = undefined; } return; }
+    const key = id ?? 'intro';
+    // Standing still, a line that was being said belongs to where the reader was: moving on ends it.
+    if (!play.on) { if (told.cue !== undefined && key !== told.cue && told.cue !== 'outro') { voice.stop(); told.cue = undefined; } return; }
+    if (told.cue === 'outro') return;
+    const after = next ? next.t.id : 'outro';
+    if (key !== told.cue) {
+      told.cue = key; told.then = null;
+      // A view opens on its first entry, so the opening is said there, before that entry's own line.
+      if (id != null && road.gorder[0].t.id === id && voice.has('intro')) { told.then = key; voice.cue('intro', key); }
+      else voice.cue(key, after);
+    } else if (told.then && !voice.busy()) { voice.cue(told.then, after); told.then = null; }
+    else if (!next && id != null && !voice.busy()) { told.cue = 'outro'; voice.cue('outro'); }
+  }
+  function drawTold() {
+    const any = voice.any();
+    $('voice-row').hidden = $('subs-row').hidden = !any;
+    for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
+    for (const b of $('subs-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.subs));
+    if (!telling()) { voice.stop(); told.cue = undefined; }
+    drawSubs(); tune();
   }
   // The road rests while the tab is hidden, so the music does too.
   document.addEventListener('visibilitychange', () => {
@@ -2528,6 +2572,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // Turning it on lets you hear what you turned on.
     if (sound.on) { soundReady(); setTimeout(() => breath(0), 60); }
     tune();
+    drawTold();
   }
 
   // The symbols, and where the data comes from. Opened from the panel's info button.
@@ -2708,6 +2753,19 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!b) return;
       if (globe) { globe.look(b.dataset.v); for (const pn of panes.values()) pn.g.look(b.dataset.v); } else store.set('cg-look', b.dataset.v);
       lookShow(b.dataset.v);
+    });
+    // The voiceover and its subtitles, for a timeline that has one.
+    $('voice-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      told.on = b.dataset.v === 'on'; store.set('cg-voice', told.on ? '1' : '0'); drawTold();
+    });
+    $('subs-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      told.subs = b.dataset.v === 'on'; store.set('cg-subs', told.subs ? '1' : '0'); drawTold();
     });
     // Play: by itself, or one entry at a time by the arrow keys.
     const stepShow = () => { for (const b of $('step').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'keys') === play.step)); };
@@ -3045,6 +3103,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     listChanged: () => runSearch(),
     replace: replaceView, forget: forgetView, home: () => location.assign('/'),
     focusSearch: () => $('q').focus(),
+    // What a voiceover tells: the entries in the order play meets them.
+    told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), summary: p.t.summary || '' })) }; },
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
   });
   const authFailed = account.boot();      // before the address is read: a returning sign-in leaves its tokens after "#"

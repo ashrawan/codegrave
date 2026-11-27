@@ -451,3 +451,14 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
   #ai-live.low ol { display: grid; grid-template-columns: auto auto; }
   body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 232px; }
 }
+
+/* Voiceover: its button beside Publish, and the small form it opens. */
+.ebtn.vo { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+.ebtn.vo.has svg { color: var(--acc); }
+.ebtn.vo:disabled { opacity: .75; pointer-events: none; }
+.ebtn.vo:disabled .wide { display: inline; }
+.pop .vo-form { width: min(330px, calc(100vw - 48px)); padding: 4px 2px 0; }
+.pop .vo-form .dlg-sub { margin: 6px 0 14px; line-height: 1.45; }
+.pop .vo-form .big + .dlg-sub { margin: 10px 0 0; font-size: 12.5px; text-align: center; color: var(--faint); }
+.vo-form select { width: 100%; height: 42px; padding: 0 10px; font-size: 14.5px; color: var(--text); background: var(--bg); border: 1px solid var(--rule2); border-radius: 12px; }
+@media (max-width: 699px) { .ebtn.vo { padding: 0 11px; } }
