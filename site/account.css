@@ -194,15 +194,15 @@ body.side-open #filters { right: calc(var(--side) + var(--bar) + 14px); }
 .yr.open .yr-pop { display: block; }
 body.playing #filters:not(.open), body.exploring #filters { display: none; }
 #toggle-side { display: none; }
-#more-menu { position: fixed; right: 8px; bottom: 52px; z-index: 40; min-width: 250px; padding: 6px; background: var(--surf); border: 1px solid var(--glass-edge); border-radius: 14px; box-shadow: 0 16px 40px rgba(0, 0, 0, .45); }
-body.side-open #more-menu { right: calc(var(--side) + 8px); }
-#more-menu .cap { margin: 6px 10px 4px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
-#more-menu hr { height: 1px; margin: 6px -6px; border: 0; background: var(--rule); }
-#more-menu .nv img { flex: none; margin: 0 1px; }
-#more-menu .to-dark, [data-theme="light"] #more-menu .to-light { display: none; }
-[data-theme="light"] #more-menu .to-dark { display: inline; }
-#more-menu[hidden] { display: none; }
-body #more-menu .nv { justify-content: flex-start; padding: 0 10px; text-decoration: none; }
+:is(#more-menu, #vo-menu) { position: fixed; right: 8px; bottom: 52px; z-index: 40; min-width: 250px; padding: 6px; background: var(--surf); border: 1px solid var(--glass-edge); border-radius: 14px; box-shadow: 0 16px 40px rgba(0, 0, 0, .45); }
+body.side-open :is(#more-menu, #vo-menu) { right: calc(var(--side) + 8px); }
+:is(#more-menu, #vo-menu) .cap { margin: 6px 10px 4px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
+:is(#more-menu, #vo-menu) hr { height: 1px; margin: 6px -6px; border: 0; background: var(--rule); }
+:is(#more-menu, #vo-menu) .nv img { flex: none; margin: 0 1px; }
+:is(#more-menu, #vo-menu) .to-dark, [data-theme="light"] :is(#more-menu, #vo-menu) .to-light { display: none; }
+[data-theme="light"] :is(#more-menu, #vo-menu) .to-dark { display: inline; }
+:is(#more-menu, #vo-menu)[hidden] { display: none; }
+body :is(#more-menu, #vo-menu) .nv { justify-content: flex-start; padding: 0 10px; text-decoration: none; }
 @media (min-width: 861px) { #info { left: calc(var(--sb) + 12px); right: auto; } }
 
 /* folded: icons only */
@@ -352,7 +352,7 @@ html, body { touch-action: pan-x pan-y; }
   #road-views { top: 62px; max-width: calc(100% - 28px); }
   /* On a phone the period stands in the top corner, level with the search (asked for, Nov 2026). */
   #road-head { top: 58px; }
-  body.side-open #more-menu { right: 8px; }
+  body.side-open :is(#more-menu, #vo-menu) { right: 8px; }
   /* a field under 16px makes a phone's browser zoom in when it is tapped */
   input, textarea, select { font-size: 16px !important; }
   #sb { width: min(310px, 82vw); padding-bottom: 18px; transform: translateX(-102%); transition: transform .22s ease; box-shadow: 12px 0 40px rgba(0, 0, 0, .4); }
@@ -399,7 +399,7 @@ html, body { touch-action: pan-x pan-y; }
 #sb-list #sb-new { margin: 2px 0 10px; min-height: 38px; font-weight: 600; color: var(--acc); background: color-mix(in srgb, var(--acc) 13%, transparent); border: 1px solid color-mix(in srgb, var(--acc) 46%, transparent); border-radius: 10px; transition: background .15s, border-color .15s; }
 #sb-list #sb-new:hover, #sb-list #sb-new.on { color: var(--acc); background: color-mix(in srgb, var(--acc) 22%, transparent); border-color: var(--acc); }
 body:not(.sb-open) #sb-list #sb-new { width: 36px; margin-inline: auto; }
-#more-menu .state { margin-left: auto; font-size: 12px; color: var(--faint); }
+:is(#more-menu, #vo-menu) .state { margin-left: auto; font-size: 12px; color: var(--faint); }
 .ex-gh { display: flex; align-items: center; justify-content: center; gap: 8px; width: max-content; margin: 14px auto 0; font-size: 13px; color: var(--muted); text-decoration: none; }
 .ex-gh:hover { color: var(--text); }
 body.fine #filters { display: none; }

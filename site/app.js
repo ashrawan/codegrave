@@ -2576,11 +2576,12 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }, 300); }
   function drawChip() {
     const el = $('vo-chip'), any = voice.any() && state.views.length === 1, ready = any && told.kept >= told.lines;
-    el.hidden = !any;
-    el.classList.toggle('ready', ready);
-    el.setAttribute('aria-pressed', String(told.on));
-    el.title = !told.on ? 'This timeline has a voiceover. It is off: press to turn it on.' : ready ? 'This timeline has a voiceover, ready on this device. Press to turn it off.' : `This timeline has a voiceover. Its voice is made on this device as it plays (${told.kept || 0} of ${told.lines || 0} lines ready). Press to turn it off.`;
-    el.setAttribute('aria-label', el.title);
+    el.classList.toggle('voiced', any); el.classList.toggle('ready', ready); el.classList.toggle('off', any && !told.on);
+    el.classList.toggle('x1', play.speed === 1);
+    $('vo-x').textContent = String(play.speed) + 'x';
+    $('vo-cap').textContent = any ? 'Voiceover' : 'Play';
+    el.title = !any ? `Play speed: ${play.speed}x` : !told.on ? 'This timeline has a voiceover. It is off.' : ready ? 'This timeline has a voiceover, ready on this device.' : `This timeline has a voiceover. Its voice is made on this device as it plays (${told.kept || 0} of ${told.lines || 0} lines ready).`;
+    el.setAttribute('aria-label', el.title + ' Open the voiceover and speed.');
   }
   function drawTold() {
     const any = voice.any();
@@ -2770,7 +2771,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       $('info').hidden = !on; $('info-btn').setAttribute('aria-expanded', on);
     });
     // How fast play travels (cg-pace in this browser): 1x is the pace it was made for, less lingers on each card.
-    const paceShow = () => { voice.rate(play.speed); $('pace').value = play.speed; $('pace-now').textContent = String(play.speed).replace(/^0\./, '0.') + 'x'; };
+    const paceShow = () => { voice.rate(play.speed); drawChip(); $('pace').value = play.speed; $('pace-now').textContent = String(play.speed).replace(/^0\./, '0.') + 'x'; };
     play.speed = clamp(Number(store.get('cg-pace')) || 1, 0.25, 2);
     paceShow();
     $('pace').addEventListener('input', () => { play.speed = clamp(Number($('pace').value) || 1, 0.25, 2); store.set('cg-pace', String(play.speed)); paceShow(); });
@@ -2805,7 +2806,15 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!b) return;
       told.on = b.dataset.v === 'on'; store.set('cg-voice', told.on ? '1' : '0'); drawTold();
     });
-    $('vo-chip').addEventListener('click', (e) => { e.stopPropagation(); told.on = !told.on; store.set('cg-voice', told.on ? '1' : '0'); drawTold(); });
+    const voMenu = (on) => {
+      const m = $('vo-menu'), r = $('vo-chip').getBoundingClientRect();
+      // Just over the chip, wherever play stands (the strip steps away in the film layout).
+      if (on) { m.style.bottom = Math.round(innerHeight - r.top + 14) + 'px'; m.style.right = Math.max(8, Math.round(innerWidth - r.right - 60)) + 'px'; }
+      m.hidden = !on; $('vo-chip').setAttribute('aria-expanded', on);
+    };
+    $('vo-chip').addEventListener('click', (e) => { e.stopPropagation(); const on = $('vo-menu').hidden; document.body.click(); voMenu(on); });
+    $('vo-menu').addEventListener('click', (e) => e.stopPropagation());
+    document.addEventListener('click', () => voMenu(false));
     $('gpu-row').addEventListener('click', (e) => {
       e.stopPropagation();
       const b = e.target.closest('button[data-v]');

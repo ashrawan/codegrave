@@ -645,18 +645,18 @@ body.globe .g-credit { display: inline-flex; }
 /* The three-dot menu (restructured on request, Nov 2026): groups under small headings, and in each a row is a
    name on the left and its control on the right, every control the same width so they stand in one column. The
    choice that is on is lit in the accent colour. */
-#more-menu { width: 318px; max-width: calc(100vw - 16px); max-height: calc(100vh - 64px); overflow-y: auto; padding: 8px; }
-#more-menu .cap { margin: 8px 10px 6px; }
-#more-menu hr { margin: 8px -8px; }
-#more-menu .set { display: grid; grid-template-columns: minmax(0, 1fr) 186px; align-items: center; gap: 12px; min-height: 36px; padding: 0 6px 0 10px; font-size: 13.5px; color: var(--text); cursor: default; }
-#more-menu .set .lbl { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-#more-menu .rng { display: flex; align-items: center; gap: 10px; }
-#more-menu .rng input { flex: 1; min-width: 0; margin: 0; accent-color: var(--acc); touch-action: none; }
-#more-menu .rng .state { flex: none; width: 34px; text-align: right; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--muted); }
-#more-menu .seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border: 1px solid var(--rule2); border-radius: 9px; }
-#more-menu .seg button { height: 26px; padding: 0 2px; font-size: 12px; white-space: nowrap; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; transition: color .15s, background .15s; }
-#more-menu .seg button:hover { color: var(--text); }
-#more-menu .seg button[aria-pressed="true"] { font-weight: 600; color: var(--acc); background: color-mix(in srgb, var(--acc) 18%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 55%, transparent); }
+:is(#more-menu, #vo-menu) { width: 318px; max-width: calc(100vw - 16px); max-height: calc(100vh - 64px); overflow-y: auto; padding: 8px; }
+:is(#more-menu, #vo-menu) .cap { margin: 8px 10px 6px; }
+:is(#more-menu, #vo-menu) hr { margin: 8px -8px; }
+:is(#more-menu, #vo-menu) .set { display: grid; grid-template-columns: minmax(0, 1fr) 186px; align-items: center; gap: 12px; min-height: 36px; padding: 0 6px 0 10px; font-size: 13.5px; color: var(--text); cursor: default; }
+:is(#more-menu, #vo-menu) .set .lbl { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+:is(#more-menu, #vo-menu) .rng { display: flex; align-items: center; gap: 10px; }
+:is(#more-menu, #vo-menu) .rng input { flex: 1; min-width: 0; margin: 0; accent-color: var(--acc); touch-action: none; }
+:is(#more-menu, #vo-menu) .rng .state { flex: none; width: 34px; text-align: right; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--muted); }
+:is(#more-menu, #vo-menu) .seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border: 1px solid var(--rule2); border-radius: 9px; }
+:is(#more-menu, #vo-menu) .seg button { height: 26px; padding: 0 2px; font-size: 12px; white-space: nowrap; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; transition: color .15s, background .15s; }
+:is(#more-menu, #vo-menu) .seg button:hover { color: var(--text); }
+:is(#more-menu, #vo-menu) .seg button[aria-pressed="true"] { font-weight: 600; color: var(--acc); background: color-mix(in srgb, var(--acc) 18%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 55%, transparent); }
 #globe .g-rows { cursor: grab; touch-action: none; }
 #globe .g-rows.drag { cursor: grabbing; }
 #globe .g-rows.drag .g-nm { pointer-events: none; }
@@ -827,7 +827,7 @@ body.fullscreen:not(.peek) .tsearch:not(:focus-within), body.fullscreen:not(.pee
 
 /* The voiceover: its two settings show only for a timeline that has one, and the line being said is written
    at the foot while it is said (subtitles), over the map and under nothing. */
-#more-menu .set[hidden] { display: none; }
+:is(#more-menu, #vo-menu) .set[hidden] { display: none; }
 #subs { position: fixed; left: calc(var(--sb) + (100vw - var(--sb)) / 2); bottom: 96px; z-index: 18; width: max-content; max-width: min(760px, calc(100vw - var(--sb) - 48px)); margin: 0; padding: 8px 16px; transform: translateX(-50%); font-size: 17px; line-height: 1.45; text-align: center; text-wrap: balance; color: #fff; background: rgba(8, 10, 16, .72); border-radius: 10px; opacity: 0; pointer-events: none; transition: opacity .25s; }
 #subs.on { opacity: 1; }
 #subs.wait { font-size: 13.5px; color: rgba(255, 255, 255, .8); }
@@ -838,13 +838,19 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { #subs { transition: none; } }
 
-/* By play: this timeline has a voiceover (asked for, Nov 2026). The dot is lit when its voice is ready on this
-   device, hollow while it still has to be made here; a press turns the voiceover off and on. */
-.vochip { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; font-size: 12px; color: var(--text); background: color-mix(in srgb, var(--bg) 55%, transparent); border: 1px solid var(--line); border-radius: 14px; white-space: nowrap; }
-.vochip[hidden] { display: none; }
-.vochip i { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--accent); }
-.vochip.ready i { background: var(--accent); }
-.vochip[aria-pressed="false"] { color: var(--faint); }
-.vochip[aria-pressed="false"] span { text-decoration: line-through; }
-.vochip[aria-pressed="false"] i { border-color: var(--faint); background: none; }
-@media (max-width: 699px) { .vochip span { display: none; } .vochip { padding: 0 8px; } }
+/* By play: a person speaking when this timeline has a voiceover (asked for, Nov 2026: a symbol, not the word),
+   with a dot that is lit when its voice is ready on this device and hollow while it still has to be made here;
+   on any timeline the speed of play when it is not 1x. A press opens the voiceover and the speed (#vo-menu). */
+.vochip { display: inline-flex; align-items: center; gap: 5px; height: 28px; min-width: 28px; justify-content: center; padding: 0 7px; font-size: 11.5px; color: var(--muted); background: transparent; border: 0; border-radius: 14px; white-space: nowrap; }
+.vochip:hover, .vochip[aria-expanded="true"] { color: var(--text); background: var(--raised); }
+.vochip b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.vochip i { width: 6px; height: 6px; border-radius: 50%; border: 1.5px solid var(--acc); }
+.vochip.ready i { background: var(--acc); }
+.vochip:not(.voiced) svg, .vochip:not(.voiced) i { display: none; }
+.vochip.voiced.x1 b { display: none; }
+.vochip.voiced { color: var(--text); }
+.vochip.off svg { opacity: .45; }
+.vochip.off i { border-color: var(--faint); background: none; }
+#vo-menu { bottom: 104px; width: 300px; }
+#vo-menu .set { grid-template-columns: minmax(0, 1fr) 170px; }
+@media (max-width: 699px) { #vo-menu { bottom: 150px; } }
