@@ -562,14 +562,17 @@ export function createAccount(app) {
   const onNow = () => app.views().join();
   // `guide` is the reader's own words on how to tell it (asked for, Nov 2026; not needed): the function gives
   // them to the writer, and they are kept beside the script so Write again starts from them.
-  async function voiceover(row, voice, guide = '') {
+  // `span` is the part of the timeline to tell, by entry ([from, to]; asked for, Nov 2026, like the period of
+  // an export: not needed, and without it the whole timeline is told).
+  async function voiceover(row, voice, guide = '', span = null) {
     if (voicing || working) return;
     voicing = { key: onNow(), step: 1, note: 'Writing the script…', open: true };
     draw();
     try {
       const src = app.told();
       if (!src || !src.entries.length) throw new Error('There is nothing to tell yet.');
-      const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries, ...(guide ? { guide } : {}) } });
+      const part = span ? src.entries.slice(span[0], span[1] + 1) : src.entries;
+      const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: part, ...(guide ? { guide } : {}) } });
       await row.set({ at: Date.now(), voice, style: script.style || '', ...(guide ? { guide } : {}), lines: script.lines });
       await record(voice, script.lines);
       if (!voicing.early) toast('The voiceover is ready. Press play to hear it.');
@@ -703,6 +706,33 @@ export function createAccount(app) {
     me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } }, text || undefined);
     if (!loaded) { const t = setInterval(() => { if (sample !== me) return clearInterval(t); if (app.speaker().ready()) { clearInterval(t); b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } }, 300); }
   }
+  // The part of the timeline a voiceover tells: the same strip with two handles as in the export dialog.
+  function spanPick(ents) {
+    const n = ents.length - 1, st = { from: 0, to: Math.max(0, n) };
+    const html = n < 1 ? '' : `<div class="ex-span vo-span"><div class="ex-span-h"><b>Period <small>Optional</small></b><span class="ex-snote"></span></div>
+      <div class="yearbar ex-yb"><div class="ex-hist">${Array.from({ length: Math.min(ents.length, 60) }, () => '<i></i>').join('')}</div><input type="range" data-span="from" min="0" max="${n}" step="1" aria-label="First entry"><input type="range" data-span="to" min="0" max="${n}" step="1" aria-label="Last entry"></div>
+      <div class="ex-ends"><span data-end="from"></span><span data-end="to"></span></div></div>`;
+    const wire = (d) => {
+      const box = d.querySelector('.vo-span');
+      if (!box) return;
+      const q = (x) => box.querySelector(x), hs = box.querySelectorAll('.ex-hist i');
+      const show = () => {
+        q('[data-span=from]').value = st.from; q('[data-span=to]').value = st.to;
+        const a = ents[st.from], b = ents[st.to], yb = q('.ex-yb'), count = st.to - st.from + 1;
+        yb.style.setProperty('--lo', (st.from / n * 100) + '%'); yb.style.setProperty('--hi', (st.to / n * 100) + '%');
+        hs.forEach((el, k) => { const at = hs.length > 1 ? k / (hs.length - 1) * n : 0; el.classList.toggle('off', at < st.from - 0.5 || at > st.to + 0.5); });
+        q('.ex-snote').textContent = `${a.mark || ''}${a.mark && b.mark && a.mark !== b.mark ? ' to ' + b.mark : ''} · ${count === ents.length ? `all ${ents.length} entries` : `${count} of ${ents.length} entries`}`;
+        q('[data-end=from]').textContent = a.name; q('[data-end=to]').textContent = b.name;
+      };
+      box.addEventListener('input', (e) => {
+        const k = e.target.dataset.span, v = Number(e.target.value);
+        if (k === 'from') st.from = Math.min(v, st.to); else if (k === 'to') st.to = Math.max(v, st.from); else return;
+        show();
+      });
+      show();
+    };
+    return { html, wire, get: () => (st.from > 0 || st.to < n ? [st.from, st.to] : null) };
+  }
   function voiceMenu(anchor, row) {
     if (voicing) return;
     const has = voiceOf(row.get()), was = has?.voice || (() => { try { const v = localStorage.getItem('cg-voice-name'); return isVoice(v) ? v : null; } catch (e) { return null; } })() || DEFAULT_VOICE;
@@ -715,23 +745,24 @@ export function createAccount(app) {
       <p class="vo-load" hidden></p>
       <p class="vo-slow" hidden>This device makes the voice slowly. Play will pause at each card until its line is ready.</p>
       <p class="dlg-err" role="alert"></p>`;
-    const byId = new Map((app.told()?.entries || []).map((e) => [e.id, e]));
+    const ents = app.told()?.entries || [], span = spanPick(ents);
+    const byId = new Map(ents.map((e) => [e.id, e]));
     const lineEl = (l) => { const e = byId.get(l.id), edge = l.id === 'intro' ? 'Opening' : l.id === 'outro' ? 'Closing' : ''; return `<li${edge ? ' class="edge"' : ''}><span>${esc(edge || e?.when || '')}</span><div>${e ? `<b>${esc(e.name)}</b>` : ''}<p>${esc(l.text)}</p></div></li>`; };
     const d = modal(has ? `<form class="vo-form vb">
       <div class="vo-list"><h2>Voiceover</h2><div class="cap">Voice</div>
         <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, 'row')).join('')}</div>${notes}</div>
       <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span><button type="submit" class="big" title="Writes the script again from the timeline as it is now. Uses one of today's requests.">Write again</button></div>
-        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>
+        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>${span.html}
         <ol>${has.lines.map(lineEl).join('')}</ol></div>
       <div class="exf"><span class="ex-say"><span>${has.lines.length} lines. Made on your device; changing the voice is free.</span></span><button type="button" class="big vo-rm" data-unvoice>Remove voiceover</button><button type="button" class="big pri" data-revoice>Use <span data-vname></span></button></div></form>`
       : `<form class="vo-form va">
       <div class="vo-head"><h2>Choose a voice</h2><p class="dlg-sub">It tells ${esc(row.title || 'this timeline')} while it plays: an opening, a line for each entry${byId.size ? ` (${byId.size})` : ''}, and a closing.${row.own ? '' : ' Kept in this browser, for you alone.'}</p></div>
       <div class="vo-body"><div class="vo-voices cards" role="radiogroup" aria-label="Voice">${kok.map((v) => voiceEl(v, 'card')).join('')}</div>
         ${voiceEl(dev, 'row dev')}
-        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>${notes}</div>
+        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>${span.html}${notes}</div>
       <div class="exf"><span class="ex-say"><span>Uses one of today's requests.</span></span><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Generate with <span data-vname></span></button></div></form>`, 'vodlg ' + (has ? 'vb' : 'va'));
     const nameIt = () => { const n = d.querySelector('[data-vname]'); if (n) n.textContent = voiceLabel(d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE); };
-    nameIt(); d.addEventListener('change', nameIt);
+    nameIt(); d.addEventListener('change', nameIt); span.wire(d);
     // The voice starts downloading as the dialog opens, and the dialog says how far it has come. Where the
     // graphics card can make it, the faster voice is offered (off unless the reader turned it on).
     const pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
@@ -754,7 +785,7 @@ export function createAccount(app) {
     }, 250);
     const err = d.querySelector('.dlg-err');
     d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }, has && has.lines.length ? has.lines.map((l) => l.text) : ''); } });
-    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v, d.querySelector('[name=guide]')?.value.trim().slice(0, 400) || ''); });
+    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v, d.querySelector('[name=guide]')?.value.trim().slice(0, 400) || '', span.get()); });
     d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });
     d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
   }

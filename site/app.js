@@ -2611,11 +2611,13 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const after = next ? next.t.id : 'outro';
     if (key !== told.cue) {
       told.cue = key; told.then = null;
-      // A view opens on its first entry, so the opening is said there, before that entry's own line.
-      if (id != null && road.gorder[0].t.id === id && voice.has('intro')) { told.then = key; voice.cue('intro', key); }
+      // The opening is said on the first entry that has a line and the closing after the last that has one:
+      // the whole timeline, or the part a voiceover was written for (asked for, Nov 2026).
+      told.first = road.gorder.find((p) => voice.has(p.t.id))?.t.id; told.last = road.gorder.findLast((p) => voice.has(p.t.id))?.t.id;
+      if (id != null && told.first === id && voice.has('intro')) { told.then = key; voice.cue('intro', key); }
       else voice.cue(key, after);
     } else if (told.then && !voice.busy()) { voice.cue(told.then, after); told.then = null; }
-    else if (!next && id != null && !voice.busy()) { told.cue = 'outro'; voice.cue('outro'); }
+    else if (id != null && (!next || id === told.last) && !voice.busy()) { told.cue = 'outro'; voice.cue('outro'); }
   }
   // The chip by play: how many of this timeline's lines this browser has already made in its voice.
   let keptAt = 0;

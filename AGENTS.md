@@ -434,6 +434,13 @@ How the page is put together:
   as `guide` with the script request, the function `voiceover` gives them to the writer as guidance that never
   changes the facts or the shape of the answer, and they are kept beside the script (`voice.guide`) so Write again
   starts from them. The quick Generate in the menu by play sends none.
+- **A long timeline is told to its end, and a part of one can be told (Nov 2026, asked for).** The function
+  `voiceover` writes a long timeline in parts of `PART` entries, side by side, and joins them (the opening from the
+  first part, the closing from the last), after a timeline of two or three hundred entries came back with no
+  lines at its end; it is still one request. Both voice dialogs have "Period" under the prompt (`spanPick()` in
+  `site/account.js`, the same strip with two handles as the export's; not needed): then only those entries are
+  sent and told. The opening is said on the first entry that has a line and the closing after the last that has
+  one (`told.first`, `told.last` in `tell()`).
 - **When an export is saved (Nov 2026, asked for)** a note stands at the top right, "Video downloaded" with the
   file's name, until the reader closes it with its cross (`exported()` in `site/account.js`, `#ex-done`); not a toast.
 - **Arrows during play (Nov 2026, asked for).** While automatic play travels, the left and right arrow keys glide

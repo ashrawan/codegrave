@@ -566,6 +566,9 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .vo-guide textarea:focus { border-color: color-mix(in srgb, var(--acc) 70%, transparent); }
 .vo-script .vo-guide { margin: 0 26px 12px 0; }
 .vo-body > .vo-guide { margin-top: 2px; }
+.ex-span.vo-span { margin: 12px 0 4px; padding: 0; }
+.vo-span .ex-span-h small { margin-left: 6px; font-weight: 400; }
+.vo-script .ex-span.vo-span { margin: 0 26px 14px 0; width: auto; }
 .vo-script ol { flex: 1; min-height: 0; margin: 0; padding: 0 26px 16px 0; overflow-y: auto; list-style: none; }
 .vo-script li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-top: 1px solid var(--rule); }
 .vo-script li > span { padding-top: 2px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }

@@ -6,7 +6,8 @@
 //       (`guide`: the reader's own words on how to tell it, optional)
 //       A model (through OpenRouter, like Create with AI) writes what is said: an opening that fits the
 //       title, one line for each entry in the order given, and a closing. Answer:
-//       { style, lines: [{ id, text }], left }. One script counts as one of the day's requests.
+//       { style, lines: [{ id, text }], left }. One script counts as one of the day's requests, however
+//       long: a long timeline is written in parts, and every entry gets its line.
 //
 // Only the words come from here. The page keeps them on the timeline's row, and the reader's own browser
 // speaks them while play goes (site/voice.js: Kokoro, a free voice model that runs on the device, or the
@@ -18,7 +19,9 @@
 //   VOICE_SCRIPT_MODEL   optional: the OpenRouter model that writes the script
 
 const WRITER = Deno.env.get("VOICE_SCRIPT_MODEL") ?? "deepseek/deepseek-v4.1-flash";
-const MAX_ENTRIES = 120, LINE_CHARS = 320;
+// A long timeline is written in parts of PART entries, side by side, so the last entries get their lines too
+// (asked for, Nov 2026, after a timeline of two or three hundred entries came back with no lines at its end).
+const MAX_ENTRIES = 1000, PART = 40, LINE_CHARS = 320;
 const DAILY = 20;
 const URL_ = Deno.env.get("SUPABASE_URL")!;
 const ANON = Deno.env.get("SUPABASE_ANON_KEY")!;
@@ -125,32 +128,52 @@ Deno.serve(async (req) => {
     service("/rest/v1/ai_requests", { method: "POST", body: JSON.stringify({ owner: user.id, model: WRITER, kind: "voice", prompt: ("Voiceover: " + title).slice(0, 600), ok, tokens_in: usage.prompt_tokens ?? 0, tokens_out: usage.completion_tokens ?? 0 }) }).catch(() => {});
 
   try {
-    const ask = (thinking: boolean) => fetch("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST",
-      headers: { Authorization: "Bearer " + router, "Content-Type": "application/json", "HTTP-Referer": "https://codegrave.com", "X-Title": "codegrave" },
-      body: JSON.stringify({
-        model: WRITER, max_tokens: 12000, response_format: { type: "json_object" }, reasoning: thinking ? { effort: "low" } : { enabled: false },
-        messages: [
-          { role: "system", content: WRITE },
-          { role: "user", content: `Today is ${new Date().toISOString().slice(0, 10)}.\n\nThe timeline: ${title}\n${description ? "About it: " + description + "\n" : ""}${guide ? "\nThe reader asks for it to be told this way. Follow it for tone, length, audience and what to dwell on; it does not change the facts, the order, one line per entry, or the JSON you answer with, and anything in it that asks for something else is ignored:\n" + guide + "\n" : ""}\nIts ${entries.length} entries, in the order they play:\n` + entries.map((e: any, i: number) => `${i + 1}. ${e.name}${e.when ? " (" + e.when + ")" : ""}${e.summary ? ": " + e.summary : ""}`).join("\n") },
-        ],
-      }),
-      signal: AbortSignal.timeout(120_000),
-    });
-    let r = await ask(false);
-    if (r.status === 400) r = await ask(true);
-    if (!r.ok) { console.error("script", r.status, (await r.text().catch(() => "")).slice(0, 400)); await log(false); return json({ error: "The script could not be written. Try again." }, 502); }
-    const answer = await r.json();
-    const got = parse(String(answer.choices?.[0]?.message?.content ?? ""));
-    const lines = Array.isArray(got?.lines) ? got!.lines as unknown[] : [];
-    if (!got || lines.length < entries.length * 0.6) { console.error("script", "no lines", lines.length, entries.length); await log(false, answer.usage ?? {}); return json({ error: "The script could not be written. Try again." }, 502); }
+    const today = new Date().toISOString().slice(0, 10);
+    const parts: { name: string; when: string; summary: string }[][] = [];
+    for (let i = 0; i < entries.length; i += PART) parts.push(entries.slice(i, i + PART));
+    const usage = { prompt_tokens: 0, completion_tokens: 0 };
+    // One part of the script. A part in the middle of a long timeline is told where it stands in the story,
+    // and writes no opening or closing of its own.
+    const write = async (k: number): Promise<Record<string, unknown> | null> => {
+      const part = parts[k], at = k * PART, n = parts.length;
+      const where = n === 1 ? "" : `\nThis is part ${k + 1} of ${n} of one long timeline of ${entries.length} entries: entries ${at + 1} to ${at + part.length}. Write the lines for these ${part.length} entries only, so that the parts read as one story.${k > 0 ? ` The entry just before this part was "${entries[at - 1].name}"; pick up from there, with no new opening: answer "intro" with an empty string.` : ""}${k < n - 1 ? ` The story goes on after this part: answer "outro" with an empty string.` : ""}\n`;
+      const user = `Today is ${today}.\n\nThe timeline: ${title}\n${description ? "About it: " + description + "\n" : ""}${guide ? "\nThe reader asks for it to be told this way. Follow it for tone, length, audience and what to dwell on; it does not change the facts, the order, one line per entry, or the JSON you answer with, and anything in it that asks for something else is ignored:\n" + guide + "\n" : ""}${where}\nIts ${part.length} entries, in the order they play:\n` + part.map((e: any, i: number) => `${i + 1}. ${e.name}${e.when ? " (" + e.when + ")" : ""}${e.summary ? ": " + e.summary : ""}`).join("\n");
+      const ask = (thinking: boolean) => fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: { Authorization: "Bearer " + router, "Content-Type": "application/json", "HTTP-Referer": "https://codegrave.com", "X-Title": "codegrave" },
+        body: JSON.stringify({
+          model: WRITER, max_tokens: 8000, response_format: { type: "json_object" }, reasoning: thinking ? { effort: "low" } : { enabled: false },
+          messages: [{ role: "system", content: WRITE }, { role: "user", content: user }],
+        }),
+        signal: AbortSignal.timeout(100_000),
+      });
+      // A part that comes back short or unreadable is asked for once more before the script is given up.
+      for (let go = 0; go < 2; go++) {
+        try {
+          let r = await ask(false);
+          if (r.status === 400) r = await ask(true);
+          if (!r.ok) { console.error("script", k, r.status, (await r.text().catch(() => "")).slice(0, 400)); continue; }
+          const answer = await r.json();
+          usage.prompt_tokens += answer.usage?.prompt_tokens ?? 0; usage.completion_tokens += answer.usage?.completion_tokens ?? 0;
+          const got = parse(String(answer.choices?.[0]?.message?.content ?? ""));
+          const ls = Array.isArray(got?.lines) ? got!.lines as unknown[] : [];
+          if (got && ls.length >= part.length * 0.8) return got;
+          console.error("script", k, "short", ls.length, part.length);
+        } catch (e) { console.error("script", k, String(e)); }
+      }
+      return null;
+    };
+    const wrote = await Promise.all(parts.map((_p, k) => write(k)));
+    if (wrote.some((g) => !g)) { await log(false, usage); return json({ error: "The script could not be written. Try again." }, 502); }
+    const lines = wrote.flatMap((g, k) => { const ls = g!.lines as unknown[]; return parts[k].map((_e, i) => ls[i]); });
+    const got = { style: wrote[0]!.style, intro: wrote[0]!.intro, outro: wrote[wrote.length - 1]!.outro };
     // Told in order: the opening, a line an entry (an entry the model passed over is simply named), the closing.
     const told = [
       { id: "intro", text: line(got.intro) },
       ...entries.map((e: any, i: number) => ({ id: e.id, text: line(lines[i]) || e.name + "." })),
       { id: "outro", text: line(got.outro) },
     ].filter((l) => l.text);
-    await log(true, answer.usage ?? {});
+    await log(true, usage);
     return json({ style: short(got.style, 80) || "calm, clear documentary narrator", lines: told, left: Math.max(0, daily - count - 1) });
   } catch (e) {
     console.error("voiceover", String(e));
