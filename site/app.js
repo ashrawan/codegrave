@@ -1002,7 +1002,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     globePanes(steps);
     voice.set(voiceNow()); drawTold();
     // A timeline with a voiceover gets its voice ready at once, so play need not wait for the download.
-    if (told.on && voice.any()) speaker.warm();
+    if (told.on && voice.any() && !voice.device()) speaker.warm();
   }
   // With several views each has a globe and cards of its own, in a grid, and the one time line runs below them
   // (asked for, Nov 2026). A pane is kept while its view stays, so its map is not made again.
@@ -2529,7 +2529,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function drawSubs() {
     // While the voice is downloaded (the first time in a browser) or a line is made, the foot says so, subtitles
     // or not: play waits for it (asked for, Nov 2026: "so user know what's happening").
-    const loading = told.load != null && told.load < 1 && told.on && voice.any();
+    const loading = told.load != null && told.load < 1 && told.on && voice.any() && !voice.device();
     const el = $('subs'), wait = loading || (told.wait && play.on && telling()), on = wait || (told.subs && !!told.text);
     if (loading && told.load >= 0.95) el.textContent = 'Getting the voice ready…';
     else if (loading) el.textContent = `Downloading the ${speaker.gpu() ? 'faster ' : ''}voice, first time only: ${Math.round(told.load * 100)}% of ${Math.round((told.bytes || 0) / 1e6) || MODEL_MB} MB`;
@@ -2557,7 +2557,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function drawTold() {
     const any = voice.any();
     $('voice-row').hidden = $('subs-row').hidden = !any;
-    $('gpu-row').hidden = !any || !told.gpuOk;
+    $('gpu-row').hidden = !any || !told.gpuOk || voice.device();
     for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
     for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
     for (const b of $('subs-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.subs));

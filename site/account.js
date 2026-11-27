@@ -650,23 +650,27 @@ export function createAccount(app) {
       <p class="dlg-err" role="alert"></p>
       <div class="dlg-row">${has ? '<button type="button" class="big" data-revoice>Use this voice</button><button type="submit" class="big pri">Write again</button>' : '<button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Generate voiceover</button>'}</div>
       ${has ? '<button type="button" class="linkish" data-unvoice>Remove the voiceover</button>' : ''}
-      <p class="dlg-fine center">Writing the script uses one of today's requests. The voice is made on your device for free; it downloads once, about ${MODEL_MB} MB for both voices.</p></form>`, 'small vo');
+      <p class="dlg-fine center">Writing the script uses one of today's requests. The voice is made on your device for free: Heart and Michael download once, about ${MODEL_MB} MB for both; This device needs no download.</p></form>`, 'small vo');
     // The voice starts downloading as the dialog opens, and the dialog says how far it has come. Where the
     // graphics card can make it, the faster voice is offered (off unless the reader turned it on).
+    const pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
     const sp = app.speaker(), gp = d.querySelector('.vo-gpu'), slow = d.querySelector('.vo-slow');
     const drawSlow = () => { slow.hidden = !isSlow(); };
-    gpuOk().then((ok) => { gp.hidden = !ok; gp.querySelector('input').checked = sp.gpu(); });
+    // "This device" downloads nothing: the model is fetched only once a Kokoro voice is picked.
+    let gpuFine = false;
+    const kokoro = () => pick() !== 'device';
+    const drawPick = () => { gp.hidden = !gpuFine || !kokoro(); if (kokoro()) sp.warm(); };
+    gpuOk().then((ok) => { gpuFine = ok; gp.querySelector('input').checked = sp.gpu(); drawPick(); });
     gp.querySelector('input').addEventListener('change', (e) => { sp.engine(e.target.checked); drawSlow(); sp.warm(); });
-    drawSlow();
-    sp.warm();
+    d.addEventListener('change', (e) => { if (e.target.name === 'voice') drawPick(); });
     const ld = d.querySelector('.vo-load'), tick = setInterval(() => {
       if (!d.isConnected) return clearInterval(tick);
-      const l = app.voiceLoad();
+      const l = kokoro() ? app.voiceLoad() : null;
       ld.hidden = !l;
-      drawSlow(); gp.querySelector('input').checked = sp.gpu();
+      drawSlow(); slow.hidden ||= !kokoro(); gp.querySelector('input').checked = sp.gpu();
       if (l) ld.innerHTML = `<span>${l.part >= 0.95 ? 'Getting the voice ready' : `Downloading the ${sp.gpu() ? 'faster ' : ''}voice, first time only`}</span><b>${Math.round(l.part * 100)}% of ${l.mb} MB</b><i><u style="width: ${Math.round(l.part * 100)}%"></u></i>`;
     }, 250);
-    const err = d.querySelector('.dlg-err'), pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
+    const err = d.querySelector('.dlg-err');
     d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }); } });
     d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); voiceover(row, v); });
     d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });

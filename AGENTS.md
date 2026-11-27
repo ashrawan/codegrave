@@ -312,7 +312,8 @@ How the page is put together:
   from jsDelivr, the q8 model from Hugging Face, about 92 MB once, then kept by the browser) in a Web Worker on the
   CPU (wasm), one line at a time, the line asked for now first; each line made is kept in this browser's Cache
   Storage (`lineKey()`), so playing again is instant. Two voices are offered, Heart (warm, American; the default)
-  and Michael (calm, American) (asked for, Nov 2026); they share the model and each adds about half a MB, fetched
+  and Michael (calm, American) (asked for, Nov 2026), and third "This device", the browser's own voice
+  (`speechSynthesis`: no download, instant, plainer; asked for, Nov 2026, and good for testing); the Kokoro two share the model and each adds about half a MB, fetched
   only when used. The model starts downloading as soon as a timeline with a voiceover opens, or the voice dialog
   does (`speaker.warm()`), and the foot and the dialog say how far it has come, first time only (asked for: "so
   user know what's happening"). Each line made is timed (`cg-voice-speed`); on a device slower than real time

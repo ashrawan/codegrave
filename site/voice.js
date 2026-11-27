@@ -11,10 +11,12 @@
 // createVoice() plays it, a line at a time, as play reaches each card.
 
 // The voices offered: an id, a name and a few words, all Kokoro's (English only; the two he liked, Nov 2026, from
-// its best seven). Where Kokoro cannot run, the device's own voice says the line instead.
+// its best seven), and the browser's own. Where Kokoro cannot run, the device's own voice says the line instead.
 export const VOICES = [
   ['af_heart', 'Heart', 'Warm, American'],
   ['am_michael', 'Michael', 'Calm, American'],
+  // The browser's own voice: nothing to download and instant, if plainer (asked for, Nov 2026, as a third choice).
+  ['device', 'This device', 'Your browser’s own voice, no download'],
 ];
 // The model all of Kokoro's voices share, downloaded once (each voice adds about half a megabyte).
 export const MODEL_MB = 92;
@@ -244,6 +246,7 @@ export function createVoice({ ctx, said, speaker }) {
     },
     // A line is being said, or is being made.
     busy: () => !!S.cur && !S.cur.done,
+    device,
     now: () => (S.cur && !S.cur.done ? S.cur.id : null),
     pause() {
       if (!S.cur || S.cur.done || S.held) return;

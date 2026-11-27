@@ -13,8 +13,8 @@ test('a stored voiceover is read, and a broken one is none', () => {
   assert.equal(voiceOf({ voice: 'Charon', lines: [{ id: 'x', text: 'Hi' }] }).voice, DEFAULT_VOICE);
 });
 
-test('the voices offered are known, and only Heart and Michael are offered', () => {
-  assert.ok(isVoice(DEFAULT_VOICE) && isVoice('am_michael') && !isVoice('Charon') && VOICES.length === 2);
+test('the voices offered are known, and Heart, Michael and the browser voice are offered', () => {
+  assert.ok(isVoice(DEFAULT_VOICE) && isVoice('am_michael') && isVoice('device') && !isVoice('Charon') && VOICES.length === 3);
   assert.equal(new Set(VOICES.map((v) => v[0])).size, VOICES.length);
 });
 
