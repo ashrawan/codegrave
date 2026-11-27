@@ -409,3 +409,13 @@ body.multi #road-unit { display: none; }
 #explore .card .radd { width: auto; height: 30px; gap: 5px; padding: 0 12px 0 9px; font-size: 12.5px; font-weight: 600; border-radius: 15px; opacity: 1; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 #explore .card .radd:hover { color: var(--bg); background: var(--text); border-color: var(--text); }
 #explore .card .radd:disabled { opacity: 0 !important; }
+/* Ask AI: its steps stand in a row just above its box at the foot while the timeline is rewritten (asked for, Nov 2026). */
+#ai-live.low { top: auto; bottom: 122px; padding: 10px 18px; border-radius: 22px; }
+#ai-live.low ol { display: flex; gap: 6px 20px; }
+#ai-live.low li { font-size: 13px; }
+body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
+@media (max-width: 699px) {
+  #ai-live.low { top: auto; bottom: 116px; max-width: calc(100vw - 24px); }
+  #ai-live.low ol { display: grid; grid-template-columns: auto auto; }
+  body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 232px; }
+}

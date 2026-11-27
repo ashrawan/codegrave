@@ -420,18 +420,21 @@ export function createAccount(app) {
   // the middle of the road, the one under way lit (asked for, Nov 2026: "a proper loading").
   // `step` is 0 (reading up), 1 (writing entries, `n` so far) or 2 (finding pictures); null takes it away.
   const MAKE_STEPS = ['Reading up on the subject', 'Writing the entries', 'Finding pictures'];
-  function live(step, n = 0) {
+  // Ask AI shows the same, low: its own steps in a row just above its box at the foot (asked for, Nov 2026).
+  const ASK_STEPS = ['Reading your timeline', 'Thinking', 'Writing the entries', 'Finding pictures'];
+  function live(step, n = 0, steps = MAKE_STEPS) {
     let el = $('ai-live'), bar = $('ai-bar');
     if (!el) {
       el = document.createElement('div'); el.id = 'ai-live'; el.setAttribute('role', 'status');
       bar = document.createElement('div'); bar.id = 'ai-bar'; bar.innerHTML = '<i></i>';
       document.body.append(el, bar);
     }
-    el.hidden = bar.hidden = step == null;
+    el.hidden = bar.hidden = step == null; el.classList.toggle('low', steps === ASK_STEPS);
+    const w = steps.length - 2;      // the step that writes entries
     if (step == null) { bar.firstChild.style.width = '0'; return; }
-    el.innerHTML = '<ol>' + MAKE_STEPS.map((s, i) => `<li class="${i < step ? 'done' : i === step ? 'now' : ''}">${s}${i === 1 && n ? ` <b>${n}</b>` : ''}</li>`).join('') + '</ol>';
+    el.innerHTML = '<ol>' + steps.map((s, i) => `<li class="${i < step ? 'done' : i === step ? 'now' : ''}">${s}${i === w && n ? ` <b>${n}</b>` : ''}</li>`).join('') + '</ol>';
     // How far it has come: the entries are not counted ahead, so writing fills the bar more slowly as it goes.
-    const f = step === 0 ? 0.1 : step === 1 ? 0.15 + 0.65 * (1 - Math.exp(-n / 18)) : 0.9;
+    const f = step < w ? 0.06 + 0.08 * step / Math.max(1, w) + 0.04 : step === w ? 0.15 + 0.65 * (1 - Math.exp(-n / 18)) : 0.9;
     bar.firstChild.style.width = (f * 100).toFixed(1) + '%';
   }
   const draftTitle = (prompt) => prompt.replace(/\s+/g, ' ').trim().slice(0, 80).replace(/[.,;:!?\s]+$/, '') || 'New timeline';
@@ -502,18 +505,21 @@ export function createAccount(app) {
     if (working || !spec || prompt.length < 3) return;
     const st = $('ask-status');
     working = true; document.body.classList.add('ai-busy');
-    st.classList.add('busy'); st.classList.remove('err'); st.textContent = 'Reading your timeline…';
+    st.classList.remove('err'); st.textContent = '';
+    let at = 0, n = 0;
+    const go = (k) => { if (k >= at) { at = k; live(at, n, ASK_STEPS); } };
+    go(0);
     try {
-      const got = await ask_ai({ prompt, current: spec }, (text) => { st.textContent = `Writing… ${partialSpec(text).entries.length} entries`; }, (note) => { st.textContent = note; });
+      const got = await ask_ai({ prompt, current: spec }, (text) => { n = partialSpec(text).entries.length; go(2); }, (note) => { go(/pictures/.test(note) ? 3 : /Writ/.test(note) ? 2 : /Think/.test(note) ? 1 : at); });
       const file = specToView(got.spec, seed());
       if (!file.entries.length) throw new Error('That change would leave the timeline empty.');
       const before = { title: row.title, description: row.description, data: JSON.parse(row.text) };
       await patch(row, { title: file.spec.title, description: file.spec.description, data: { view: file.view, entries: file.entries, spec: file.spec, prompt: before.data.prompt } });
-      st.classList.remove('busy'); st.textContent = '';
+      live(null);
       $('ask-q').value = '';
       toast(got.changed || 'Changed.', { undo: () => patch(row, before).catch((e) => toast(e.message)) });
       morePictures(row, file.entries[0].id.split('-')[0].slice(1));
-    } catch (e) { st.classList.remove('busy'); fail(st, e); setTimeout(() => { if (st.classList.contains('err')) { st.textContent = ''; st.classList.remove('err'); } }, 7000); }
+    } catch (e) { live(null); fail(st, e); setTimeout(() => { if (st.classList.contains('err')) { st.textContent = ''; st.classList.remove('err'); } }, 7000); }
     working = false; document.body.classList.remove('ai-busy');
   }
   // The requests offered under one kind: pressing the kind again folds them away.

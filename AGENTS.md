@@ -494,7 +494,9 @@ How the page is put together:
   should be above that footer"), growing to a few lines as it is typed
   into: the model gets the spec and the
   request and writes the whole spec again; the toast says what changed and
-  offers Undo. A timeline the reader keeps shows only its own pictures on
+  offers Undo. While it works, its steps (reading the timeline, thinking,
+  writing the entries with their count, finding pictures) stand in a row just above
+  the box (`#ai-live.low`) and the bar runs along the strip (asked for, Nov 2026). A timeline the reader keeps shows only its own pictures on
   the walls, never the eras' stand-ins (`L.own`). An entry made this way names its kind in
   words (`category`) and its branch in `domain`, and its id starts with
   `x`. A plan is dated by the day, or by the hour (`2027-04-05T09:00`), and
