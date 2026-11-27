@@ -232,18 +232,25 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   }
   // Where the card stands: beside its pin, on the side with room; for an entry with no place, over its
   // row in the strip (or in the middle of the sky). On a phone it rests above the strip.
+  // The card's place, drop and size are written as one transform, so growing never moves it sideways: it grows
+  // and shrinks about its own centre and drops straight down (asked for, Nov 2026).
+  function put() { card.style.transform = `translate(${S.tx || 0}px, ${((S.ty || 0) + (S.drop || 0)).toFixed(1)}px) scale(${(S.sc || 1).toFixed(3)})`; }
   function place() {
     const s = S.steps[S.cardFor];
     if (!s || card.hidden) { lead.hidden = true; return; }
     const W = host.clientWidth, H = host.clientHeight, cw = card.offsetWidth, ch = card.offsetHeight, foot = shelf.hidden ? 0 : shelf.offsetHeight;
     lead.hidden = true;
-    if (S.phone) { card.style.transform = `translate(12px, ${Math.max(60, H - foot - ch - 10)}px)`; return; }
+    if (S.phone) { S.tx = 12; S.ty = Math.max(60, H - foot - ch - 10); put(); return; }
     const top0 = 96, low = H - foot - ch - 14;
     if (s.place && S.ready) {
-      const p = S.map.project([s.place[1], s.place[0]]);
+      // In play the card keeps the place its pin comes to rest at, so it never slides sideways as the globe turns
+      // on: it only comes and goes (asked for, Nov 2026). Standing still or dragged, it follows its pin.
+      const q = S.map.project([s.place[1], s.place[0]]), f = S.fix || 0;
+      const rx = (W + S.pad.left - S.pad.right) / 2, ry = (H + S.pad.top - S.pad.bottom) / 2;
+      const p = { x: q.x + (rx - q.x) * f, y: q.y + (ry - q.y) * f };
       const right = p.x + 46 + cw < W - 20, x = right ? p.x + 46 : p.x - 46 - cw;
       const y = Math.max(top0, Math.min(low, p.y - ch * 0.42));
-      card.style.transform = `translate(${Math.round(Math.max(12, x))}px, ${Math.round(y)}px)`;
+      S.tx = Math.round(Math.max(12, x)); S.ty = Math.round(y); put();
       lead.hidden = false;
       lead.style.transform = `translate(${Math.round(right ? p.x + 12 : p.x - 46)}px, ${Math.round(p.y)}px)`;
       return;
@@ -251,7 +258,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     const chip = track.querySelector('.on');
     const mid = S.stage === 'space' || !chip ? W / 2 : chip.getBoundingClientRect().left - host.getBoundingClientRect().left + 4;
     const y = S.stage === 'space' ? Math.max(top0, card.classList.contains('bare') ? low - 34 : (H - foot - ch) * 0.42) : Math.max(top0, low - 26);
-    card.style.transform = `translate(${Math.round(Math.max(12, Math.min(W - cw - 12, mid - cw / 2)))}px, ${Math.round(y)}px)`;
+    S.tx = Math.round(Math.max(12, Math.min(W - cw - 12, mid - cw / 2))); S.ty = Math.round(y); put();
   }
 
   // ---- the time line at the foot: it slides under a marker that stands still. The entries stand on it by name
@@ -363,11 +370,17 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
         const out = clamp01((g - 0.36) / 0.3) ** 2;
         scale = g < 0 ? 0.6 + 0.4 * (1 - (g / early) ** 2) : 1 + 0.05 * clamp01(g / 0.36) + 0.75 * out;
         drop = (g < 0 ? -0.1 * (g / early) ** 2 : 0.55 * out) * host.clientHeight;
+      } else if (S.playing && !still && !S.phone) {
+        // On the map it goes away into its own centre, growing a little smaller, never to a side.
+        scale = g < 0 ? 0.94 + 0.06 * (1 - (g / early) ** 2) : 1 - 0.14 * clamp01(g / late) ** 2;
+        drop = g < 0 ? 0 : 46 * clamp01(g / late) ** 2;
       }
     }
+    const fix = S.playing && !still ? 1 : 0;
+    if ((S.fix || 0) !== fix) { S.fix = toward(S.fix || 0, fix, dt * 5); busy = true; place(); }
     S.vis = toward(S.vis, vis, still ? 1 : dt * 12);
     if (S.vis !== vis) busy = true;
-    card.style.opacity = S.vis.toFixed(3); card.style.scale = scale.toFixed(3); card.style.translate = `0 ${drop.toFixed(1)}px`; card.style.pointerEvents = S.vis > 0.5 ? '' : 'none';
+    card.style.opacity = S.vis.toFixed(3); S.sc = scale; S.drop = drop; put(); card.style.pointerEvents = S.vis > 0.5 ? '' : 'none';
     lead.style.opacity = (0.75 * S.vis).toFixed(3);
     back.style.opacity = sp.toFixed(3);
     if (sp > 0.005) { bimg.style.opacity = (0.8 * S.vis).toFixed(3); bimg.style.scale = (0.94 + 0.12 * clamp01(g + early)).toFixed(4); }

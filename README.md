@@ -20,9 +20,8 @@ Click any card to read its history, with dates, sources and pictures.
   </tr>
 </table>
 
-The globe is a preview: add `?globe` to a link to open it, for example
-[`/wiki/computer-generations?globe`](https://codegrave.com/wiki/computer-generations?globe)
-or [`/wiki/the-universe?globe`](https://codegrave.com/wiki/the-universe?globe).
+Try [Computers](https://codegrave.com/wiki/computer-generations) or
+[The Universe](https://codegrave.com/wiki/the-universe).
 
 ## What you can do
 

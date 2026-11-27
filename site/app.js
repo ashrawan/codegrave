@@ -22,7 +22,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   const MAX_VIEWS = 8;
   const MAX_ROWS = 800;         // the most lines drawn at once
   // The globe (globe.js): the same timeline drawn on the Earth. A first version, shown only when the link says `?globe`.
-  const GLOBE = new URLSearchParams(location.search).has('globe');
+  const GLOBE = true;                          // the globe is the only timeline now; the road under it is only the clock
   const DEEP = -5e6;
   const TOP = 14;               // a little air above the road. There is no bar across the top any more (asked for, Nov 2026)
   // How a link reads from the entry that carries it, and from the entry it points to.
@@ -625,7 +625,6 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function writeUrl() {
     const q = new URLSearchParams();
     if (state.views.length > 1) q.set('with', state.views.slice(1).map(addr).join(','));
-    if (GLOBE) q.set('globe', '1');
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => colOut(state.colors.get(id))).join(','));
