@@ -74,6 +74,14 @@ const VIDEO = [['avc1.640034', 'avc'], ['avc1.640028', 'avc'], ['avc1.4d0028', '
 const AUDIO = [['mp4a.40.2', 'aac'], ['opus', 'opus']];
 // The bits a second a frame of this size is given: 8 Mbit for 1080p, more for more, within what players take.
 export const bitsFor = (w, h) => Math.round(Math.min(120e6, Math.max(4e6, 8e6 * (w * h) / (1920 * 1080))));
+// Whether the device's own video chip can encode a film of that size (asked for, Nov 2026: tell the reader when
+// their device's graphics hardware is used). The export does not ask for it: the browser already picks the
+// hardware encoder where there is one; this only says so.
+export async function canFast(shape, short) {
+  if (!canExport()) return false;
+  const { w, h } = sizeOf(shape, short);
+  return !!(await pick(VIDEO, (codec) => VideoEncoder.isConfigSupported({ codec, width: w, height: h, bitrate: bitsFor(w, h), framerate: FPS, hardwareAcceleration: 'prefer-hardware' })));
+}
 // Whether this browser can encode a film of that shape and size (asked for, Nov 2026: 4K and 8K where the device can).
 export async function canSize(shape, short) {
   if (!canExport()) return false;

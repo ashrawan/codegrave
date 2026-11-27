@@ -828,6 +828,9 @@ export function createAccount(app) {
       q('.ex-qnote').textContent = st.short >= 4320 ? '8K is a very large file and takes long to make. Few devices can play it.' : st.short >= 2160 ? '4K takes about four times as long to make as 1080p.' : st.short === 720 ? '720p is the quickest to make.' : '';
       // What this device's encoder cannot make at this shape is not offered (asked for, Nov 2026: 4K and 8K).
       const shape = st.shape;
+      // Where the device's graphics hardware makes the film, the foot says so (asked for, Nov 2026).
+      const short = st.short;
+      app.canFast(shape, short).then((fast) => { if (!d.isConnected || busy || st.shape !== shape || st.short !== short) return; q('.ex-say span').textContent = fast ? 'Made on your device, sped up by its graphics hardware. Nothing is uploaded.' : 'Made on your device. Nothing is uploaded.'; q('.ex-say').classList.toggle('fast', !!fast); });
       for (const [n] of QUALITY) app.canSize(shape, n).then((ok) => { if (!d.isConnected || st.shape !== shape) return; const b = q(`[data-short="${n}"]`); b.disabled = !ok; b.title = ok ? '' : 'This device cannot make a video of this size'; if (!ok && st.short === n) { st.short = 1080; show(); } });
     }
     show();

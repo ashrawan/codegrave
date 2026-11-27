@@ -672,3 +672,5 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
   .exf .big { flex: 1; }
 }
 .vo-form .exf .big { gap: .3em; }
+
+.ex-say.fast svg { color: var(--acc); }

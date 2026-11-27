@@ -429,6 +429,9 @@ How the page is put together:
 - **Ask AI folds after play (Nov 2026, asked for).** Pressing play sets `body.ask-min`: the Ask AI box becomes a
   small "Ask AI" pill at the left above the strip, and a press opens it again (`#ask.open`) until the next play.
   Showing another timeline, or making one, shows the box whole; a box with words typed in it is not folded.
+- **Export says when the graphics hardware helps (Nov 2026, asked for).** The browser's encoder already uses the
+  device's video hardware where there is one; `canFast()` in `site/export.js` only asks whether it can, and the
+  dialog's foot then reads "Made on your device, sped up by its graphics hardware. Nothing is uploaded."
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

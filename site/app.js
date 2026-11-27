@@ -13,7 +13,7 @@ import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
 import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk, voiceLabel } from './voice.js';
-import { exportFilm, canExport, canSize } from './export.js';
+import { exportFilm, canExport, canSize, canFast } from './export.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -3218,7 +3218,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // The voice made in this browser, and an audio context for hearing a voice before choosing it.
     speaker: () => speaker,
     exportVideo: (kind, step, stop) => exportVideo(kind, step, stop),
-    canExport, canSize,
+    canExport, canSize, canFast,
     one: () => { const v = state.views.length === 1 ? viewById.get(state.views[0]) : null; return v ? { id: v.id, title: v.name || '', description: v.description || '', voice: voiceNow() } : null; },
     keepVoice: keepLocalVoice,
     first: () => { const p = (road.gorder || [])[0]; return p ? stepOf(p) : null; },
