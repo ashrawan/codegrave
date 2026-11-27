@@ -946,7 +946,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // It eases down to that limit as it eases up to speed, so the road never jerks under the reader.
       // On the globe, play takes each stretch between two entries in a set time (globe.legSecs()), whatever its
       // length, so the camera, which follows the reader, travels evenly and never waits.
-      const want = !play.on ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
+      const want = !play.on || play.step ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       road.t += dir * road.vel * L.D * dt;
@@ -1752,6 +1752,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // Not while typing, nor inside the panel or the bar, which use the arrows themselves.
       if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '') || e.target.closest?.('#side, #axis, #info, .tsearch')) return;
       e.preventDefault();
+      if (play.on && play.step) return playStep(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1);
       roadBy(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 0.3 : -0.3, 8);
     });
     if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); if (globe) { globe.resize(); for (const pn of panes.values()) pn.g.resize(); } }).observe(box);
@@ -2350,7 +2351,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // ---------------------------------------------------------------- play and scrub
   // Play carries the reader along the road; the marker on the bar is where
   // they stand. Drag it, or press play. The reader's place is road.t.
-  const play = { on: false, drag: false, own: false, speed: 1 };   // own: play to the view's own music (a country's anthem)
+  const play = { on: false, drag: false, own: false, speed: 1, step: false };   // own: play to the view's own music (a country's anthem)
   const ICON_PLAY = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg>';
   const ICON_AGAIN = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5"/><path d="M4.5 4.5v4.2h4.2"/></svg>';
   const ICON_PAUSE = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>';
@@ -2378,12 +2379,35 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     soundReady();
     drawPlay();
     roadKick();
+    if (play.step) playStep(0);
   }
   // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
   // pointer nears the top edge, when anything in it has focus, and when play stops.
   function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
   // On the globe a pause stops dead, exactly where play was (asked for, Nov 2026); the road eased to a stop.
   function pausePlay() { play.on = false; if (GLOBE) road.vel = 0; drawPlay(); }
+  // Play by the arrow keys ("Play" in the three-dot menu, `cg-step` in this browser; asked for, Nov 2026): play
+  // sounds and takes the screen as ever, but the reader stands still until an arrow is pressed, and then goes to
+  // the next entry, or back to the one before.
+  function playStep(n) {
+    const o = road.gorder;
+    if (!L || !o || !o.length) return;
+    const dir = camDir(), edge = (road.target ?? road.t) + dir * AHEAD * L.D;
+    let i = -1;
+    for (let k = 0; k < o.length; k++) { if (dir * (o[k].a - edge) > 1e-5 * L.D) break; i = k; }
+    // A press while still on the way counts from where the last press was going.
+    if (road.target != null && road.stepTo === road.target && o[road.stepI]) i = road.stepI;
+    if (!n) { if (i >= 0) return; n = 1; }
+    let j = i + n;
+    while (j >= 0 && j < o.length && i >= 0 && o[j].t.id === o[i].t.id) j += n;
+    if (j >= o.length) return;
+    road.vel = 0; road.gfree = state.open || null;
+    road.target = camClamp(j < 0 ? (dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D) : o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D);
+    road.rate = 2.6;
+    road.stepTo = road.target; road.stepI = Math.max(j, -1);
+    if (calm()) { road.t = road.prev = road.target; road.target = null; }
+    roadKick();
+  }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
   function playWith(own) {
@@ -2523,8 +2547,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function wire() {
     let rt = null, lastW = innerWidth, lastH = innerHeight;
     addEventListener('pointermove', (e) => {
-      if (!play.on || e.pointerType === 'touch') return;
       const b = document.body.classList;
+      if (!(play.on || b.contains('fullscreen')) || e.pointerType === 'touch') return;
       // The top edge brings the bar back anywhere, over the open panel too (asked for, Nov 2026).
       if (e.clientY < 48) b.add('peek'); else if (e.clientY > 110) b.remove('peek');
     }, { passive: true });
@@ -2681,6 +2705,23 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!b) return;
       if (globe) { globe.look(b.dataset.v); for (const pn of panes.values()) pn.g.look(b.dataset.v); } else store.set('cg-look', b.dataset.v);
       lookShow(b.dataset.v);
+    });
+    // Play: by itself, or one entry at a time by the arrow keys.
+    const stepShow = () => { for (const b of $('step').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'keys') === play.step)); };
+    play.step = store.get('cg-step') === 'keys'; stepShow();
+    $('step-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      play.step = b.dataset.v === 'keys'; store.set('cg-step', b.dataset.v); stepShow();
+      if (play.on) roadKick();
+    });
+    // In full screen a click on the stage brings the search and the menu button back for a moment.
+    let peekT = null;
+    $('stage').addEventListener('click', (e) => {
+      if (!document.body.classList.contains('fullscreen') || e.target.closest('button, a, input')) return;
+      document.body.classList.add('peek'); clearTimeout(peekT);
+      peekT = setTimeout(() => document.body.classList.remove('peek'), 4000);
     });
     // Several views: each on a globe of its own in a grid, or all on one globe.
     const gridShow = (v) => { for (const b of $('grid-seg').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };

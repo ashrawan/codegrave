@@ -424,6 +424,13 @@ How the page is put together:
   with an entry at the same date light together); the others dim and put their card away, so it is plain which
   globe is being told about (asked for). The film layout belongs to full screen: leaving full screen brings the
   bar on the left and the strip of views back, playing or not (asked for).
+- **Round 5 (Nov 2026), which replaces what the rounds above say where they differ.** The marker of the time line
+  at the foot stands at the left end (`nowAt()`: 34 px, 22 px on a phone), so a view opens with its first entry at
+  the left edge. In full screen the search, the menu button beside it and `.top` go away too; they come back while
+  the pointer is at the top edge, for a few seconds after a click on the stage, and while the search is used
+  (`body.fullscreen:not(.peek)`). "Play" in the three-dot menu (`#step-row`, `play.step`, `cg-step` in this
+  browser) is Auto or Arrow keys: with Arrow keys, play sounds and takes the screen as ever but the reader stands
+  still until an arrow is pressed, and then glides to the next entry or back to the one before (`playStep()`).
 - **Globe look** (three-dot menu: Atlas, Day, Dots; `cg-look` in this browser; asked for, Nov 2026). Atlas is the
   default. Day lays NASA's Blue Marble over the far globe (`DAY` in `site/globe.js`: NASA's own tiles, public
   domain); Dots draws the land as a field of points made in the browser from the coast file (`landDots()`). A look

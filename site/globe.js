@@ -396,7 +396,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     const els = track.children;
     for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
-  const nowAt = () => rows.clientWidth * (S.phone ? 0.2 : 0.16);
+  // The marker stands at the left end, so a view opens with its first entry at the left edge (asked for, Nov 2026).
+  const nowAt = () => (S.phone ? 22 : 34);
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;
