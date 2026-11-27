@@ -58,7 +58,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
-| The globe (the timeline on the Earth, behind `?globe`): the map, pins, cards, the strip of rows | `site/globe.js`; its arithmetic (camera heights, arcs, when to dim or go to space) in `site/globe-path.js`, then `tests/globe.test.mjs` | |
+| The globe (the timeline on the Earth, the only way it is drawn): the map, pins, cards, the strip of rows | `site/globe.js`; its arithmetic (camera heights, arcs, when to dim or go to space) in `site/globe-path.js`, then `tests/globe.test.mjs` | |
 | Where entries are on the Earth | `node scripts/places.mjs` writes `data/places.json` from Wikidata | `data/places.json` by hand |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
 
@@ -322,9 +322,11 @@ How the page is put together:
   silences it. The house track was asked for with this file; do not swap it
   without asking.
 - **The globe** (`site/globe.js`, `site/globe-path.js`; asked for and designed in Nov 2026, plan and
-  mockups in the design doc "3D world map"). The same timeline drawn on the Earth. It is a first
-  version and shows only when the link says `?globe`; the plan is that the road goes once the globe
-  does all the road does, so keep the two apart until then. The road stays the clock: in globe mode
+  mockups in the design doc "3D world map"). The same timeline drawn on the Earth. It is the only
+  way the timeline is shown (asked for, Nov 2026: "by default all should be globe", "we are not supporting
+  the old timeline at all"; `GLOBE` in `site/app.js` is always true and an old `?globe` in a link is ignored).
+  The road is no longer drawn for the reader; its layout and travel remain underneath only as the clock, so
+  what this guide says about the road's look describes code that is hidden and may be removed. The road stays the clock: in globe mode
   it is laid out and travelled as ever, only not shown (`body.globe`), so the bar, play, the wheel,
   the year on top, the panel and the links work unchanged. `globeShow()` hands the globe the entries
   in the order play meets them and `globeFrame()` tells it which one stands in front (the open
@@ -358,6 +360,8 @@ How the page is put together:
   right side can be cleaned up"): `body.globe` sets `--bar` to 0 and hides `#axis`, play and the
   sound button stand at the strip's right end (asked for), and the strip slides under a marker that
   stands still, with a year written where it changes. The entries stand on it by name, one with no place in italics (design C, picked from three).
+  While play travels a card on the map keeps the spot its pin comes to rest at and goes away into its own
+  centre, a little smaller, never sliding to a side as the globe turns on (`S.fix`; asked for, Nov 2026).
   A card shows the picture, kind, dates, name and summary, and neither coordinates nor a note that
   an entry has no place (asked for: "it will be in details"). The card is a label written on the map, with no box and a rule in the view's colour
   (design B, picked from three; a glass box on a phone). The credits the map's licences ask for

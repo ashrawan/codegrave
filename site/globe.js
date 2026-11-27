@@ -240,7 +240,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     if (S.phone) { card.style.transform = `translate(12px, ${Math.max(60, H - foot - ch - 10)}px)`; return; }
     const top0 = 96, low = H - foot - ch - 14;
     if (s.place && S.ready) {
-      const p = S.map.project([s.place[1], s.place[0]]);
+      // In play the card keeps the place its pin comes to rest at, so it never slides sideways as the globe turns
+      // on: it only comes and goes (asked for, Nov 2026). Standing still or dragged, it follows its pin.
+      const q = S.map.project([s.place[1], s.place[0]]), f = S.fix || 0;
+      const rx = (W + S.pad.left - S.pad.right) / 2, ry = (H + S.pad.top - S.pad.bottom) / 2;
+      const p = { x: q.x + (rx - q.x) * f, y: q.y + (ry - q.y) * f };
       const right = p.x + 46 + cw < W - 20, x = right ? p.x + 46 : p.x - 46 - cw;
       const y = Math.max(top0, Math.min(low, p.y - ch * 0.42));
       card.style.transform = `translate(${Math.round(Math.max(12, x))}px, ${Math.round(y)}px)`;
@@ -363,8 +367,13 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
         const out = clamp01((g - 0.36) / 0.3) ** 2;
         scale = g < 0 ? 0.6 + 0.4 * (1 - (g / early) ** 2) : 1 + 0.05 * clamp01(g / 0.36) + 0.75 * out;
         drop = (g < 0 ? -0.1 * (g / early) ** 2 : 0.55 * out) * host.clientHeight;
+      } else if (S.playing && !still && !S.phone) {
+        // On the map it goes away into its own centre, growing a little smaller, never to a side.
+        scale = g < 0 ? 0.94 + 0.06 * (1 - (g / early) ** 2) : 1 - 0.14 * clamp01(g / late) ** 2;
       }
     }
+    const fix = S.playing && !still ? 1 : 0;
+    if ((S.fix || 0) !== fix) { S.fix = toward(S.fix || 0, fix, dt * 5); busy = true; place(); }
     S.vis = toward(S.vis, vis, still ? 1 : dt * 12);
     if (S.vis !== vis) busy = true;
     card.style.opacity = S.vis.toFixed(3); card.style.scale = scale.toFixed(3); card.style.translate = `0 ${drop.toFixed(1)}px`; card.style.pointerEvents = S.vis > 0.5 ? '' : 'none';
