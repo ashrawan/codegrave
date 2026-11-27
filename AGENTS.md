@@ -414,7 +414,7 @@ How the page is put together:
   `cg-land`, on by default, `globe.land()`) lights the country the entry in front falls in with a warm wash
   and edge (`c-now`, `c-now-edge` in `site/globe.js`), at every detail. Pressing play at the beginning opens
   on the whole globe while the sound starts, comes down to the first place and only then sets off
-  (`globe.intro()`: `INTRO_HOLD` then `INTRO_GLIDE` seconds; `road.intro` keeps the reader still meanwhile).
+  (`globe.intro()`: it draws back for `INTRO_OUT` seconds, rests `INTRO_HOLD` and comes down in `INTRO_GLIDE`, never cut to, since a first, quicker version read as a jump; `road.intro` keeps the reader still meanwhile). The pin of the entry in front is see-through so the map's names under it can be read, the way the reader came is dotted like the way ahead (`came`), and while play rests the map comes plainly closer (`DRIFT_*`) and the picture in front breathes in and out (`g-near` in `site/styles.css`): all asked for, because play "feels like it's freezing".
 - **The voice dialog (designs A and B, picked from three each, Nov 2026).** `voiceMenu()` in `site/account.js`
   draws two dialogs. With no voiceover yet: "Choose a voice", the Kokoro voices as cards (`.vo-voice.card`, a
   round Listen on each), This device as a dashed row, and one lit button that names the voice ("Generate with

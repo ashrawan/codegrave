@@ -876,3 +876,12 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 #vo-menu :is(#gen-row, #pick-row) { grid-template-columns: minmax(0, 1fr) auto; }
 @media (max-width: 699px) { #vo-menu { bottom: 150px; } }
 #sound[hidden] { display: none !important; }
+
+/* While play travels the picture of the entry in front never stands still: it comes slowly closer and goes back
+   (asked for, Nov 2026: "like a zoom", it "feels like it's freezing"). A pause holds it where it is. */
+@keyframes g-near { from { scale: 1; } to { scale: 1.12; } }
+@media (prefers-reduced-motion: no-preference) {
+  #globe .g-card img, #globe .g-bimg { transform-origin: 50% 100%; animation: g-near 9s ease-in-out infinite alternate paused; }
+  #globe .g-bimg { transform-origin: 50% 50%; }
+  body.playing #globe .g-card img, body.playing #globe .g-bimg { animation-play-state: running; }
+}
