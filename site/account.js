@@ -660,14 +660,16 @@ export function createAccount(app) {
   function timelineMenu(anchor) {
     const cur = current(), free = !!cur && !working, hold = working ? null : holder(), told = !!hold && !!voiceOf(hold.get());
     const item = (act, icon, label, note = '', cls = '') => `<button type="button" class="nv${cls}" data-act="${act}" role="menuitem">${icon}<span>${label}</span>${note ? `<small>${note}</small>` : ''}</button>`;
-    const d = popover(anchor, `<div class="cap">This timeline</div>
-      ${hold ? item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', told ? 'Ready' : '', told ? '' : ' lit') : ''}
+    // In groups, what is taken away first (asked for, Nov 2026: "export could be top", the voiceover below).
+    const d = popover(anchor, `<div class="cap">Export</div>
+      ${item('video', TL.film, 'Export video', 'MP4')}
+      ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Export as PDF', 'PDF')}
+      ${hold ? '<hr><div class="cap">Voiceover</div>' + item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', told ? 'Ready' : '', told ? '' : ' lit') : ''}
+      <hr><div class="cap">This timeline</div>
       ${free && cur.text.includes('"spec":{') ? item('edit', TL.edit, 'Open in editor') : ''}
-      ${cur ? item('publish', TL.share, cur.visibility === 'private' ? 'Publish' : 'Share', `<i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}`) + '<hr>' : ''}
-      ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Export as PDF')}
-      ${item('video', TL.film, 'Export video')}
+      ${cur ? item('publish', TL.share, cur.visibility === 'private' ? 'Publish' : 'Share', `<i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}`) : ''}
       ${item('turn', TL.turn, esc($('reverse').textContent.trim() || 'Turn round'))}
-      ${cur ? '<hr>' + item('rename', TL.name, 'Rename') + item('delete', TL.bin, 'Delete', '', ' danger') : ''}`, 'menu tl');
+      ${cur ? item('rename', TL.name, 'Rename') + item('delete', TL.bin, 'Delete', '', ' danger') : ''}`, 'menu tl');
     d.addEventListener('click', (x) => {
       const a = x.target.closest('[data-act]')?.dataset.act, at = $('tl-more');
       if (!a) return;
@@ -753,18 +755,15 @@ export function createAccount(app) {
   const QUALITY = [[720, '720p'], [1080, '1080p'], [2160, '4K'], [4320, '8K']];
   const EX_STEP = { voice: 'Making the voice', sound: 'Mixing the sound', pictures: 'Fetching the pictures', map: 'Getting the map ready', video: 'Drawing the video', saving: 'Saving the file' };
   const LOCK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>';
-  const exKept = () => { try { return JSON.parse(localStorage.getItem('cg-export')) || {}; } catch (e) { return {}; } };
   // Export (asked for, Nov 2026, twice: first the choices, then "a standard UI ... like the Canva standard"):
   // the film as it will look on the left, drawn from the timeline's own first entry and following every choice;
   // the choices on the right; one button. Nothing here asks the server for anything.
   function videoMenu() {
     if (voicing) return;
     const can = app.canExport(), cur = holder(), has = !!cur && voiceOf(cur.get()), dev = has && has.voice === 'device', told = !!has && !dev;
-    const was = exKept(), first = app.first() || {}, count = app.told()?.entries.length || 0;
-    const st = {
-      voice: told && was.kind !== 'video', subs: !!was.subs,
-      shape: SHAPES.some(([k]) => k === was.shape) ? was.shape : 'wide', scene: was.scene === 'full' ? 'full' : 'globe', short: QUALITY.some(([n]) => n === was.short) ? was.short : 1080,
-    };
+    const first = app.first() || {}, count = app.told()?.entries.length || 0;
+    // It always opens on the same choices (asked for, Nov 2026): Landscape, Default, the voiceover on where there is one, 1080p.
+    const st = { voice: told, subs: false, shape: 'wide', scene: 'globe', short: 1080 };
     const sw = (name, label, hint) => `<div class="ex-opt"><span><b>${label}</b><small data-hint="${name}">${hint}</small></span><button type="button" class="ex-sw" role="switch" data-sw="${name}" aria-label="${label}"><i></i></button></div>`;
     const d = modal(`<form class="ex">
       <div class="ex-prev" aria-hidden="true">
@@ -832,7 +831,6 @@ export function createAccount(app) {
       if (busy) { closeLayer(); return; }      // "Hide": the export goes on, and the pill at the top right says how far
       const voiceOn = st.voice && told, kind = voiceOn ? 'both' : 'video';
       const o = { kind, shape: st.shape, scene: st.scene, subs: voiceOn && st.subs, short: st.short };
-      try { localStorage.setItem('cg-export', JSON.stringify(o)); } catch (x) { /* private window */ }
       // The dialog stays and its foot says how far the export has come, with a line along the foot's edge
       // (asked for, Nov 2026). It can be hidden: the export goes on behind the pill at the top right.
       busy = true; d.querySelector('form').classList.add('busy');

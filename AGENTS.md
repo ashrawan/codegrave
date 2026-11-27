@@ -368,7 +368,7 @@ How the page is put together:
   one of the day's requests. **Export** asks, in this order: What (video with voiceover, video only, voiceover
   only), Format (`SHAPES`: Landscape 16:9, Vertical 9:16, Square 1:1; "the first important thing is the
   format"), Scene (Globe or Full view; "we should see the option to export in full view or as a globe"),
-  Subtitles and Quality (1080p or 720p); the choices are kept in `cg-export`. For the globe, `stageGlobe()` in
+  Subtitles and Quality; it always opens on Landscape, Default, voiceover on and 1080p (asked for). For the globe, `stageGlobe()` in
   `site/export.js` runs the page's own `createGlobe()` on a stage out of sight and tells it for each frame only
   where the reader is (`drive({ auto: true, dt, pos, pad })`: unlike film mode's full say, the camera, pins,
   trail, drift and the dimming for an entry with no place follow as they do in play); the frame is the map's
