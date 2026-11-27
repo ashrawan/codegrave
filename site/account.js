@@ -760,9 +760,10 @@ export function createAccount(app) {
         return undefined;
       }
       if (el('#sb-me')) {
-        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<div class="me" id="me-ai" hidden><small>Create with AI</small><span></span><i><u></u></i></div><hr><button type="button" class="nv" data-act="theme">Switch theme</button><hr><button type="button" class="nv" data-act="out">Sign out</button>`, 'menu wide');
+        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><div class="me" id="me-ai"><small>Create with AI</small><span>&nbsp;</span><i><u></u></i></div><hr><button type="button" class="nv" data-act="theme">Switch theme</button><hr><button type="button" class="nv" data-act="out">Sign out</button>`, 'menu wide');
         d.addEventListener('click', (x) => { const a = x.target.closest('[data-act]')?.dataset.act; if (!a) return; closeLayer(); if (a === 'out') signOut(); else $('theme').click(); });
-        // How many requests are left today (asked for, Nov 2026): the account's own requests of the last 24
+        // How many requests are left today (asked for, Nov 2026; the line has its room from the start, since the
+        // menu is placed by its height when it opens): the account's own requests of the last 24
         // hours against its allowance (its own number when it has one, else AI_PER_DAY).
         Promise.all([
           api(`/rest/v1/ai_requests?select=id&created_at=gte.${new Date(Date.now() - 864e5).toISOString()}&limit=20000`),
@@ -773,7 +774,6 @@ export function createAccount(app) {
           box.querySelector('span').textContent = `${left.toLocaleString('en-US')} of ${most.toLocaleString('en-US')} requests left today`;
           box.querySelector('u').style.width = (most ? 100 * left / most : 0) + '%';
           box.classList.toggle('none', !left);
-          box.hidden = false;
         }).catch(() => {});
         return undefined;
       }
