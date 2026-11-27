@@ -953,6 +953,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // With a voiceover, the reader stops at each card until its line is said, then goes on, like Arrow keys
       // play (asked for, Nov 2026: "we need to stop in the card").
       if (want && !play.step && telling() && voice.busy()) { want = 0; road.vel = 0; }
+      if (road.intro) { if (performance.now() < road.intro) { want = 0; road.vel = 0; } else road.intro = 0; }
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       if (play.on && play.step && !stepping) road.vel = 0;
@@ -2390,6 +2391,17 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
     play.on = true; road.pace = 1; document.body.classList.add('film');
+    // From the beginning, play opens on the whole globe while the sound starts, comes down to the first place
+    // and only then sets off (asked for, Nov 2026: coming straight in close, "it's very hard to know" where one is).
+    road.intro = 0;
+    if (GLOBE && globe && road.gorder && road.gorder.length && !state.open) {
+      const dir = camDir(), edge = road.t + dir * AHEAD * L.D, o = road.gorder;
+      if (!o.some((p) => p.t.id !== o[0].t.id && dir * (p.a - edge) <= 0)) {
+        const secs = globe.intro();
+        for (const pn of panes.values()) pn.g.intro();
+        road.intro = performance.now() + secs * 1000;
+      }
+    }
     soundReady();
     drawPlay();
     roadKick();
@@ -2758,7 +2770,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
 
     $('toggle-side').addEventListener('click', () => { if (state.pane !== 'views') showSide($('side').hidden); });
     // The three dots: turn round, how to read the timeline, the repository.
-    const more = (on) => { $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
+    // The settings are in groups that fold (asked for, Nov 2026: "collapsible, like for the globe", so the menu
+    // stays quiet however many settings come). A folded group says what is chosen in it; Globe opens folded.
+    const groupsSay = () => { for (const g of $('more-menu').querySelectorAll('details.grp')) g.querySelector('summary small').textContent = [...g.querySelectorAll('.set:not([hidden]) .seg button[aria-pressed="true"]')].map((b) => b.textContent).join(' · '); };
+    const more = (on) => { if (on) groupsSay(); $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
+    $('more-menu').addEventListener('click', (e) => { e.stopPropagation(); setTimeout(groupsSay); });
     $('more-btn').addEventListener('click', (e) => { e.stopPropagation(); more($('more-menu').hidden); });
     document.addEventListener('click', () => more(false));
     $('more-info').addEventListener('click', (e) => { e.stopPropagation(); more(false); $('info-btn').click(); });
@@ -2873,6 +2889,17 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!b) return;
       store.set('cg-grid', b.dataset.v); gridShow(b.dataset.v);
       if (state.views.length) render();
+    });
+    // The country of the entry in front, lit or not (cg-land in this browser, kept by the globe; on by default).
+    const landShow = (on) => { for (const b of $('land-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === on)); };
+    landShow(store.get('cg-land') !== 'off');
+    $('land-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      const on = b.dataset.v === 'on';
+      if (globe) { globe.land(on); for (const pn of panes.values()) pn.g.land(on); } else store.set('cg-land', on ? 'on' : 'off');
+      landShow(on);
     });
     $('detail-row').addEventListener('click', (e) => {
       e.stopPropagation();

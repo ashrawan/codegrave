@@ -407,6 +407,14 @@ How the page is put together:
   "Made on your device. Nothing is uploaded." at its left, Cancel and Export at its right. The dialog stays
   open while the film is made: a line runs along the foot's top edge, the note becomes the step and how far
   it has come, and the buttons become Stop and Hide (hidden, the export goes on behind the pill at the top right).
+- **Settings that fold, the lit country, and play's opening (Nov 2026, asked for).** The settings menu
+  (`#more-menu`) is headed "Settings" and its groups are `<details class="grp">` that fold: Play and Appearance
+  open, Globe folded, and a folded group names what is chosen in it (`groupsSay()` in `site/app.js`). Put a new
+  setting in a group, or add a group; do not go back to one long list. "Highlight country" (Globe group,
+  `cg-land`, on by default, `globe.land()`) lights the country the entry in front falls in with a warm wash
+  and edge (`c-now`, `c-now-edge` in `site/globe.js`), at every detail. Pressing play at the beginning opens
+  on the whole globe while the sound starts, comes down to the first place and only then sets off
+  (`globe.intro()`: `INTRO_HOLD` then `INTRO_GLIDE` seconds; `road.intro` keeps the reader still meanwhile).
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

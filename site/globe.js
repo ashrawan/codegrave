@@ -32,6 +32,7 @@ const NAMED = 5;          // pins this many steps either side of the one in fron
 const LOCAL = 7;         // a view whose places all fit the frame at this zoom (about 100 km across) is told from close
 const NEARER = 0.4;      // how far in from the whole globe the camera comes for a view of one place, in zoom levels
 const TURN = 0.11;       // the part of the way over which one card goes and the next comes
+const INTRO_HOLD = 1.6, INTRO_GLIDE = 2.6;   // play's opening: seconds on the whole globe, then seconds coming down
 const STAY = 0.45;       // the part of the way from one place to the next that the camera rests before it goes
 const STARS = 240;        // stars that fly past in space
 // How the camera travels ("turn", picked from three clean ways in Nov 2026, after livelier ones were found "not
@@ -155,6 +156,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // 'dots'. What a look needs is fetched only when that look is picked.
   try { const l = localStorage.getItem('cg-look'); S.look = LOOKS.includes(l) ? l : 'atlas'; } catch (e) { S.look = 'atlas'; }
   try { const d = localStorage.getItem('cg-detail'); S.detail = d === 'medium' || d === 'full' ? d : 'less'; } catch (e) { S.detail = 'less'; }
+  // The country the entry in front falls in is lit in the accent colour, whatever the detail (asked for, Nov 2026:
+  // "when that map falls into the particular country, we want that country to be highlighted"; `cg-land`, on).
+  try { S.land = localStorage.getItem('cg-land') !== 'off'; } catch (e) { S.land = true; }
   // The countries (Natural Earth, public domain; one small file, fetched once): which one a place falls in.
   const inRing = (r, x, y) => { let c = false; for (let i = 0, j = r.length - 1; i < r.length; j = i++) if ((r[i][1] > y) !== (r[j][1] > y) && x < ((r[j][0] - r[i][0]) * (y - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) c = !c; return c; };
   const inPoly = (poly, x, y) => inRing(poly[0], x, y) && !poly.slice(1).some((h) => inRing(h, x, y));
@@ -206,12 +210,17 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       map.addLayer({ id: 'c-name', type: 'symbol', source: 'land-names', maxzoom: 6, filter: ['==', ['get', 'n'], ''],
         layout: { 'text-field': ['get', 'n'], 'text-font': ['Noto Sans Regular'], 'text-size': 10.5, 'text-letter-spacing': 0.18, 'text-transform': 'uppercase', 'text-max-width': 8 },
         paint: { 'text-color': 'rgba(236,222,196,.72)', 'text-halo-color': 'rgba(10,10,12,.85)', 'text-halo-width': 1.2 } }, 'way');
+      // The lit country: a warm wash that thins out close in, and an edge that stays to street height.
+      map.addLayer({ id: 'c-now', type: 'fill', source: 'lands', filter: ['==', ['get', 'n'], ''], paint: { 'fill-color': '#e8b04a', 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 1, 0.3, 4.6, 0.2, 7, 0.05, 9, 0], 'fill-opacity-transition': { duration: 500 } } }, 'way');
+      map.addLayer({ id: 'c-now-edge', type: 'line', source: 'lands', filter: ['==', ['get', 'n'], ''], paint: { 'line-color': 'rgba(244,196,104,.95)', 'line-width': ['interpolate', ['linear'], ['zoom'], 1, 1.2, 6, 2], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 8, 1, 10.5, 0] } }, 'way');
       look();
     }
     const names = full ? [] : S.detail === 'less' ? [S.homes[S.now] || ''] : [...new Set(S.homes.filter(Boolean))];
-    const sig = S.detail + '|' + full + '|' + names.join();
+    const lit = S.land && S.homes ? S.homes[S.now] || '' : '';
+    const sig = S.detail + '|' + full + '|' + names.join() + '|' + lit;
     if (sig === S.said) return;
     S.said = sig;
+    if (map.getLayer('c-now')) for (const id of ['c-now', 'c-now-edge']) map.setFilter(id, ['==', ['get', 'n'], lit]);
     map.setLayoutProperty('country', 'visibility', full ? 'visible' : 'none');
     if (map.getLayer('c-fill')) for (const id of ['c-fill', 'c-edge', 'c-name']) map.setFilter(id, ['in', ['get', 'n'], ['literal', names]]);
   }
@@ -460,7 +469,13 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     const still = calm(), snap = still || !!o, goal = o ? o.pos : S.cur + S.frac;
     let busy = false;
     // The reader's place follows the page's a moment behind, so a jump to a far entry is travelled, not cut to.
-    if (S.pos == null || snap) S.pos = goal; else S.pos = Math.abs(goal - S.pos) < 0.0004 ? goal : S.pos + (goal - S.pos) * Math.min(1, dt * 7);
+    let opens = false;
+    if (S.intro && !o) {
+      const k = (now - S.intro) / 1000, u = clamp01((k - INTRO_HOLD) / INTRO_GLIDE);
+      if (u >= 1 || !S.playing) S.intro = 0; else { opens = true; S.pos = -1 + (Math.min(goal, 0.999) + 1) * u * u * (3 - 2 * u); }
+    }
+    if (opens) busy = true;
+    else if (S.pos == null || snap) S.pos = goal; else S.pos = Math.abs(goal - S.pos) < 0.0004 ? goal : S.pos + (goal - S.pos) * Math.min(1, dt * 7);
     if (S.pos !== goal) busy = true;
     const speed = (S.pos - S.was) / dt; S.was = S.pos;
 
@@ -677,6 +692,19 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     detail(v) {
       if (v === 'less' || v === 'medium' || v === 'full') { S.detail = v; try { localStorage.setItem('cg-detail', v); } catch (e) { /* fine */ } S.said = null; pins(); run(); }
       return S.detail;
+    },
+    // Whether the country of the entry in front is lit. Given true or false, it is kept in this browser.
+    land(v) {
+      if (v === true || v === false) { S.land = v; try { localStorage.setItem('cg-land', v ? 'on' : 'off'); } catch (e) { /* fine */ } S.said = null; detail(); run(); }
+      return S.land;
+    },
+    // Play begins from far off (asked for, Nov 2026: "show the globe from the far, start playing the sound, and
+    // then zoom in"): the whole globe for INTRO_HOLD seconds, then down to where the reader is in INTRO_GLIDE.
+    // It answers how long that takes, so the page keeps the reader still meanwhile.
+    intro() {
+      if (calm() || !S.steps.length) return 0;
+      S.intro = K.now(); S.pos = -1; S.playing = true; run();
+      return INTRO_HOLD + INTRO_GLIDE;
     },
     zoom: () => (S.map ? S.map.getZoom() : null),
     // For film mode (site/film/) only: one frame drawn now from what `o` says, and what it needs to say it.

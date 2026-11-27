@@ -647,6 +647,19 @@ body.globe .g-credit { display: inline-flex; }
    choice that is on is lit in the accent colour. */
 :is(#more-menu, #vo-menu) { width: 318px; max-width: calc(100vw - 16px); max-height: calc(100vh - 64px); overflow-y: auto; padding: 8px; }
 :is(#more-menu, #vo-menu) .cap { margin: 8px 10px 6px; }
+/* The settings: a little larger, in groups that fold (asked for, Nov 2026) */
+#more-menu { width: 348px; }
+#more-menu .head { margin: 6px 10px 8px; font-size: 15px; font-weight: 600; color: var(--text); }
+#more-menu .grp { border-top: 1px solid var(--rule); margin: 0 -8px; padding: 0 8px; }
+#more-menu .grp summary { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 6px 0 8px; font-size: 13.5px; font-weight: 600; color: var(--text); list-style: none; border-radius: 8px; cursor: pointer; user-select: none; }
+#more-menu .grp summary::-webkit-details-marker { display: none; }
+#more-menu .grp summary:hover { background: color-mix(in srgb, var(--text) 6%, transparent); }
+#more-menu .grp summary .chev { flex: none; color: var(--faint); transition: transform .15s; }
+#more-menu .grp[open] summary .chev { transform: rotate(90deg); }
+#more-menu .grp summary small { margin-left: auto; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 12px; font-weight: 400; color: var(--faint); }
+#more-menu .grp[open] summary small { display: none; }
+#more-menu .grp[open] { padding-bottom: 6px; }
+#more-menu .grp + hr { margin-top: 0; }
 :is(#more-menu, #vo-menu) hr { margin: 8px -8px; }
 :is(#more-menu, #vo-menu) .set { display: grid; grid-template-columns: minmax(0, 1fr) 186px; align-items: center; gap: 12px; min-height: 36px; padding: 0 6px 0 10px; font-size: 13.5px; color: var(--text); cursor: default; }
 :is(#more-menu, #vo-menu) .set .lbl { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
