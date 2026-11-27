@@ -766,8 +766,8 @@ export function createAccount(app) {
     ['globe', 'Default', 'As play shows it: the globe from place to place, the stars where there is none', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>'],
     ['full', 'Full view', 'Every card large, among the stars', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 15h8M10 9.5h4"/></svg>'],
   ];
-  // 480p is the quick test (asked for, Nov 2026, in place of 4K and 8K): small and fast, to check a film before the real one.
-  const QUALITY = [[480, 'Quick test · 480p'], [720, '720p'], [1080, '1080p']];
+  // 240p is the quick test (the smallest and so the fastest; 480p was first) (asked for, Nov 2026, in place of 4K and 8K): small and fast, to check a film before the real one.
+  const QUALITY = [[240, 'Quick test · 240p'], [720, '720p'], [1080, '1080p']];
   const EX_STEP = { voice: 'Making the voice', sound: 'Mixing the sound', pictures: 'Fetching the pictures', map: 'Getting the map ready', video: 'Drawing the video', saving: 'Saving the file' };
   const LOCK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>';
   // Export (asked for, Nov 2026, twice: first the choices, then "a standard UI ... like the Canva standard"):
@@ -776,9 +776,13 @@ export function createAccount(app) {
   function videoMenu() {
     if (voicing) return;
     const can = app.canExport(), cur = holder(), has = !!cur && voiceOf(cur.get()), dev = has && has.voice === 'device', told = !!has && !dev;
-    const first = app.first() || {}, count = app.told()?.entries.length || 0;
+    const first = app.first() || {}, ents = app.told()?.entries || [], all0 = ents.length;
     // It always opens on the same choices (asked for, Nov 2026): Landscape, Default, the voiceover on where there is one, 1080p.
-    const st = { voice: told, subs: false, shape: 'wide', scene: 'globe', short: 1080 };
+    const st = { voice: told, subs: false, shape: 'wide', scene: 'globe', short: 1080, from: 0, to: Math.max(0, all0 - 1) };
+    // The part of the timeline that goes into the film (asked for, Nov 2026: the export is to have the span of
+    // period the timeline has): it opens on what the timeline shows, and From and To cut it shorter by entry.
+    const cut = (x) => (x.length > 44 ? x.slice(0, 42) + '…' : x);
+    const opts = ents.map((x, n) => `<option value="${n}">${esc(cut((x.when ? x.when + ' · ' : '') + x.name))}</option>`).join('');
     const sw = (name, label, hint) => `<div class="ex-opt"><span><b>${label}</b><small data-hint="${name}">${hint}</small></span><button type="button" class="ex-tog" role="switch" data-sw="${name}" aria-label="${label}"><i></i></button></div>`;
     const d = modal(`<form class="ex">
       <div class="ex-prev" aria-hidden="true">
@@ -801,6 +805,9 @@ export function createAccount(app) {
           <h3>Sound and text</h3>
           ${sw('voice', 'Voiceover', '')}
           ${sw('subs', 'Subtitles', 'Each line written at the foot while it is said')}
+          ${all0 > 1 ? `<h3>Period</h3>
+          <div class="ex-span"><label><span>From</span><select data-span="from">${opts}</select></label><label><span>To</span><select data-span="to">${opts}</select></label></div>
+          <p class="ex-qnote ex-snote"></p>` : ''}
           <h3>Quality</h3>
           <div class="ex-q" role="radiogroup" aria-label="Quality">${QUALITY.map(([n, label]) => `<button type="button" role="radio" data-short="${n}">${label}</button>`).join('')}</div>
           <p class="ex-qnote"></p>
@@ -814,7 +821,8 @@ export function createAccount(app) {
     const q = (x) => d.querySelector(x), all = (x) => d.querySelectorAll(x);
     let busy = false;
     function show() {
-      const audio = false, voiceOn = st.voice && told, subsOn = voiceOn && st.subs;
+      const audio = false, voiceOn = st.voice && told, subsOn = voiceOn && st.subs, count = st.to - st.from + 1;
+      if (q('.ex-span')) { q('[data-span=from]').value = st.from; q('[data-span=to]').value = st.to; q('.ex-snote').textContent = count === all0 ? `All ${all0} entries the timeline shows.` : `${count} of ${all0} entries.`; }
       all('[data-shape]').forEach((b) => b.setAttribute('aria-checked', b.dataset.shape === st.shape));
       all('[data-scene]').forEach((b) => b.setAttribute('aria-checked', b.dataset.scene === st.scene));
       all('[data-short]').forEach((b) => b.setAttribute('aria-checked', Number(b.dataset.short) === st.short));
@@ -826,7 +834,7 @@ export function createAccount(app) {
       const [, , , , w, h] = SHAPES.find(([k]) => k === st.shape), k = st.short / Math.min(w, h), secs = count * (voiceOn || audio ? 9 : 4.2);
       const long = secs < 90 ? `about ${Math.max(5, Math.round(secs / 5) * 5)} seconds` : `about ${Math.round(secs / 60)} minutes`;
       q('.ex-meta').innerHTML = audio ? `<b>WAV</b> · the voice alone · ${long}` : `<b>${Math.round(w * k)} × ${Math.round(h * k)}</b> · MP4 · ${long}`;
-      q('.ex-qnote').textContent = st.short === 480 ? 'Small and fast: for checking the film before the real export.' : st.short === 720 ? '720p is quicker to make than 1080p.' : '';
+      q('.ex-qnote').textContent = st.short === 240 ? 'The smallest and fastest: for checking the film before the real export.' : st.short === 720 ? '720p is quicker to make than 1080p.' : '';
       // What this device's encoder cannot make at this shape is not offered.
       const shape = st.shape;
       // Where the device's graphics hardware makes the film, the foot says so (asked for, Nov 2026).
@@ -844,11 +852,17 @@ export function createAccount(app) {
       else if (b.dataset.short) st.short = Number(b.dataset.short); else st[b.dataset.sw] = !(b.getAttribute('aria-checked') === 'true');
       show();
     });
+    d.addEventListener('change', (e) => {
+      const sel = e.target.closest('[data-span]'); if (!sel || busy) return;
+      st[sel.dataset.span] = Number(sel.value);
+      if (st.from > st.to) { if (sel.dataset.span === 'from') st.to = st.from; else st.from = st.to; }
+      show();
+    });
     d.querySelector('form').addEventListener('submit', async (e) => {
       e.preventDefault();
       if (busy) { closeLayer(); return; }      // "Hide": the export goes on, and the pill at the top right says how far
       const voiceOn = st.voice && told, kind = voiceOn ? 'both' : 'video';
-      const o = { kind, shape: st.shape, scene: st.scene, subs: voiceOn && st.subs, short: st.short };
+      const o = { kind, shape: st.shape, scene: st.scene, subs: voiceOn && st.subs, short: st.short, from: st.from, to: st.to };
       // The dialog stays and its foot says how far the export has come, with a line along the foot's edge
       // (asked for, Nov 2026). It can be hidden: the export goes on behind the pill at the top right.
       busy = true; d.querySelector('form').classList.add('busy');

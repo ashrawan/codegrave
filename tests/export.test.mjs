@@ -70,3 +70,15 @@ test('the card keeps to one side of the map: the right of a wide frame, the foot
   assert.equal(full.pad, null);
   for (const l of [wide, tall, full, layout(720, 720, true)]) assert.ok(l.card.w > 0 && l.card.h > 0);
 });
+
+test('the picture of an entry moves inside its frame and never shows past its edge', async () => {
+  const { panAt } = await import('../site/export.js');
+  for (let n = 0; n < 12; n++) for (const tall of [false, true]) for (let s = 0; s < 30; s += 0.7) {
+    const [z, x, y] = panAt(n, tall, s);
+    assert.ok(z > 1.1 && z < 1.6);
+    assert.ok(Math.abs(x) <= (z - 1) / 2 + 1e-9 && Math.abs(y) <= (z - 1) / 2 + 1e-9);
+  }
+  assert.notDeepEqual(panAt(0, false, 0), panAt(0, false, 4));
+  assert.deepEqual(panAt(0, false, 0), panAt(1, false, 0));
+  assert.notDeepEqual(panAt(0, false, 0), panAt(2, false, 0));
+});

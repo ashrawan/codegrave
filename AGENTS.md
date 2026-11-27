@@ -402,7 +402,7 @@ How the page is put together:
   voice follows. Under a voice the music is louder than it first was (`MUSIC_UNDER` 0.14 on the page, 0.16 in a
   film; it was found "a little bit too subtle"). The export dialog has no "Audio only" (the engine can still
   make the WAV). Scene is "Default" (as play shows it: the globe, and the stars where entries have no place)
-  or "Full view". Quality is Quick test (480p, small and fast, for checking a film first), 720p or 1080p (4K and 8K were offered and then removed on request, Nov 2026; `QUALITY`; `canSize()` in `site/export.js` asks the
+  or "Full view". Quality is Quick test (240p, the smallest and fastest, for checking a film first), 720p or 1080p (4K and 8K were offered and then removed on request, Nov 2026; `QUALITY`; `canSize()` in `site/export.js` asks the
   browser's encoder, and a size it cannot make is not offered). The dialog has a foot of its own (`.exf`):
   "Made on your device. Nothing is uploaded." at its left, Cancel and Export at its right. The dialog stays
   open while the film is made: a line runs along the foot's top edge, the note becomes the step and how far
@@ -429,6 +429,13 @@ How the page is put together:
 - **Ask AI folds after play (Nov 2026, asked for).** Pressing play sets `body.ask-min`: the Ask AI box becomes a
   small "Ask AI" pill at the left above the strip, and a press opens it again (`#ask.open`) until the next play.
   Showing another timeline, or making one, shows the box whole; a box with words typed in it is not folded.
+- **The film shows what play shows (Nov 2026, asked for: "however the timeline is built, the same would be the
+  exported video").** At the foot of every frame is the page's time line, not a bar of progress (`shelf()` in
+  `painter()`, `site/export.js`): the entries by name on a strip that slides under a marker standing still at the
+  left, a year where it changes, one with no place in italics. The picture of the entry in front moves as it does
+  in play (`panAt()`, the same five ways as `g-pan` to `g-pan-e`; change the two together). The export dialog has
+  "Period": From and To, by entry, opening on all the timeline shows (which already follows the year range of the
+  page), so a film can be a part of a timeline. Quality is Quick test (240p), 720p or 1080p.
 - **Export says when the graphics hardware helps (Nov 2026, asked for).** The browser's encoder already uses the
   device's video hardware where there is one; `canFast()` in `site/export.js` only asks whether it can, and the
   dialog's foot then reads "Made on your device, sped up by its graphics hardware. Nothing is uploaded."

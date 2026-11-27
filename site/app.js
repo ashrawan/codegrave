@@ -2542,6 +2542,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function exportVideo(o, step, stop) {
     const steps = [], seen = new Set();
     for (const p of road.gorder || []) if (!seen.has(p.t.id)) { seen.add(p.t.id); steps.push(stepOf(p)); }
+    // Only the part of the timeline the reader chose in the dialog (From and To, by entry).
+    if (Number.isInteger(o.from) && Number.isInteger(o.to)) { steps.splice(o.to + 1); steps.splice(0, o.from); }
     const css = getComputedStyle(document.documentElement);
     return exportFilm({
       kind: o.kind, shape: o.shape, short: o.short, scene: o.scene, subs: !!o.subs, steps, step, stop, speaker, voice: voiceNow(),

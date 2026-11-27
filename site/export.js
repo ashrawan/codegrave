@@ -149,9 +149,20 @@ export function layout(w, h, globe) {
     : { u, wide, m, card: { x: m, y: Math.round(h * 0.5), w: w - 2 * m, h: Math.round(h * 0.5) - foot }, pad: { right: 0, bottom: w === h ? 0.5 : 0.46 } };
 }
 
+// How the picture of entry `n` stands in its frame after `secs`: [scale, across, down] (the last two as parts
+// of the frame). The same five ways as play on the page (`g-pan` to `g-pan-e` in site/styles.css), two entries
+// each in turn, a tall picture moved along its height; there and back, never by chance.
+const PANS = [[1.22, -0.09, 0, 1.38, 0.09, 0, 9], [1.22, 0.09, 0, 1.38, -0.09, 0, 9], [1.45, 0, 0.07, 1.2, 0, -0.07, 9], [1.25, -0.08, -0.06, 1.4, 0.08, 0.06, 9], [1.18, 0, 0.03, 1.5, 0, 0.09, 11]];
+const PAN_T = [1.25, 0, 0.1, 1.4, 0, -0.1, 9], PAN_U = [1.35, 0, -0.1, 1.22, 0, 0.1, 9];
+export function panAt(n, tall, secs) {
+  const k = Math.floor(n / 2) % 5, p = tall && (k === 0 || k === 3) ? PAN_T : tall && k === 1 ? PAN_U : PANS[k];
+  const ph = (Math.max(0, secs) / p[6]) % 2, e = ph <= 1 ? ph : 2 - ph, mix = (a, b) => a + (b - a) * e;
+  return [mix(p[0], p[3]), mix(p[1], p[4]), mix(p[2], p[5])];
+}
+
 // ---- the picture: one frame at time `t`. `map` (when the film shows the globe) gives the map's own canvas
 // for this frame and how far the map has gone out of sight for an entry with no place.
-function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
+export function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
   const c = cv.getContext('2d'), serif = fonts.serif, sans = fonts.sans, W = cv.width, H = cv.height;
   const lay = layout(W, H, globe), u = lay.u, px = (n) => Math.round(n * u);
   const sp = (v) => { try { c.letterSpacing = v + 'px'; } catch (e) { /* older canvas */ } };
@@ -182,11 +193,12 @@ function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
     }
     y += pad;
     if (ph) {
-      // The whole picture, never cropped, coming slowly closer while it is up.
-      const z = 1 + 0.035 * Math.min(1, into / 12), w = pw * z, h = ph * z;
-      c.save(); rounded(cx - pw / 2, y, pw, ph, px(6)); if (plate) c.clip();
-      if (!plate) { c.shadowColor = 'rgba(0,0,0,.55)'; c.shadowBlur = px(50); c.shadowOffsetY = px(18); }
-      c.drawImage(st.bmp, cx - w / 2, y + (ph - h) / 2, w, h);
+      // The picture moves as it does in play (asked for, Nov 2026: the film is to show what play shows): cut
+      // in and gliding inside a frame that keeps its place, each entry in its turn one of the page's own ways.
+      const [z, mx, my] = panAt(st.n || 0, st.bmp.height > st.bmp.width * 1.15, into), w = pw * z, h = ph * z;
+      if (!plate) { c.save(); c.shadowColor = 'rgba(0,0,0,.55)'; c.shadowBlur = px(50); c.shadowOffsetY = px(18); c.fillStyle = '#05070c'; rounded(cx - pw / 2, y, pw, ph, px(6)); c.fill(); c.restore(); }
+      c.save(); rounded(cx - pw / 2, y, pw, ph, px(6)); c.clip();
+      c.drawImage(st.bmp, cx - w / 2 + pw * mx, y + (ph - h) / 2 + ph * my, w, h);
       c.restore();
       y += ph + gap;
     }
@@ -206,6 +218,39 @@ function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
     y += px(14) + Math.round(sumSize * 1.1); c.font = `400 ${sumSize}px ${sans}`; c.fillStyle = 'rgba(255,255,255,.84)';
     for (const ln of rows) { c.fillText(ln, cx, y); y += lineH; }
     c.restore();
+  }
+  // The time line at the foot, as on the page (asked for, Nov 2026): the entries by name on a strip that slides
+  // under a marker standing still at the left, a year written where it changes, one with no place in italics.
+  let strip = null;
+  function shelf(t, now) {
+    const fs = px(lay.wide ? 20 : 24), ys = px(lay.wide ? 15 : 18), gap = px(36), x0 = lay.m, x1 = W - lay.m, yn = H - px(lay.wide ? 54 : 96);
+    const font = (it) => `${it ? 'italic ' : ''}500 ${fs}px ${sans}`;
+    if (!strip) {
+      let x = 0, said = '';
+      strip = steps.map((s) => {
+        c.font = font(!s.place && globe);
+        const nm = s.name.length > 36 ? s.name.slice(0, 34) + '…' : s.name, w = px(18) + c.measureText(nm).width;
+        const o = { x, nm, w, yr: s.mark && s.mark !== said ? s.mark : '', it: !s.place && globe }; if (o.yr) said = s.mark;
+        x += w + gap; return o;
+      });
+    }
+    const pos = posAt(scenes, t), k = Math.min(strip.length - 1, Math.max(0, Math.floor(pos))), nx = strip[k + 1];
+    const at = pos < 0 ? strip[0].x + px(40) * pos : nx ? strip[k].x + (nx.x - strip[k].x) * (pos - k) : strip[k].x;
+    const off = x0 + px(16) - at, acc = steps[now].rgb || '#e8b04a';
+    c.save(); c.textBaseline = 'alphabetic'; c.textAlign = 'left';
+    strip.forEach((o, n) => {
+      const x = o.x + off; if (x + o.w < 0 || x > W) return;
+      // What has passed goes out to the left of the marker; what is far ahead comes in at the right edge.
+      const edge = Math.min(1, Math.max(0, (x + o.w * 0.5) / x0), Math.max(0, (W - x) / (W - x1 + px(120))));
+      const st = n === now ? 1 : n < now ? 0.4 : 0.66;
+      c.globalAlpha = edge * st; c.font = font(o.it);
+      c.fillStyle = n === now ? (steps[n].rgb || '#e8b04a') : '#aab1c0'; c.beginPath(); c.arc(x + px(5), yn - fs * 0.32, px(n === now ? 5 : 3.5), 0, 6.3); c.fill();
+      c.fillStyle = n === now ? '#f4efe6' : '#c9ced9'; c.fillText(o.nm, x + px(18), yn);
+      if (o.yr) { c.font = `400 ${ys}px ${sans}`; c.fillStyle = n === now ? '#ece7dc' : '#8f97a8'; c.fillText(o.yr, x + px(18), yn + ys + px(10)); }
+    });
+    c.globalAlpha = 1; c.shadowColor = acc; c.shadowBlur = px(10); c.fillStyle = acc; c.fillRect(x0 - 1, yn - fs, 2, Math.round(fs * 1.3));
+    c.restore();
+    return yn - fs;
   }
   return function draw(t, map) {
     const g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#06080f'); g.addColorStop(1, '#0c1120');
@@ -229,7 +274,7 @@ function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
       c.globalAlpha = 1;
     }
     const { i, into, fade } = sceneAt(scenes, t), st = steps[i], plate = shown > 0.5;
-    if (fade > 0 && i > 0) card(steps[i - 1], fade, 99, plate);
+    if (fade > 0 && i > 0) card(steps[i - 1], fade, scenes[i - 1].t1 - scenes[i - 1].t0 + into, plate);
     card(st, 1 - fade, into, plate);
     // The heading and the period of the entry in front: side by side on a wide frame, one over the other else.
     c.textBaseline = 'alphabetic'; c.textAlign = 'center';
@@ -238,18 +283,13 @@ function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
     c.fillStyle = 'rgba(244,239,230,.92)'; c.fillText(title, W / 2, lay.wide ? px(86) : px(96));
     if (lay.wide) { c.textAlign = 'right'; c.font = `400 ${px(84)}px ${serif}`; c.fillStyle = 'rgba(244,239,230,.9)'; c.fillText(st.mark || '', W - lay.m, px(130)); }
     else { c.font = `400 ${px(92)}px ${serif}`; c.fillStyle = 'rgba(244,239,230,.9)'; c.fillText(st.mark || '', W / 2, px(200)); }
-    // How far along, at the foot.
-    const total = scenes[scenes.length - 1].t1, x0 = lay.m, x1 = W - lay.m, yb = H - px(lay.wide ? 46 : 96);
-    c.fillStyle = 'rgba(255,255,255,.14)'; c.fillRect(x0, yb, x1 - x0, 2);
-    c.fillStyle = st.rgb || '#e8b04a'; c.fillRect(x0, yb, (x1 - x0) * Math.min(1, t / total), 2);
-    if (scenes.length <= 60) for (const s of scenes) { c.globalAlpha = t >= s.t0 ? 1 : 0.35; c.beginPath(); c.arc(x0 + (x1 - x0) * (s.t0 / total), yb + 1, px(4), 0, 6.3); c.fill(); }
-    c.globalAlpha = 1;
+    const yb = shelf(t, i);
     const sub = subsOf ? subsOf(t) : '';
     if (sub) {
       const fs = px(lay.wide ? 30 : 34); c.textAlign = 'center'; c.font = `500 ${fs}px ${sans}`;
       const rows = wrap((s) => c.measureText(s).width, sub, Math.min(W - 2 * lay.m - px(36), px(1300)), lay.wide ? 2 : 4), lh = Math.round(fs * 1.47);
       rows.forEach((r, k) => {
-        const w = c.measureText(r).width + px(36), y = yb - px(46) - (rows.length - 1 - k) * lh;
+        const w = c.measureText(r).width + px(36), y = yb - px(30) - (rows.length - 1 - k) * lh;
         c.fillStyle = 'rgba(0,0,0,.66)'; c.fillRect(W / 2 - w / 2, y - Math.round(fs * 1.03), w, Math.round(fs * 1.4));
         c.fillStyle = '#fff'; c.fillText(r, W / 2, y);
       });
@@ -339,6 +379,7 @@ export async function exportFilm({ kind, title, steps, voice, speaker, music, fo
   step('pictures', 0);
   let done = 0;
   const drawn = await Promise.all(steps.map(async (s) => { const bmp = await picture(s.img); step('pictures', ++done / steps.length); return { ...s, bmp }; }));
+  drawn.forEach((s, n) => { s.n = n; });
   gone();
   if (document.fonts && document.fonts.load) await Promise.all([document.fonts.load(`400 76px ${fonts.serif}`), document.fonts.load(`400 27px ${fonts.sans}`)]).catch(() => {});
 
