@@ -642,12 +642,21 @@ body.globe .g-credit { display: inline-flex; }
 .g-credit p { position: absolute; right: 0; bottom: calc(100% + 8px); margin: 0; padding: 6px 10px; white-space: nowrap; font-size: 11px; color: #bcc2cf; background: rgba(7, 10, 16, .94); border: 1px solid rgba(200, 215, 255, .16); border-radius: 6px; }
 .g-credit p[hidden] { display: none; }
 .g-credit a { color: inherit; }
-#more-menu .pace { cursor: default; }
-#more-menu .pace input { flex: none; width: 96px; margin: 0; accent-color: var(--acc); touch-action: none; }
-#more-menu .pace .state { flex: none; width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
-#more-menu .seg { margin-left: auto; display: inline-flex; padding: 2px; border: 1px solid var(--rule2); border-radius: 9px; }
-#more-menu .seg button { height: 24px; padding: 0 8px; font-size: 12px; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; }
-#more-menu .seg button[aria-pressed="true"] { color: var(--text); background: var(--raised); }
+/* The three-dot menu (restructured on request, Nov 2026): groups under small headings, and in each a row is a
+   name on the left and its control on the right, every control the same width so they stand in one column. The
+   choice that is on is lit in the accent colour. */
+#more-menu { width: 318px; max-width: calc(100vw - 16px); max-height: calc(100vh - 64px); overflow-y: auto; padding: 8px; }
+#more-menu .cap { margin: 8px 10px 6px; }
+#more-menu hr { margin: 8px -8px; }
+#more-menu .set { display: grid; grid-template-columns: minmax(0, 1fr) 186px; align-items: center; gap: 12px; min-height: 36px; padding: 0 6px 0 10px; font-size: 13.5px; color: var(--text); cursor: default; }
+#more-menu .set .lbl { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#more-menu .rng { display: flex; align-items: center; gap: 10px; }
+#more-menu .rng input { flex: 1; min-width: 0; margin: 0; accent-color: var(--acc); touch-action: none; }
+#more-menu .rng .state { flex: none; width: 34px; text-align: right; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--muted); }
+#more-menu .seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border: 1px solid var(--rule2); border-radius: 9px; }
+#more-menu .seg button { height: 26px; padding: 0 2px; font-size: 12px; white-space: nowrap; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; transition: color .15s, background .15s; }
+#more-menu .seg button:hover { color: var(--text); }
+#more-menu .seg button[aria-pressed="true"] { font-weight: 600; color: var(--acc); background: color-mix(in srgb, var(--acc) 18%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 55%, transparent); }
 #globe .g-rows { cursor: grab; touch-action: none; }
 #globe .g-rows.drag { cursor: grabbing; }
 #globe .g-rows.drag .g-nm { pointer-events: none; }

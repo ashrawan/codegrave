@@ -2743,10 +2743,16 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (globe) { globe.detail(b.dataset.v); for (const pn of panes.values()) pn.g.detail(b.dataset.v); } else store.set('cg-detail', b.dataset.v);
       detailShow(b.dataset.v);
     });
-    $('theme').addEventListener('click', () => {
+    // The theme is named, Dark or Light, with the one that is on lit (asked for, Nov 2026). `#theme` stays as the
+    // one switch the account menu presses too.
+    const themeShow = () => { const now = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark'; for (const x of $('theme-seg').children) x.setAttribute('aria-pressed', String(x.dataset.v === now)); return now; };
+    const themeFlip = () => {
       const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-      document.documentElement.dataset.theme = next; store.set('cg-theme2', next); roadKick();
-    });
+      document.documentElement.dataset.theme = next; store.set('cg-theme2', next); roadKick(); themeShow();
+    };
+    $('theme').addEventListener('click', themeFlip);
+    $('theme-row').addEventListener('click', (e) => { e.stopPropagation(); const x = e.target.closest('button[data-v]'); if (x && x.dataset.v !== themeShow()) themeFlip(); });
+    themeShow();
 
     $('q').addEventListener('input', findOnTimeline);
     $('propose').addEventListener('click', propose);

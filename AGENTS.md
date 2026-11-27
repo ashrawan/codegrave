@@ -432,6 +432,13 @@ How the page is put together:
   browser) is Auto or Arrow keys: with Arrow keys, play sounds and takes the screen as ever but the reader stands
   still until an arrow is pressed, and then travels to the next entry or back to the one before at the pace of
   automatic play, and stops there (`playStep()`, `road.stepEnd`; a quick glide was tried first and found too fast).
+- **The camera comes down where places are near** (asked for, Nov 2026, after "things to do in Seattle" showed
+  every pin on one dot from far off, then: "little bit closer if upcoming 2 or more distances are closer"). This
+  replaces the `NEARER` limit above, which now holds only for a view of one place. In `cams()` a place's height is
+  the closest that keeps the two places either side of it in the frame, so a run of places in one town or one
+  country is told from over it and only far ones pull back to the globe; the height changes by at most `STEP`
+  from one place to the next. When all of a view's places fit the frame at zoom `LOCAL` or closer (about 100 km
+  across) it may come as close as frames them all (`fit` from `opening()`, at most `CLOSE`).
 - **Globe look** (three-dot menu: Atlas, Day, Dots; `cg-look` in this browser; asked for, Nov 2026). Atlas is the
   default. Day lays NASA's Blue Marble over the far globe (`DAY` in `site/globe.js`: NASA's own tiles, public
   domain); Dots draws the land as a field of points made in the browser from the coast file (`landDots()`). A look
@@ -560,9 +567,12 @@ How the page is put together:
   sight (`#unzoom`, placed from `visualViewport`) and puts it back.
 - **The three-dot menu** (`#more-btn`, `#more-menu`) is at the bottom right, under play, at the
   right end of the strip (asked for, Nov 2026, after it stood at the foot of the bar on the left).
-  It is in three parts: This timeline (Export as PDF, `#pdf`; Turn round, `#reverse`,
-  `state.order`), Settings (the theme, `#theme`; Play speed) and Info (How to read the timeline; the
-  GitHub link was removed on request, Nov 2026). Export as PDF lives only here. For a timeline someone keeps, which is
+  It is in groups under small headings (restructured on request, Nov 2026, after a first list was found
+  "crappy"): This timeline (Export as PDF, `#pdf`; Turn round, `#reverse`, `state.order`), Play (Speed,
+  Advance), Globe (View, Look, Detail, Several views), Appearance (Theme: Dark or Light, `#theme-seg`) and
+  How to read the timeline. A setting is a row (`.set`): its name on the left and its control on the right,
+  every control the same width so they stand in one column, with no icon; the choice that is on is lit in the
+  accent colour. Keep new settings in that shape. Export as PDF lives only here. For a timeline someone keeps, which is
   not a built file, the page hands the view file to the print page through this tab's storage
   (`cg-print`).
 - **The panel** on the right is only for one thing at a time: it is hidden

@@ -11,6 +11,7 @@ const TILE = 512;                                     // MapLibre's tile size: z
 // How close the camera may come to a place of each level, and no closer: a building can be
 // seen from the street, a country cannot.
 export const LEVELS = { spot: 14.6, city: 10.4, region: 6.2, country: 4.3, globe: 1.9 };
+export const CLOSE = 13;   // the closest the camera comes for a view whose places all lie near each other
 export const levelZoom = (level) => LEVELS[level] ?? LEVELS.city;
 
 // Kilometres between two places, along the ground.
@@ -92,8 +93,11 @@ export function opening(places, size, far = LEVELS.globe) {
   for (const p of places) { x += Math.cos(p[0] * RAD) * Math.cos(p[1] * RAD); y += Math.cos(p[0] * RAD) * Math.sin(p[1] * RAD); z += Math.sin(p[0] * RAD); }
   const mid = Math.hypot(x, y, z) < 1e-9 ? [20, 0] : [Math.atan2(z, Math.hypot(x, y)) / RAD, Math.atan2(y, x) / RAD];
   const reach = Math.max(...places.map((p) => distance(mid, p)));
-  const zoom = Math.max(farAt(far, mid[0]), Math.min(LEVELS.city, zoomFor(reach, 0.36 * size, mid[0])));
-  return { center: [mid[1], mid[0]], zoom, pitch: pitchFor(zoom) };
+  // `fit` is the zoom that just frames them all, however close that is: a view of one town is told from over
+  // that town (CLOSE), not from over the whole globe.
+  const fit = Math.min(CLOSE, zoomFor(reach, 0.36 * size, mid[0]));
+  const zoom = Math.max(farAt(far, mid[0]), Math.min(LEVELS.city, fit));
+  return { center: [mid[1], mid[0]], zoom, fit, pitch: pitchFor(zoom) };
 }
 
 // Seconds a flight takes: a glide next door is short, a flight across the world is not long either.
