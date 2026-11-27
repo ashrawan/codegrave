@@ -166,6 +166,12 @@ body:has(#ask:not([hidden])) #toast { bottom: 124px; }
 #ai-live li.now::before { border-color: var(--acc); border-top-color: transparent; animation: spin .8s linear infinite; }
 #ai-live li.done::before { width: 11px; height: 11px; border: 0; background: var(--acc); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.5l2.5 2.5L10 3.5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.5l2.5 2.5L10 3.5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
 #ai-live li b { margin-left: 4px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--acc); }
+/* The step being done ends in three dots that come and go, so it is seen to be working (asked for, Nov 2026). */
+#ai-live .dots { display: inline-block; width: 1.3em; text-align: left; }
+#ai-live .dots i { font-style: normal; opacity: .2; animation: aidot 1.2s infinite; }
+#ai-live .dots i:nth-child(2) { animation-delay: .2s; }
+#ai-live .dots i:nth-child(3) { animation-delay: .4s; }
+@keyframes aidot { 0%, 60%, 100% { opacity: .2; } 30% { opacity: 1; } }
 #ai-live[hidden], #ai-bar[hidden] { display: none; }
 /* With the panel open the road is narrower: the steps stay in the middle of what is left, the bar stops at the panel. */
 body.side-open #ai-live { left: calc(var(--sb) + (100vw - var(--sb) - var(--bar) - var(--side)) / 2); }
