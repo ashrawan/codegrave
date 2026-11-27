@@ -13,6 +13,7 @@ import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
 import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk } from './voice.js';
+import { startRecording, canRecord, fileOf } from './record.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -2473,8 +2474,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     gain.gain.linearRampToValueAtTime(0.07, at + 0.2);
     gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.7);
     src.connect(low); low.connect(gain);
-    if (ctx.createStereoPanner) { const pan = ctx.createStereoPanner(); pan.pan.value = 0.4 * clamp(lean, -1, 1); gain.connect(pan); pan.connect(ctx.destination); }
-    else gain.connect(ctx.destination);
+    if (ctx.createStereoPanner) { const pan = ctx.createStereoPanner(); pan.pan.value = 0.4 * clamp(lean, -1, 1); gain.connect(pan); pan.connect(ctx.destination); if (sound.rec) pan.connect(sound.rec); }
+    else { gain.connect(ctx.destination); if (sound.rec) gain.connect(sound.rec); }
     src.start(at, Math.random() * 0.2, 0.74);
   }
   // The music of play: one track that sounds while play travels and starts over when it ends. A view may
@@ -2519,6 +2520,57 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // until its line is over. The speech is made in this browser (voice.js), all the lines in order from where play
   // starts; a line not made yet holds play at its card, with "Preparing the voice" at the foot. "Voiceover" in the three-dot menu turns it off (`cg-voice` in this browser), and
   // "Subtitles" writes each line at the foot while it is said (`cg-subs`). Only a road of one view is told.
+  // ---- export video (site/record.js): the timeline recorded as it plays, with its sound, into one file in
+  // this browser. All the page's sound also goes to `sound.rec` while it records; the page's own buttons hide
+  // (`body.recording`); play starts from the beginning; when play has ended and no line is being said, the
+  // recording stops and the file is saved. Pausing ends it too.
+  let recording = null;
+  async function exportVideo() {
+    if (recording) return;
+    if (!canRecord()) throw new Error('This browser cannot record video. Try Chrome or Edge on a computer.');
+    if (!sound.on) { sound.on = true; store.set('cg-sound', '1'); drawSound(); }
+    soundReady();
+    const ctx = sound.ctx;
+    if (ctx) {
+      sound.rec = ctx.createMediaStreamDestination();
+      voice.tap(sound.rec);
+      musicTap();
+    }
+    let quiet = 0, tick = 0;
+    const finish = () => { clearInterval(tick); const r = recording; if (r && r.stop) r.stop(); };
+    recording = {};
+    try {
+      recording = await startRecording({
+        audio: sound.rec?.stream, el: null, ended: finish,
+        done: (blob, type) => {
+          recording = null;
+          document.body.classList.remove('recording');
+          voice.tap(null); if (music.node && sound.rec) { try { music.node.disconnect(sound.rec); } catch { /* gone */ } } sound.rec = null;
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob); a.download = fileOf(view0Title(), type);
+          document.body.append(a); a.click(); a.remove();
+          setTimeout(() => URL.revokeObjectURL(a.href), 60_000);
+          note(`The video is saved: ${a.download}.`);
+        },
+      });
+    } catch (e) {
+      recording = null; voice.tap(null); sound.rec = null;
+      throw e.name === 'NotAllowedError' ? new Error('The video needs this tab to be shared. Try again and choose this tab.') : e;
+    }
+    document.body.classList.add('recording');
+    startPlay(L ? L.tMin : undefined);
+    tick = setInterval(() => { quiet = !play.on && !voice.busy() ? quiet + 1 : 0; if (quiet >= 3) finish(); }, 500);
+  }
+  // The music is an <audio> element: it joins the page's sound once, the first time a recording needs it,
+  // and only when the track is on this site (a track elsewhere would go silent without CORS).
+  function musicTap() {
+    if (!music.el) { tune(); if (!music.el) { music.el = new Audio(); music.el.loop = true; music.el.preload = 'auto'; music.el.volume = 0; } }
+    try {
+      if (!music.node && (!music.src || new URL(music.src, location.href).origin === location.origin)) { music.node = sound.ctx.createMediaElementSource(music.el); music.node.connect(sound.ctx.destination); }
+      if (music.node) music.node.connect(sound.rec);
+    } catch { /* recorded without the music */ }
+  }
+  const view0Title = () => (L && L.lanes.length ? L.lanes.map((ln) => ln.view.name).join(' and ') : 'timeline');
   const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '', wait: false, load: null };
   const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); if (s.engine) drawTold(); drawSubs(); });
   told.slow = isSlow();
@@ -3126,6 +3178,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // What a voiceover tells: the entries in the order play meets them.
     // The voice made in this browser, and an audio context for hearing a voice before choosing it.
     speaker: () => speaker,
+    exportVideo: () => exportVideo(),
+    canRecord,
     voiceLoad: () => (told.load != null && told.load < 1 ? { part: told.load, mb: Math.round((told.bytes || 0) / 1e6) || MODEL_MB } : null),
     audio: () => { try { const AC = window.AudioContext || window.webkitAudioContext; if (!sound.ctx && AC) sound.ctx = new AC(); if (sound.ctx?.state === 'suspended') sound.ctx.resume(); } catch { sound.ctx = null; } return sound.ctx; },
     told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), summary: p.t.summary || '' })) }; },

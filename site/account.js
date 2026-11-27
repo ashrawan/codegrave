@@ -623,6 +623,7 @@ export function createAccount(app) {
     share: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.5 2.6 14.5 0 17M12 3.5c-2.6 2.5-2.6 14.5 0 17"/></svg>',
     turn: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4v15M20 15l-4 4-4-4M8 20V5M12 9 8 5 4 9"/></svg>',
     name: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7V5h14v2M12 5v14M9 19h6"/></svg>',
+    film: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg>',
     bin: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l1 12.5h9l1-12.5"/></svg>',
   };
   function timelineMenu(anchor) {
@@ -633,6 +634,7 @@ export function createAccount(app) {
       ${free && cur.text.includes('"spec":{') ? item('edit', TL.edit, 'Open in editor') : ''}
       ${cur ? item('publish', TL.share, cur.visibility === 'private' ? 'Publish' : 'Share', `<i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}`) + '<hr>' : ''}
       ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Export as PDF')}
+      ${item('video', TL.film, 'Export video', 'MP4')}
       ${item('turn', TL.turn, esc($('reverse').textContent.trim() || 'Turn round'))}
       ${cur ? '<hr>' + item('rename', TL.name, 'Rename') + item('delete', TL.bin, 'Delete', '', ' danger') : ''}`, 'menu tl');
     d.addEventListener('click', (x) => {
@@ -640,6 +642,7 @@ export function createAccount(app) {
       if (!a) return;
       x.stopPropagation();
       if (a === 'voice') return voiceMenu(at, cur);
+      if (a === 'video') { closeLayer(); return videoMenu(); }
       if (a === 'publish') return publish(at);
       closeLayer();
       if (a === 'edit') { if (!editor.open(cur)) toast('This timeline cannot be opened in the editor.'); }
@@ -703,6 +706,23 @@ export function createAccount(app) {
     d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); voiceover(row, v); });
     d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });
     d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
+  }
+  // Export video (site/record.js): what will happen, then the browser asks to share this tab.
+  function videoMenu() {
+    const can = app.canRecord(), cur = current(), told = !!cur && cur.text.includes('"voice":{'), dev = told && voiceOf(JSON.parse(cur.text).voice)?.voice === 'device';
+    const d = modal(`<form class="vo-form"><h2>Export video</h2>
+      <p class="dlg-sub">The timeline plays from the beginning in full view and is recorded${told ? ' with its voiceover and music' : ' with its music'}, as one MP4 file you can upload to YouTube. Nothing leaves your device.</p>
+      <ul class="vx-list"><li>It records in real time: a timeline that plays for three minutes takes three minutes.</li>
+      <li>Your browser asks to share a tab. Choose this one.</li>
+      <li>Keep this tab open and in front. Pausing ends the video early; it is saved when play ends.</li>
+      ${dev ? '<li>The voice of This device cannot be recorded by a page. For a video with the voiceover, choose Heart or Michael first.</li>' : ''}</ul>
+      <p class="dlg-err" role="alert">${can ? '' : 'This browser cannot record video. Try Chrome or Edge on a computer.'}</p>
+      <div class="dlg-row"><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri"${can ? '' : ' disabled'}>Start recording</button></div></form>`, 'small vo');
+    d.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      closeLayer();
+      app.exportVideo().catch((x) => toast(x.message || 'The video could not be recorded.'));
+    });
   }
   function showKind(id) {
     const list = $('cr-list'), k = KINDS.find((x) => x.id === id), same = !list.hidden && list.dataset.kind === id;

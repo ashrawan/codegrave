@@ -837,3 +837,8 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
   #subs { top: 108px; bottom: auto; left: 50%; max-width: calc(100vw - 24px); font-size: 14.5px; padding: 6px 12px; }
 }
 @media (prefers-reduced-motion: reduce) { #subs { transition: none; } }
+
+/* Export video: while the page records itself, its own buttons and the pointer are out of the picture. */
+body.recording, body.recording * { cursor: none !important; }
+body.recording #axisbar .ends, body.recording #film-menu, body.recording .top, body.recording .tsearch, body.recording #tl-state,
+body.recording #vo-panel, body.recording #more-btn, body.recording #ask, body.recording #toast { opacity: 0 !important; pointer-events: none !important; }

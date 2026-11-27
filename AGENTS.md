@@ -57,6 +57,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | Voiceover (a timeline told aloud: the script, the voices, the speech made in the browser, how play waits for a line) | `site/voice.js` (the voices, the speaker and the player), `site/account.js` (making one), `site/app.js` (`tell()`), then `tests/voice.test.mjs` and `docs/ACCOUNTS.md`; the server side is `supabase/functions/voiceover/index.ts`, deployed to the Supabase project | |
 | Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
+| Export video (the timeline recorded as it plays, with its voice and music, into one file in the browser) | `site/record.js`, `exportVideo()` in `site/app.js`, `videoMenu()` in `site/account.js`, then `tests/record.test.mjs` | |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The globe (the timeline on the Earth, the only way it is drawn): the map, pins, cards, the strip of rows | `site/globe.js`; its arithmetic (camera heights, arcs, when to dim or go to space) in `site/globe-path.js`, then `tests/globe.test.mjs` | |
@@ -334,6 +335,15 @@ How the page is put together:
   told, and play by the arrow keys says a line as its entry arrives without waiting. The script's prompt has many
   short examples by kind of timeline; add to them rather than cut them. Another engine (a cheaper paid voice, or
   another free model) would go beside Kokoro in `voice.js`, with its voices in `VOICES`.
+- **Export video** (`site/record.js`; asked for, Nov 2026: "just like export as PDF, you can have the export
+  video", to upload to YouTube later). In the three dots at the top right, for any timeline. The browser records
+  this tab (`getDisplayMedia`, it asks once), the page's own sound goes to the recording too (`sound.rec`: the
+  voice through `voice.tap()`, the music through a media element source, the breath of the cards), the page's
+  buttons and pointer hide (`body.recording`), play starts from the beginning, and when play has ended and no line
+  is being said the file is saved (MP4, H.264 and AAC where the browser records it, `pickType()`; WebM
+  otherwise). It runs in real time; pausing ends it early. The voice of This device cannot be recorded by a page.
+  Exact, frame-by-frame videos are film mode's job (`docs/FILM_MODE.md`). Generate voiceover is two steps (asked
+  for): the script, then the voice made for every line at once (`record()` in `account.js`), so play never waits.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound
