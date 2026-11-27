@@ -59,7 +59,8 @@ const ICON = {
 const LOGO = '<svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 27.5H29" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 27.5V12.5a6.5 6.5 0 0 1 13 0V27.5" stroke="currentColor" stroke-width="1.8"/><path d="M21.5 27.5V20a3.5 3.5 0 0 1 7 0v7.5" stroke="currentColor" stroke-width="1.6" opacity=".55"/><path d="M10 14.5l3 2.5-3 2.5" stroke="currentColor" stroke-width="1.8"/><path d="M14 22.5h3.5" stroke="var(--acc)" stroke-width="2.2"/></svg>';
 const SEEN = { private: 'Private draft', link: 'Link only', public: 'Public' };
 const PHONE = '(max-width: 699px)';
-const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt';
+const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt', FAILED = 'cg-ai-failed';
+const AI_PER_DAY = 20;      // the function's default allowance (AI_DAILY)
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),
    show(id), open(id) (travel to a view's beginning), replace(payload) (a stored view changed), forget(id), home(),
@@ -370,7 +371,8 @@ export function createAccount(app) {
     el.textContent = STEPS[0];
     ticker = setInterval(() => { i = Math.min(STEPS.length - 1, i + 1); el.textContent = STEPS[i]; }, 3500);
   }
-  const fail = (el, e) => { if (el) { el.classList.add('err'); el.textContent = e.status === 401 ? 'Sign in again to make a timeline.' : e.message || 'That did not work. Try again.'; } else toast(e.message); };
+  const sayOf = (e) => (e.status === 401 ? 'Sign in again to make a timeline.' : e.status === 429 ? 'Request limit reached. ' + (e.message || '') : e.message || 'That did not work. Try again.');
+  const fail = (el, e) => { if (el) { el.classList.add('err'); el.textContent = sayOf(e); } else toast(sayOf(e)); };
   // Asks the function and reads its answer as it comes: `onText` gets the JSON written so far, `onNote`
   // what the function is doing. Resolves with the finished answer, or throws with a sentence to show.
   async function ask_ai(body, onText, onNote) {
@@ -497,6 +499,9 @@ export function createAccount(app) {
       api(`/rest/v1/timelines?id=eq.${uuidOf(id)}`, { method: 'DELETE' }).catch(() => {});
       rows.delete(uuidOf(id)); app.forget(id);
       await refreshList();
+      // The page is loaded afresh on the way home, so what went wrong is kept for the page that follows to show
+      // with the request (reported, Nov 2026: the limit's message was never seen).
+      try { sessionStorage.setItem(FAILED, JSON.stringify({ prompt, message: e.message || '', status: e.status || 0 })); } catch (x) { /* fine */ }
       app.home();
       openCreate(prompt);
       fail($('cr-status'), e);
@@ -755,8 +760,21 @@ export function createAccount(app) {
         return undefined;
       }
       if (el('#sb-me')) {
-        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><button type="button" class="nv" data-act="theme">Switch theme</button><hr><button type="button" class="nv" data-act="out">Sign out</button>`, 'menu wide');
+        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<div class="me" id="me-ai" hidden><small>Create with AI</small><span></span><i><u></u></i></div><hr><button type="button" class="nv" data-act="theme">Switch theme</button><hr><button type="button" class="nv" data-act="out">Sign out</button>`, 'menu wide');
         d.addEventListener('click', (x) => { const a = x.target.closest('[data-act]')?.dataset.act; if (!a) return; closeLayer(); if (a === 'out') signOut(); else $('theme').click(); });
+        // How many requests are left today (asked for, Nov 2026): the account's own requests of the last 24
+        // hours against its allowance (its own number when it has one, else AI_PER_DAY).
+        Promise.all([
+          api(`/rest/v1/ai_requests?select=id&created_at=gte.${new Date(Date.now() - 864e5).toISOString()}&limit=20000`),
+          api('/rest/v1/ai_limits?select=daily').catch(() => []),
+        ]).then(([used, own]) => {
+          const box = d.querySelector('#me-ai'); if (!box) return;
+          const most = Number.isFinite(Number(own?.[0]?.daily)) ? Number(own[0].daily) : AI_PER_DAY, left = Math.max(0, most - (used?.length || 0));
+          box.querySelector('span').textContent = `${left.toLocaleString('en-US')} of ${most.toLocaleString('en-US')} requests left today`;
+          box.querySelector('u').style.width = (most ? 100 * left / most : 0) + '%';
+          box.classList.toggle('none', !left);
+          box.hidden = false;
+        }).catch(() => {});
         return undefined;
       }
       const add = el('[data-tl-add]');
@@ -799,6 +817,9 @@ export function createAccount(app) {
       // A sentence typed before signing in: carry on with it.
       let kept = ''; try { kept = sessionStorage.getItem(PROMPT) || ''; sessionStorage.removeItem(PROMPT); } catch (e) { /* fine */ }
       if (kept) { openCreate(kept); make(kept); }
+      // A request that failed before the page was loaded afresh: it comes back with what went wrong.
+      let bad = null; try { bad = JSON.parse(sessionStorage.getItem(FAILED) || 'null'); sessionStorage.removeItem(FAILED); } catch (e) { /* fine */ }
+      if (bad && !kept) { openCreate(bad.prompt || ''); fail($('cr-status'), bad); }
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 

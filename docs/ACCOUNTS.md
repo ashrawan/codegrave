@@ -50,7 +50,7 @@ finished even when the tab is closed.
    with the reader's session. The answer is always a stream; a model the
    function does not offer is refused (there is no support for older pages).
 2. The function checks who is asking and counts the day's requests in
-   `ai_requests` (20 a day per account by default).
+   `ai_requests` (20 a day per account by default; a row in `ai_limits`, written by hand, gives one account its own number).
 3. It reads up on the subject in Wikipedia (the best article whole, the
    openings of three more), so recent facts come from today's Wikipedia
    and not only from the model's memory.

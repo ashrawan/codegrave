@@ -20,7 +20,8 @@
 //   OPENROUTER_API_KEY   required
 //   AI_MODELS            optional: more OpenRouter model ids to allow, separated by commas; "*" allows any
 //                        (the plan: offer everything OpenRouter has, and let the key's own limit cap the spending)
-//   AI_DAILY             optional: requests one account may make in a day (default 20)
+//   AI_DAILY             optional: requests one account may make in a day (default 20); a row in the
+//                        table `ai_limits` gives one account its own number
 //   AI_WEB               optional: "1" also lets the model search the web (OpenRouter's web search tool, paid per search)
 
 import { findPictures, findPlaces, specToView } from "./ai.js";   // the page's own site/ai.js, deployed beside this file
@@ -156,7 +157,14 @@ Deno.serve(async (req) => {
   const since = new Date(Date.now() - 864e5).toISOString();
   const used = await service(`/rest/v1/ai_requests?owner=eq.${user.id}&created_at=gte.${since}&select=id`, { headers: { Prefer: "count=exact", Range: "0-0" } });
   const count = Number((used.headers.get("content-range") ?? "*/0").split("/")[1] || 0);
-  if (count >= DAILY) return json({ error: `That is ${DAILY} requests today, the most for now. Try again tomorrow.`, code: "limit" }, 429);
+  // One account may be given its own allowance: a row in `ai_limits` (written by hand in the database).
+  let daily = DAILY;
+  try {
+    const own = await service(`/rest/v1/ai_limits?owner=eq.${user.id}&select=daily`);
+    const rows = own.ok ? await own.json() : [];
+    if (rows[0] && Number.isFinite(Number(rows[0].daily))) daily = Number(rows[0].daily);
+  } catch (_e) { /* the default stands */ }
+  if (count >= daily) return json({ error: `That is ${daily} requests today, the most for now. Try again tomorrow.`, code: "limit" }, 429);
 
   const log = (ok: boolean, usage: Record<string, number> = {}) =>
     service("/rest/v1/ai_requests", { method: "POST", body: JSON.stringify({ owner: user.id, model, kind: current ? "change" : "create", prompt, ok, tokens_in: usage.prompt_tokens ?? 0, tokens_out: usage.completion_tokens ?? 0 }) }).catch(() => {});
@@ -239,7 +247,7 @@ Deno.serve(async (req) => {
           } catch (e) { console.error("save", String(e)); }
         }
         await log(true, usage);
-        send({ done: { saved, spec, changed: typeof spec.changed === "string" ? spec.changed.slice(0, 200) : "", model, left: Math.max(0, DAILY - count - 1) } });
+        send({ done: { saved, spec, changed: typeof spec.changed === "string" ? spec.changed.slice(0, 200) : "", model, left: Math.max(0, daily - count - 1) } });
       } catch (e) {
         console.error("ai-timeline", String(e));
         await log(false);
