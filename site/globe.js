@@ -423,7 +423,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   }
   // Where each entry stands on the strip.
   function measure() {
-    S.xs = Array.from(track.children, (el) => el.offsetLeft + 4);
+    // Turned round, an entry is placed by its right edge: it stands just before the marker, which is at the right.
+    S.xs = Array.from(track.children, (el) => (S.flip ? el.offsetLeft + el.offsetWidth : el.offsetLeft + 4));
     rows.style.setProperty('--now', Math.round(nowAt()) + 'px');
   }
   function markShelf() {
@@ -431,7 +432,10 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
   // The marker stands at the left end, so a view opens with its first entry at the left edge (asked for, Nov 2026).
-  const nowAt = () => (S.phone ? 22 : 34);
+  // Turned round (asked for, Nov 2026: "instead of currently moving from left to right, actually moves from right
+  // to left"), the marker stands at the right end: what has been passed stays in sight at its left, and what is
+  // still to come is not shown until its turn.
+  const nowAt = () => (S.flip ? rows.clientWidth - (S.phone ? 26 : 44) : S.phone ? 22 : 34);
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;
@@ -538,7 +542,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     }
     // The dot of the entry in front stands just after the marker, not under it (asked for, Nov 2026: the line "should
     // be on the left, and the first dot ... a little bit right after that").
-    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + (S.phone ? 12 : 16) - xAt(S.pos)).toFixed(1)}px)`;
+    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + (S.flip ? -1 : 1) * (S.phone ? 12 : 16) - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
       S.warp = still ? 0 : d ? d.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);
@@ -648,6 +652,14 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
 
   return {
     // With several views each has a globe of its own, and this one, the page's, keeps only the time line.
+    // The time line turned round: see nowAt().
+    flip(on) {
+      on = !!on;
+      if (on === !!S.flip) return;
+      S.flip = on; rows.classList.toggle('flip', on);
+      if (!shelf.hidden) measure();
+      run();
+    },
     bare(on) {
       if (!!S.bare === !!on) return;
       S.bare = !!on; host.classList.toggle('bare', S.bare); host.classList.remove('close');

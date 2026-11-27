@@ -439,6 +439,11 @@ How the page is put together:
   place on the map (The Universe), the view and its play start in space, not on the globe: `stageFor()` answers
   'space' before the first entry and for a run without places at the very beginning, however short, and
   `globe.intro()` does no glide from the whole globe. The globe comes in at the first entry that has a place.
+- **Turned round, the time line at the foot runs from the right (Nov 2026, asked for).** With "Turn round" on
+  (`state.order` 'new'), the marker of the strip stands at the right end (`globe.flip()`, `nowAt()` in
+  `site/globe.js`, `.g-rows.flip`): the entry in front stands just before it, what was passed stays in sight at
+  its left, and what is still to come is not shown until its turn. Nothing else changes: the order, the years
+  and the drag are the same.
 - **A default voiceover for a built timeline (Nov 2026, asked for).** `data/community/<owner>/voices/<view>.json`
   holds the words (`{ style, lines: [{ id, text }] }`; ids are `intro`, `outro` and entry ids), and the build puts
   them into the view's own file as `voice` (`docs/VIEWS.md`). The page tells them unless the reader made their

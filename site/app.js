@@ -1002,6 +1002,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     }
     road.gsteps = new Map(road.gorder.map((p) => [p.t.id, p]).reverse());
     road.gcur = undefined;
+    globe.flip(state.order === 'new');
     globe.show(steps);
     globePanes(steps);
     voice.set(voiceNow()); drawTold();
