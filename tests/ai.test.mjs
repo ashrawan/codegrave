@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec, whereOf, findPlaces, kmBetween } from '../site/ai.js';
+import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec, whereOf, findPlaces, kmBetween, linkPictures, pictureLink } from '../site/ai.js';
 import { parseDate } from '../site/rank.js';
 
 test('dates are kept only in the shapes the page reads', () => {
@@ -23,7 +23,7 @@ test('a spec is made safe: no undated entry, no twin, no chapter over another', 
       { name: 'No date', start: 'unknown' },
       { name: 'Early', start: '1900-01-02', end: '1890', events: [{ date: '1901', label: 'Kept' }, { date: 'x', label: 'Dropped' }] },
       { name: 'early', start: '1901' },
-      { name: 'Pic', start: '1920', image: { src: 'https://evil.example/x.png' } },
+      { name: 'Pic', start: '1920', image: { src: 'http://evil.example/x.png' } },
       'not an entry',
     ],
   });
@@ -68,12 +68,14 @@ test('a spec becomes a view file the page can draw', () => {
   assert.notEqual(specToView(f.spec, 'zzz').entries[0].id, a.id);
 });
 
-test('pictures from Wikimedia thumbnails are kept, others are not', () => {
+test('pictures are https links; Wikimedia thumbnails lose their tracking query', () => {
   const pic = (src) => specToView({ entries: [{ name: 'A', start: '1960', image: { src } }] }, 's').entries[0].image?.src;
   // Wikimedia serves thumbnails from thumb.wikimedia.org since 2026, with a tracking query that is dropped.
   assert.equal(pic('https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/A.jpg/500px-A.jpg?utm_source=en.wikipedia.org&utm_campaign=api'), 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/A.jpg/500px-A.jpg');
   assert.equal(pic('https://upload.wikimedia.org/wikipedia/commons/4/43/B.jpg'), 'https://upload.wikimedia.org/wikipedia/commons/4/43/B.jpg');
-  assert.equal(pic('https://example.com/c.jpg'), undefined);
+  assert.equal(pic('https://example.com/c.jpg'), 'https://example.com/c.jpg');   // a link the reader set, or one that was checked
+  assert.equal(pic('http://example.com/c.jpg'), undefined);
+  assert.equal(pic('javascript:alert(1)'), undefined);
 });
 
 test('names make ids, and there are three models to pick from', () => {
@@ -272,4 +274,25 @@ test("the model's coordinates only refine a place that is already known", async 
   assert.deepEqual(entries[3].where, [47.6204, -122.3491]);
   assert.deepEqual(entries[4].where, [47.6125, -122.2046]);
   assert.deepEqual(cleanSpec({ title: 'T', entries: [{ name: 'A', start: '2026', coordinates: [47.61012, -122.20151] }, { name: 'B', start: '2026', coordinates: 'Seattle' }] }).entries.map((e) => e.coordinates), [[47.6101, -122.2015], undefined]);
+});
+
+test("the model's picture links come after Wikipedia's and only when they open", async () => {
+  assert.deepEqual(pictureLink('https://commons.wikimedia.org/wiki/File:Space_Needle.jpg'), { src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Space_Needle.jpg?width=500', source: 'https://commons.wikimedia.org/wiki/File:Space_Needle.jpg' });
+  assert.equal(pictureLink('http://example.com/a.jpg'), null);
+  const wiki = { src: 'https://upload.wikimedia.org/a.jpg', source: '' };
+  const entries = [
+    { name: 'Has one', image: wiki, pictures: ['https://example.com/good.jpg', 'https://example.com/dead.jpg'] },
+    { name: 'Has none', pictures: ['https://example.com/dead.jpg', 'https://example.com/good2.jpg', 'javascript:alert(1)'] },
+    { name: 'Nothing opens', pictures: ['https://example.com/dead.jpg'] },
+  ];
+  assert.equal(await linkPictures(entries, async (u) => u.includes('good')), 2);
+  assert.equal(entries[0].image, wiki);
+  assert.deepEqual(entries[0].more, [{ src: 'https://example.com/good.jpg', source: 'https://example.com/good.jpg' }]);
+  assert.equal(entries[1].image.src, 'https://example.com/good2.jpg');
+  assert.equal(entries[2].image, undefined);
+  assert.ok(entries.every((e) => !('pictures' in e)));
+  const f = specToView(cleanSpec({ title: 'T', entries: entries.map((e) => ({ ...e, start: '2026' })) }), 'abc');
+  assert.equal(f.entries[0].media[0].credit, 'example.com');
+  assert.equal(f.entries[0].image.credit, 'Wikimedia Commons');
+  assert.equal(f.entries[2].image, undefined);
 });

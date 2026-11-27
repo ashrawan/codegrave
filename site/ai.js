@@ -146,15 +146,14 @@ export function cleanSpec(raw) {
     seen.add(name.toLowerCase());
     let end = ranked || scaled ? '' : cleanDate(e.end);
     if (end && order(end) < order(start)) end = '';
-    // Pictures only from Wikimedia's own servers (upload. and, since 2026, thumb.wikimedia.org), without the tracking query.
-    const img = e.image && typeof e.image === 'object' && /^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(e.image.src || '')
-      ? { src: text(String(e.image.src).replace(/\?utm_[^#]*$/, ''), 400), source: /^https:\/\//.test(e.image.source || '') ? text(e.image.source, 400) : '' } : null;
+    const img = picOf(e.image), more = (Array.isArray(e.more) ? e.more : []).map(picOf).filter((m) => m && m.src !== img?.src).slice(0, MORE_PICS);
     entries.push({
       ...(ranked ? { rank: entries.length + 1 } : scaled ? { value: num(e.value) } : {}),
       name, kind: text(e.kind, 40) || 'Entry', type: TYPES.includes(e.type) ? e.type : 'events', start, end,
       summary: text(e.summary, 400), wikipedia: text(e.wikipedia, 120), importance: Math.min(5, Math.max(1, Math.round(Number(e.importance)) || 3)),
       events: (Array.isArray(e.events) ? e.events : []).map((x) => ({ date: cleanDate(x?.date), label: text(x?.label, 80), note: text(x?.note, 200) })).filter((x) => x.date && x.label).slice(0, 6),
       ...(img ? { image: img } : {}),
+      ...(img && more.length ? { more } : {}),
       ...(text(e.place, 120) ? { place: text(e.place, 120) } : {}),
       ...(text(e.address, 160) ? { address: text(e.address, 160) } : {}),
       ...(whereOf(e.coordinates) ? { coordinates: whereOf(e.coordinates) } : {}),
@@ -200,7 +199,8 @@ export function specToView(raw, seed) {
       sources: wiki ? [{ title: 'Wikipedia: ' + e.wikipedia, url: wiki, kind: 'secondary' }] : [],
       verified: false,
       ...(e.where ? { where: e.where } : {}),
-      ...(e.image ? { image: { src: e.image.src, alt: e.name, credit: 'Wikimedia Commons', licence: 'See the source', source: e.image.source || wiki } } : {}),
+      ...(e.image ? { image: mediaOf(e.image, e.name, wiki) } : {}),
+      ...(e.image && e.more?.length ? { media: e.more.map((m) => mediaOf(m, e.name, wiki)) } : {}),
     };
   });
   const ids = new Set(), sc = spec.axis === 'scale' ? scaleOf(spec.entries.map((e) => e.value), spec.log) : null;
@@ -254,6 +254,48 @@ export function partialSpec(text) {
 // is not (a logo, a product shot), the picture Wikidata keeps for the subject (P18, else its logo P154),
 // always a file on Wikimedia Commons. About three requests for a whole timeline. `get(host, query)`
 // answers one API request (the server and the page each pass their own). Returns how many it found.
+// One picture of a spec's entry, { src, source }, or null: any https address (Wikimedia's own lose their tracking
+// query). It is found by the server on Wikipedia first; a link the model gave is kept only when it opened as a
+// picture (`linkPictures()`), and the reader may set any link in the editor.
+export const MORE_PICS = 3;
+export function picOf(v) {
+  const src = typeof v === 'string' ? v : v && typeof v === 'object' ? v.src : '';
+  if (typeof src !== 'string' || !/^https:\/\/[^\s"'<>]+$/.test(src.trim())) return null;
+  const source = v && typeof v === 'object' && /^https:\/\//.test(v.source || '') ? text(v.source, 400) : '';
+  return { src: text(src.replace(/\?utm_[^#]*$/, ''), 400), source };
+}
+const wikimedia = (u) => /^https:\/\/[a-z.]*wikimedia\.org\//.test(u);
+const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+const mediaOf = (m, name, wiki) => ({ src: m.src, alt: name, credit: wikimedia(m.src) ? 'Wikimedia Commons' : hostOf(m.source || m.src), licence: 'See the source', source: m.source || (wikimedia(m.src) ? wiki : m.src) });
+// A link the model gave, as the address of the picture itself: a file page on Wikimedia Commons becomes the file.
+export function pictureLink(u) {
+  if (typeof u !== 'string' || !/^https:\/\/[^\s"'<>]+$/.test(u.trim())) return null;
+  u = u.trim();
+  const file = u.match(/^https:\/\/(?:commons\.wikimedia|[a-z-]+\.wikipedia)\.org\/wiki\/File:([^?#]+)/);
+  return file ? { src: 'https://commons.wikimedia.org/wiki/Special:FilePath/' + file[1] + '?width=500', source: 'https://commons.wikimedia.org/wiki/File:' + file[1] } : { src: u, source: u };
+}
+// The pictures the model linked (`pictures` on an entry), after Wikipedia's: each link is opened (`check(url)`
+// answers whether it is a picture), since most addresses a model writes from memory do not exist. The first that
+// opens is the entry's picture when Wikipedia had none; the others stand beside it (`more`). Returns how many were kept.
+export async function linkPictures(entries, check, max = 60) {
+  const asks = [];
+  for (const e of entries) {
+    const links = (Array.isArray(e.pictures) ? e.pictures : []).map(pictureLink).filter(Boolean).slice(0, MORE_PICS);
+    delete e.pictures;
+    for (const m of links) if (asks.length < max) asks.push({ e, m });
+  }
+  let n = 0;
+  for (let i = 0; i < asks.length; i += 6) {
+    const ok = await Promise.all(asks.slice(i, i + 6).map(({ m }) => check(m.src).catch(() => false)));
+    asks.slice(i, i + 6).forEach(({ e, m }, j) => {
+      if (!ok[j] || e.image?.src === m.src) return;
+      if (!e.image) e.image = m; else if ((e.more ??= []).length < MORE_PICS && !e.more.some((x) => x.src === m.src)) e.more.push(m); else return;
+      n++;
+    });
+  }
+  return n;
+}
+
 // A place on the Earth, [lat, lon], or null: only what is a real pair of numbers in range.
 export function whereOf(w) {
   if (!Array.isArray(w) || w.length < 2) return null;

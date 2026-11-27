@@ -22,7 +22,7 @@
 //                        (the plan: offer everything OpenRouter has, and let the key's own limit cap the spending)
 //   AI_WEB               optional: "1" also lets the model search the web (OpenRouter's web search tool, paid per search)
 
-import { findPictures, findPlaces, specToView } from "./ai.js";   // the page's own site/ai.js, deployed beside this file
+import { findPictures, findPlaces, linkPictures, specToView } from "./ai.js";   // the page's own site/ai.js, deployed beside this file
 
 // The models this function will run, by OpenRouter id (site/ai.js lists the same ones for the page):
 // the cheapest and most used of OpenRouter's ranking, and the cheapest of OpenAI, Anthropic and Google (asked for, Nov 2026).
@@ -65,6 +65,7 @@ const system = (today: string) => `You make timelines for codegrave.com, where a
     "wikipedia": "the exact title of its English Wikipedia article, or null if unsure",
     "place": "the exact title of the English Wikipedia article of the most exact place where it is, was made or happened: the venue, building, park or neighbourhood when that has an article, else the city, else the country; null if it has none",
     "address": "only for something at one spot: the name of the venue or landmark, then the city, the region and the country, as typed into a map search, e.g. Bellevue Downtown Park, Bellevue, Washington, USA; else null",
+    "pictures": [ up to 3 links to pictures of exactly this entry that you are sure exist: the address of a file page on Wikimedia Commons, or a direct https link to an image; else [] ],
     "coordinates": [latitude, longitude] of that exact spot in decimal degrees, only when you know it well (a famous building, a stadium, a park); else null,
     "importance": 1 to 5 (5 = nobody could leave it out),
     "events": [ { "date": "...", "label": "a turning point in a few words", "note": "one sentence" } ]
@@ -80,7 +81,8 @@ Rules:
 - "address" pins the exact spot, for whatever is or happens at one: an event, a festival, a concert, a match, a market, a restaurant, a shop, a sight, a building, a stop on a trip, a meeting. Write the name of the venue or landmark (the street address only when the spot has no name), then the city, the region and the country: "Climate Pledge Arena, Seattle, Washington, USA", "Tsukiji Outer Market, Tokyo, Japan", "500 108th Ave NE, Bellevue, Washington, USA". Give it even when the venue has no Wikipedia article; then "place" is the neighbourhood or city around it. Leave it null for a country, a whole city, a region, or anything spread wide.
 - "coordinates" are checked against the place and the address and thrown away when they do not agree, so they never replace them: always give "place" and "address" first. Write coordinates only for a spot you could point to on a map, to four decimals, and null rather than a guess; never the middle of the city for something whose spot you do not know.
 - When the request is about one town or area ("events in Seattle and Bellevue", "a weekend in Lisbon", "the best ramen in Tokyo", "things to do near me in Austin"), the pins are the whole point: every entry gets the venue where it actually takes place, as its "address", and entries at different venues never share the bare city as their place. Something that moves or fills a district (a parade, a marathon, a street fair) gets where it starts or centres. Name only a venue you are sure of; when unsure, give the neighbourhood, and only then the city.
-- Give "wikipedia" for every entry that has an article of its own: the picture comes from it. For a product or an event without one, name the closest article that shows it.
+- Give "wikipedia" for every entry that has an article of its own: the picture comes from it first. For a product or an event without one, name the closest article that shows it.
+- "pictures" come after Wikipedia's: they fill in where the article has no picture and add more views of the entry. Prefer files on Wikimedia Commons, by the address of their file page ("https://commons.wikimedia.org/wiki/File:Space_Needle_2011-07-04.jpg"); else an official page's own image. Every link is opened and dropped when it is not a picture, so write only an address you remember exactly, never one you made up from the name, and [] when you have none.
 - A plan (a trip, a course, a training schedule, a project, a working week) is dated forward: from the day or month the request names ("Monday to Friday" means the coming Monday to Friday), else starting tomorrow, and lasts exactly as long as the request says ("in 30 days" is 30 days, not a year). Each step is one entry with a full date for "start" and for "end" ("2027-04-03"; the same day twice for one day), and a time of day when the plan is by the hour ("2027-04-05T09:00" to "2027-04-05T11:00"): a day of a trip, a day of a course, a task, a meeting, a milestone. Keep the steps of one day in the order they happen. "name" says what happens ("Day 3: Kyoto temples", "Week 2: loops and functions"), "kind" is Day, Week, Lesson, Task, Milestone and the like, "summary" says what to do and why, "type" is the nearest fit (a place visited: places; a lesson: knowledge), and "wikipedia" names the article of the place or subject of that step, so it gets a picture. Write as many steps as the plan has.
 - Pick the axis from what the request is about, not from its words. Most things happen in time: use "time". Use "rank" when the request asks for an order with no measure behind it that you can give for every entry: the most popular, the best, the most influential, "top 100 ...", the steps of a recipe or a process. Use "scale" when it asks to compare things by a measure you can give as a number for every entry: the tallest buildings (height), the planets by distance from the Sun, the biggest animals (mass), the most populous countries (people), phones by price. A count in the request ("the 20 tallest", "top 10 richest") does not make it a rank: when the order comes from a measure (tallest, longest, biggest, richest, fastest, farthest, oldest by a number), it is a scale. When in doubt between the two, prefer "scale" if a number exists for every entry, else "rank".
 - "rank": give every entry "rank" (1 = first) instead of "start" and "end", in rank order, as many as the request names (at most 100). Chapters run from one rank to another ("from": 1, "to": 10, "name": "The top ten").
@@ -110,6 +112,15 @@ const wiki = async (host: string, query: string) => {
     if (i >= 2 || (r.status !== 429 && r.status < 500)) throw new Error("wiki " + r.status);
     await new Promise((ok) => setTimeout(ok, 700 * (i + 1)));
   }
+};
+
+// Whether a link the model gave opens as a picture: a public https address that answers with an image.
+const isPicture = async (url: string) => {
+  const u = new URL(url);
+  if (u.protocol !== "https:" || !u.hostname.includes(".") || /^[\d.]+$|^\[|localhost|\.local$|\.internal$/i.test(u.hostname)) return false;
+  const r = await fetch(url, { headers: { ...AGENT, Range: "bytes=0-0" }, signal: AbortSignal.timeout(4000) });
+  await r.body?.cancel();
+  return r.ok && (r.headers.get("content-type") ?? "").startsWith("image/");
 };
 
 // One request to the geocoder (Photon, on OpenStreetMap's data), for the exact spot of an address.
@@ -237,7 +248,16 @@ Deno.serve(async (req) => {
         send({ note: "Looking for pictures…" });
         // Pictures are found here, never taken from the model; a change keeps the ones the timeline had.
         if (!current) for (const e of spec.entries as Record<string, unknown>[]) delete e.image;
-        const pics = await findPictures(spec.entries, wiki);
+        if (!current) for (const e of spec.entries as Record<string, unknown>[]) delete e.more;
+        else {
+          // A change keeps only the pictures the timeline already had; a new link the model wrote is checked like any other.
+          const had = new Set((Array.isArray(current.entries) ? current.entries : []).flatMap((e: any) => [e?.image?.src, ...(Array.isArray(e?.more) ? e.more.map((m: any) => m?.src) : [])]).filter(Boolean));
+          for (const e of spec.entries as any[]) {
+            if (e.image && !had.has(e.image.src)) { e.pictures = [e.image.src, ...(Array.isArray(e.pictures) ? e.pictures : [])]; delete e.image; }
+            if (Array.isArray(e.more)) e.more = e.more.filter((m: any) => had.has(m?.src));
+          }
+        }
+        const pics = await findPictures(spec.entries, wiki) + await linkPictures(spec.entries, isPicture);
         // Where each entry is on the Earth: from Wikipedia's coordinates, never from the model.
         const spots = await findPlaces(spec.entries, wiki, geo);
         console.log("places", spots);
