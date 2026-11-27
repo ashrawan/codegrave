@@ -103,6 +103,10 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     '<button type="button" class="g-mode" hidden></button><div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
   const sky = host.children[0], back = host.children[1], bimg = back.children[0], past = back.children[1], box = host.children[2], ov = host.children[3], lead = ov.children[0], card = ov.children[1], modeBtn = host.children[4], shelf = host.children[5], note = host.children[6];
   const rows = shelf.querySelector('.g-rows'), track = shelf.querySelector('.g-track');
+  // The small pictures at the left stand over the map so they can be pressed: one goes back to its entry (asked for, Nov 2026).
+  ov.appendChild(past);
+  past.addEventListener('click', (e) => { const el = e.target.closest('img[data-i]'), st = el && S.steps[Number(el.dataset.i)]; if (st) goTo(st.id); });
+  past.addEventListener('dblclick', (e) => e.stopPropagation());
   const S = { map: null, ready: false, steps: [], index: new Map(), cur: -1, last: null, stage: 'map', sig: '', until: 0, cardFor: -1, shown: 0, phone: false,
     xs: [], frac: 0, pos: null, was: 0, now: -1, vis: 0, dimv: 0, spv: 0, cam: [], placed: [], open: null, playing: false, warp: 0, stars: null, raf: 0, then: 0 };
   // Globe or full view (asked for, Nov 2026): in full view there is no Earth, only the sky, the picture and the text.
