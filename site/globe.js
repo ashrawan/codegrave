@@ -724,7 +724,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     // then zoom in"): from the whole globe, one glide of INTRO_GLIDE seconds.
     // It answers how long that takes, so the page keeps the reader still meanwhile.
     intro() {
-      if (calm() || !S.steps.length) return 0;
+      // Not when the first entry has no place: then play opens among the stars, with no globe to come down to.
+      if (calm() || !S.steps.length || !S.steps[0].place) return 0;
       S.intro = K.now(); S.playing = true; run();
       return INTRO_GLIDE;
     },

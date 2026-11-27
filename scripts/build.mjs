@@ -258,6 +258,15 @@ if (existsSync(communityDir)) {
       if (!ID.test(v.id || '')) err(here, 'id must be lower-case letters, digits and hyphens');
       if (v.author != null && v.author !== owner) err(here, `"author" must be the folder's name, "${owner}", or be left out`);
       v._at = here; v._owner = owner; v._id = `${owner}/${v.id}`; v._type = 'community';
+      // Its default voiceover, if it has one: the words only, in a file of the same name under voices/
+      // (written by scripts/voices.mjs; docs/VIEWS.md). The page speaks them unless the reader made their own.
+      const told = join(communityDir, owner, 'voices', f);
+      if (existsSync(told)) {
+        const vo = readJson(told), at2 = `${at}/voices/${f}`;
+        const ok = vo && Array.isArray(vo.lines) && vo.lines.length && vo.lines.every((l) => l && typeof l.id === 'string' && typeof l.text === 'string' && l.text.trim() && l.text.length <= 400);
+        if (!ok) err(at2, 'needs "lines": [{ "id", "text" }], each text at most 400 characters');
+        else v._voice = { ...(typeof vo.voice === 'string' ? { voice: vo.voice } : {}), style: String(vo.style || ''), lines: vo.lines.map((l) => ({ id: l.id, text: l.text.trim() })) };
+      }
       views.push(v);
     }
   }
@@ -644,7 +653,7 @@ if (!process.argv.includes('--check')) {
     return out;
   };
   const payload = (v) => ({
-    view: { ...meta(v), checkpoints: v.checkpoints || [] },
+    view: { ...meta(v), checkpoints: v.checkpoints || [], ...(v._voice ? { voice: v._voice } : {}) },
     entries: v._members.slice(0, v._list ? PICKED_CAP : VIEW_CAP).map(compile),
   });
 

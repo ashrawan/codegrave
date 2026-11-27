@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { gpuPick, voiceOf, lineKey, madeOrder, isVoice, isSlow, gpuOk, stretch, voiceRate, DEFAULT_VOICE, VOICES } from '../site/voice.js';
+import { voiceOf, lineKey, madeOrder, isVoice, isSlow, gpuOk, stretch, voiceRate, DEFAULT_VOICE, VOICES } from '../site/voice.js';
 
 test('a stored voiceover is read, and a broken one is none', () => {
   assert.equal(voiceOf(null), null);
@@ -52,11 +52,4 @@ test('speech is made quicker or slower to length, and left alone at 1x', () => {
   const hz = z / 2 / ((y.length - sr / 5) / sr);
   assert.ok(Math.abs(hz - 220) < 8, 'pitch ' + hz);
   assert.equal(voiceRate(2), 1.6); assert.equal(voiceRate(0.25), 0.7); assert.equal(voiceRate(1), 1);
-});
-
-test('the graphics card is used where there is one, unless the reader turned it off', () => {
-  assert.equal(gpuPick(null, true), true);
-  assert.equal(gpuPick(null, false), false);
-  assert.equal(gpuPick(false, true), false);
-  assert.equal(gpuPick(true, false), true);
 });

@@ -106,16 +106,20 @@ export const flightSeconds = (km) => 0.8 + 1.7 * Math.min(1, km / 8000);
 // What the stage does for the entry in front. `placed` says of each entry in play order whether it
 // has a place. With a place, the map. Without: out to space when most of the view has no place or
 // the entry stands in a run of RUN or more without one; else the map only steps back and dims,
-// since flying out and back for one card would tire.
+// since flying out and back for one card would tire. A run at the very beginning is always space.
 export const RUN = 5, MOSTLY = 0.6;
 export function stageFor(placed, i) {
-  if (i < 0 || i >= placed.length) return placed.some(Boolean) ? 'map' : 'space';
+  if (i < 0) return placed[0] ? 'map' : 'space';   // before the first entry: as that entry will be shown
+  if (i >= placed.length) return placed.some(Boolean) ? 'map' : 'space';
   if (placed[i]) return 'map';
   const none = placed.filter((p) => !p).length;
   if (none >= MOSTLY * placed.length) return 'space';
   let a = i, b = i;
   while (a > 0 && !placed[a - 1]) a--;
   while (b < placed.length - 1 && !placed[b + 1]) b++;
+  // A view that begins with entries that have no place opens among the stars, however few they are: the
+  // globe has nothing to show yet (asked for, Nov 2026: "then it should not start with the globe").
+  if (a === 0) return 'space';
   return b - a + 1 >= RUN ? 'space' : 'dim';
 }
 

@@ -36,19 +36,13 @@ const SPEED = 'cg-voice-speed';
 export const SLOW = 1.2;
 export function speedOf(gpu = gpuOn()) { try { const v = Number(localStorage.getItem(SPEED + (gpu ? '-gpu' : ''))); return v > 0 ? v : null; } catch (e) { return null; } }
 // The faster voice (asked for, Nov 2026: "for the users who have a good PC, like good internet"): the same model
-// at full precision on the graphics card (WebGPU), a 326 MB download instead of 92 MB. Where the browser has a
-// real graphics adapter (`gpuOk()`) it is the voice used, without asking (asked for, Nov 2026: "by default, it
-// should download that and it should select that one"); the reader can turn it off, and that is kept
-// (`cg-voice-gpu`: '1' on, '0' off, unset follows the device). If it fails to load, the voice goes back to the
-// processor by itself.
+// at full precision on the graphics card (WebGPU), a 326 MB download instead of 92 MB. It is offered only where
+// the browser has a real graphics adapter (`gpuOk()`), and never downloaded by itself: the reader presses
+// Download on its row, and can switch back and forth afterwards (`cg-voice-gpu`; asked for, Nov 2026: "not auto
+// download, only when the user clicks download"). If it fails to load, the voice goes back to the processor.
 export const GPU_MB = 326;
 const GPU = 'cg-voice-gpu';
-let gpuKnown = null;
-// The reader's own choice: true, false, or null when they never made one.
-export function gpuChoice() { try { const v = localStorage.getItem(GPU); return v === '1' ? true : v === '0' ? false : null; } catch (e) { return null; } }
-// Which engine to use, given the choice and what the device can do.
-export function gpuPick(choice, ok) { return choice === null ? !!ok : choice; }
-export function gpuOn() { return gpuPick(gpuChoice(), gpuKnown); }
+export function gpuOn() { try { return localStorage.getItem(GPU) === '1'; } catch (e) { return false; } }
 let gpuAsk = null;
 export function gpuOk() {
   return (gpuAsk ??= (async () => {
@@ -57,7 +51,7 @@ export function gpuOk() {
       const a = await navigator.gpu.requestAdapter({ powerPreference: 'high-performance' });
       return !!a && !(a.isFallbackAdapter || a.info?.isFallbackAdapter);
     } catch (e) { return false; }
-  })().then((ok) => (gpuKnown = ok)));
+  })());
 }
 export const isSlow = (r = speedOf()) => r != null && r > SLOW;
 
@@ -120,12 +114,6 @@ export function stretch(x, rate, sr = 24000) {
 // the front. `status(s)` is told how it goes: { loading: 0..1 }, { ready: true } or { failed: message }.
 export function createSpeaker(status = () => {}) {
   let worker = null, busy = false, booted = false, gpu = gpuOn();
-  // With no choice made, the device decides, and that has to be asked: nothing is downloaded before it answers.
-  let asked = null, chose = gpuChoice() !== null;
-  const settle = () => (asked ??= chose ? Promise.resolve() : gpuOk().then((ok) => {
-    if (chose || worker || ok === gpu) return;
-    gpu = ok; status({ engine: gpu ? 'gpu' : 'cpu', speed: speedOf(gpu) });
-  }));
   const queue = [], made = new Map();
   let store = null;
   const opened = () => (store ??= (typeof caches !== 'undefined' ? caches.open(KEEP).catch(() => null) : Promise.resolve(null)));
@@ -187,7 +175,7 @@ export function createSpeaker(status = () => {}) {
     }
     const p = opened().then((c) => c?.match(key)).then(async (r) => {
       if (r) return { audio: new Float32Array(await r.arrayBuffer()), rate: Number(r.headers.get('x-rate')) || 24000 };
-      await settle(); boot();
+      boot();
       return new Promise((ok, no) => {
         const j = { id: ++n, key, text, voice, ok, no };
         if (now) queue.splice(busy ? 1 : 0, 0, j); else queue.push(j);
@@ -209,11 +197,11 @@ export function createSpeaker(status = () => {}) {
   }
   // Have the model ready before anything is said: when a timeline with a voiceover is opened.
   let warmed = false;
-  function warm() { if (warmed || booted) return; warmed = true; settle().then(() => { if (!warmed || booted) return; boot(); worker.postMessage({ id: 0 }); }); }
+  function warm() { if (warmed || booted) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
   // Change between the processor and the graphics card: the worker starts again on the other model; lines
   // waiting to be made are made by it. `failed` is set when the graphics card could not load it.
   function engine(on, failed = false) {
-    on = !!on; chose = true;
+    on = !!on;
     try { localStorage.setItem(GPU, on ? '1' : '0'); } catch (e) {}
     if (on === gpu && !failed) return;
     gpu = on;
