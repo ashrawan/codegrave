@@ -446,6 +446,10 @@ How the page is put together:
   timelines are listed as the community's, by `wiki`. A community page of
   people's own creations is planned; keep this page able to grow into it.
   There is no "Views" button in the strip (removed on request).
+  Under the chips a bar says what is on the timeline now (`#vnow`, `drawNow()`): a pill a view, with a cross
+  to take one of several off. A click on a card shows that timeline alone and closes Explore; the card's Add
+  button (a plain, always visible "+ Add", "Remove" once it is on) puts it beside the others and leaves
+  Explore open, so several can be added in a row (asked for, Nov 2026).
 - **New timeline is a page with one box** (`#create`, filled by
   `account.js`): "What do you want to make?", a prompt, the model menu and,
   under the box, the kinds of thing people come to make (`KINDS`: a

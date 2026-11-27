@@ -2097,6 +2097,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const q = fold($('vq').value.trim());
     const full = state.views.length + pending.size >= MAX_VIEWS;
     $('vlist').innerHTML = found.map(row).join('') || '<li class="none" role="presentation">No views here yet.</li>';
+    drawNow();
     const msg = noteText || (q && !found.length ? 'Nothing matches. Try a name, a topic or a year.' : '') || (!q && full ? `${MAX_VIEWS} views is the most at once. Remove one to add another.` : '');
     $('vnote').textContent = msg;
     function row(f, i) {
@@ -2120,12 +2121,24 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
           `<small class="desc">${esc(v.description || (v.type === 'classical' ? viewSub(v) : ''))}</small>` +
           `<small class="meta"><i class="av" aria-hidden="true">${esc(who.slice(0, 1).toUpperCase())}</i><span>${esc(who)}</span>${facts ? `<span class="fx">${esc(facts)}</span>` : ''}</small></span>`;
         // Beside the others: add it, or take it off when it is one of several.
-        if (on && state.views.length > 1) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Take ${esc(v.name)} off the timeline" title="Take off the timeline">${ICON.xs}</button>`;
-        else if (!on && !wait && state.views.length) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Show ${esc(v.name)} beside ${state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name)}" title="${full ? `${MAX_VIEWS} views is the most at once` : 'Show beside ' + (state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name))}"${full ? ' disabled' : ''}>${ICON.plus}</button>`;
+        if (on && state.views.length > 1) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Take ${esc(v.name)} off the timeline" title="Take off the timeline">${ICON.xs}<span>Remove</span></button>`;
+        else if (!on && !wait && state.views.length) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Show ${esc(v.name)} beside ${state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name)}" title="${full ? `${MAX_VIEWS} views is the most at once` : 'Show beside ' + (state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name))}"${full ? ' disabled' : ''}>${ICON.plus}<span>Add</span></button>`;
         return card + side + '</li>';
       }
       return `<li role="option" class="line" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span>${side}</li>`;
     }
+  }
+  // What is on the timeline now, at the top of Explore: one pill a view, with a cross to take it off when there
+  // are several. A card shows its timeline alone; its Add button puts it beside these (asked for, Nov 2026).
+  function drawNow() {
+    const el = $('vnow');
+    el.hidden = !state.views.length;
+    if (el.hidden) return;
+    const many = state.views.length > 1, full = state.views.length + pending.size >= MAX_VIEWS;
+    el.innerHTML = `<span class="cap">On the timeline now</span><span class="pills">` + state.views.map((id) => {
+      const v = viewById.get(id);
+      return `<span class="now-p" style="--c:${colVar(state.colors.get(id))}"><i></i><b>${esc(v?.name || id)}</b>${many ? `<button type="button" data-remove="${esc(id)}" aria-label="Take ${esc(v?.name || id)} off the timeline" title="Take off the timeline">${ICON.xs}</button>` : ''}</span>`;
+    }).join('') + `</span><small>${full ? `${MAX_VIEWS} timelines is the most at once.` : 'Click a timeline to show it alone, or press Add to show it beside ' + (many ? 'these' : 'this one') + ', each on its own globe.'}</small>`;
   }
   // "Propose a view" at the foot of the panel opens the issue form with this link filled in.
   function propose() {
@@ -2162,7 +2175,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     state.span = Array.isArray(v.span) && v.span.length === 2 && v.span.every(Number.isFinite) ? v.span : null;
   }
 
-  function changed() { render(); writeUrl(); account.sync(); }
+  function changed() { render(); writeUrl(); account.sync(); if (!$('explore').hidden) drawResults(); }
 
   // ---------------------------------------------------------------- panel: history of one entry
   // A link to another entry: its name travels with the link, so it shows before that entry is loaded.
