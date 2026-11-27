@@ -684,11 +684,12 @@ body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
   /* On a phone the card is a glass box over the time line: kind and dates, the name, three lines of summary;
      with a picture of its own (on the map) the picture stands at its left. */
   #globe .g-card, #globe[data-stage="space"] .g-card { width: calc(100% - 24px); padding: 14px 15px 15px; display: block; }
-  #globe .g-card:has(img), #globe[data-stage="space"] .g-card:has(img) { display: grid; grid-template-columns: 124px 1fr; gap: 0 14px; align-items: start; }
-  #globe .g-card img { grid-row: span 3; height: 124px; margin: 0; }
+  #globe .g-card:has(img), #globe[data-stage="space"] .g-card:has(img) { display: grid; grid-template-columns: 124px 1fr; grid-template-rows: auto 1fr; gap: 0 14px; align-items: start; }
+  #globe .g-card img { grid-row: span 2; height: 110px; margin: 0; }
   #globe .g-k b { font-size: 11.5px; } #globe .g-k small { font-size: 12.5px; }
   #globe .g-card strong { font-size: 29px; margin: 4px 0 6px; }
-  #globe .g-s { -webkit-line-clamp: 4; font-size: 14px; line-height: 1.42; }
+  /* The summary runs the card's whole width under the picture, small, so most of it can be read (asked for, Nov 2026). */
+  #globe .g-s { grid-column: 1 / -1; margin-top: 10px; -webkit-line-clamp: 7; font-size: 12.5px; line-height: 1.45; }
   body.globe #filters { display: none; }
 }
 /* What floats at the foot of the road stands above the strip. */

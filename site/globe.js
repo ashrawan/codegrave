@@ -307,7 +307,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     lead.hidden = true;
     if (!s || card.hidden) return;
     const W = host.clientWidth, H = host.clientHeight, cw = card.offsetWidth, ch = card.offsetHeight, foot = shelf.hidden ? 0 : shelf.offsetHeight;
-    if (S.phone) { S.tx = 12; S.ty = Math.max(60, H - foot - ch - 10); put(); return; }
+    if (S.phone) { S.tx = 12; S.ty = Math.max(60, H - foot - ch - 2); put(); return; }
     const low = H - foot - ch - (pane ? 8 : 30);
     S.tx = Math.round(Math.max(12, Math.min(W - cw - 12, W * midX() - cw / 2)));
     // The card stands in the middle of the stage, top to bottom (asked for, Nov 2026), clear of the strip.
