@@ -430,7 +430,8 @@ How the page is put together:
   the pointer is at the top edge, for a few seconds after a click on the stage, and while the search is used
   (`body.fullscreen:not(.peek)`). "Play" in the three-dot menu (`#step-row`, `play.step`, `cg-step` in this
   browser) is Auto or Arrow keys: with Arrow keys, play sounds and takes the screen as ever but the reader stands
-  still until an arrow is pressed, and then glides to the next entry or back to the one before (`playStep()`).
+  still until an arrow is pressed, and then travels to the next entry or back to the one before at the pace of
+  automatic play, and stops there (`playStep()`, `road.stepEnd`; a quick glide was tried first and found too fast).
 - **Globe look** (three-dot menu: Atlas, Day, Dots; `cg-look` in this browser; asked for, Nov 2026). Atlas is the
   default. Day lays NASA's Blue Marble over the far globe (`DAY` in `site/globe.js`: NASA's own tiles, public
   domain); Dots draws the land as a field of points made in the browser from the coast file (`landDots()`). A look

@@ -946,10 +946,13 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // It eases down to that limit as it eases up to speed, so the road never jerks under the reader.
       // On the globe, play takes each stretch between two entries in a set time (globe.legSecs()), whatever its
       // length, so the camera, which follows the reader, travels evenly and never waits.
-      const want = !play.on || play.step ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
+      const stepping = play.on && play.step && road.stepEnd != null, back = stepping && dir * (road.stepEnd - road.t) < 0;
+      const want = !play.on || (play.step && !stepping) ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
-      road.t += dir * road.vel * L.D * dt;
+      if (play.on && play.step && !stepping) road.vel = 0;
+      road.t += (back ? -dir : dir) * road.vel * L.D * dt;
+      if (stepping && (back ? dir * (road.t - road.stepEnd) <= 0 : dir * (road.t - road.stepEnd) >= 0)) { road.t = road.stepEnd; road.stepEnd = null; road.vel = 0; }
       if (road.t >= hi || road.t <= lo) {
         road.t = clamp(road.t, lo, hi); road.vel = 0;
         if (play.on && (dir > 0 ? road.t >= hi : road.t <= lo)) { play.on = false; drawPlay(); }
@@ -2385,27 +2388,27 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // pointer nears the top edge, when anything in it has focus, and when play stops.
   function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
   // On the globe a pause stops dead, exactly where play was (asked for, Nov 2026); the road eased to a stop.
-  function pausePlay() { play.on = false; if (GLOBE) road.vel = 0; drawPlay(); }
+  function pausePlay() { play.on = false; road.stepEnd = null; if (GLOBE) road.vel = 0; drawPlay(); }
   // Play by the arrow keys ("Play" in the three-dot menu, `cg-step` in this browser; asked for, Nov 2026): play
   // sounds and takes the screen as ever, but the reader stands still until an arrow is pressed, and then goes to
   // the next entry, or back to the one before.
   function playStep(n) {
     const o = road.gorder;
     if (!L || !o || !o.length) return;
-    const dir = camDir(), edge = (road.target ?? road.t) + dir * AHEAD * L.D;
+    const dir = camDir(), edge = road.t + dir * AHEAD * L.D;
     let i = -1;
     for (let k = 0; k < o.length; k++) { if (dir * (o[k].a - edge) > 1e-5 * L.D) break; i = k; }
     // A press while still on the way counts from where the last press was going.
-    if (road.target != null && road.stepTo === road.target && o[road.stepI]) i = road.stepI;
+    if (road.stepEnd != null && o[road.stepI]) i = road.stepI;
     if (!n) { if (i >= 0) return; n = 1; }
     let j = i + n;
     while (j >= 0 && j < o.length && i >= 0 && o[j].t.id === o[i].t.id) j += n;
     if (j >= o.length) return;
-    road.vel = 0; road.gfree = state.open || null;
-    road.target = camClamp(j < 0 ? (dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D) : o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D);
-    road.rate = 2.6;
-    road.stepTo = road.target; road.stepI = Math.max(j, -1);
-    if (calm()) { road.t = road.prev = road.target; road.target = null; }
+    // It travels there at play's own pace (asked for, Nov 2026: "similar to the autoplay"), and stops.
+    road.target = null; road.gfree = state.open || null;
+    road.stepEnd = camClamp(j < 0 ? (dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D) : o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D);
+    road.stepI = Math.max(j, -1);
+    if (calm()) { road.t = road.prev = road.stepEnd; road.stepEnd = null; }
     roadKick();
   }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
