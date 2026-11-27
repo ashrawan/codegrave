@@ -379,7 +379,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     card.dataset.pan = Math.floor(i / 2) % 5;
     card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}`;
     const img = card.querySelector('img');
-    if (img) { img.addEventListener('error', () => { if (S.picI) return; img.remove(); place(); }); img.addEventListener('load', place); }
+    if (img) { img.addEventListener('error', () => { if (S.picI) return; img.remove(); place(); }); img.addEventListener('load', place);
+      // A tall picture is moved up and down, a wide one from side to side (the styles of `g-pan` in styles.css).
+      img.addEventListener('load', () => { card.dataset.shape = img.naturalHeight > img.naturalWidth * 1.1 ? 'tall' : 'wide'; }); }
     // An entry with several pictures shows them in turn while its card is up (asked for, Nov 2026: "the card
     // still gets the same time, but it can show the other images"). They are fetched now so a change is not a wait.
     S.picT = 0; S.picI = 0;
@@ -563,8 +565,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       S.picT += dt; busy = true;
       const n = Math.floor(S.picT / PIC_SECS) % turn.length, img = card.querySelector('img');
       if (n !== S.picI && img) {
-        S.picI = n; img.style.transition = 'opacity .3s'; img.style.opacity = '0';
-        setTimeout(() => { if (S.cardFor === c && img.isConnected) { img.src = turn[n]; img.style.opacity = '1'; } }, 300);
+        // One dissolves into the next, and the next moves another way.
+        S.picI = n; img.style.transition = 'opacity .5s'; img.style.opacity = '0';
+        setTimeout(() => { if (S.cardFor === c && img.isConnected) { card.dataset.pan = (Number(card.dataset.pan) + 1) % 5; img.src = turn[n]; img.style.opacity = '1'; } }, 500);
       }
     }
     S.vis = toward(S.vis, vis, snap ? 1 : dt * 14);

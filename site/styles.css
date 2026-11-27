@@ -927,10 +927,30 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
   80% { scale: 1.8700; translate: 0.00% 15.60%; clip-path: inset(14.920% 23.262% 31.604% 23.262% round 3px); }
   100% { scale: 2.0000; translate: 0.00% 18.00%; clip-path: inset(16.000% 25.000% 34.000% 25.000% round 3px); }
 }
+/* A tall picture (`data-shape`, set when it loads) is moved along its height instead of across: down it coming
+   closer, and up it drawing back. */
+@keyframes g-pan-t {
+  0% { scale: 1.5000; translate: 0.00% 16.00%; clip-path: inset(6.000% 16.667% 27.333% 16.667% round 3px); }
+  20% { scale: 1.5500; translate: 0.00% 9.60%; clip-path: inset(11.548% 17.742% 23.935% 17.742% round 3px); }
+  40% { scale: 1.6000; translate: 0.00% 3.20%; clip-path: inset(16.750% 18.750% 20.750% 18.750% round 3px); }
+  60% { scale: 1.6500; translate: 0.00% -3.20%; clip-path: inset(21.636% 19.697% 17.758% 19.697% round 3px); }
+  80% { scale: 1.7000; translate: 0.00% -9.60%; clip-path: inset(26.235% 20.588% 14.941% 20.588% round 3px); }
+  100% { scale: 1.7500; translate: 0.00% -16.00%; clip-path: inset(30.571% 21.429% 12.286% 21.429% round 3px); }
+}
+@keyframes g-pan-u {
+  0% { scale: 1.6000; translate: 0.00% -18.00%; clip-path: inset(30.000% 18.750% 7.500% 18.750% round 3px); }
+  20% { scale: 1.5600; translate: 0.00% -10.80%; clip-path: inset(24.872% 17.949% 11.026% 17.949% round 3px); }
+  40% { scale: 1.5200; translate: 0.00% -3.60%; clip-path: inset(19.474% 17.105% 14.737% 17.105% round 3px); }
+  60% { scale: 1.4800; translate: 0.00% 3.60%; clip-path: inset(13.784% 16.216% 18.649% 16.216% round 3px); }
+  80% { scale: 1.4400; translate: 0.00% 10.80%; clip-path: inset(7.778% 15.278% 22.778% 15.278% round 3px); }
+  100% { scale: 1.4000; translate: 0.00% 18.00%; clip-path: inset(1.429% 14.286% 27.143% 14.286% round 3px); }
+}
 @media (prefers-reduced-motion: no-preference) and (min-width: 700px) {
   body.playing #globe .g-card img { animation: g-pan 9s linear infinite alternate; }
   body.playing #globe .g-card[data-pan="1"] img { animation-name: g-pan-b; }
   body.playing #globe .g-card[data-pan="2"] img { animation-name: g-pan-c; }
   body.playing #globe .g-card[data-pan="3"] img { animation-name: g-pan-d; }
   body.playing #globe .g-card[data-pan="4"] img { animation-name: g-pan-e; animation-duration: 11s; }
+  body.playing #globe .g-card[data-shape="tall"]:is([data-pan="0"], [data-pan="3"]) img { animation-name: g-pan-t; }
+  body.playing #globe .g-card[data-shape="tall"][data-pan="1"] img { animation-name: g-pan-u; }
 }
