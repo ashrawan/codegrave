@@ -32,7 +32,7 @@ const NAMED = 5;          // pins this many steps either side of the one in fron
 const LOCAL = 7;         // a view whose places all fit the frame at this zoom (about 100 km across) is told from close
 const NEARER = 0.4;      // how far in from the whole globe the camera comes for a view of one place, in zoom levels
 const TURN = 0.11;       // the part of the way over which one card goes and the next comes
-const INTRO_OUT = 1.6, INTRO_HOLD = 1.2, INTRO_GLIDE = 5;   // play's opening: seconds drawing back to the whole globe, resting there, coming down
+const INTRO_GLIDE = 5;   // play's opening: seconds from the whole globe down to the first place, in one move
 const STAY = 0.45;       // the part of the way from one place to the next that the camera rests before it goes
 const STARS = 240;        // stars that fly past in space
 // How the camera travels ("turn", picked from three clean ways in Nov 2026, after livelier ones were found "not
@@ -374,6 +374,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     if (!s) { card.hidden = true; lead.hidden = true; return; }
     card.hidden = false; card.classList.toggle('bare', !!pic);
     card.dataset.id = s.id; card.style.setProperty('--c', s.col);
+    // How its picture moves in play: three ways, two entries each in turn, so it never reads as one effect on a
+    // loop (asked for, Nov 2026: "2 3 variations of style"). By the entry's number, never by chance.
+    card.dataset.pan = Math.floor(i / 2) % 3;
     card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}`;
     const img = card.querySelector('img');
     if (img) { img.addEventListener('error', () => { if (S.picI) return; img.remove(); place(); }); img.addEventListener('load', place); }
@@ -476,12 +479,12 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     // The reader's place follows the page's a moment behind, so a jump to a far entry is travelled, not cut to.
     let opens = false;
     if (S.intro && !o) {
-      // Nothing is cut to (it was first, and read as a jump): the camera draws back from where it stands, rests,
-      // and comes down, each on a curve with no speed at either end.
-      const k = (now - S.intro.t) / 1000, soft = (v) => v * v * v * (v * (v * 6 - 15) + 10), to = Math.min(goal, 0.999);
-      const out = S.intro.out, u = clamp01((k - out - INTRO_HOLD) / INTRO_GLIDE);
-      if (u >= 1 || !S.playing) S.intro = 0;
-      else { opens = true; S.pos = k < out ? S.intro.from + (-1 - S.intro.from) * soft(k / out) : -1 + (to + 1) * soft(u); }
+      // One move (asked for, Nov 2026, after a hold and then a draw-back were both found restless: "from the globe
+      // and it directly comes to that point ... like one smooth flow"). The camera is led here, not by `pos`, so
+      // the rest-then-go of a leg is not in it; the card unrolls as the camera arrives.
+      const u = clamp01((now - S.intro) / 1000 / INTRO_GLIDE);
+      if (u >= 1 || !S.playing || goal >= 1) S.intro = 0;
+      else { opens = true; S.pos = Math.min(goal, -0.3 + 0.3 * clamp01((u - 0.7) / 0.3)); S.introE = u * u * u * (u * (u * 6 - 15) + 10); }
     }
     if (opens) busy = true;
     else if (S.pos == null || snap) S.pos = goal; else S.pos = Math.abs(goal - S.pos) < 0.0004 ? goal : S.pos + (goal - S.pos) * Math.min(1, dt * 7);
@@ -508,7 +511,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       sky.style.opacity = sp.toFixed(3); host.style.setProperty('--sp', sp.toFixed(3));
     }
     if (S.ready && !S.bare && sp < 0.995) {
-      const cam = d ? d.cam : camAt(S.pos);
+      let cam = d ? d.cam : camAt(S.pos);
+      if (opens && cam && S.placed.length) {
+        const A = S.open, B = S.cam[S.placed[0]], e = S.introE, at = between(A.at, B.at, e);
+        cam = { center: [at[1], at[0]], zoom: Math.max(farAt(far(), at[0]), A.zoom + (B.zoom - A.zoom) * e), pitch: 0, bearing: 0, padding: S.pad };
+      }
       // While play rests at a place (a line is being said) the map does not stand still: it comes slowly
       // closer and glides a little east, like a camera held on a subject, and gives that back as it travels
       // on (asked for, Nov 2026: "it feels very static", "more like the video"). North stays up, nothing
@@ -708,13 +715,12 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       return S.land;
     },
     // Play begins from far off (asked for, Nov 2026: "show the globe from the far, start playing the sound, and
-    // then zoom in"): the whole globe for INTRO_HOLD seconds, then down to where the reader is in INTRO_GLIDE.
+    // then zoom in"): from the whole globe, one glide of INTRO_GLIDE seconds.
     // It answers how long that takes, so the page keeps the reader still meanwhile.
     intro() {
       if (calm() || !S.steps.length) return 0;
-      const from = S.pos == null ? -1 : Math.max(-1, Math.min(S.pos, 0.999)), out = from > -0.98 ? INTRO_OUT : 0;
-      S.intro = { t: K.now(), from, out }; S.playing = true; run();
-      return out + INTRO_HOLD + INTRO_GLIDE;
+      S.intro = K.now(); S.playing = true; run();
+      return INTRO_GLIDE;
     },
     zoom: () => (S.map ? S.map.getZoom() : null),
     // For film mode (site/film/) only: one frame drawn now from what `o` says, and what it needs to say it.

@@ -877,11 +877,27 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 @media (max-width: 699px) { #vo-menu { bottom: 150px; } }
 #sound[hidden] { display: none !important; }
 
-/* While play travels the picture of the entry in front never stands still: it comes slowly closer and goes back
-   (asked for, Nov 2026: "like a zoom", it "feels like it's freezing"). A pause holds it where it is. */
-@keyframes g-near { from { scale: 1; } to { scale: 1.12; } }
-@media (prefers-reduced-motion: no-preference) {
-  #globe .g-card img, #globe .g-bimg { transform-origin: 50% 100%; animation: g-near 9s ease-in-out infinite alternate paused; }
-  #globe .g-bimg { transform-origin: 50% 50%; }
-  body.playing #globe .g-card img, body.playing #globe .g-bimg { animation-play-state: running; }
+/* While play travels the picture of the entry in front is shown as stills are in a video (asked for, Nov 2026:
+   "zoomed in and showing from the side", so it "feels like a video"): zoomed in, it glides from one side to the
+   other and comes closer. Its frame keeps its place and size: the cut-out moves against the picture. A pause
+   holds it where it is. */
+@keyframes g-pan {
+  from { scale: 1.12; translate: -4% 0; clip-path: inset(5.36% 1.79% 5.36% 8.93% round 3px); }
+  to { scale: 1.24; translate: 4% 0; clip-path: inset(9.68% 12.9% 9.68% 6.45% round 3px); }
+}
+/* Three ways, taken in turn two entries at a time (`data-pan`): across to the right coming closer, across to the
+   left coming closer, and drawing back while it rises. */
+@keyframes g-pan-b {
+  from { scale: 1.12; translate: 4% 0; clip-path: inset(5.36% 8.93% 5.36% 1.79% round 3px); }
+  to { scale: 1.24; translate: -4% 0; clip-path: inset(9.68% 6.45% 9.68% 12.9% round 3px); }
+}
+@keyframes g-pan-c {
+  from { scale: 1.26; translate: 0 3%; clip-path: inset(7.94% 10.32% 12.7% 10.32% round 3px); }
+  to { scale: 1.1; translate: 0 -3%; clip-path: inset(7.27% 4.55% 1.82% 4.55% round 3px); }
+}
+@media (prefers-reduced-motion: no-preference) and (min-width: 700px) {
+  body.film #globe .g-card img { animation: g-pan 12s ease-in-out infinite alternate paused; }
+  body.film #globe .g-card[data-pan="1"] img { animation-name: g-pan-b; }
+  body.film #globe .g-card[data-pan="2"] img { animation-name: g-pan-c; }
+  body.film.playing #globe .g-card img { animation-play-state: running; }
 }
