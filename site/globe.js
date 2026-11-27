@@ -252,7 +252,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
         'circle-color': ['match', ['get', 'st'], 'next', 'rgba(0,0,0,.25)', ['get', 'c']],
         // The one in front is see-through, so the map's own names under it can be read (asked for, Nov 2026).
         'circle-opacity': ['match', ['get', 'st'], 'past', 0.75, 'now', 0.28, 1],
-        'circle-stroke-color': ['match', ['get', 'st'], 'next', 'rgba(255,255,255,.75)', 'rgba(5,8,15,.7)'], 'circle-stroke-width': 1 } });
+        // The edge of the pin in front is its own colour, not a dark ring (asked for, Nov 2026: the black did not match).
+        'circle-stroke-color': ['match', ['get', 'st'], 'next', 'rgba(255,255,255,.75)', 'now', ['get', 'c'], 'rgba(5,8,15,.7)'], 'circle-stroke-width': 1, 'circle-stroke-opacity': ['match', ['get', 'st'], 'now', 0.85, 1] } });
       map.addLayer({ id: 'pin-name', type: 'symbol', source: 'pins', filter: ['all', ['get', 'near'], ['!=', ['get', 'st'], 'now']],
         layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-anchor': 'left', 'text-offset': [0.8, 0], 'text-max-width': 14, 'text-optional': true },
         paint: { 'text-color': ['match', ['get', 'st'], 'past', '#ffffff', 'rgba(255,255,255,.72)'], 'text-halo-color': 'rgba(5,8,15,.85)', 'text-halo-width': 1.4 } });
