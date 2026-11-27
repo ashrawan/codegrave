@@ -2615,7 +2615,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     $('gen-row').hidden = any || state.views.length !== 1;
     if (any) $('vo-name').textContent = voiceLabel(voice.name());
     drawChip(); keptSoon();
-    $('gpu-row').hidden = !any || !told.gpuOk || voice.device();
+    $('gpu-row').hidden = true;   // not offered any more (asked for, Nov 2026: "we don't need that option")
     for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
     for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
     for (const b of $('subs-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.subs));

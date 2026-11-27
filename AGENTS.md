@@ -422,6 +422,10 @@ How the page is put together:
   a line under each entry's name and period, closing), with Write again, Remove voiceover and "Use <voice>"
   (asked for: "this is your script", to write again or try other voices). The export dialog keeps design A,
   the preview beside the choices.
+- **Listen says the script, and Faster voice is gone (Nov 2026, asked for).** In the voice dialog of a timeline
+  that has a voiceover, Listen says the opening line of its own script in that voice, not the sample sentence
+  (`listen()` takes the text). "Faster voice" is no longer offered, in the menu by play or in the dialog (its rows
+  stay hidden; the graphics-card engine is still in `site/voice.js`, used only by someone who turned it on before).
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

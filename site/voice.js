@@ -315,19 +315,21 @@ export function createVoice({ ctx, said, speaker }) {
 }
 
 // A few words in one voice, to choose by ear: `done()` is called when they end. Returns a way to stop them.
-export function listen(speaker, voice, ctx, done, fail) {
+// `text` is what it says: the opening of the timeline's own script where there is one (asked for, Nov 2026: "the
+// script is already there. It can just speak that"), else the sample line.
+export function listen(speaker, voice, ctx, done, fail, text = SAMPLE) {
   let stopped = false, src = null, u = null;
   const stop = () => { stopped = true; if (src) { src.onended = null; try { src.stop(); } catch (e) { /* none */ } } if (u) { u.onend = null; try { speechSynthesis.cancel(); } catch (e) { /* none */ } } };
   if (voice === 'device') {
     if (typeof speechSynthesis === 'undefined') { fail(new Error('This browser has no voice of its own.')); return stop; }
-    u = new SpeechSynthesisUtterance(SAMPLE);
+    u = new SpeechSynthesisUtterance(text);
     const en = speechSynthesis.getVoices().filter((v) => /^en/i.test(v.lang));
     u.voice = en.find((v) => /natural|neural|premium|enhanced/i.test(v.name)) || en.find((v) => v.default) || en[0] || null;
     u.onend = () => { if (!stopped) done(); };
     speechSynthesis.speak(u);
     return stop;
   }
-  speaker.line(SAMPLE, voice, true).then(({ audio, rate }) => {
+  speaker.line(text, voice, true).then(({ audio, rate }) => {
     const c = ctx();
     if (stopped || !c) return;
     const buf = c.createBuffer(1, audio.length, rate);

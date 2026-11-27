@@ -690,7 +690,7 @@ export function createAccount(app) {
   const PLAY = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>', HALT = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5.5" y="5" width="4.5" height="14" rx="1"/><rect x="14" y="5" width="4.5" height="14" rx="1"/></svg>';
   let sample = null;
   function hush() { if (sample) { sample.stop(); sample.b.classList.remove('on', 'wait'); sample.b.innerHTML = PLAY + '<span>Listen</span>'; sample = null; } }
-  function sampleOf(b, fail) {
+  function sampleOf(b, fail, text) {
     const same = sample && sample.b === b;
     hush();
     if (same) return;
@@ -698,7 +698,7 @@ export function createAccount(app) {
     sample = me;
     const loaded = app.speaker().ready();
     b.classList.add(loaded ? 'on' : 'wait'); b.innerHTML = loaded ? HALT + '<span>Stop</span>' : '<span>Loading…</span>';
-    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } });
+    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } }, text || undefined);
     if (!loaded) { const t = setInterval(() => { if (sample !== me) return clearInterval(t); if (app.speaker().ready()) { clearInterval(t); b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } }, 300); }
   }
   function voiceMenu(anchor, row) {
@@ -736,7 +736,8 @@ export function createAccount(app) {
     // "This device" downloads nothing: the model is fetched only once a Kokoro voice is picked.
     let gpuFine = false;
     const kokoro = () => pick() !== 'device';
-    const drawPick = () => { gp.hidden = !gpuFine || !kokoro(); if (kokoro()) sp.warm(); };
+    const drawPick = () => { gp.hidden = true;   // "Faster voice" is not offered any more (asked for, Nov 2026); the engine stays
+      if (kokoro()) sp.warm(); };
     gpuOk().then((ok) => { gpuFine = ok; gp.querySelector('input').checked = sp.gpu(); drawPick(); });
     gp.querySelector('input').addEventListener('change', (e) => { sp.engine(e.target.checked); drawSlow(); sp.warm(); });
     d.addEventListener('change', (e) => { if (e.target.name === 'voice') drawPick(); });
@@ -748,7 +749,7 @@ export function createAccount(app) {
       if (l) ld.innerHTML = `<span>${l.part >= 0.95 ? 'Getting the voice ready' : `Downloading the ${sp.gpu() ? 'faster ' : ''}voice, first time only`}</span><b>${Math.round(l.part * 100)}% of ${l.mb} MB</b><i><u style="width: ${Math.round(l.part * 100)}%"></u></i>`;
     }, 250);
     const err = d.querySelector('.dlg-err');
-    d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }); } });
+    d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }, has && has.lines[0] ? has.lines[0].text : ''); } });
     d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v); });
     d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });
     d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
