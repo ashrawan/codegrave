@@ -1,0 +1,64 @@
+/* Film mode: only the stage is on the page, at the exact size asked for, and nothing moves by
+   itself. This file is fetched only by film mode. */
+html, body { margin: 0 !important; overflow: hidden !important; background: #05070c !important; }
+body.cg-film > :not(#film-stage) { display: none !important; }
+body.cg-film, body.cg-film * { cursor: none !important; }
+body.cg-film *, body.cg-film *::before, body.cg-film *::after { transition: none !important; animation: none !important; caret-color: transparent; }
+#film-stage { position: fixed; left: 0; top: 0; overflow: hidden; background: #05070c; contain: strict; }
+#film-stage #globe { position: absolute; inset: 0; }
+#film-stage .g-mode, #film-stage .g-note { display: none !important; }
+#film-stage #globe.nopic .g-card img, #film-stage #globe.nopic .g-card canvas { display: none; }
+/* The site dims its map with a filter, which a browser draws a shade differently from one frame to the next.
+   Here a plain dark sheet over the map does the same, the same way every time. */
+#film-stage .g-map { filter: none !important; }
+#film-stage .film-dim { position: absolute; inset: 0; background: #05070c; opacity: calc(var(--film-dim, 0) * 0.55); pointer-events: none; }
+/* Rounded corners over the moving map are smoothed a shade differently from frame to frame too. */
+#film-stage .g-past img, #film-stage .g-past canvas { border-radius: 0 !important; }
+
+/* ---- layers: what a film may leave out, each on its own, for putting a picture together elsewhere */
+#film-stage.no-globe .g-map, #film-stage.no-globe .g-space, #film-stage.no-globe .film-dim { visibility: hidden !important; }
+#film-stage.no-card .g-card, #film-stage.no-card .g-bimg, #film-stage.no-card .g-past, #film-stage.no-card .film-pic { display: none !important; }
+#film-stage.no-strip .g-shelf { display: none !important; }
+#film-stage.no-overlays .film-ov { display: none !important; }
+#film-stage:not(.title) .film-title, #film-stage:not(.clock) .film-clock { display: none; }
+/* A see-through stage: the globe, the cards and the overlays with nothing behind them. */
+html.film-clear, html.film-clear body, #film-stage.clear { background: transparent !important; }
+#film-stage.clear .g-space { display: none !important; }
+
+/* ---- sizes follow the stage: --fu is one unit, 1 on a 1080p landscape stage */
+#film-stage { --fu: 1; --safe-b: 0px; --safe-r: 0px; font-family: var(--sans, system-ui, sans-serif); }
+/* The safe area: the card and the time line keep clear of the bottom and the right edge. */
+#film-stage .g-card { translate: calc(var(--safe-r) * -0.5) calc(var(--safe-b) * -0.5); }
+#film-stage.narrow .g-card { translate: 0 calc(var(--safe-b) * -1); max-width: calc(100% - 24px - var(--safe-r)); }
+#film-stage .g-shelf { translate: 0 calc(var(--safe-b) * -1); }
+#film-stage .film-title, #film-stage .film-clock { position: absolute; top: calc(34px * var(--fu)); z-index: 6; color: #f3ecdc; text-shadow: 0 2px 18px rgba(0, 0, 0, .7); pointer-events: none; }
+#film-stage .film-title { left: calc(44px * var(--fu)); max-width: 60%; font: 500 calc(26px * var(--fu)) / 1.2 var(--serif, Georgia, serif); letter-spacing: .01em; }
+#film-stage .film-clock { right: calc(44px * var(--fu) + var(--safe-r)); font: 600 calc(64px * var(--fu)) / 1 var(--serif, Georgia, serif); font-variant-numeric: tabular-nums; }
+
+/* ---- overlays: marks, words and stamps over the map */
+#film-stage .film-ov { position: absolute; inset: 0; z-index: 5; pointer-events: none; overflow: hidden; }
+#film-stage .film-ov > div { position: absolute; left: 0; top: 0; will-change: transform; }
+.film-head b { position: absolute; left: calc(-7px * var(--fu)); top: calc(-7px * var(--fu)); width: calc(14px * var(--fu)); height: calc(14px * var(--fu)); border-radius: 50%; background: #fff; box-shadow: 0 0 0 calc(3px * var(--fu)) currentColor, 0 0 calc(22px * var(--fu)) calc(4px * var(--fu)) currentColor; }
+.film-head svg { position: absolute; left: calc(-21px * var(--fu)); top: calc(-21px * var(--fu)); width: calc(42px * var(--fu)); height: calc(42px * var(--fu)); filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .6)); }
+.film-head.plane svg, .film-head.ship svg { color: #fff; }
+.film-marker i, .film-marker b { position: absolute; border-radius: 50%; }
+.film-marker b { left: calc(-8px * var(--fu)); top: calc(-8px * var(--fu)); width: calc(16px * var(--fu)); height: calc(16px * var(--fu)); background: currentColor; border: calc(2.5px * var(--fu)) solid #fff; box-sizing: border-box; box-shadow: 0 2px 10px rgba(0, 0, 0, .55); scale: var(--pop, 1); }
+.film-marker.pin b { left: calc(-13px * var(--fu)); top: calc(-34px * var(--fu)); width: calc(26px * var(--fu)); height: calc(26px * var(--fu)); border-radius: 50% 50% 50% 0; rotate: -45deg; transform-origin: 50% 50%; translate: 0 calc((1 - var(--pop, 1)) * -18px * var(--fu)); scale: 1; }
+.film-marker.pin i { left: calc(-5px * var(--fu)); top: calc(-3px * var(--fu)); width: calc(10px * var(--fu)); height: calc(5px * var(--fu)); background: rgba(0, 0, 0, .45); filter: blur(2px); }
+.film-marker.pulse i { left: calc(-40px * var(--fu)); top: calc(-40px * var(--fu)); width: calc(80px * var(--fu)); height: calc(80px * var(--fu)); border: calc(2.5px * var(--fu)) solid currentColor; box-sizing: border-box; scale: calc(.2 + .8 * var(--ring, 0)); opacity: calc(1 - var(--ring, 0)); }
+.film-marker span { position: absolute; left: calc(18px * var(--fu)); top: calc(-15px * var(--fu)); white-space: nowrap; font: 600 calc(22px * var(--fu)) / 1.35 var(--sans, system-ui, sans-serif); color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 0 14px rgba(0, 0, 0, .8); }
+.film-marker.pin span { top: calc(-38px * var(--fu)); left: calc(20px * var(--fu)); }
+.film-label span { position: absolute; left: 0; top: 0; translate: -50% -50%; width: max-content; max-width: calc(820px * var(--fu)); text-align: center; color: inherit; font: 600 calc(30px * var(--fu) * var(--size, 1)) / 1.25 var(--sans, system-ui, sans-serif); text-shadow: 0 2px 4px rgba(0, 0, 0, .85), 0 0 22px rgba(0, 0, 0, .75); }
+.film-label { color: #fff; }
+.film-label.left span { translate: 0 -50%; text-align: left; } .film-label.right span { translate: -100% -50%; text-align: right; }
+.film-label.title span { font: 700 calc(72px * var(--fu) * var(--size, 1)) / 1.08 var(--serif, Georgia, serif); letter-spacing: -.01em; }
+.film-label.caption span { font: 400 calc(26px * var(--fu) * var(--size, 1)) / 1.4 var(--sans, system-ui, sans-serif); letter-spacing: .14em; text-transform: uppercase; color: inherit; opacity: .92; }
+.film-label.chip span { padding: calc(8px * var(--fu)) calc(18px * var(--fu)); background: rgba(8, 10, 16, .82); border: 1px solid rgba(255, 255, 255, .22); border-radius: calc(8px * var(--fu)); font-size: calc(24px * var(--fu) * var(--size, 1)); text-shadow: none; }
+.film-label.quote span { font: italic 500 calc(44px * var(--fu) * var(--size, 1)) / 1.3 var(--serif, Georgia, serif); }
+.film-stamp span { position: absolute; left: 0; top: 0; translate: -50% -50%; width: max-content; max-width: calc(900px * var(--fu)); padding: calc(10px * var(--fu)) calc(26px * var(--fu)); border: calc(7px * var(--fu)) solid currentColor; border-radius: calc(10px * var(--fu)); color: inherit; text-align: center; text-transform: uppercase; letter-spacing: .06em; font: 800 calc(64px * var(--fu) * var(--size, 1)) / 1.05 var(--sans, system-ui, sans-serif); background: rgba(8, 10, 16, .18); box-shadow: inset 0 0 0 calc(2px * var(--fu)) rgba(8, 10, 16, .25); }
+/* A picture over the whole stage. */
+#film-stage .film-pic { position: absolute; inset: 0; z-index: 7; pointer-events: none; }
+#film-stage .film-pic i { position: absolute; inset: 0; background: #05070c; }
+#film-stage .film-pic canvas { position: absolute; left: 50%; top: 50%; box-shadow: 0 20px 80px rgba(0, 0, 0, .6); }
+/* The night look dims the light of the sky round the globe. */
+#film-stage.night .g-space { filter: brightness(.7); }

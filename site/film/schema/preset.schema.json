@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codegrave.com/film/schema/preset.schema.json",
+  "title": "A film mode preset",
+  "description": "A style: how the stage is set and what its shots default to. A shot's own fields always win over a preset's defaults.",
+  "type": "object",
+  "required": [
+    "name",
+    "format"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "format": {
+      "enum": [
+        "vertical",
+        "landscape"
+      ]
+    },
+    "look": {
+      "enum": [
+        "atlas",
+        "day",
+        "dots",
+        "night"
+      ]
+    },
+    "detail": {
+      "enum": [
+        "less",
+        "medium",
+        "full"
+      ]
+    },
+    "safe": {
+      "enum": [
+        "shorts",
+        "none"
+      ]
+    },
+    "layers": {
+      "type": "object",
+      "properties": {
+        "globe": {
+          "type": "boolean"
+        },
+        "card": {
+          "type": "boolean"
+        },
+        "strip": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "boolean"
+        },
+        "clock": {
+          "type": "boolean"
+        },
+        "overlays": {
+          "type": "boolean"
+        }
+      }
+    },
+    "label": {
+      "enum": [
+        "plain",
+        "title",
+        "caption",
+        "chip",
+        "quote"
+      ]
+    },
+    "pace": {
+      "type": "object",
+      "description": "Seconds autoShots gives each part",
+      "properties": {
+        "open": {
+          "type": "number"
+        },
+        "travel": {
+          "type": "number"
+        },
+        "hold": {
+          "type": "number"
+        },
+        "picture": {
+          "type": "number"
+        }
+      }
+    },
+    "defaults": {
+      "type": "object",
+      "description": "Fields given to every shot (all) or to every shot of one type, unless the shot says otherwise",
+      "additionalProperties": {
+        "type": "object"
+      }
+    }
+  }
+}
