@@ -533,3 +533,5 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 
 
 .vx-list { margin: 12px 0 0; padding-left: 18px; list-style: disc; display: grid; gap: 6px; font-size: 13px; line-height: 1.45; color: var(--muted); }
+
+.vo-voice.off { opacity: .45; }

@@ -608,6 +608,14 @@ export function createAccount(app) {
     const p = $('vo-panel');
     p.hidden = !on || !voicing.open;
     if (p.hidden) { p.innerHTML = ''; return; }
+    if (voicing.exporting) {
+      const order = ['voice', 'sound', 'pictures', 'video', 'saving'], at = order.indexOf(voicing.what);
+      if (!p.querySelector('.vp-ex')) p.innerHTML = `<div class="vp-head"><b>Export</b><small></small></div><div class="vp-bar vp-ex"><i></i></div><p class="vp-note"></p><p class="vp-foot">Made on your device. Keep this tab open until the file is saved.</p><button type="button" class="linkish" id="ex-stop">Cancel the export</button>`;
+      p.querySelector('.vp-head small').textContent = at >= 0 ? `Step ${at + 1} of ${order.length}` : '';
+      p.querySelector('.vp-bar i').style.width = Math.round((voicing.part || 0) * 100) + '%';
+      p.querySelector('.vp-note').textContent = voicing.note;
+      return;
+    }
     const two = voicing.step === 2, part = two && voicing.total ? voicing.made / voicing.total : 0;
     const step = (n, label, state) => `<li class="${state}"><i>${state === 'done' ? '✓' : n}</i><span>${label}</span></li>`;
     p.innerHTML = `<div class="vp-head"><b>Voiceover</b><small>Step ${voicing.step} of 2</small></div>
@@ -707,21 +715,42 @@ export function createAccount(app) {
     d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });
     d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
   }
-  // Export video (site/record.js): what will happen, then the browser asks to share this tab.
+  // Export video (site/export.js): one press makes the file in this browser; the pill at the top right says how
+  // far it has come and the timeline can be used meanwhile (asked for, Nov 2026: three files to choose from).
+  const EXPORTS = [
+    ['both', 'Video with voiceover', 'The film with its voice and music, as one MP4.'],
+    ['video', 'Video only', 'The film with its music and no voice, as an MP4.'],
+    ['voice', 'Voiceover only', 'The voice alone, as a sound file (WAV).'],
+  ];
+  const EX_STEP = { voice: 'Making the voice', sound: 'Mixing the sound', pictures: 'Fetching the pictures', video: 'Drawing the video', saving: 'Saving the file' };
   function videoMenu() {
-    const can = app.canRecord(), cur = current(), told = !!cur && cur.text.includes('"voice":{'), dev = told && voiceOf(JSON.parse(cur.text).voice)?.voice === 'device';
-    const d = modal(`<form class="vo-form"><h2>Export video</h2>
-      <p class="dlg-sub">The timeline plays from the beginning in full view and is recorded${told ? ' with its voiceover and music' : ' with its music'}, as one MP4 file you can upload to YouTube. Nothing leaves your device.</p>
-      <ul class="vx-list"><li>It records in real time: a timeline that plays for three minutes takes three minutes.</li>
-      <li>Your browser asks to share a tab. Choose this one.</li>
-      <li>Keep this tab open and in front. Pausing ends the video early; it is saved when play ends.</li>
-      ${dev ? '<li>The voice of This device cannot be recorded by a page. For a video with the voiceover, choose Heart or Michael first.</li>' : ''}</ul>
-      <p class="dlg-err" role="alert">${can ? '' : 'This browser cannot record video. Try Chrome or Edge on a computer.'}</p>
-      <div class="dlg-row"><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri"${can ? '' : ' disabled'}>Start recording</button></div></form>`, 'small vo');
-    d.querySelector('form').addEventListener('submit', (e) => {
+    if (voicing) return;
+    const can = app.canExport(), cur = current(), has = !!cur && voiceOf(JSON.parse(cur.text).voice), dev = has && has.voice === 'device', told = !!has && !dev;
+    const off = (k) => (k !== 'video' && !told) || (k !== 'voice' && !can);
+    const first = EXPORTS.find(([k]) => !off(k))?.[0];
+    const d = modal(`<form class="vo-form"><h2>Export</h2>
+      <p class="dlg-sub">The file is made on your device and downloaded. Nothing is uploaded, and you can keep using the timeline while it works.</p>
+      <div class="vo-voices" role="radiogroup" aria-label="What to export">${EXPORTS.map(([k, name, w]) => `<label class="vo-voice${off(k) ? ' off' : ''}"><input type="radio" name="kind" value="${k}"${k === first ? ' checked' : ''}${off(k) ? ' disabled' : ''}><i></i><span><b>${name}</b><small>${w}</small></span></label>`).join('')}</div>
+      <p class="dlg-err" role="alert">${!can ? 'This browser cannot make a video file. Try Chrome or Edge.' : dev ? 'The voice of This device cannot be saved to a file. Choose another voice for a video with the voiceover.' : !has ? (cur ? 'Generate a voiceover first to export with a voice.' : '') : ''}</p>
+      <div class="dlg-row"><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri"${first ? '' : ' disabled'}>Export</button></div></form>`, 'small vo');
+    d.querySelector('form').addEventListener('submit', async (e) => {
       e.preventDefault();
+      const kind = d.querySelector('input[name=kind]:checked')?.value;
+      if (!kind) return;
       closeLayer();
-      app.exportVideo().catch((x) => toast(x.message || 'The video could not be recorded.'));
+      voicing = { row: cur, exporting: true, note: 'Exporting…', part: 0, open: true, stop: false };
+      draw();
+      let last = 0;
+      try {
+        const name = await app.exportVideo(kind, (what, part) => {
+          if (!voicing) return;
+          voicing.note = `${EX_STEP[what] || 'Exporting'}: ${Math.round(part * 100)}%`; voicing.what = what; voicing.part = part;
+          if (Date.now() - last > 250) { last = Date.now(); draw(); }
+        }, () => !voicing || voicing.stop);
+        toast(`Saved ${name}.`);
+      } catch (x) {
+        if (x.message !== 'stopped') toast(x.message || 'The export could not be made.');
+      } finally { voicing = null; draw(true); }
     });
   }
   function showKind(id) {
@@ -948,6 +977,7 @@ export function createAccount(app) {
       if (el('#sb-in')) return signIn();
       if (el('#publish')) return publish(el('#publish'));
       if (el('#tl-more')) return timelineMenu(el('#tl-more'));
+      if (el('#ex-stop')) { if (voicing) { voicing.stop = true; voicing.note = 'Stopping…'; draw(); } return undefined; }
       if (el('#vo-pill')) { if (voicing) { voicing.open = !voicing.open; draw(); } return undefined; }
       const open = el('[data-open]');
       if (open) { if (phone()) setOpen(false); return app.show('t/' + open.dataset.open); }

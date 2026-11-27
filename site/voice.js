@@ -224,7 +224,7 @@ export function createSpeaker(status = () => {}) {
 // ---- playing it. `ctx()` gives the page's audio context once the reader has pressed play (null: no sound);
 // `said(text, waiting)` is told the line being spoken ('' when none), or that the voice is being got ready.
 export function createVoice({ ctx, said, speaker }) {
-  const S = { sig: '', lines: new Map(), order: [], voice: DEFAULT_VOICE, cur: null, src: null, gain: null, t0: 0, off: 0, held: false, utter: null, tap: null, rate: 1 };
+  const S = { sig: '', lines: new Map(), order: [], voice: DEFAULT_VOICE, cur: null, src: null, gain: null, t0: 0, off: 0, held: false, utter: null, rate: 1 };
   const device = () => S.voice === 'device';
   function quit() {
     const s = S.src; S.src = null;
@@ -235,7 +235,7 @@ export function createVoice({ ctx, said, speaker }) {
   function begin(cur, buf, from) {
     const c = ctx();
     if (!c || S.cur !== cur || cur.done) return;
-    if (!S.gain) { S.gain = c.createGain(); S.gain.connect(c.destination); if (S.tap) S.gain.connect(S.tap); }
+    if (!S.gain) { S.gain = c.createGain(); S.gain.connect(c.destination); }
     const src = c.createBufferSource();
     src.buffer = buf; src.connect(S.gain);
     src.onended = () => { if (S.src === src) end(cur); };
@@ -297,12 +297,6 @@ export function createVoice({ ctx, said, speaker }) {
     rate(r) { S.rate = voiceRate(r); },
     name: () => S.voice,
     texts: () => [...S.lines.values()].map((l) => l.text),
-    // Export video: the voice also goes to `node` (a recording), or no longer when null.
-    tap(node) {
-      if (S.gain && S.tap) { try { S.gain.disconnect(S.tap); } catch (e) { /* not joined */ } }
-      S.tap = node || null;
-      if (S.gain && S.tap) S.gain.connect(S.tap);
-    },
     now: () => (S.cur && !S.cur.done ? S.cur.id : null),
     pause() {
       if (!S.cur || S.cur.done || S.held) return;

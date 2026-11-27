@@ -57,7 +57,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | Voiceover (a timeline told aloud: the script, the voices, the speech made in the browser, how play waits for a line) | `site/voice.js` (the voices, the speaker and the player), `site/account.js` (making one), `site/app.js` (`tell()`), then `tests/voice.test.mjs` and `docs/ACCOUNTS.md`; the server side is `supabase/functions/voiceover/index.ts`, deployed to the Supabase project | |
 | Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
-| Export video (the timeline recorded as it plays, with its voice and music, into one file in the browser) | `site/record.js`, `exportVideo()` in `site/app.js`, `videoMenu()` in `site/account.js`, then `tests/record.test.mjs` | |
+| Export video (the timeline drawn and encoded into one file in the browser: video, voiceover, or both) | `site/export.js`, `exportVideo()` in `site/app.js`, `videoMenu()` in `site/account.js`, then `tests/export.test.mjs` | |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The globe (the timeline on the Earth, the only way it is drawn): the map, pins, cards, the strip of rows | `site/globe.js`; its arithmetic (camera heights, arcs, when to dim or go to space) in `site/globe-path.js`, then `tests/globe.test.mjs` | |
@@ -342,15 +342,20 @@ How the page is put together:
   The voices are Heart and Michael first, then Bella, Nicole, Emma and George, then This device. While play
   rests at a place the map comes slowly closer and glides a little east (`DRIFT_*` in `site/globe.js`), so the
   picture is never still; north stays up and a pause stops it dead.
-- **Export video** (`site/record.js`; asked for, Nov 2026: "just like export as PDF, you can have the export
-  video", to upload to YouTube later). In the three dots at the top right, for any timeline. The browser records
-  this tab (`getDisplayMedia`, it asks once), the page's own sound goes to the recording too (`sound.rec`: the
-  voice through `voice.tap()`, the music through a media element source, the breath of the cards), the page's
-  buttons and pointer hide (`body.recording`), play starts from the beginning, and when play has ended and no line
-  is being said the file is saved (MP4, H.264 and AAC where the browser records it, `pickType()`; WebM
-  otherwise). It runs in real time; pausing ends it early. The voice of This device cannot be recorded by a page.
-  Exact, frame-by-frame videos are film mode's job (`docs/FILM_MODE.md`). Generate voiceover is two steps (asked
-  for): the script, then the voice made for every line at once (`record()` in `account.js`), so play never waits.
+- **Export video** (`site/export.js`; asked for, Nov 2026: "just like export as PDF, you can have the export
+  video", then, after a first version that recorded the tab: "it should not control the browser and record",
+  "you just click, and the MP4 ... should process and download"). In the three dots at the top right, for any
+  timeline: Video with voiceover, Video only (music, no voice) or Voiceover only (a WAV). Nothing is recorded
+  from the screen and nothing is uploaded. `exportFilm()` draws the film frame by frame on a 1920 by 1080 canvas
+  (`painter()`: the entry in front as in Full view, its picture whole and coming slowly closer, its text under
+  it, stars drifting, the title, the period, how far along), hands each frame to the browser's encoder
+  (WebCodecs: H.264 where there is one, else VP9 or AV1; AAC, else Opus), mixes the voice's lines and the music
+  off-line (`mix()`, `schedule()` says when each entry is up and each line said) and joins them with
+  `mp4-muxer` from jsDelivr, fetched only then. It runs as fast as the device draws. The pill at the top right
+  says how far it has come (`voicing.exporting` in `account.js`) and can cancel. The map is not in the film yet,
+  and the voice of This device cannot be saved to a file. Exact frames of the page itself are film mode's job
+  (`docs/FILM_MODE.md`). Generate voiceover is two steps (asked for): the script, then the voice made for every
+  line at once (`record()` in `account.js`), so play never waits.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound
