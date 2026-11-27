@@ -20,8 +20,6 @@
 //   OPENROUTER_API_KEY   required
 //   AI_MODELS            optional: more OpenRouter model ids to allow, separated by commas; "*" allows any
 //                        (the plan: offer everything OpenRouter has, and let the key's own limit cap the spending)
-//   AI_DAILY             optional: requests one account may make in a day (default 20); a row in the
-//                        table `ai_limits` gives one account its own number
 //   AI_WEB               optional: "1" also lets the model search the web (OpenRouter's web search tool, paid per search)
 
 import { findPictures, findPlaces, specToView } from "./ai.js";   // the page's own site/ai.js, deployed beside this file
@@ -34,7 +32,7 @@ const EXTRA = (Deno.env.get("AI_MODELS") ?? "").split(",").map((s) => s.trim()).
 const allowed = (id: string) => OFFERED.includes(id) || EXTRA.includes(id) || (EXTRA.includes("*") && /^[a-z0-9-]+\/[a-z0-9.:_-]+$/i.test(id));
 // How long the model may think before it writes. "none" switches thinking off: the fastest, and the default.
 const EFFORTS = ["none", "low", "medium", "high"];
-const DAILY = Number(Deno.env.get("AI_DAILY") ?? "20");
+const DAILY = 20;   // only if the account's row cannot be read; the allowance itself is `profiles.ai_daily`
 const WEB = Deno.env.get("AI_WEB") === "1";
 const URL_ = Deno.env.get("SUPABASE_URL")!;
 const ANON = Deno.env.get("SUPABASE_ANON_KEY")!;
@@ -165,17 +163,15 @@ Deno.serve(async (req) => {
   const key = Deno.env.get("OPENROUTER_API_KEY");
   if (!key) return json({ error: "Create with AI is not switched on yet.", code: "not_configured" }, 503);
 
-  // A day's allowance per account.
+  // A day's allowance per account: the number on the account's own row (`profiles.ai_daily`, 20 unless
+  // changed) against its requests of the last 24 hours. Both are asked for at once, each by an index.
   const since = new Date(Date.now() - 864e5).toISOString();
-  const used = await service(`/rest/v1/ai_requests?owner=eq.${user.id}&created_at=gte.${since}&select=id`, { headers: { Prefer: "count=exact", Range: "0-0" } });
+  const [used, own] = await Promise.all([
+    service(`/rest/v1/ai_requests?owner=eq.${user.id}&created_at=gte.${since}&select=id`, { headers: { Prefer: "count=exact", Range: "0-0" } }),
+    service(`/rest/v1/profiles?id=eq.${user.id}&select=ai_daily`).then((r) => (r.ok ? r.json() : [])).catch(() => []),
+  ]);
   const count = Number((used.headers.get("content-range") ?? "*/0").split("/")[1] || 0);
-  // One account may be given its own allowance: a row in `ai_limits` (written by hand in the database).
-  let daily = DAILY;
-  try {
-    const own = await service(`/rest/v1/ai_limits?owner=eq.${user.id}&select=daily`);
-    const rows = own.ok ? await own.json() : [];
-    if (rows[0] && Number.isFinite(Number(rows[0].daily))) daily = Number(rows[0].daily);
-  } catch (_e) { /* the default stands */ }
+  const daily = Number.isFinite(Number(own[0]?.ai_daily)) ? Number(own[0].ai_daily) : DAILY;
   if (count >= daily) return json({ error: `That is ${daily} requests today, the most for now. Try again tomorrow.`, code: "limit" }, 429);
 
   const log = (ok: boolean, usage: Record<string, number> = {}) =>

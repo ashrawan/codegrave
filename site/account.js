@@ -61,7 +61,7 @@ const LOGO = '<svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke
 const SEEN = { private: 'Private draft', link: 'Link only', public: 'Public' };
 const PHONE = '(max-width: 699px)';
 const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt', FAILED = 'cg-ai-failed';
-const AI_PER_DAY = 20;      // the function's default allowance (AI_DAILY)
+const AI_PER_DAY = 20;      // the allowance until the account's row is read (`profiles.ai_daily`)
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),
    show(id), open(id) (travel to a view's beginning), replace(payload) (a stored view changed), forget(id), home(),
@@ -121,7 +121,7 @@ export function createAccount(app) {
   async function refreshList() {
     if (!user) return;
     const [p, l] = await Promise.all([
-      api(`/rest/v1/profiles?id=eq.${user.id}&select=username`),
+      api(`/rest/v1/profiles?id=eq.${user.id}&select=username,ai_daily`),
       api(`/rest/v1/timelines?owner=eq.${user.id}&select=id,slug,title,visibility,entries,updated_at&order=updated_at.desc`),
     ]);
     profile = p[0] || { username: null };
@@ -631,7 +631,7 @@ export function createAccount(app) {
       try {
         if (un && vis !== 'private') {
           try { await api(`/rest/v1/profiles?id=eq.${user.id}`, { method: 'PATCH', body: { username: un.value.trim().toLowerCase() } }); } catch (x) { throw x.code === '23505' ? new Error('That name was just taken. Pick another.') : x; }
-          profile = { username: un.value.trim().toLowerCase() };
+          profile = { ...profile, username: un.value.trim().toLowerCase() };
           row.username = profile.username;
         }
         await patch(row, { visibility: vis });
@@ -772,13 +772,10 @@ export function createAccount(app) {
         });
         // How many requests are left today (asked for, Nov 2026; the line has its room from the start, since the
         // menu is placed by its height when it opens): the account's own requests of the last 24
-        // hours against its allowance (its own number when it has one, else AI_PER_DAY).
-        Promise.all([
-          api(`/rest/v1/ai_requests?select=id&created_at=gte.${new Date(Date.now() - 864e5).toISOString()}&limit=20000`),
-          api('/rest/v1/ai_limits?select=daily').catch(() => []),
-        ]).then(([used, own]) => {
+        // hours against its allowance, the number on its own row (`profile.ai_daily`).
+        api(`/rest/v1/ai_requests?select=id&created_at=gte.${new Date(Date.now() - 864e5).toISOString()}&limit=20000`).then((used) => {
           const box = d.querySelector('#me-ai'); if (!box) return;
-          const most = Number.isFinite(Number(own?.[0]?.daily)) ? Number(own[0].daily) : AI_PER_DAY, left = Math.max(0, most - (used?.length || 0));
+          const most = Number.isFinite(Number(profile?.ai_daily)) ? Number(profile.ai_daily) : AI_PER_DAY, left = Math.max(0, most - (used?.length || 0));
           box.querySelector('span').textContent = `${left.toLocaleString('en-US')} of ${most.toLocaleString('en-US')} requests left today`;
           box.querySelector('u').style.width = (most ? 100 * left / most : 0) + '%';
           box.classList.toggle('none', !left);
