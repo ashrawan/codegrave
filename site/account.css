@@ -271,6 +271,10 @@ body:not(.sb-open) .rail-only { display: flex; transform: rotate(90deg); }
 .pop.menu.acct #me-ai { padding-bottom: 8px; }
 .pop.menu.acct #me-ai i { margin-top: 5px; }
 .pop.menu.acct .me-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 4px 4px 4px 9px; color: var(--muted); }
+.pop.menu.acct #me-plan b { margin-left: 4px; color: var(--text); font-weight: 600; }
+.pop.menu.acct #me-plan button { height: 26px; padding: 0 12px; border: 0; border-radius: 8px; font-size: 12px; cursor: pointer; }
+.pop.menu.acct #me-plan .go { background: var(--acc); color: #fff; font-weight: 600; }
+.pop.menu.acct #me-plan .quiet { background: var(--raised); color: inherit; }
 .pop.menu.acct .seg { padding: 2px; border-radius: 8px; }
 .pop.menu.acct .seg button { flex: none; height: 24px; padding: 0 10px; font-size: 12px; cursor: pointer; }
 .pop.menu.acct .nv.out { min-height: 32px; gap: 8px; padding: 0 9px; font-size: 13px; color: var(--muted); }

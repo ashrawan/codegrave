@@ -259,3 +259,30 @@ is not offered the editor.
   edited by hand.
 - A copied timeline keeps its entries as they were when copied; later
   corrections to the base do not reach it.
+
+## The pro plan
+
+An account is free or pro, said on its own row (`plan`). Being pro is paid for through Stripe, and
+the page never handles a card: "Go Pro" in the account menu asks the function `billing` for a link
+to Stripe's own checkout page, and "Manage" for a link to Stripe's own page to change the card or
+cancel (`billing()` in `site/account.js`).
+
+Nothing the page or the reader does makes an account pro. Stripe calls the function
+`stripe-webhook` when a subscription starts, changes or ends; the function checks Stripe's
+signature, reads the subscription's state from Stripe itself, and writes the plan and the day's AI
+allowance on the account's row (200 a day for pro, 20 for free). An account may write only its
+username, so nobody can switch it on for themselves.
+
+What pro is for: the work a free account does in its own browser, done on a server instead
+(voiceover and video export), and a larger AI allowance. A free account keeps everything it has.
+
+Setting it up (once, by the owner):
+
+1. In Stripe, a product "codegrave Pro" with one monthly price.
+2. In Supabase, the secrets `STRIPE_SECRET_KEY`, `STRIPE_PRICE` (the price's id) and
+   `STRIPE_WEBHOOK_SECRET`; optionally `PRO_AI_DAILY`.
+3. In Stripe, a webhook endpoint at the address of the function `stripe-webhook`, for the events
+   `checkout.session.completed` and `customer.subscription.created`, `.updated` and `.deleted`.
+4. In Stripe, the customer portal switched on, so "Manage" has somewhere to go.
+
+Test keys and live keys are separate sets of all three secrets.

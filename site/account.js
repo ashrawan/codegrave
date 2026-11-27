@@ -122,7 +122,7 @@ export function createAccount(app) {
   async function refreshList() {
     if (!user) return;
     const [p, l] = await Promise.all([
-      api(`/rest/v1/profiles?id=eq.${user.id}&select=username,ai_daily`),
+      api(`/rest/v1/profiles?id=eq.${user.id}&select=username,ai_daily,plan`),
       api(`/rest/v1/timelines?owner=eq.${user.id}&select=id,slug,title,visibility,entries,updated_at&order=updated_at.desc`),
     ]);
     profile = p[0] || { username: null };
@@ -130,6 +130,28 @@ export function createAccount(app) {
     for (const t of l) { const r = rows.get(t.id); if (r) Object.assign(r, t, { username: profile.username }); }
     draw(true);
   }
+  // The pro plan (docs/ACCOUNTS.md): the page only sends the reader to Stripe's own pages, to pay or to manage
+  // the plan. Whether an account is pro is read from its row, which only the payment webhook writes.
+  const isPro = () => profile?.plan === 'pro';
+  async function billing(what) {
+    try {
+      toast(what === 'portal' ? 'Opening your plan…' : 'Opening the checkout…');
+      const t = await token();
+      const r = await fetch(CONFIG.url + '/functions/v1/billing', { method: 'POST', headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' }, body: JSON.stringify({ [what]: true }) });
+      const got = await r.json().catch(() => ({}));
+      if (!r.ok || !got.url) throw new Error(got.error || 'That did not work. Try again.');
+      location.assign(got.url);
+    } catch (e) { toast(e.message); }
+  }
+  // Back from the checkout: Stripe tells the server a moment after it sends the reader back, so the row is
+  // read again a few times until it says pro.
+  async function welcomed() {
+    if (new URLSearchParams(location.search).get('pro') !== 'welcome') return;
+    history.replaceState(null, '', location.pathname + location.hash);
+    for (let i = 0; i < 6 && user && !isPro(); i++) { await new Promise((ok) => setTimeout(ok, i ? 2000 : 0)); await refreshList().catch(() => {}); }
+    toast(isPro() ? 'You are on the pro plan. Thank you.' : 'The payment is being confirmed. Your plan will show in a moment.');
+  }
+
   // The account is the person who signed in (their name or email); a username is only the space they
   // publish under, kept apart from it (asked for, Nov 2026).
   const shown = () => user?.name || (user?.email || '').split('@')[0] || 'You';
@@ -1233,13 +1255,14 @@ export function createAccount(app) {
         return undefined;
       }
       if (el('#sb-me')) {
-        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><div class="me" id="me-ai"><small>Create with AI</small><span>&nbsp;</span><i><u></u></i></div><hr><div class="me-row"><span>Theme</span><div class="seg" role="radiogroup" aria-label="Theme"><button type="button" role="radio" data-theme-to="light">Light</button><button type="button" role="radio" data-theme-to="dark">Dark</button></div></div><hr><button type="button" class="nv out" data-act="out">${ICON.out}<span>Sign out</span></button>`, 'menu wide acct');
+        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><div class="me" id="me-ai"><small>Create with AI</small><span>&nbsp;</span><i><u></u></i></div><hr><div class="me-row" id="me-plan"><span>Plan <b>${profile?.plan === 'pro' ? 'Pro' : 'Free'}</b></span><button type="button" class="${profile?.plan === 'pro' ? 'quiet' : 'go'}" data-act="plan">${profile?.plan === 'pro' ? 'Manage' : 'Go Pro'}</button></div><hr><div class="me-row"><span>Theme</span><div class="seg" role="radiogroup" aria-label="Theme"><button type="button" role="radio" data-theme-to="light">Light</button><button type="button" role="radio" data-theme-to="dark">Dark</button></div></div><hr><button type="button" class="nv out" data-act="out">${ICON.out}<span>Sign out</span></button>`, 'menu wide acct');
         // Light or dark: said as it is, and the menu stays open (asked for, Nov 2026, in place of "Switch theme").
         const themed = () => { const now = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark'; for (const b of d.querySelectorAll('[data-theme-to]')) b.setAttribute('aria-checked', String(b.dataset.themeTo === now)); return now; };
         themed();
         d.addEventListener('click', (x) => {
           const to = x.target.closest('[data-theme-to]')?.dataset.themeTo;
           if (to) { if (to !== themed()) $('theme').click(); themed(); return; }
+          if (x.target.closest('[data-act="plan"]')) { closeLayer(); billing(profile?.plan === 'pro' ? 'portal' : 'checkout'); return; }
           if (x.target.closest('[data-act="out"]')) { closeLayer(); signOut(); }
         });
         // How many requests are left today (asked for, Nov 2026; the line has its room from the start, since the
@@ -1289,6 +1312,7 @@ export function createAccount(app) {
     try {
       if (!user) await whoAmI();
       await refreshList();
+      welcomed();
       let intent = null; try { intent = sessionStorage.getItem(INTENT); sessionStorage.removeItem(INTENT); } catch (e) { /* fine */ }
       if (intent === 'new') copyTimeline();
       // A sentence typed before signing in: carry on with it.
@@ -1300,5 +1324,5 @@ export function createAccount(app) {
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { voiceQuick, boot, start, api, ask: ask_ai, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
+  return { voiceQuick, boot, start, api, ask: ask_ai, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, isPro, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
 }
