@@ -407,8 +407,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     S.ty = Math.round(Math.max(pane ? 8 : 70, Math.min(low, (H - ch) / 2))); put();
   }
 
-  // ---- the time line at the foot: it slides under a marker that stands still, near the left
-  // end (asked for, Nov 2026: the line began in the middle of the screen), so most of what shows is still to come. The entries stand on it by name
+  // ---- the time line at the foot: it slides under a marker that stands still, at the right end (see nowAt()),
+  // so what shows is what has been told so far. The entries stand on it by name
   // (picked from three designs, Nov 2026), one with no place in italics; a year is written where it changes.
   function drawShelf() {
     shelf.hidden = !S.steps.length;
@@ -423,19 +423,19 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   }
   // Where each entry stands on the strip.
   function measure() {
-    // Turned round, an entry is placed by its right edge: it stands just before the marker, which is at the right.
-    S.xs = Array.from(track.children, (el) => (S.flip ? el.offsetLeft + el.offsetWidth : el.offsetLeft + 4));
+    // An entry is placed by its right edge: it stands just before the marker, which is at the right.
+    S.xs = Array.from(track.children, (el) => el.offsetLeft + el.offsetWidth);
     rows.style.setProperty('--now', Math.round(nowAt()) + 'px');
   }
   function markShelf() {
     const els = track.children;
     for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
-  // The marker stands at the left end, so a view opens with its first entry at the left edge (asked for, Nov 2026).
-  // Turned round (asked for, Nov 2026: "instead of currently moving from left to right, actually moves from right
-  // to left"), the marker stands at the right end: what has been passed stays in sight at its left, and what is
-  // still to come is not shown until its turn.
-  const nowAt = () => (S.flip ? rows.clientWidth - (S.phone ? 26 : 44) : S.phone ? 22 : 34);
+  // The marker stands at the right end (asked for, Nov 2026, in both directions of the timeline: "those items
+  // not yet visible should not be in timeline"): the entry in front stands just before it, what has been passed
+  // stays in sight at its left, and what is still to come is not shown until its turn, coming in from the right.
+  // (Before, the marker stood at the left and the strip showed what was to come.)
+  const nowAt = () => rows.clientWidth - (S.phone ? 26 : 44);
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;
@@ -540,9 +540,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
       if (d) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }
-    // The dot of the entry in front stands just after the marker, not under it (asked for, Nov 2026: the line "should
-    // be on the left, and the first dot ... a little bit right after that").
-    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + (S.flip ? -1 : 1) * (S.phone ? 12 : 16) - xAt(S.pos)).toFixed(1)}px)`;
+    // The entry in front stands just before the marker, not under it.
+    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() - (S.phone ? 12 : 16) - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
       S.warp = still ? 0 : d ? d.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);
@@ -652,14 +651,6 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
 
   return {
     // With several views each has a globe of its own, and this one, the page's, keeps only the time line.
-    // The time line turned round: see nowAt().
-    flip(on) {
-      on = !!on;
-      if (on === !!S.flip) return;
-      S.flip = on; rows.classList.toggle('flip', on);
-      if (!shelf.hidden) measure();
-      run();
-    },
     bare(on) {
       if (!!S.bare === !!on) return;
       S.bare = !!on; host.classList.toggle('bare', S.bare); host.classList.remove('close');
