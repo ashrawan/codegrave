@@ -221,7 +221,7 @@ body:not(.sb-open) .nv { justify-content: center; padding: 0; }
 body:not(.sb-open) #sb-foot .big { height: 40px; padding: 0; }
 body:not(.sb-open) .rail-only { display: flex; transform: rotate(90deg); }
 
-/* beside the search: what this timeline is, and Publish */
+/* top right: the three dots of this timeline (Publish is in their menu) */
 #tl-state { display: flex; align-items: center; gap: 12px; margin-right: 6px; }
 #tl-state .st { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); white-space: nowrap; }
 #tl-state .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--faint); }
@@ -323,8 +323,8 @@ body.side-open .top { right: var(--side); }
 @media (min-width: 700px) { #side { top: 0; } }
 #info { top: 16px; }
 #road-views { top: 22px; }
-#road-head { top: 26px; }
-body.mine #road-head { top: 58px; }
+/* The year stands under the three dots at the top right. */
+#road-head { top: 58px; }
 /* The search stands at the top left, always (asked for, Nov 2026: "search: person, place, event"),
    see-through until it is used, then wider; it steps away with the rest of the top while play travels. */
 .tsearch { position: fixed; left: calc(var(--sb) + 16px); top: 12px; z-index: 45; transform: none; width: 280px; height: 38px; padding: 0 12px 0 14px; gap: 10px; color: var(--muted); background: var(--glass) !important; border-color: var(--glass-edge) !important; border-radius: 19px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); transition: width .18s ease, background .15s; }
@@ -351,8 +351,7 @@ html, body { touch-action: pan-x pan-y; }
   /* the search stands top left beside the menu button, so the names of the views go under it */
   #road-views { top: 62px; max-width: calc(100% - 28px); }
   /* On a phone the period stands in the top corner, level with the search (asked for, Nov 2026). */
-  #road-head { top: 16px; }
-  body.mine #road-head { top: 100px; }
+  #road-head { top: 58px; }
   body.side-open #more-menu { right: 8px; }
   /* a field under 16px makes a phone's browser zoom in when it is tapped */
   input, textarea, select { font-size: 16px !important; }
@@ -452,13 +451,42 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
   body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 232px; }
 }
 
-/* Voiceover: its button beside Publish, and the small form it opens. */
-.ebtn.vo { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
-.ebtn.vo.has svg { color: var(--acc); }
-.ebtn.vo:disabled { opacity: .75; pointer-events: none; }
-.ebtn.vo:disabled .wide { display: inline; }
+/* The three dots at the top right (what can be done with this timeline), the pill and the script shown
+   while a voiceover is recorded, and the small form of the voiceover. */
+#tl-more { position: relative; width: 36px; height: 36px; color: var(--text); background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 50%; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+#tl-more.live::after { content: ''; position: absolute; right: 1px; top: 1px; width: 8px; height: 8px; background: #8fcdb2; border: 2px solid var(--bg); border-radius: 50%; }
+.pop.menu.tl .dlg { width: 248px; }
+.pop.menu.tl .nv span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.pop.menu.tl .nv small { display: inline-flex; align-items: center; gap: 2px; }
+.pop.menu.tl .nv img { flex: none; margin: 0 1px; }
+.pop.menu.tl .nv.lit { color: var(--acc); font-weight: 600; background: color-mix(in srgb, var(--acc) 13%, transparent); }
+.pop.menu.tl .nv.lit:hover { background: color-mix(in srgb, var(--acc) 20%, transparent); }
+.pop.menu.tl .dot { background: var(--faint); }
+.pop.menu.tl .dot.live { background: #8fcdb2; }
+.vo-pill { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; font-variant-numeric: tabular-nums; border-color: color-mix(in srgb, var(--acc) 55%, var(--glass-edge)); }
+.vo-pill .rec { width: 8px; height: 8px; background: var(--acc); border-radius: 50%; animation: vorec 1.2s ease-in-out infinite; }
+@keyframes vorec { 50% { opacity: .25; transform: scale(.7); } }
+#vo-panel { position: fixed; z-index: 31; top: 52px; right: calc(var(--bar) + 20px); width: min(340px, calc(100vw - 24px)); padding: 14px 14px 10px; color: var(--text); background: var(--chrome); border: 1px solid var(--glass-edge); border-radius: 16px; box-shadow: 0 18px 50px rgba(0, 0, 0, .35); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); pointer-events: auto; }
+#vo-panel[hidden], body.playing #vo-panel, body.exploring #vo-panel, body.creating #vo-panel, body.editing #vo-panel { display: none; }
+.vp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 14px; }
+.vp-head small { font-size: 12px; color: var(--faint); }
+.vp-bar { height: 3px; margin: 10px 0 8px; background: var(--raised); border-radius: 2px; overflow: hidden; }
+.vp-bar i { display: block; height: 100%; background: var(--acc); border-radius: 2px; transition: width .5s ease; }
+.vp-lines { max-height: min(300px, 42vh); margin: 0; padding: 0; overflow-y: auto; list-style: none; position: relative; }
+.vp-lines li { display: flex; gap: 8px; padding: 5px 2px; font-size: 13px; line-height: 1.4; color: var(--faint); }
+.vp-lines li i { flex: none; width: 14px; height: 14px; margin-top: 2px; color: var(--acc); }
+.vp-lines li.done { color: var(--muted); }
+.vp-lines li.now { color: var(--text); }
+.vp-lines li.now i { width: 8px; height: 8px; margin: 5px 3px 0; background: var(--acc); border-radius: 50%; animation: vorec 1.2s ease-in-out infinite; }
+.vp-note { margin: 4px 0; font-size: 13px; color: var(--muted); }
+.vp-note .dots i { font-style: normal; opacity: .2; animation: aidot 1.2s infinite; }
+.vp-note .dots i::before { content: '.'; }
+.vp-note .dots i:nth-child(2) { animation-delay: .2s; }
+.vp-note .dots i:nth-child(3) { animation-delay: .4s; }
+.vp-foot { margin: 8px 0 0; font-size: 11.5px; color: var(--faint); }
+@media (max-width: 699px) { #vo-panel { right: 12px; } .vo-pill { padding: 0 11px; } }
 .pop .vo-form { width: min(330px, calc(100vw - 48px)); padding: 4px 2px 0; }
 .pop .vo-form .dlg-sub { margin: 6px 0 14px; line-height: 1.45; }
 .pop .vo-form .big + .dlg-sub { margin: 10px 0 0; font-size: 12.5px; text-align: center; color: var(--faint); }
 .vo-form select { width: 100%; height: 42px; padding: 0 10px; font-size: 14.5px; color: var(--text); background: var(--bg); border: 1px solid var(--rule2); border-radius: 12px; }
-@media (max-width: 699px) { .ebtn.vo { padding: 0 11px; } }
+

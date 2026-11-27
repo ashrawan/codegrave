@@ -123,6 +123,7 @@
     <ul id="qlist" role="listbox" aria-label="Found on the timeline" hidden></ul>
   </div>
   <span id="tl-state"></span>
+  <div id="vo-panel" role="status" hidden></div>
   <button id="toggle-side" class="ibtn" type="button" aria-label="Show or hide the panel" aria-controls="side" aria-expanded="false">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M14.5 4.5v15"/></svg>
   </button>
@@ -169,17 +170,17 @@
   <span class="dock-tools">
     <button id="shuffle" class="ibtn sm" type="button" data-shuffle aria-label="Shuffle colours" title="Shuffle colours" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4h-4"/><circle cx="12" cy="8.6" r="1.9" fill="var(--p0)" stroke="none"/><circle cx="8.8" cy="14" r="1.9" fill="var(--p1)" stroke="none"/><circle cx="15.2" cy="14" r="1.9" fill="var(--p2)" stroke="none"/></svg></button>
     
-    <button id="more-btn" class="ibtn sm" type="button" aria-label="Menu: export, settings and info" title="Export, settings and info" aria-haspopup="menu" aria-expanded="false" aria-controls="more-menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5.5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18.5" cy="12" r="1.7"/></svg></button>
+    <button id="more-btn" class="ibtn sm" type="button" aria-label="Settings: play, the globe, appearance and help" title="Settings" aria-haspopup="menu" aria-expanded="false" aria-controls="more-menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
   </span>
   <div id="swatches" role="listbox" aria-label="Colour" hidden></div>
 </div>
 
-<!-- The three dots at the bottom right, under play: this timeline, play, the globe, appearance, help -->
+<!-- What the three dots at the top right do to the timeline is kept on these two, which are never shown (account.js presses them) -->
+<button id="pdf" type="button" hidden></button>
+<button id="reverse" type="button" hidden><span></span></button>
+
+<!-- The settings, behind the gear at the bottom right, under play: play, the globe, appearance, help -->
 <div id="more-menu" role="menu" hidden>
-  <p class="cap">This timeline</p>
-  <button id="pdf" class="nv" type="button" role="menuitem"><img src="media/pdf.svg" width="14" height="17" alt=""><span>Export as PDF</span></button>
-  <button id="reverse" class="nv" type="button" role="menuitem"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4v15M20 15l-4 4-4-4M8 20V5M12 9 8 5 4 9"/></svg><span></span></button>
-  <hr>
   <p class="cap">Play</p>
   <label id="pace-row" class="set"><span class="lbl">Speed</span><span class="rng"><input id="pace" type="range" min="0.25" max="2" step="0.25" value="1" aria-label="Play speed"><small id="pace-now" class="state">1x</small></span></label>
   <div id="voice-row" class="set" hidden><span class="lbl">Voiceover</span><span id="voice-seg" class="seg" role="group" aria-label="Voiceover"><button type="button" data-v="on">On</button><button type="button" data-v="off">Off</button></span></div>

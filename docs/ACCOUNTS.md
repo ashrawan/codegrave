@@ -128,7 +128,7 @@ unverified and carry a link to their Wikipedia article as the source.
 
 ## Voiceover
 
-A timeline of your own can be told aloud while it plays. "Generate voiceover", beside Publish, asks for a
+A timeline of your own can be told aloud while it plays. "Generate voiceover", in the three dots at the top right, asks for a
 voice (six of Gemini's) and then:
 
 1. The function `voiceover` has a model write the script: an opening that fits the title, one line for each
@@ -189,7 +189,7 @@ axis is never put beside a view on another: it is shown alone.
 ## Open in editor
 
 A timeline made with AI can also be changed by hand. "Open in editor",
-beside Publish, swaps the road for one page (asked for, Nov 2026: one page,
+in the three dots at the top right, swaps the road for one page (asked for, Nov 2026: one page,
 no tabs): the title and description typed in place, then every entry as a
 row under its chapter (picture, name, kind, starts, ends, weight). A click
 opens a row in place for its summary and Wikipedia article; Enter or a

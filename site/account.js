@@ -584,16 +584,19 @@ export function createAccount(app) {
   }
   async function voiceover(row, voice) {
     if (voicing || working) return;
-    const say = (note) => { voicing = { row, note }; draw(); };
+    const st = voicing = { row, note: '', voice, lines: null, done: 0, to: 0, open: true };
+    const say = (note) => { st.note = note; draw(); };
     try {
       const src = app.told();
       if (!src || !src.entries.length) throw new Error('There is nothing to tell yet.');
       say('Writing the script…');
       const [script, L] = await Promise.all([voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries } }), lame()]);
       const at = Date.now(), base = `${user.id}/${row.id}/`, lines = [];
+      st.lines = script.parts.flatMap((p) => p.texts);
       for (let k = 0; k < script.parts.length; k++) {
         const part = script.parts[k];
-        say(`Recording ${k + 1} of ${script.parts.length}…`);
+        st.done = lines.length; st.to = st.done + part.texts.length;
+        say(`Recording ${st.done + 1} of ${st.lines.length}`);
         const got = await voiceFn({ speak: { texts: part.texts, sig: part.sig }, voice, style: script.style }, 3);
         const bytes = new Uint8Array(await (await fetch('data:application/octet-stream;base64,' + got.audio)).arrayBuffer());
         const m = /rate=(\d+)/.exec(got.mime || ''), { pcm, rate } = pcmOf(bytes, m ? Number(m[1]) : 24000);
@@ -604,6 +607,7 @@ export function createAccount(app) {
           return putClip(base + name, mp3(L, pcm.slice(a, b), rate)).then(() => ({ id, text: part.texts[i], src: name, secs: Math.round((b - a) / rate * 100) / 100 }));
         })));
       }
+      st.done = st.to = lines.length;
       say('Saving…');
       const data = JSON.parse(row.text);
       await patch(row, { data: { ...data, voice: { at, voice, style: script.style, base, lines } } });
@@ -620,6 +624,52 @@ export function createAccount(app) {
       clips(row.id).catch(() => {});
       toast('The voiceover is removed.');
     } catch (e) { toast(e.message); } finally { draw(true); }
+  }
+  // The script under the pill while it is recorded: the lines said, the ones being said, the ones to come.
+  function drawVoicing(on) {
+    const p = $('vo-panel'), v = voicing;
+    p.hidden = !on || !v.open;
+    if (p.hidden) { p.innerHTML = ''; return; }
+    const n = v.lines ? v.lines.length : 0;
+    p.innerHTML = `<div class="vp-head"><b>Voiceover</b><small>${esc(v.voice)}${n ? ` · ${n} lines` : ''}</small></div>
+      <div class="vp-bar"><i style="width: ${n ? Math.round(v.done / n * 100) : 4}%"></i></div>
+      ${n ? `<ol class="vp-lines">${v.lines.map((t, i) => `<li class="${i < v.done ? 'done' : i < v.to ? 'now' : 'next'}"><i>${i < v.done ? ICON.check : ''}</i><span>${esc(t)}</span></li>`).join('')}</ol>` : '<p class="vp-note">Writing a script that fits the title and every entry<span class="dots"><i></i><i></i><i></i></span></p>'}
+      <p class="vp-foot">${n ? 'You can keep using the timeline while it records.' : 'This takes a moment.'}</p>`;
+    const now = p.querySelector('.now'), ol = p.querySelector('.vp-lines');
+    if (now && ol) ol.scrollTop = now.offsetTop - ol.offsetTop - 44;
+  }
+  // The three dots at the top right: what can be done with the timeline on show (asked for, Nov 2026: Publish
+  // and the voiceover moved in here, and the menu at the foot became settings only).
+  const TL = {
+    edit: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4"/></svg>',
+    share: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.5 2.6 14.5 0 17M12 3.5c-2.6 2.5-2.6 14.5 0 17"/></svg>',
+    turn: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4v15M20 15l-4 4-4-4M8 20V5M12 9 8 5 4 9"/></svg>',
+    name: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7V5h14v2M12 5v14M9 19h6"/></svg>',
+    bin: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l1 12.5h9l1-12.5"/></svg>',
+  };
+  function timelineMenu(anchor) {
+    const cur = current(), free = !!cur && !working, told = free && cur.text.includes('"voice":{');
+    const item = (act, icon, label, note = '', cls = '') => `<button type="button" class="nv${cls}" data-act="${act}" role="menuitem">${icon}<span>${label}</span>${note ? `<small>${note}</small>` : ''}</button>`;
+    const d = popover(anchor, `<div class="cap">This timeline</div>
+      ${free ? item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', told ? 'Ready' : '', told ? '' : ' lit') : ''}
+      ${free && cur.text.includes('"spec":{') ? item('edit', TL.edit, 'Open in editor') : ''}
+      ${cur ? item('publish', TL.share, cur.visibility === 'private' ? 'Publish' : 'Share', `<i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}`) + '<hr>' : ''}
+      ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Export as PDF')}
+      ${item('turn', TL.turn, esc($('reverse').textContent.trim() || 'Turn round'))}
+      ${cur ? '<hr>' + item('rename', TL.name, 'Rename') + item('delete', TL.bin, 'Delete', '', ' danger') : ''}`, 'menu tl');
+    d.addEventListener('click', (x) => {
+      const a = x.target.closest('[data-act]')?.dataset.act, at = $('tl-more');
+      if (!a) return;
+      x.stopPropagation();
+      if (a === 'voice') return voiceMenu(at, cur);
+      if (a === 'publish') return publish(at);
+      closeLayer();
+      if (a === 'edit') { if (!editor.open(cur)) toast('This timeline cannot be opened in the editor.'); }
+      else if (a === 'pdf') $('pdf').click();
+      else if (a === 'turn') $('reverse').click();
+      else if (a === 'rename') rename(cur);
+      else if (a === 'delete') remove(cur);
+    });
   }
   function voiceMenu(anchor, row) {
     if (voicing) return;
@@ -793,7 +843,7 @@ export function createAccount(app) {
       .catch(() => { asked = false; });
   }
   function draw(force) {
-    const on = app.views(), cur = current(), key = [user?.id, profile?.username, listed, on.join(), list.map((t) => t.id + t.title + t.visibility).join(), cur?.visibility, voicing?.note, cur && cur.text.includes('"voice":{')].join('|');
+    const on = app.views(), cur = current(), key = [user?.id, profile?.username, listed, on.join(), list.map((t) => t.id + t.title + t.visibility).join(), cur?.visibility, voicing?.note, voicing?.open, cur && cur.text.includes('"voice":{')].join('|');
     if (!force && key === drawn) return;
     drawn = key;
     // "Create timeline" stands first under "Your timelines", as a lit button so it is seen (asked for, Nov 2026).
@@ -807,9 +857,13 @@ export function createAccount(app) {
     // Beside the search: what this timeline is, and the way to publish it.
     if (editor.isOpen() && editor.row() !== cur) editor.close();
     const editable = !!cur && !working && cur.text.includes('"spec":{');
-    const told = !!cur && cur.text.includes('"voice":{'), busyHere = voicing && voicing.row === cur;
-    const VO = cur && !working ? `<button type="button" class="ebtn vo${told ? ' has' : ''}" id="vo-open" title="${told ? 'This timeline has a voiceover' : 'Have this timeline told aloud while it plays'}"${busyHere ? ' disabled' : ''}>${MIC}<span class="wide">${busyHere ? esc(voicing.note) : told ? 'Voiceover' : 'Generate voiceover'}</span></button>` : '';
-    $('tl-state').innerHTML = cur ? `${VO}${editable ? '<button type="button" class="ebtn" id="ed-open"><span class="wide">Open in editor</span><span class="narrow">Edit</span></button>' : ''}<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
+    // One quiet button at the top right opens what can be done with the timeline; while a voiceover is
+    // made it is a pill that says how far it has come, with the script under it (asked for, Nov 2026).
+    const busyHere = !!voicing && voicing.row === cur;
+    $('tl-state').innerHTML = busyHere
+      ? `<button type="button" class="ebtn vo-pill" id="vo-pill" aria-expanded="${voicing.open}" aria-controls="vo-panel" title="Show or hide the script"><i class="rec"></i><span>${esc(voicing.note)}</span></button>`
+      : `<button type="button" class="ibtn tl-more${cur && cur.visibility !== 'private' ? ' live' : ''}" id="tl-more" aria-haspopup="menu" aria-label="This timeline: voiceover, publish, export" title="This timeline">${ICON.dots}</button>`;
+    drawVoicing(busyHere);
     document.body.classList.toggle('mine', !!cur);
     const canAsk = !!cur && cur.text.includes('"spec":{');
     if ($('ask').hidden === canAsk) {
@@ -858,8 +912,8 @@ export function createAccount(app) {
       if (el('[data-sb-home]')) return explore(false);
       if (el('#sb-in')) return signIn();
       if (el('#publish')) return publish(el('#publish'));
-      if (el('#vo-open')) { const r = current(); if (r) voiceMenu(el('#vo-open'), r); return undefined; }
-      if (el('#ed-open')) { const r = current(); if (r && !editor.open(r)) toast('This timeline cannot be opened in the editor.'); return undefined; }
+      if (el('#tl-more')) return timelineMenu(el('#tl-more'));
+      if (el('#vo-pill')) { if (voicing) { voicing.open = !voicing.open; draw(); } return undefined; }
       const open = el('[data-open]');
       if (open) { if (phone()) setOpen(false); return app.show('t/' + open.dataset.open); }
       const more = el('[data-more]');

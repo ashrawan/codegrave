@@ -79,7 +79,7 @@ body.editing #ask { left: calc(var(--sb) + (100vw - var(--sb) - var(--bar) - var
 .ed-add:disabled { opacity: .4; pointer-events: none; }
 .ed-foot .ed-add { margin-top: 18px; width: 100%; text-align: left; border: 1px dashed var(--rule2); padding: 10px 12px; }
 .ed-empty { padding: 30px 8px; color: var(--faint); }
-/* Open in editor, beside Publish */
+/* A glass pill at the top right (the recording pill) */
 .ebtn { height: 34px; padding: 0 14px; font-size: 13.5px; color: var(--text); background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 17px; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .ebtn:hover { background: var(--raised); }
 

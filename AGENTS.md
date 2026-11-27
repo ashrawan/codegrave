@@ -301,7 +301,7 @@ How the page is put together:
   queue, no timers, no turns.
 - **Voiceover** (`site/voice.js`, `docs/ACCOUNTS.md`; asked for, Nov 2026: "voiceover will be main", the music "should
   be subtle", play "should wait on the cards if its corresponding voiceover not done", "and also a subtitle. if
-  its on"). On a timeline of the reader's own, "Generate voiceover" stands beside Publish (`#vo-open`): the
+  its on"). On a timeline of the reader's own, "Generate voiceover" is in the three dots at the top right (`#tl-more`): the
   function `voiceover` writes an opening that fits the title, a line for each entry in the order play meets
   them (`told` lent by the page) and a closing, and Gemini's cheapest Flash text to speech says them a few
   lines at a time. The page cuts each piece of speech at its pauses into one clip a line (`cuts()`), makes
@@ -582,6 +582,19 @@ How the page is put together:
   16px on a phone so the browser does not zoom into them, and if the page
   is zoomed anyway a "Reset zoom" button appears at the top of what is in
   sight (`#unzoom`, placed from `visualViewport`) and puts it back.
+- **Two menus, one for the timeline and one for settings** (asked for, Nov 2026: "remove that publish and
+  voiceover into the 3 dot in the top", "the bottom footer 3 dots should be like the settings"; this replaces
+  what the point below and the points above say where they differ). At the top right stands one quiet
+  three-dot button (`#tl-more`, drawn by `account.js` in `#tl-state`; `timelineMenu()`): "This timeline" holds
+  Generate voiceover (lit until there is one), Open in editor, Publish with its state, Export as PDF, Turn
+  round, Rename and Delete. For a timeline that is not the reader's own it holds Export as PDF and Turn round
+  only. Publish, Open in editor and the voiceover no longer stand as buttons at the top. Export as PDF and
+  Turn round are still done by the page: `#pdf` and `#reverse` are kept as two unseen buttons that the menu
+  presses. The button at the foot (`#more-btn`) is a gear and its menu (`#more-menu`) holds settings only:
+  Play, Globe, Appearance and How to read the timeline. While a voiceover is made the three dots become a
+  pill that says how far it has come ("Recording 7 of 17", `#vo-pill`), and under it a panel (`#vo-panel`,
+  `drawVoicing()`) shows the script with each line ticked as it is recorded; pressing the pill hides or shows
+  the panel, and the timeline can be used meanwhile. The year on the road stands under the button.
 - **The three-dot menu** (`#more-btn`, `#more-menu`) is at the bottom right, under play, at the
   right end of the strip (asked for, Nov 2026, after it stood at the foot of the bar on the left).
   It is in groups under small headings (restructured on request, Nov 2026, after a first list was found
