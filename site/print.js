@@ -728,8 +728,8 @@ async function start() {
   await document.fonts.ready;
   shaped = { views, inks: keep };
   // Format: the book (A4 or Letter pages) or the poster (landscape sheets, A2 to A4); kept in the link as `fmt=poster`
-  // the poster is the default (asked for, Nov 2026); the book is kept in the link as `fmt=book`
-  const fm = $('fmt'); fm.value = q.get('fmt') === 'book' ? 'book' : 'poster';
+  // the book is the default (asked for, Nov 2026, after the poster had been); the poster is kept in the link as `fmt=poster`
+  const fm = $('fmt'); fm.value = q.get('fmt') === 'poster' ? 'poster' : 'book';
   const keepLink = () => history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/'));
   // The paper starts as the one used where the reader is (Letter in the US and a few others, A4 elsewhere).
   // The book offers A4 and Letter; the poster A2, A3, A4 and Letter. Kept in the link as `paper`.
@@ -754,7 +754,7 @@ async function start() {
   sz.value = Math.round(fs / TEXT_BASE * 100); showSize();
   sz.addEventListener('input', showSize);
   sz.addEventListener('change', () => { fs = sz.value / 100 * TEXT_BASE; if (Number(sz.value) === 100) q.delete('size'); else q.set('size', sz.value); keepLink(); relay(); });
-  fm.addEventListener('change', () => { if (fm.value === 'book') q.set('fmt', 'book'); else q.delete('fmt'); papers(); keepLink(); relay(); });
+  fm.addEventListener('change', () => { if (fm.value === 'poster') q.set('fmt', 'poster'); else q.delete('fmt'); papers(); keepLink(); relay(); });
   const ord = $('order'); ord.value = rev ? 'new' : 'old';
   ord.addEventListener('change', () => { rev = ord.value === 'new';
     q.set('o', rev ? 'backward' : 'forward'); keepLink();

@@ -653,9 +653,20 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .ex-tog:disabled { opacity: .4; cursor: default; }
 .ex-q { display: grid; grid-template-columns: 1.7fr 1fr 1fr; gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border-radius: 9px; }
 .ex-q button:disabled { opacity: .35; cursor: default; }
-.ex-span { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.ex-span label { display: flex; flex-direction: column; gap: 4px; min-width: 0; font-size: 11.5px; color: var(--muted); }
-.ex-span select { width: 100%; min-width: 0; height: 34px; padding: 0 8px; font: inherit; font-size: 12.5px; color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); border: 1px solid var(--rule2); border-radius: 8px; }
+.ex-span { width: 100%; margin: 16px 0 18px; padding: 0 24px; box-sizing: border-box; text-align: left; }
+.ex-span-h { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px; font-size: 12px; color: var(--muted); }
+.ex-span-h b { font-weight: 600; }
+.ex-span-h span { color: var(--text); font-variant-numeric: tabular-nums; }
+.ex-yb { height: 30px; }
+.ex-yb::before { background: var(--acc); }
+.ex-hist { position: absolute; inset: 0 0 1px; display: flex; align-items: flex-end; gap: 2px; }
+.ex-hist i { flex: 1; height: 62%; background: color-mix(in srgb, var(--acc) 55%, transparent); border-radius: 1px 1px 0 0; }
+.ex-hist i.off { background: var(--rule2); opacity: .5; }
+.ex-yb input::-webkit-slider-thumb { height: 36px; border-color: var(--acc); }
+.ex-yb input::-moz-range-thumb { height: 32px; border-color: var(--acc); }
+.ex-ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 8px; font-size: 11.5px; color: var(--muted); }
+.ex-ends span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ex-ends span:last-child { text-align: right; }
 .ex-qnote { min-height: 16px; margin: 6px 0 0; font-size: 11.5px; color: var(--muted); }
 .ex-q button { height: 30px; padding: 0 12px; font-size: 12px; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; }
 .ex-q button[aria-checked="true"] { font-weight: 600; color: var(--text); background: var(--raised); box-shadow: inset 0 0 0 1px var(--rule2); }

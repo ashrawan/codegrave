@@ -781,8 +781,9 @@ export function createAccount(app) {
     const st = { voice: told, subs: false, shape: 'wide', scene: 'globe', short: 1080, from: 0, to: Math.max(0, all0 - 1) };
     // The part of the timeline that goes into the film (asked for, Nov 2026: the export is to have the span of
     // period the timeline has): it opens on what the timeline shows, and From and To cut it shorter by entry.
-    const cut = (x) => (x.length > 44 ? x.slice(0, 42) + '…' : x);
-    const opts = ents.map((x, n) => `<option value="${n}">${esc(cut((x.when ? x.when + ' · ' : '') + x.name))}</option>`).join('');
+    // It is chosen as the years are on the timeline (asked for): a strip with two handles, under the picture
+    // at the left, with a line that says from where to where.
+    const bars = Array.from({ length: Math.min(all0, 60) }, () => '<i></i>').join('');
     const sw = (name, label, hint) => `<div class="ex-opt"><span><b>${label}</b><small data-hint="${name}">${hint}</small></span><button type="button" class="ex-tog" role="switch" data-sw="${name}" aria-label="${label}"><i></i></button></div>`;
     const d = modal(`<form class="ex">
       <div class="ex-prev" aria-hidden="true">
@@ -794,6 +795,9 @@ export function createAccount(app) {
           <span class="ex-bar"><u></u></span>
         </div></div>
         <p class="ex-meta"></p>
+        ${all0 > 1 ? `<div class="ex-span" aria-hidden="false"><div class="ex-span-h"><b>Period</b><span class="ex-snote"></span></div>
+          <div class="yearbar ex-yb"><div class="ex-hist">${bars}</div><input type="range" data-span="from" min="0" max="${all0 - 1}" step="1" aria-label="First entry"><input type="range" data-span="to" min="0" max="${all0 - 1}" step="1" aria-label="Last entry"></div>
+          <div class="ex-ends"><span data-end="from"></span><span data-end="to"></span></div></div>` : ''}
       </div>
       <div class="ex-side">
         <h2>Export</h2>
@@ -805,9 +809,6 @@ export function createAccount(app) {
           <h3>Sound and text</h3>
           ${sw('voice', 'Voiceover', '')}
           ${sw('subs', 'Subtitles', 'Each line written at the foot while it is said')}
-          ${all0 > 1 ? `<h3>Period</h3>
-          <div class="ex-span"><label><span>From</span><select data-span="from">${opts}</select></label><label><span>To</span><select data-span="to">${opts}</select></label></div>
-          <p class="ex-qnote ex-snote"></p>` : ''}
           <h3>Quality</h3>
           <div class="ex-q" role="radiogroup" aria-label="Quality">${QUALITY.map(([n, label]) => `<button type="button" role="radio" data-short="${n}">${label}</button>`).join('')}</div>
           <p class="ex-qnote"></p>
@@ -822,7 +823,14 @@ export function createAccount(app) {
     let busy = false;
     function show() {
       const audio = false, voiceOn = st.voice && told, subsOn = voiceOn && st.subs, count = st.to - st.from + 1;
-      if (q('.ex-span')) { q('[data-span=from]').value = st.from; q('[data-span=to]').value = st.to; q('.ex-snote').textContent = count === all0 ? `All ${all0} entries the timeline shows.` : `${count} of ${all0} entries.`; }
+      if (q('.ex-span')) {
+        q('[data-span=from]').value = st.from; q('[data-span=to]').value = st.to;
+        const a = ents[st.from], b = ents[st.to], yb = q('.ex-yb'), n = all0 - 1, hs = all('.ex-hist i');
+        yb.style.setProperty('--lo', (st.from / n * 100) + '%'); yb.style.setProperty('--hi', (st.to / n * 100) + '%');
+        hs.forEach((el, k) => { const at = hs.length > 1 ? k / (hs.length - 1) * n : 0; el.classList.toggle('off', at < st.from - 0.5 || at > st.to + 0.5); });
+        q('.ex-snote').textContent = `${a.mark || ''}${a.mark && b.mark && a.mark !== b.mark ? ' to ' + b.mark : ''} · ${count === all0 ? `all ${all0} entries` : `${count} of ${all0} entries`}`;
+        q('[data-end=from]').textContent = a.name; q('[data-end=to]').textContent = b.name;
+      }
       all('[data-shape]').forEach((b) => b.setAttribute('aria-checked', b.dataset.shape === st.shape));
       all('[data-scene]').forEach((b) => b.setAttribute('aria-checked', b.dataset.scene === st.scene));
       all('[data-short]').forEach((b) => b.setAttribute('aria-checked', Number(b.dataset.short) === st.short));
@@ -852,7 +860,7 @@ export function createAccount(app) {
       else if (b.dataset.short) st.short = Number(b.dataset.short); else st[b.dataset.sw] = !(b.getAttribute('aria-checked') === 'true');
       show();
     });
-    d.addEventListener('change', (e) => {
+    d.addEventListener('input', (e) => {
       const sel = e.target.closest('[data-span]'); if (!sel || busy) return;
       st[sel.dataset.span] = Number(sel.value);
       if (st.from > st.to) { if (sel.dataset.span === 'from') st.to = st.from; else st.from = st.to; }
