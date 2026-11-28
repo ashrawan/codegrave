@@ -38,6 +38,9 @@ export function readAuthHash(hash) {
   if (q.get('access_token') && q.get('refresh_token')) {
     return { session: { access_token: q.get('access_token'), refresh_token: q.get('refresh_token'), expires_at: Number(q.get('expires_at')) || Math.floor(Date.now() / 1000) + (Number(q.get('expires_in')) || 3600) } };
   }
+  // A sign-in email whose link opens codegrave.com itself carries a one-time key here, which the page
+  // trades for a session (`verify()`), so the link never has to point at the sign-in service's address.
+  if (q.get('token_hash')) return { verify: { token_hash: q.get('token_hash'), type: q.get('type') || 'email' } };
   if (q.get('error') || q.get('error_code')) return { error: (q.get('error_description') || q.get('error') || 'Sign-in failed').replace(/\+/g, ' ') };
   return null;
 }
@@ -113,6 +116,13 @@ export function createAccount(app) {
   function oauth(provider) { location.href = `${CONFIG.url}/auth/v1/authorize?provider=${provider}&redirect_to=${encodeURIComponent(here())}`; }
   function emailLink(email) {
     return api('/auth/v1/otp?redirect_to=' + encodeURIComponent(here()), { method: 'POST', body: { email, create_user: true } });
+  }
+  // Trades a code typed from the email, or the key in a link to codegrave.com, for a session.
+  async function verify(body) {
+    const d = await api('/auth/v1/verify', { method: 'POST', body });
+    if (!d?.access_token) throw new Error('That code did not work. Ask for a new email.');
+    session = { access_token: d.access_token, refresh_token: d.refresh_token, expires_at: d.expires_at || Math.floor(Date.now() / 1000) + (d.expires_in || 3600) };
+    user = null; save();
   }
   async function signOut() {
     try { await api('/auth/v1/logout', { method: 'POST' }); } catch (e) { /* the session is dropped here either way */ }
@@ -387,8 +397,30 @@ export function createAccount(app) {
       busy(d, true);
       try {
         await emailLink(email);
-        d.innerHTML = `<button type="button" class="ibtn dlg-x" data-close aria-label="Close">${ICON.x}</button><div class="dlg-logo">${LOGO}</div><h1>Check your inbox</h1><p class="dlg-sub">We sent a sign-in link to <b>${esc(email)}</b>. Open it on this device and you are in.</p>`;
+        sent(d, email);
       } catch (err) { d.querySelector('.dlg-err').textContent = err.status === 429 ? 'Too many emails just now. Try again in a minute.' : err.message; busy(d, false); }
+    });
+  }
+
+  // After the email is sent: open its link on this device, or type the code it holds here.
+  function sent(d, email) {
+    d.innerHTML = `<button type="button" class="ibtn dlg-x" data-close aria-label="Close">${ICON.x}</button><div class="dlg-logo">${LOGO}</div><h1>Check your inbox</h1>
+      <p class="dlg-sub">We sent a sign-in email to <b>${esc(email)}</b>. Open its link on this device, or type the code from it here.</p>
+      <form class="code"><input type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,10}" maxlength="10" placeholder="Code from the email" required aria-label="Code from the email">
+      <button type="submit" class="big pri">Sign in</button></form>
+      <p class="dlg-err" role="alert"></p>`;
+    const input = d.querySelector('input');
+    input.focus();
+    input.addEventListener('input', () => { input.value = input.value.replace(/\D/g, ''); });
+    d.querySelector('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      busy(d, true);
+      try {
+        await verify({ type: 'email', email, token: input.value });
+        closeLayer();
+        await afterSignIn();
+        app.redraw();
+      } catch (err) { d.querySelector('.dlg-err').textContent = err.status === 403 || err.status === 400 ? 'That code is wrong or has expired. Check the newest email.' : err.message; busy(d, false); }
     });
   }
 
@@ -1417,13 +1449,14 @@ export function createAccount(app) {
   const stored = () => { try { return localStorage.getItem(FOLD); } catch (e) { return null; } };
 
   // Runs before the page reads its address: takes a returning sign-in out of the "#".
+  let pending = null;       // the one-time key of a sign-in link to codegrave.com, traded in start()
   function boot() {
     load();
     const got = readAuthHash(location.hash);
     let failed = '';
     if (got) {
       history.replaceState(null, '', location.pathname + location.search);
-      if (got.session) { session = got.session; user = null; save(); } else failed = got.error;
+      if (got.session) { session = got.session; user = null; save(); } else if (got.verify) pending = got.verify; else failed = got.error;
     }
     setOpen(!phone() && (stored() ? stored() === '1' : innerWidth >= 1100), false);
     return failed;
@@ -1432,7 +1465,13 @@ export function createAccount(app) {
     wire();
     draw(true);
     if (failed) toast(failed);
-    if (!session) return;
+    if (pending) {
+      try { await verify(pending); } catch (e) { toast('That sign-in link has expired or was used already. Ask for a new one.'); }
+      pending = null;
+    }
+    if (session) await afterSignIn();
+  }
+  async function afterSignIn() {
     try {
       if (!user) await whoAmI();
       await refreshList();
