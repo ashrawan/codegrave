@@ -239,7 +239,7 @@ export function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
     // As on the page: the marker stands on the dot of the entry in front, what has passed at its
     // left, and what is still to come shows only its dot until its turn (asked for, Nov 2026).
     const pos = posAt(scenes, t), k = Math.min(strip.length - 1, Math.max(0, Math.floor(pos))), nx = strip[k + 1];
-    const at = pos < 0 ? strip[0].x + px(40) * pos : nx ? strip[k].x + (nx.x - strip[k].x) * (pos - k) : strip[k].x;
+    const at = pos < 0 ? strip[0].x : nx ? strip[k].x + (nx.x - strip[k].x) * (pos - k) : strip[k].x;
     const xm = x1 - px(lay.wide ? 380 : 300), off = xm - px(5) - at, acc = steps[now].rgb || '#e8b04a';
     c.save(); c.textBaseline = 'alphabetic'; c.textAlign = 'left';
     strip.forEach((o, n) => {

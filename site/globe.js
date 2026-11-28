@@ -428,8 +428,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // Where each entry stands on the strip.
   function measure() {
     // An entry is placed by its left edge, where its dot is: the marker stands just before it, so the reader is seen going to it.
-    S.xs = Array.from(track.children, (el) => el.offsetLeft);
-    rows.style.setProperty('--now', Math.round(nowAt()) + 'px');
+    // Each entry is placed by the middle of its dot, so the marker stands exactly on it.
+    S.xs = Array.from(track.children, (el) => { const d = el.firstElementChild; return el.offsetLeft + (d ? d.offsetLeft + d.offsetWidth / 2 : 0); });
+    S.nowX = Math.round(nowAt()); rows.style.setProperty('--now', S.nowX + 'px');
   }
   function markShelf() {
     const els = track.children;
@@ -441,16 +442,19 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // stays in sight at its left, and what is still to come is not shown until its turn, coming in from the right.
   // (Before, the marker stood at the left and the strip showed what was to come.)
   const nowAt = () => Math.max(30, rows.clientWidth - (S.phone ? 160 : 300));
-  // At a card the marker stands right on its dot (asked for, Nov 2026: "stopping right on the dot"), the dot being
-  // 7 px wide at the entry's left edge; between two cards it travels from one dot to the next. The shift is as
-  // measured on the page (the strip's own inset included), not worked out.
-  const DOT_SHIFT = 3.4;
+  // At a card the marker stands right on its dot (asked for, Nov 2026: "stopping right on the dot"): `S.xs` holds the
+  // middle of each dot, measured on the page.
+  const DOT_SHIFT = 0;
   // The place on the strip that belongs under the marker for a reader at `pos`.
+  // The marker keeps to the camera: it stands on an entry's dot while the camera rests there (`STAY`; play waits
+  // there for the entry's line) and before play, on the first dot, and moves on to the next dot, easing out and in,
+  // only while the camera does (asked for, Nov 2026: "exact on that point on the first dot", and on each one after).
+  const glide = (f) => { const u = clamp01((f - STAY) / (1 - STAY)); return u * u * (3 - 2 * u); };
   function xAt(pos) {
     if (!S.xs.length) return 0;
-    if (pos < 0) return S.xs[0] + 34 * pos;
+    if (pos < 0) return S.xs[0];
     const i = Math.min(S.xs.length - 1, Math.floor(pos)), a = S.xs[i], b = S.xs[i + 1];
-    return b == null ? a : a + (b - a) * (pos - i);
+    return b == null ? a : a + (b - a) * glide(pos - i);
   }
 
   // ---- space: where a view has no place on the Earth the reader flies on among the stars, as fast as they travel.
@@ -550,7 +554,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       if (d) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }
     // The entry in front stands just after the marker, its dot first: the marker is on its way to it (asked for, Nov 2026).
-    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + DOT_SHIFT - xAt(S.pos)).toFixed(1)}px)`;
+    // The marker is moved with the strip: the strip's width changes when the bar on the left steps away for play.
+    if (!shelf.hidden) { const n = Math.round(nowAt()); if (n !== S.nowX) { S.nowX = n; rows.style.setProperty('--now', n + 'px'); } track.style.transform = `translateX(${(n + DOT_SHIFT - xAt(S.pos)).toFixed(1)}px)`; }
     if (sp > 0.005) {
       S.warp = still ? 0 : d ? d.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);
@@ -601,7 +606,14 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     const xs = S.xs;
     if (!xs.length) return 0;
     if (x <= xs[0]) return Math.max(-1, (x - xs[0]) / 34);
-    for (let i = 0; i < xs.length - 1; i++) if (x < xs[i + 1]) return i + (x - xs[i]) / (xs[i + 1] - xs[i]);
+    for (let i = 0; i < xs.length - 1; i++) if (x < xs[i + 1]) {
+      // The way back from a place on the strip to the reader: glide() turned round (by halving; it only rises).
+      const want = (x - xs[i]) / (xs[i + 1] - xs[i]);
+      if (want <= 0) return i;
+      let lo = STAY, hi = 1;
+      for (let k = 0; k < 24; k++) { const m = (lo + hi) / 2; if (glide(m) < want) lo = m; else hi = m; }
+      return i + (lo + hi) / 2;
+    }
     return xs.length - 1;
   }
   rows.addEventListener('pointerdown', (e) => {
