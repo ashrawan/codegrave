@@ -31,6 +31,8 @@ test('a returning sign-in is read from the link, and nothing else is', () => {
   assert.equal(got.session.refresh_token, 'bbb');
   assert.ok(got.session.expires_at > Date.now() / 1000);
   assert.equal(readAuthHash('#error=access_denied&error_description=Email+link+is+invalid').error, 'Email link is invalid');
+  assert.deepEqual(readAuthHash('#token_hash=abc123&type=email').verify, { token_hash: 'abc123', type: 'email' });
+  assert.deepEqual(readAuthHash('#token_hash=abc123').verify, { token_hash: 'abc123', type: 'email' });
   assert.equal(readAuthHash('#apollo-11'), null);
   assert.equal(readAuthHash(''), null);
 });
