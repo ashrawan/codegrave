@@ -440,6 +440,10 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // stays in sight at its left, and what is still to come is not shown until its turn, coming in from the right.
   // (Before, the marker stood at the left and the strip showed what was to come.)
   const nowAt = () => Math.max(30, rows.clientWidth - (S.phone ? 160 : 300));
+  // At a card the marker stands right on its dot (asked for, Nov 2026: "stopping right on the dot"), the dot being
+  // 7 px wide at the entry's left edge; between two cards it travels from one dot to the next. The shift is as
+  // measured on the page (the strip's own inset included), not worked out.
+  const DOT_SHIFT = 3.4;
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;
@@ -545,7 +549,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       if (d) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }
     // The entry in front stands just after the marker, its dot first: the marker is on its way to it (asked for, Nov 2026).
-    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + (S.phone ? 8 : 10) - xAt(S.pos)).toFixed(1)}px)`;
+    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + DOT_SHIFT - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
       S.warp = still ? 0 : d ? d.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);

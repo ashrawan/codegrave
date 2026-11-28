@@ -108,9 +108,16 @@ async function speak(account: string, ask: any): Promise<Response> {
 
 const cors = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, apikey, content-type, x-client-info",
+  "Access-Control-Allow-Headers": "authorization, apikey, content-type, x-client-info, x-admin-key",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
+// The editors' key, as the function `voice-store` checks it: its hash is on the list and has not run out.
+async function editorKey(key: string) {
+  if (key.length < 32) return false;
+  const d = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(key)))].map((b) => b.toString(16).padStart(2, "0")).join("");
+  const ok = await service(`/rest/v1/admin_keys?hash=eq.${d}&expires_at=gt.${new Date().toISOString()}&select=hash`).then((r) => (r.ok ? r.json() : [])).catch(() => []);
+  return ok.length > 0;
+}
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json" } });
 const service = (path: string, init: RequestInit = {}) =>
   fetch(URL_ + path, { ...init, headers: { apikey: SERVICE, Authorization: "Bearer " + SERVICE, "Content-Type": "application/json", ...(init.headers ?? {}) } });
@@ -171,16 +178,22 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   if (req.method !== "POST") return json({ error: "Send a POST." }, 405);
 
-  const auth = req.headers.get("Authorization") ?? "";
-  const who = await fetch(URL_ + "/auth/v1/user", { headers: { apikey: ANON, Authorization: auth } });
-  if (!who.ok) return json({ error: "Sign in to make a voiceover." }, 401);
-  const user = await who.json();
+  // An editor writing the default voiceover of a built view (scripts/voices.mjs) carries the editors' key
+  // instead of a reader's sign-in: only scripts, and nothing is counted against an account.
+  const editor = await editorKey(req.headers.get("x-admin-key") ?? "");
+  let user: { id: string } = { id: "" };
+  if (!editor) {
+    const auth = req.headers.get("Authorization") ?? "";
+    const who = await fetch(URL_ + "/auth/v1/user", { headers: { apikey: ANON, Authorization: auth } });
+    if (!who.ok) return json({ error: "Sign in to make a voiceover." }, 401);
+    user = await who.json();
+  }
 
   let body: Record<string, any>;
   try { body = await req.json(); } catch (_e) { return json({ error: "That request could not be read." }, 400); }
 
   // ---- a line said by the server, within the account's share of the month
-  if (body.speak) return speak(user.id, body.speak);
+  if (body.speak) return editor ? json({ error: "Not for the editors' key." }, 400) : speak(user.id, body.speak);
 
   const router = Deno.env.get("OPENROUTER_API_KEY");
   if (!router) return json({ error: "Voiceover is not switched on yet.", code: "not_configured" }, 503);
@@ -203,14 +216,14 @@ Deno.serve(async (req) => {
 
   // The day's allowance, the same one Create with AI counts against: a voiceover is one request.
   const since = new Date(Date.now() - 864e5).toISOString();
-  const [used, own] = await Promise.all([
+  const [used, own] = editor ? [null, []] : await Promise.all([
     service(`/rest/v1/ai_requests?owner=eq.${user.id}&created_at=gte.${since}&select=id`, { headers: { Prefer: "count=exact", Range: "0-0" } }),
     service(`/rest/v1/profiles?id=eq.${user.id}&select=ai_daily`).then((r) => (r.ok ? r.json() : [])).catch(() => []),
   ]);
-  const count = Number((used.headers.get("content-range") ?? "*/0").split("/")[1] || 0);
-  const daily = Number.isFinite(Number(own[0]?.ai_daily)) ? Number(own[0].ai_daily) : DAILY;
+  const count = used ? Number((used.headers.get("content-range") ?? "*/0").split("/")[1] || 0) : 0;
+  const daily = editor ? 1e9 : Number.isFinite(Number(own[0]?.ai_daily)) ? Number(own[0].ai_daily) : DAILY;
   if (count >= daily) return json({ error: `That is ${daily} requests today, the most for now. Try again tomorrow.`, code: "limit" }, 429);
-  const log = (ok: boolean, usage: Record<string, number> = {}) =>
+  const log = (ok: boolean, usage: Record<string, number> = {}) => editor ? Promise.resolve() :
     service("/rest/v1/ai_requests", { method: "POST", body: JSON.stringify({ owner: user.id, model: WRITER, kind: "voice", prompt: ("Voiceover: " + title).slice(0, 600), ok, tokens_in: usage.prompt_tokens ?? 0, tokens_out: usage.completion_tokens ?? 0 }) }).catch(() => {});
 
   try {

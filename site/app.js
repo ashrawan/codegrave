@@ -890,7 +890,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!L) return;
     const to = camClamp(x - camDir() * 0.2 * L.D);
     if (play.on) pausePlay();
-    road.vel = 0; turnsOver();
+    road.vel = 0; road.skipI = null; turnsOver();
     if (smooth && !calm()) { road.target = to; road.rate = 6; } else { road.t = road.prev = to; road.target = null; }
     roadKick();
   }
@@ -956,7 +956,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       let want = !play.on || (play.step && !stepping) ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
       // With a voiceover, the reader stops at each card until its line is said, then goes on, like Arrow keys
       // play (asked for, Nov 2026: "we need to stop in the card").
-      if (want && !play.step && telling() && voice.busy()) { want = 0; road.vel = 0; }
+      // The move to the next card starts as the line nears its end, so the next line begins a moment after this
+      // one ends, not after the whole way between them (asked for, Nov 2026: "only a little gap in between").
+      if (want && !play.step && telling() && voice.busy() && !(told.at === told.cue && !told.then && voice.left() <= leadSecs())) { want = 0; road.vel = 0; }
       if (road.intro) { if (performance.now() < road.intro) { want = 0; road.vel = 0; } else road.intro = 0; }
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
@@ -993,7 +995,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!globe) {
       document.body.classList.add('globe');
       $('globe').hidden = false;
-      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => roadToThing(id), seek: globeSeek, credit: document.querySelector('.dock-tools') });
+      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => playTo(id), seek: globeSeek, credit: document.querySelector('.dock-tools') });
     }
     const dir = camDir(), P = roadPalette(), seen = new Set(), steps = [];
     road.gorder = L.shown.filter((p) => p.a >= L.tMin && p.a <= L.tMax && L.at.get(p.t.id) === p).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
@@ -1051,7 +1053,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const from = i < 0 ? (dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D) : road.gorder[i].a, next = road.gorder[j];
     const edge = next ? from + (next.a - from) * clamp(frac, 0, 1) : from;
     road.gfree = state.open || null;
-    road.target = null; road.vel = 0;
+    road.target = null; road.vel = 0; road.skipI = null;
+    // Pulled to another entry: what was being said stops, and that entry's line starts (asked for, Nov 2026).
+    if (telling() && (id ?? 'intro') !== told.at) { voice.stop(); told.cue = undefined; }
     road.t = camClamp(edge - dir * AHEAD * L.D + dir * 1e-6 * L.D);
     roadKick();
   }
@@ -2457,10 +2461,23 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     while (j >= 0 && j < o.length && i >= 0 && o[j].t.id === o[i].t.id) j += n;
     j = clamp(j, 0, o.length - 1);
     if (j === i) return;
+    glideTo(j);
+  }
+  // During play: glide to the entry at `j` of the play order and go on playing from there; its line starts on
+  // arrival (what was being said stops, since the reader chose to move on).
+  function glideTo(j) {
+    const o = road.gorder, dir = camDir();
+    if (telling()) { voice.stop(); told.cue = undefined; }
     road.intro = 0; road.vel = 0; road.skipI = j;
     road.target = camClamp(o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D); road.rate = 4;
     if (calm()) { road.t = road.prev = road.target; road.target = null; }
     roadKick();
+  }
+  // A name on the time line was pressed: while play travels the reader glides there and play goes on
+  // (asked for, Nov 2026: "it doesn't need to pause"); standing still it goes there as before.
+  function playTo(id) {
+    const j = play.on && road.gorder ? road.gorder.findIndex((p) => p.t.id === id) : -1;
+    if (j >= 0) glideTo(j); else roadToThing(id);
   }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
@@ -2524,7 +2541,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // when play is first pressed with the sound on, it eases in and out so nothing starts or stops with a
   // jolt, and pausing keeps its place. Showing another view, or playing again from the beginning, starts
   // the track from its beginning too. The sound button silences it.
-  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.14;   // under a voiceover the music is only a background
+  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.05;   // under a voiceover the music is only a background
   const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
   // The track for what is on the road: the view's own when its play was pressed, else the house track.
   function trackNow() {
@@ -2570,7 +2587,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (Number.isInteger(o.from) && Number.isInteger(o.to)) { steps.splice(o.to + 1); steps.splice(0, o.from); }
     const css = getComputedStyle(document.documentElement);
     return exportFilm({
-      kind: o.kind, shape: o.shape, short: o.short, scene: o.scene, subs: !!o.subs, steps, step, stop, speaker, voice: voiceNow(),
+      kind: o.kind, shape: o.shape, short: o.short, scene: o.scene, subs: !!o.subs, steps, step, stop, speaker, clip: (id) => voice.clip(id), voice: voiceNow(),
       makeGlobe: (host, opts) => createGlobe(host, { esc, calm: () => false, open() {}, goTo() {}, seek() {}, credit: null, ...opts }),
       title: L && L.lanes.length ? L.lanes.map((ln) => ln.view.name).join(' and ') : 'timeline',
       music: new URL(trackNow() || MUSIC, document.baseURI).href,
@@ -2593,7 +2610,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (state.views.length !== 1) return null;
     const v = viewById.get(state.views[0]);
     if (v?.stored) return v.voice || null;
-    return localVoice(state.views[0]) || (v?.voice ? { ...v.voice, base: true } : null);
+    // A built view with a default voiceover always tells that one, and it cannot be rewritten or voiced again
+    // here (asked for, Nov 2026: to change it, the reader makes the timeline their own first).
+    if (v?.voice) return { ...v.voice, base: true };
+    return localVoice(state.views[0]);
   };
   function keepLocalVoice(v) {
     if (state.views.length !== 1) return;
@@ -2616,13 +2636,23 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     el.classList.toggle('wait', wait);
   }
   // Called whenever the reader moves: `id` is the entry in front (null before the first), `next` the one after.
+  // How long before the end of a line the reader sets off for the next card: the time the way takes at this
+  // speed, plus `EASE_SECS` because play eases up to speed from a stand, less `TOLD_GAP`, the pause wanted
+  // between two lines. Arriving early does no harm: the last words are let finish first.
+  const TOLD_GAP = 1.1, EASE_SECS = 0.9;
+  const leadSecs = () => (globe ? Math.max(0, globe.legSecs() / play.speed + EASE_SECS - TOLD_GAP) : 0);
   function tell(id, next) {
     if (!telling()) { if (told.cue !== undefined) { voice.stop(); told.cue = undefined; } return; }
     const key = id ?? 'intro';
     // Standing still, a line that was being said belongs to where the reader was: moving on ends it.
     if (!play.on) { if (told.cue !== undefined && key !== told.cue && told.cue !== 'outro') { voice.stop(); told.cue = undefined; } return; }
     if (told.cue === 'outro') return;
+    // Gliding to an entry the reader pressed: nothing on the way is said; its line starts on arrival.
+    if (road.target != null && road.skipI != null) return;
     const after = next ? next.t.id : 'outro';
+    told.at = key;
+    // Arrived while the last line still has its last words: they are let finish, and this line follows them.
+    if (key !== told.cue && told.cue !== undefined && voice.busy() && voice.left() < Infinity) return;
     if (key !== told.cue) {
       told.cue = key; told.then = null;
       // The opening is said on the first entry that has a line and the closing after the last that has one:
@@ -2636,7 +2666,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // The chip by play: how many of this timeline's lines this browser has already made in its voice.
   let keptAt = 0;
   function keptSoon() { clearTimeout(keptAt); keptAt = setTimeout(async () => {
-    const texts = voice.texts(), n = !texts.length ? 0 : voice.device() ? texts.length : await speaker.kept(texts, voice.name());
+    const texts = voice.texts(), n = !texts.length ? 0 : voice.device() || voice.whole() ? texts.length : await speaker.kept(texts, voice.name());
     told.kept = n; told.lines = texts.length; drawChip();
   }, 300); }
   function drawChip() {
@@ -2650,7 +2680,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   function drawTold() {
     const any = voice.any();
-    $('voice-row').hidden = $('subs-row').hidden = $('pick-row').hidden = !any;
+    $('voice-row').hidden = $('subs-row').hidden = !any;
+    $('pick-row').hidden = !any || !!voiceNow()?.base;
     // With no voiceover yet, the menu by play offers to make one there and then (asked for, Nov 2026: "the user
     // doesn't even need to go over click on the 3 dot").
     $('gen-row').hidden = any || state.views.length !== 1;

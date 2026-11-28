@@ -399,8 +399,8 @@ How the page is put together:
 - **Voiceover and export, round 5 (Nov 2026, asked for), which replaces the rounds above where they differ.**
   The sound switch is a row in the menu by play ("Sound", `#sound-seg`), not a button of its own beside play
   (`#sound` is kept, unseen); the menu is headed "Sound and voice" and its one speed is "Play speed", which the
-  voice follows. Under a voice the music is louder than it first was (`MUSIC_UNDER` 0.14 on the page, 0.16 in a
-  film; it was found "a little bit too subtle"). The export dialog has no "Audio only" (the engine can still
+  voice follows. Under a voice the music is louder than it first was (`MUSIC_UNDER` 0.05 on the page, 0.06 in a
+  film; it was found "a little bit too subtle" at 0.09, then a bit strong at 0.14, 0.1 and 0.08; the usual level under a voice is wanted, Nov 2026). The export dialog has no "Audio only" (the engine can still
   make the WAV). Scene is "Default" (as play shows it: the globe, and the stars where entries have no place)
   or "Full view". Quality is Quick test (240p, the smallest and fastest, for checking a film first), 720p or 1080p (4K and 8K were offered and then removed on request, Nov 2026; `QUALITY`; `canSize()` in `site/export.js` asks the
   browser's encoder, and a size it cannot make is not offered). The dialog has a foot of its own (`.exf`):
@@ -441,9 +441,9 @@ How the page is put together:
   `globe.intro()` does no glide from the whole globe. The globe comes in at the first entry that has a place.
 - **The time line at the foot shows what has been told, not what is to come (Nov 2026, asked for; this replaces
   what the points above say about the marker standing at the left).** The marker of the strip stands towards the right
-  (`nowAt()` in `site/globe.js`) and just before the entry in front, whose dot comes first, so the reader is seen
-  going to it (asked for, Nov 2026, in both directions); what was passed stays in sight at
-  its left, and what is still to come is not shown until its turn, coming in from the right ("those items not yet
+  (`nowAt()` in `site/globe.js`); at a card it stands right on the entry's dot (`DOT_SHIFT`; asked for, Nov 2026,
+  after it stood just before it), and between cards it travels from dot to dot, in both directions; what was passed stays in sight at
+  its left, and what is still to come shows only its dot (an empty ring) until its turn, when its name comes in (asked for, Nov 2026) ("those items not yet
   visible should not be in timeline"). It is so in both directions of the timeline, and the exported film draws
   its time line the same way (`shelf()` in `site/export.js`; change the two together).
 - **A default voiceover for a built timeline (Nov 2026, asked for).** `data/community/<owner>/voices/<view>.json`
@@ -487,6 +487,7 @@ How the page is put together:
   file's name, until the reader closes it with its cross (`exported()` in `site/account.js`, `#ex-done`); not a toast.
 - **Arrows during play (Nov 2026, asked for).** While automatic play travels, the left and right arrow keys glide
   to the entry before or the next one and play goes on (`playSkip()` in `site/app.js`); they no longer pause it.
+  A name on the time line, a small picture at the left or a pin pressed during play does the same (`playTo()`).
   Standing still they travel by hand as before, and with "Play: Arrow keys" they step (`playStep()`).
 - **Ask AI folds (Nov 2026, asked for).** Folded (`body.ask-min`) the Ask AI box is a small "Ask AI" pill in the
   middle, a little lower than the open box; a press opens it again (`#ask.open`), and the small arrow at the end of

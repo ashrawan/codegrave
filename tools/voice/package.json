@@ -1,0 +1,9 @@
+{
+  "name": "codegrave-voice-tools",
+  "private": true,
+  "type": "module",
+  "description": "Makes the sound of a default voiceover: one MP3 a view. See docs/VIEWS.md, \"A default voiceover\".",
+  "dependencies": {
+    "kokoro-js": "1.2.1"
+  }
+}
