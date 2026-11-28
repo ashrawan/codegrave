@@ -16,7 +16,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createHash } from 'node:crypto';
+import { sayText, versionOf } from './version.mjs';
 import { execFileSync } from 'node:child_process';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '../..');
@@ -26,9 +26,6 @@ const owner = opt('--owner', 'wiki'), voice = opt('--voice', 'af_heart'), out = 
 const only = args.filter((a, i) => !a.startsWith('--') && !String(args[i - 1]).startsWith('--'));
 const RATE = 24000, GAP = 0.35, KBPS = 48;
 
-export const sayText = (s) => String(s ?? '').replace(/\s+/g, ' ').trim().slice(0, 700);
-// The version: the voice and every line's words.
-export const versionOf = (voice, lines) => createHash('sha256').update(voice + '\n' + lines.map((l) => l.id + '\t' + sayText(l.text)).join('\n')).digest('hex').slice(0, 12);
 
 const dir = join(root, 'data/community', owner, 'voices');
 const fileOf = (id) => join(dir, id + '.json');
@@ -41,7 +38,7 @@ const todo = (only.length ? only : readdirSync(dir).filter((f) => f.endsWith('.j
 if (!todo.length) { console.log('nothing to make'); process.exit(0); }
 
 const { KokoroTTS } = await import('kokoro-js');
-const tts = await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX', { dtype: 'fp32', device: 'cpu' });
+const tts = await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX', { dtype: 'fp32', device: process.env.VOICE_DEVICE || 'cpu' });
 
 for (const id of todo) {
   const vo = JSON.parse(readFileSync(fileOf(id), 'utf8')), v = versionOf(voice, vo.lines), t0 = Date.now();
