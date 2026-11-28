@@ -53,6 +53,16 @@ export function gpuOk() {
     } catch (e) { return false; }
   })());
 }
+// Offline mode (asked for, Nov 2026: the voice is made on the server, within each account's share of the month;
+// "if its expires, the user can still download on their device and go with that. This is offline mode", "not
+// selected by default. And also not available in mobile devices"). Off, nothing is ever downloaded: a line the
+// server does not give is said by the browser's own voice. On, the model is fetched once and lines are made here.
+const OFFLINE = 'cg-voice-offline';
+export function isMobile(n = typeof navigator === 'undefined' ? null : navigator) {
+  if (!n) return false;
+  return !!n.userAgentData?.mobile || /Android|iPhone|iPad|iPod|Mobile/i.test(n.userAgent || '') || (/Mac/i.test(n.platform || '') && n.maxTouchPoints > 1);
+}
+export function offlineOn() { try { return !isMobile() && localStorage.getItem(OFFLINE) === '1'; } catch (e) { return false; } }
 export const isSlow = (r = speedOf()) => r != null && r > SLOW;
 
 export const isVoice = (v) => VOICES.some(([id]) => id === v);
@@ -71,6 +81,21 @@ export function lineKey(voice, text) {
   for (let i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
   return `https://voice.codegrave.invalid/${voice}/${(h >>> 0).toString(36)}-${text.length}`;
 }
+
+// Where a line's sound is kept for everyone (asked for, Nov 2026: the voice files go to Cloudflare, and what is
+// heard often is served from its cache): one file a line in a public store, named by the voice and a hash of the
+// words, so the same line in the same voice is made once, whoever asks. The function `voiceover` writes it and
+// names it the same way (`storeKey()` there; change the two together). `STORE` is the store's public address,
+// with no slash at its end; while it is empty the page does not ask the store, and the function still does.
+export const STORE = 'https://pub-f5afdcf4890045a5ab305d4297af0129.r2.dev';
+export const sayText = (s) => String(s ?? '').replace(/\s+/g, ' ').trim().slice(0, 700);
+export async function storeKey(voice, text) {
+  const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(voice + '\n' + sayText(text)));
+  return `v1/${voice}/${[...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, '0')).join('')}.pcm`;
+}
+// After this many lines in a row that the store does not have, it is not asked again for a while: a script
+// nobody has heard yet has no files there, and each miss is a wasted request.
+export const STORE_MISSES = 3;
 
 // The lines in the order they are made: the one asked for now first, then those after it, then the rest.
 export function madeOrder(ids, from) {
@@ -108,6 +133,14 @@ export function stretch(x, rate, sr = 24000) {
     for (let i = 0; i < win && at + i < x.length; i++) out[o + i] += x[at + i] * w[i];
   }
   return out.subarray(0, n);
+}
+
+// The server's sound is 16-bit samples, low byte first; the page plays floats between -1 and 1.
+export const FAR_AT_ONCE = 3;
+export function pcmToFloat(buf) {
+  const v = new DataView(buf), out = new Float32Array(buf.byteLength >> 1);
+  for (let i = 0; i < out.length; i++) out[i] = v.getInt16(i * 2, true) / 32768;
+  return out;
 }
 
 // ---- making the sound. One worker holds Kokoro and makes one line at a time; a line asked for `now` goes to
@@ -175,6 +208,14 @@ export function createSpeaker(status = () => {}) {
     }
     const p = opened().then((c) => c?.match(key)).then(async (r) => {
       if (r) return { audio: new Float32Array(await r.arrayBuffer()), rate: Number(r.headers.get('x-rate')) || 24000 };
+      // A pro account's line is said by the server (nothing to download); if that cannot be, by this device.
+      // Two plain modes (asked for, Nov 2026: "clearly know whether it is the online active or it is the offline"):
+      // online, the server says the line; offline, this computer makes it and the server is not asked.
+      const far = offlineOn() ? null : (await fromStore(key, text, voice)) || (await fromServer(key, text, voice, now));
+      if (far) return far;
+      // Not from the server and offline mode is off: nothing is downloaded, and whoever asked says the line
+      // with the browser's own voice.
+      if (!offlineOn()) { status({ plain: true }); throw new Error('no server'); }
       boot();
       return new Promise((ok, no) => {
         const j = { id: ++n, key, text, voice, ok, no };
@@ -184,6 +225,43 @@ export function createSpeaker(status = () => {}) {
     }).catch((e) => { made.delete(key); throw e; });
     made.set(key, p);
     return p;
+  }
+  // The server voice (asked for, Nov 2026: voiceover made on a server for pro accounts). `remote(text, voice)`
+  // is lent by the page: it answers the sound as 16-bit samples ({ pcm: ArrayBuffer, rate }), or null when this
+  // reader has no server voice. A few lines are asked for at a time, the one play needs now first. A line that
+  // cannot be had is made on the device like any other. `on()` says whether this reader has the server voice now.
+  let remote = null, has = () => false, asking = 0;
+  const waiting = [];
+  function server(fn, on) { remote = fn; has = on; }
+  function pump() {
+    while (asking < FAR_AT_ONCE && waiting.length) {
+      const w = waiting.shift(); asking++;
+      Promise.resolve().then(() => (remote ? remote(w.text, w.voice) : null)).then((got) => {
+        if (!got) return w.ok(null);
+        const out = { audio: pcmToFloat(got.pcm), rate: got.rate || 24000 };
+        status({ made: true });
+        opened().then((c) => c?.put(w.key, new Response(out.audio.slice(), { headers: { 'x-rate': String(out.rate) } }))).catch(() => {});
+        w.ok(out);
+      }).catch(() => w.ok(null)).finally(() => { asking--; pump(); });
+    }
+  }
+  // The public store first: a line anyone has heard before is there, costs no account anything and comes from
+  // Cloudflare's cache. It needs no sign-in, so a built timeline's voiceover plays for every reader.
+  let misses = 0;
+  async function fromStore(key, text, voice) {
+    if (!STORE || misses >= STORE_MISSES || !isVoice(voice) || voice === 'device') return null;
+    try {
+      const r = await fetch(STORE + '/' + (await storeKey(voice, text)));
+      if (!r.ok) { misses++; return null; }
+      const out = { audio: pcmToFloat(await r.arrayBuffer()), rate: 24000 };
+      misses = 0; status({ made: true });
+      opened().then((c) => c?.put(key, new Response(out.audio.slice(), { headers: { 'x-rate': String(out.rate) } }))).catch(() => {});
+      return out;
+    } catch (e) { misses++; return null; }
+  }
+  function fromServer(key, text, voice, now) {
+    if (!remote || !has()) return Promise.resolve(null);
+    return new Promise((ok) => { const w = { key, text, voice, ok }; if (now) waiting.unshift(w); else waiting.push(w); pump(); });
   }
   // How fast this device makes speech: seconds to make one second of it, kept in this browser so the voice
   // dialog can warn before the next time. The first line is left out: it is slow while the engine warms up.
@@ -197,12 +275,12 @@ export function createSpeaker(status = () => {}) {
   }
   // Have the model ready before anything is said: when a timeline with a voiceover is opened.
   let warmed = false;
-  function warm() { if (warmed || booted) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
+  function warm() { if (warmed || booted || has() || !offlineOn()) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
   // Change between the processor and the graphics card: the worker starts again on the other model; lines
   // waiting to be made are made by it. `failed` is set when the graphics card could not load it.
   function engine(on, failed = false) {
     on = !!on;
-    try { localStorage.setItem(GPU, on ? '1' : '0'); } catch (e) {}
+    try { localStorage.setItem(GPU, on ? '1' : '0'); if (on) localStorage.setItem(OFFLINE, '1'); } catch (e) {}
     if (on === gpu && !failed) return;
     gpu = on;
     const was = warmed || booted;
@@ -219,7 +297,12 @@ export function createSpeaker(status = () => {}) {
     for (const t of texts) if (await c.match(lineKey(voice, t)).catch(() => null)) n++;
     return n;
   }
-  return { line, warm, engine, kept, gpu: () => gpu, ready: () => booted };
+  // Offline mode on or off. A line that failed for want of it is asked for afresh next time.
+  function offline(on) {
+    try { localStorage.setItem(OFFLINE, on ? '1' : '0'); } catch (e) {}
+    status({ offline: offlineOn() });
+  }
+  return { line, warm, engine, kept, server, offline, far: () => has(), gpu: () => gpu, ready: () => booted };
 }
 
 // ---- playing it. `ctx()` gives the page's audio context once the reader has pressed play (null: no sound);

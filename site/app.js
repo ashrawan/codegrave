@@ -12,7 +12,7 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
-import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk, voiceLabel } from './voice.js';
+import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk, voiceLabel, offlineOn } from './voice.js';
 import { exportFilm, canExport, canSize, canFast } from './export.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
@@ -795,7 +795,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   const PASSED = 0.05;                         // focal lengths behind the reader at which the selected card is passed
   function camLimits() {
     const m = 0.22 * L.D;
-    return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), L.tMax];
+    // Turned round, the reader may stand a little past the end, so the latest start can be the first in front.
+    return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), Math.max(L.tMax, (L.lastA ?? -Infinity) + (AHEAD - 1e-4) * L.D)];
   }
   const camClamp = (t) => { const [lo, hi] = camLimits(); return clamp(t, lo, hi); };
   const camAtEnd = () => { const [lo, hi] = camLimits(); return camDir() > 0 ? road.t >= hi - L.D * 0.01 : road.t <= lo + L.D * 0.01; };
@@ -843,7 +844,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // other subjects (reported, Nov 2026: "it was showing all other images from previous loaded view").
     // A stored timeline counts even while it is still empty, being made, so no stand-in shows behind it.
     const own = state.views.some((id) => viewById.get(id)?.stored) || shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
-    L = { eps: Math.min(0.01, (tMax - tMin) / 2000), own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
+    // The latest start on the road: turned round, the reader opens just before it, even when it stands close to the end.
+    const lastA = shown.reduce((m, p) => (p.a <= tMax && p.a > m ? p.a : m), -Infinity);
+    L = { eps: Math.min(0.01, (tMax - tMin) / 2000), own, tMin, tMax, lastA, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
   }
@@ -2575,7 +2578,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     });
   }
   const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '', wait: false, load: null };
-  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); if (s.engine) drawTold(); if (s.made) keptSoon(); drawSubs(); });
+  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); if (s.engine || 'offline' in s) drawTold(); if (s.plain) account.plainVoice(); if (s.made) keptSoon(); drawSubs(); });
   told.slow = isSlow();
   gpuOk().then((ok) => { told.gpuOk = ok; drawTold(); });
   const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), speaker, said: (text, wait = false) => { told.text = text; told.wait = wait; drawSubs(); } });
@@ -2652,9 +2655,13 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // doesn't even need to go over click on the 3 dot").
     $('gen-row').hidden = any || state.views.length !== 1;
     if (any) $('vo-name').textContent = voiceLabel(voice.name());
+    $('vo-grp').hidden = !any && state.views.length !== 1;
+    $('vo-by').textContent = any ? 'Told by ' + voiceLabel(voice.name()) : state.views.length === 1 ? 'No voiceover yet' : '';
     drawChip(); keptSoon();
     // Offered where the device has a graphics card; off until the reader turns it on (asked for, Nov 2026).
-    $('gpu-row').hidden = !told.gpuOk;
+    // Offline mode (asked for, Nov 2026): the voice made on this computer, off unless the reader turns it on,
+    // and not offered on a phone. The GPU voice is a way of making it here, so it shows only with it.
+    $('gpu-row').hidden = !told.gpuOk || !offlineOn();
     for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
     for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
     for (const b of $('subs-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.subs));
@@ -2812,7 +2819,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // The settings are in groups that fold (asked for, Nov 2026: "collapsible, like for the globe", so the menu
     // stays quiet however many settings come). A folded group says what is chosen in it; Globe opens folded.
     const groupsSay = () => { for (const g of $('more-menu').querySelectorAll('details.grp')) g.querySelector('summary small').textContent = [...g.querySelectorAll('.set:not([hidden]) .seg button[aria-pressed="true"]')].map((b) => b.textContent).join(' · '); };
-    const more = (on) => { if (on) groupsSay(); $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
+    const more = (on) => { if (on) { groupsSay(); $('app-grp').hidden = account.signedIn(); } $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
     $('more-menu').addEventListener('click', (e) => { e.stopPropagation(); setTimeout(groupsSay); });
     $('more-btn').addEventListener('click', (e) => { e.stopPropagation(); more($('more-menu').hidden); });
     document.addEventListener('click', () => more(false));
@@ -2838,7 +2845,14 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (e.key === 'Home' || e.key === 'End') { road.target = null; road.vel = 0; road.t = road.prev = (e.key === 'Home') === fwd ? lo : hi; if (play.on) pausePlay(); return roadKick(); }
       roadBy((e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1) * Math.max(0.3, (L.tMax - L.tMin) / L.D / 100), 8);
     });
-    $('reverse').addEventListener('click', () => { state.order = state.order === 'new' ? 'old' : 'new'; drawReverse(); changed(); });
+    $('reverse').addEventListener('click', () => {
+      // Turned round, the timeline starts again from its new beginning, ready to play (reported, Nov 2026: it was
+      // left at the far end, and the reader had to drag all the way back).
+      if (play.on) pausePlay();
+      state.order = state.order === 'new' ? 'old' : 'new';
+      road.t = road.prev = null; road.target = null;
+      drawReverse(); changed();
+    });
     $('info-btn').addEventListener('click', () => {
       const on = $('info').hidden;
       if (on) drawInfo();
@@ -2863,9 +2877,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // How much the map says (Less, Medium, Full; cg-detail in this browser, kept by the globe).
     const detailShow = (v) => { for (const b of $('detail').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
     { const d = store.get('cg-detail'); detailShow(d === 'medium' || d === 'full' ? d : 'less'); }
-    // The look of the globe (Atlas, Day, Dots; cg-look in this browser, kept by the globe).
+    // The look of the globe (Atlas, Day, Dots; cg-look in this browser, kept by the globe). Day is the default
+    // (asked for, Nov 2026; Atlas was before).
     const lookShow = (v) => { for (const b of $('look').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
-    { const l = store.get('cg-look'); lookShow(l === 'day' || l === 'dots' ? l : 'atlas'); }
+    { const l = store.get('cg-look'); lookShow(l === 'atlas' || l === 'dots' ? l : 'day'); }
     $('look-row').addEventListener('click', (e) => {
       e.stopPropagation();
       const b = e.target.closest('button[data-v]');
@@ -2902,16 +2917,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!b) return;
       told.subs = b.dataset.v === 'on'; store.set('cg-subs', told.subs ? '1' : '0'); drawTold();
     });
-    // Play: by itself, or one entry at a time by the arrow keys.
-    const stepShow = () => { for (const b of $('step').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'keys') === play.step)); };
-    play.step = store.get('cg-step') === 'keys'; stepShow();
-    $('step-row').addEventListener('click', (e) => {
-      e.stopPropagation();
-      const b = e.target.closest('button[data-v]');
-      if (!b) return;
-      play.step = b.dataset.v === 'keys'; store.set('cg-step', b.dataset.v); stepShow();
-      if (play.on) roadKick();
-    });
+    // "Advance: Auto / Arrow keys" was removed from the settings on request (Nov 2026): the arrows already go from
+    // entry to entry while play travels (`playSkip()`), so play is always automatic.
+    play.step = false;
     // In full screen a click on the stage brings the search and the menu button back for a moment.
     let peekT = null;
     $('stage').addEventListener('click', (e) => {
@@ -3264,6 +3272,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), mark: stepOf(p).mark || '', summary: p.t.summary || '' })) }; },
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
   });
+  // A pro account's voiceover is said by the server (site/voice.js, `server()`); everyone else's by their own device.
+  speaker.server(account.speak, account.hasSpeak);
   const authFailed = account.boot();      // before the address is read: a returning sign-in leaves its tokens after "#"
   // Only a link with ?film=1 fetches site/film/, and without its key that does nothing and the page starts as ever.
   if (/[?&]film=1(&|$)/.test(location.search)) import('./film/boot.js').then((m) => m.default({ esc, loadView, useView, viewById, stepOf, picturesOf, createGlobe, api: account.api, ask: account.ask, replaceView, boot: () => (bootReady = getJSON('boot.json').then(useBoot)) })).then((on) => on || start(), start);

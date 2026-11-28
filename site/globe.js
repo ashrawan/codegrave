@@ -152,9 +152,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // How much the map says (asked for, Nov 2026, so the globe is less crowded; `cg-detail` in this browser):
   // 'full' names every country; 'medium' names and tints only the countries the timeline's entries fall in;
   // 'less' only the country of the entry in front, and shows only its pin.
-  // The look of the globe (asked for, Nov 2026; `cg-look` in this browser): 'atlas', the default, 'day' or
+  // The look of the globe (asked for, Nov 2026; `cg-look` in this browser): 'day', the default since Nov 2026, 'atlas' or
   // 'dots'. What a look needs is fetched only when that look is picked.
-  try { const l = localStorage.getItem('cg-look'); S.look = LOOKS.includes(l) ? l : 'atlas'; } catch (e) { S.look = 'atlas'; }
+  try { const l = localStorage.getItem('cg-look'); S.look = LOOKS.includes(l) ? l : 'day'; } catch (e) { S.look = 'day'; }
   try { const d = localStorage.getItem('cg-detail'); S.detail = d === 'medium' || d === 'full' ? d : 'less'; } catch (e) { S.detail = 'less'; }
   // The country the entry in front falls in is lit in the accent colour, whatever the detail (asked for, Nov 2026:
   // "when that map falls into the particular country, we want that country to be highlighted"; `cg-land`, on).
@@ -240,20 +240,23 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       map.addLayer({ id: 'came', type: 'line', source: 'arc', filter: kind('came'), paint: { 'line-color': ['get', 'c'], 'line-width': 1.2, 'line-opacity': 0.28, 'line-dasharray': [1, 3] } });
       map.addLayer({ id: 'done-glow', type: 'line', source: 'arc', filter: kind('done'), paint: { 'line-color': ['get', 'c'], 'line-width': 7, 'line-opacity': 0.18, 'line-blur': 4 } });
       map.addLayer({ id: 'done', type: 'line', source: 'arc', filter: kind('done'), paint: { 'line-color': ['get', 'c'], 'line-width': 1.8, 'line-opacity': 0.95 } });
-      map.addLayer({ id: 'head-glow', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 11, 'circle-color': ['get', 'c'], 'circle-opacity': 0.3, 'circle-blur': 0.9 } });
-      map.addLayer({ id: 'head', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 3.2, 'circle-color': '#fff6e2' } });
+      map.addLayer({ id: 'head-glow', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 11, 'circle-color': ['get', 'c'], 'circle-opacity': 0.15, 'circle-blur': 0.9 } });
+      map.addLayer({ id: 'head', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 3.2, 'circle-color': '#fff6e2', 'circle-opacity': 0.5 } });
       map.addSource('pins', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       const now = ['==', ['get', 'st'], 'now'];
-      map.addLayer({ id: 'halo', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 26, 'circle-color': ['get', 'c'], 'circle-opacity': 0.12, 'circle-blur': 0.8, 'circle-pitch-alignment': 'map' } });
-      map.addLayer({ id: 'ring', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 12, 'circle-color': 'rgba(0,0,0,0)', 'circle-stroke-color': ['get', 'c'], 'circle-stroke-width': 1.3, 'circle-stroke-opacity': 0.8, 'circle-pitch-alignment': 'map' } });
+      map.addLayer({ id: 'halo', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 26, 'circle-color': ['get', 'c'], 'circle-opacity': 0.07, 'circle-blur': 0.8, 'circle-pitch-alignment': 'map' } });
+      // One quiet mark for the entry in front, no second ring round it (asked for, Nov 2026: two circles were too strong).
       // What has happened is a filled point, what is ahead an empty ring, the one in front is lit.
       map.addLayer({ id: 'pin', type: 'circle', source: 'pins', paint: {
         'circle-radius': ['match', ['get', 'st'], 'now', 5.5, 'past', 3.6, 3.2],
         'circle-color': ['match', ['get', 'st'], 'next', 'rgba(0,0,0,.25)', ['get', 'c']],
         // The one in front is see-through, so the map's own names under it can be read (asked for, Nov 2026).
-        'circle-opacity': ['match', ['get', 'st'], 'past', 0.75, 'now', 0.28, 1],
+        'circle-opacity': ['match', ['get', 'st'], 'past', 0.75, 'now', 0.14, 1],
         // The edge of the pin in front is its own colour, not a dark ring (asked for, Nov 2026: the black did not match).
-        'circle-stroke-color': ['match', ['get', 'st'], 'next', 'rgba(255,255,255,.75)', 'now', ['get', 'c'], 'rgba(5,8,15,.7)'], 'circle-stroke-width': 1, 'circle-stroke-opacity': ['match', ['get', 'st'], 'now', 0.85, 1] } });
+        'circle-stroke-color': ['match', ['get', 'st'], 'next', 'rgba(255,255,255,.75)', 'now', ['get', 'c'], 'rgba(5,8,15,.7)'], 'circle-stroke-width': 1, 'circle-stroke-opacity': ['match', ['get', 'st'], 'now', 0.5, 1] } });
+      // A small see-through white dot stays at the place in front while its card is up (asked for, Nov 2026), like the
+      // one that travels along the way.
+      map.addLayer({ id: 'now-dot', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 2.4, 'circle-color': '#fff6e2', 'circle-opacity': 0.5, 'circle-pitch-alignment': 'map' } });
       map.addLayer({ id: 'pin-name', type: 'symbol', source: 'pins', filter: ['all', ['get', 'near'], ['!=', ['get', 'st'], 'now']],
         layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-anchor': 'left', 'text-offset': [0.8, 0], 'text-max-width': 14, 'text-optional': true },
         paint: { 'text-color': ['match', ['get', 'st'], 'past', '#ffffff', 'rgba(255,255,255,.72)'], 'text-halo-color': 'rgba(5,8,15,.85)', 'text-halo-width': 1.4 } });
@@ -423,19 +426,20 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   }
   // Where each entry stands on the strip.
   function measure() {
-    // An entry is placed by its right edge: it stands just before the marker, which is at the right.
-    S.xs = Array.from(track.children, (el) => el.offsetLeft + el.offsetWidth);
+    // An entry is placed by its left edge, where its dot is: the marker stands just before it, so the reader is seen going to it.
+    S.xs = Array.from(track.children, (el) => el.offsetLeft);
     rows.style.setProperty('--now', Math.round(nowAt()) + 'px');
   }
   function markShelf() {
     const els = track.children;
     for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
-  // The marker stands at the right end (asked for, Nov 2026, in both directions of the timeline: "those items
+  // The marker stands before the entry in front, which is just at its right, its dot first (asked for, Nov 2026: the
+  // line "should be on the left of that first dot, so it feels like it's going to that start"), in both directions of the timeline: "those items
   // not yet visible should not be in timeline"): the entry in front stands just before it, what has been passed
   // stays in sight at its left, and what is still to come is not shown until its turn, coming in from the right.
   // (Before, the marker stood at the left and the strip showed what was to come.)
-  const nowAt = () => rows.clientWidth - (S.phone ? 26 : 44);
+  const nowAt = () => Math.max(30, rows.clientWidth - (S.phone ? 160 : 300));
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;
@@ -540,8 +544,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
       if (d) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }
-    // The entry in front stands just before the marker, not under it.
-    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() - (S.phone ? 12 : 16) - xAt(S.pos)).toFixed(1)}px)`;
+    // The entry in front stands just after the marker, its dot first: the marker is on its way to it (asked for, Nov 2026).
+    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + (S.phone ? 8 : 10) - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
       S.warp = still ? 0 : d ? d.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);

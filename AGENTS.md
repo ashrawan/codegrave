@@ -440,8 +440,9 @@ How the page is put together:
   'space' before the first entry and for a run without places at the very beginning, however short, and
   `globe.intro()` does no glide from the whole globe. The globe comes in at the first entry that has a place.
 - **The time line at the foot shows what has been told, not what is to come (Nov 2026, asked for; this replaces
-  what the points above say about the marker standing at the left).** The marker of the strip stands at the right
-  end (`nowAt()` in `site/globe.js`): the entry in front stands just before it, what was passed stays in sight at
+  what the points above say about the marker standing at the left).** The marker of the strip stands towards the right
+  (`nowAt()` in `site/globe.js`) and just before the entry in front, whose dot comes first, so the reader is seen
+  going to it (asked for, Nov 2026, in both directions); what was passed stays in sight at
   its left, and what is still to come is not shown until its turn, coming in from the right ("those items not yet
   visible should not be in timeline"). It is so in both directions of the timeline, and the exported film draws
   its time line the same way (`shelf()` in `site/export.js`; change the two together).
@@ -504,6 +505,57 @@ How the page is put together:
 - **Export says when the graphics hardware helps (Nov 2026, asked for).** The browser's encoder already uses the
   device's video hardware where there is one; `canFast()` in `site/export.js` only asks whether it can, and the
   dialog's foot then reads "Made on your device, sped up by its graphics hardware. Nothing is uploaded."
+- **The pro plan, the server voice and offline mode (Nov 2026, asked for; `docs/ACCOUNTS.md`, "The pro plan";
+  this replaces what the voiceover points above say about the model downloading by itself).** An account is free
+  or pro (`plan` on its row, written only by the function `stripe-webhook`). The account menu has "Go Pro" or
+  "Manage" (`#me-plan`, `billing()` in `site/account.js`), which open Stripe's own pages through the function
+  `billing`. A voiceover's lines are said by a hosted Kokoro through the function `voiceover` (`{ speak }`), one
+  line at a time, kept in the browser like any other line and never on the server (`speaker.server()` in
+  `site/voice.js`). Each signed-in account has a share of it a month (free a taste, pro far more; `#me-say` in
+  the account menu shows what is left), and the key has a spending limit. A line the server does not give is
+  said by the browser's own voice. Online or Offline is a small pill beside the voice dialog's title (`.vo-pill` in `voiceMenu()`: a green dot, Online; a grey dot, Offline; a press changes it. A row in the menu by play, a box under the voices and a switch in a box were each found confusing). Only offline has a box of its own under the title (`.vo-mode`), which offers the download; nothing is downloaded until Download is pressed (`cg-voice-have`; `cg-voice-offline`,
+  `offlineOn()`) downloads the model and makes such lines on the device: off unless the reader turns it on, and
+  never on a phone (`isMobile()`), in his words "not selected by default. And also not available in mobile
+  devices". The two are plain modes: online the server says the lines, offline this computer makes
+  them and the server is not asked (`line()` in `site/voice.js`); the switch says which is on and whether the
+  model is downloaded, and the download's progress and the GPU voice stand inside it. The GPU voice shows only with offline mode on. Server video export is planned, not built.
+- **The voice's sound is kept in Cloudflare R2 (Nov 2026, asked for: "the users ones also goes to the
+  Cloudflare", and what is heard often is served from its cache; this replaces "never on the server" above for
+  the server voice).** One file a line, named by the voice and a hash of the words (`storeKey()` in
+  `site/voice.js` and in the function `voiceover`; change the two together), so a line is made and paid for once,
+  whoever asks. The function looks in the store before it counts a line against the account, and writes what it
+  makes. The page asks the store's public address first (`STORE` in `site/voice.js`, `fromStore()`; empty until
+  the bucket has one), which needs no sign-in, and gives up after `STORE_MISSES` misses in a row. Voiceovers for
+  the built views are to be made into the same store. Without the function's R2 secrets nothing is kept.
+- **The voice dialog is design A, "Two tabs" (Nov 2026, picked from three after the pill and box were found "too
+  noisy"; this replaces what the points above say about the voice dialogs).** `voiceMenu()` draws one column
+  (`.vo-form.vx`): the title, Online and Offline as two tabs (`.vo-tabs`, hidden on a phone), the voice as one
+  row with Listen and Change (`.vo-cur`; the list of voices opens only from Change, `.vo-pickall`), then the
+  script, the prompt and one lit button. On Offline, until the voice is downloaded, one panel offers the download
+  (`.vo-mode`) and everything else is grey (`.vo-form.dim .dimmable`).
+- **The light theme covers the globe too, and the card is glass (Nov 2026, asked for):** the strip at the foot and
+  the small pictures are light with dark ink; the card's plate is see-through glass with a blur in both themes, never
+  solid white or black (the block at the end of `site/styles.css`). Turned round, the road opens on
+  its latest entry: the reader may stand a little past the end (`L.lastA` in `camLimits()`), and pressing Turn round
+  takes the reader to the new beginning, ready to play.
+- **The accent is Glacier blue (Nov 2026, picked from five, in place of the amber).** `--acc` is `#6cb6ff` on
+  dark and `#1f63b8` on light, and what stands on it is `--on-acc`. The views' own colours (`--p0` to `--p7`) and
+  the warm light of the map and the wall did not change.
+- **The four menus are one design (A, "Glass list", picked from three, Nov 2026, after the menus were called
+  generic).** The account menu, the timeline's three dots, the settings and the menu by play share one sheet
+  (the block "Menus, design A" at the end of `site/account.css`): each opens with who or what it is about
+  (`.m-head`, with a chip for the plan or the state), every row has an icon, an On / Off pair is a switch
+  (`.seg.sw`: both buttons stay in the page, so the handlers are unchanged), what is left is a meter
+  (`.m-meter`) and the one thing to press is lit (`.m-pri` Go Pro, `.m-out` Publish). Keep new menus and rows
+  in these shapes. The settings' groups no longer fold: they are flat under small capitals, as drawn (the
+  `details` stay in the page, always open), and a choice is a quiet pair at the right, the one that is on a
+  shade lighter, not amber. The menu by play is Music and sound, Play speed, then "Voiceover" with its
+  switch, its voice and Subtitles together (asked for: "voiceover falls under the same"). The settings hold the
+  globe only: View, Look and Detail are a grid of tiles, a symbol over its name (`.seg.tiles`, asked for), then
+  Highlight country and Several views. Day is the default look (asked for; Atlas was), and pointing at its tile
+  says it is seen from far off and that close in the map is Atlas (`data-tip`). "Advance: Auto / Arrow keys" was removed on request (`play.step` is
+  always false; the arrows already skip during play), and Theme left the settings because the account menu
+  has it; it still shows there for a reader who is not signed in (`#app-grp`), who has no account menu.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound
