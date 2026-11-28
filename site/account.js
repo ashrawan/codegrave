@@ -760,7 +760,7 @@ export function createAccount(app) {
       x.stopPropagation();
       if (a === 'voice') return voiceMenu(at, hold);
       if (a === 'video') { closeLayer(); return videoMenu(); }
-      if (a === 'publish') return publish(at);
+      if (a === 'publish') return publish(at, () => timelineMenu(at));
       closeLayer();
       if (a === 'edit') { if (!editor.open(cur)) toast('This timeline cannot be opened in the editor.'); }
       else if (a === 'mine') makeMine();
@@ -1138,12 +1138,13 @@ export function createAccount(app) {
     } catch (e) { a.fail(e.message); }
   }
 
-  function publish(anchor) {
+  // `back`, when given, is where the arrow at the top goes: the menu it was opened from (asked for, Nov 2026).
+  function publish(anchor, back) {
     const row = current();
     if (!row) return;
     const named = !!profile?.username, link = (vis) => (vis === 'public' ? `${location.host}/${profile?.username || '…'}/${row.slug}` : `${location.host}/t/${row.id}`);
     const opt = (v, name, sub) => `<label class="pick"><input type="radio" name="vis" value="${v}"${(row.visibility === 'private' ? 'public' : row.visibility) === v ? ' checked' : ''}><i></i><span><b>${name}</b><small>${sub}</small></span></label>`;
-    const d = popover(anchor, `<form><h2>${row.visibility === 'private' ? 'Publish this timeline' : 'Sharing'}</h2>
+    const d = popover(anchor, `<form><div class="pub-top">${back ? `<button type="button" class="ibtn pub-back" data-back aria-label="Back" title="Back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>` : ''}<h2>${row.visibility === 'private' ? 'Publish this timeline' : 'Sharing'}</h2><button type="button" class="ibtn pub-x" data-close aria-label="Close">${ICON.x}</button></div>
       <p class="dlg-sub">${row.entries} ${row.entries === 1 ? 'entry' : 'entries'}. ${row.visibility === 'private' ? 'Only you can see it now.' : ''}</p>
       ${named ? '' : `<div class="cap">Your address</div><label class="addr"><span>${esc(location.host)}/</span><input type="text" name="username" maxlength="30" autocomplete="off" autocapitalize="none" spellcheck="false" value="${esc(slugOf(shown()).slice(0, 30))}" aria-label="Username"><span class="ok">${ICON.check}</span></label>
       <p class="dlg-fine" data-uname>The name is yours from now on. Every timeline you publish will live under it.</p>`}
@@ -1172,6 +1173,7 @@ export function createAccount(app) {
       }, 300);
     }
     if (un) { un.addEventListener('input', check); check(); }
+    d.querySelector('[data-back]')?.addEventListener('click', (e) => { e.stopPropagation(); back(); });
     d.querySelector('[data-copy-link]')?.addEventListener('click', (e) => {
       navigator.clipboard?.writeText('https://' + link(row.visibility)).then(() => { e.target.textContent = 'Copied'; });
     });
