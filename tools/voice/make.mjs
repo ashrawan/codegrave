@@ -35,10 +35,19 @@ const todo = (only.length ? only : readdirSync(dir).filter((f) => f.endsWith('.j
     const vo = JSON.parse(readFileSync(fileOf(id), 'utf8'));
     return only.length || vo.audio?.voice !== voice || vo.audio?.v !== versionOf(voice, vo.lines);
   });
-if (!todo.length) { console.log('nothing to make'); process.exit(0); }
+const warm = args.includes('--warm');   // only fetch the model, once, before several runs start side by side
+if (!todo.length && !warm) { console.log('nothing to make'); process.exit(0); }
 
 const { KokoroTTS } = await import('kokoro-js');
-const tts = await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX', { dtype: 'fp32', device: process.env.VOICE_DEVICE || 'cpu' });
+const MODEL = 'onnx-community/Kokoro-82M-v1.0-ONNX', THREADS = +process.env.VOICE_THREADS || 0;
+let tts;
+if (THREADS) {
+  // Several runs side by side (tools/voice/local.mjs): each keeps to its share of the processor's cores.
+  const { StyleTextToSpeech2Model, AutoTokenizer } = await import('@huggingface/transformers');
+  const model = await StyleTextToSpeech2Model.from_pretrained(MODEL, { dtype: 'fp32', device: 'cpu', session_options: { intraOpNumThreads: THREADS, interOpNumThreads: 1 } });
+  tts = new KokoroTTS(model, await AutoTokenizer.from_pretrained(MODEL));
+} else tts = await KokoroTTS.from_pretrained(MODEL, { dtype: 'fp32', device: process.env.VOICE_DEVICE || 'cpu' });
+if (warm) { console.log('model ready'); process.exit(0); }
 
 for (const id of todo) {
   const vo = JSON.parse(readFileSync(fileOf(id), 'utf8')), v = versionOf(voice, vo.lines), t0 = Date.now();
