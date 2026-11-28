@@ -87,7 +87,7 @@ export function lineKey(voice, text) {
 // words, so the same line in the same voice is made once, whoever asks. The function `voiceover` writes it and
 // names it the same way (`storeKey()` there; change the two together). `STORE` is the store's public address,
 // with no slash at its end; while it is empty the page does not ask the store, and the function still does.
-export const STORE = '';
+export const STORE = 'https://pub-f5afdcf4890045a5ab305d4297af0129.r2.dev';
 export const sayText = (s) => String(s ?? '').replace(/\s+/g, ' ').trim().slice(0, 700);
 export async function storeKey(voice, text) {
   const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(voice + '\n' + sayText(text)));

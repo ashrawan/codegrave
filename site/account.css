@@ -931,3 +931,28 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 
 .vo-form.vx [data-revoice][hidden] { display: none; }
 .m-pri, .m-pri b, .m-pri small, .m-pri span { color: var(--on-acc); }
+/* The voice dialog's order (asked for, Nov 2026): the prompt first, then the voice and the period as two small
+   choices that open in place, then the script. */
+.vx .vo-guide { gap: 8px; font-size: 13px; color: var(--text); }
+.vx .vo-guide textarea { min-height: 78px; font-size: 14px; }
+.vo-opts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.vo-opt { display: inline-flex; align-items: center; gap: 10px; height: 46px; padding: 0 12px 0 6px; font: inherit; color: var(--text); text-align: left; background: color-mix(in srgb, var(--raised) 55%, transparent); border: 1px solid var(--rule2); border-radius: 12px; cursor: pointer; }
+.vo-opt:hover { border-color: var(--text); }
+.vo-opt .vo-av { width: 32px; height: 32px; font-size: 13px; }
+.vo-opt-tx { display: flex; flex-direction: column; line-height: 1.2; }
+.vo-opt-tx small { font-size: 11px; color: var(--faint); }
+.vo-opt-tx b { font-size: 13.5px; font-weight: 600; }
+.vo-caret { color: var(--muted); transition: transform .15s; }
+.vo-opt[aria-expanded="true"] { border-color: var(--acc); }
+.vo-opt[aria-expanded="true"] .vo-caret { transform: rotate(180deg); }
+.vo-opts .vo-btn { margin-left: auto; }
+.vo-said { display: block; margin-top: 6px; font-size: 12px; color: var(--faint); }
+.vo-said:empty { display: none; }
+.vo-periodbox[hidden] { display: none; }
+.vo-periodbox .ex-span.vo-span { margin: 0; }
+.vo-periodbox .ex-span-h > b { display: none; }
+/* Upgrade to Pro: a name and one quiet line under it, like the upgrade row of the big apps. */
+.pop.menu.acct #me-plan .m-pri { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; align-items: center; column-gap: 10px; row-gap: 1px; height: auto; padding: 8px 14px; font-size: 12px; text-align: left; border-radius: 11px; }
+.pop.menu.acct #me-plan .m-pri b { grid-column: 1; margin: 0; color: var(--on-acc); font-size: 14px; }
+.pop.menu.acct #me-plan .m-pri small { grid-column: 1; color: var(--on-acc); opacity: .75; font-weight: 400; }
+.pop.menu.acct #me-plan .m-pri::after { content: "›"; grid-column: 2; grid-row: 1 / 3; font-size: 20px; color: var(--on-acc); }

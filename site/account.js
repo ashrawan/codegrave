@@ -842,23 +842,34 @@ export function createAccount(app) {
     const ents = app.told()?.entries || [], span = spanPick(ents);
     const byId = new Map(ents.map((e) => [e.id, e]));
     const lineEl = (l) => { const e = byId.get(l.id), edge = l.id === 'intro' ? 'Opening' : l.id === 'outro' ? 'Closing' : ''; return `<li${edge ? ' class="edge"' : ''}><span>${esc(edge || e?.when || '')}</span><div>${e ? `<b>${esc(e.name)}</b>` : ''}<p>${esc(l.text)}</p></div></li>`; };
-    const cur = `<div class="vo-cur dimmable"><span class="vo-av" data-vinit aria-hidden="true"></span><span class="vo-cur-tx"><b data-vnow></b><small data-vsay></small></span><button type="button" class="vo-listen vo-btn" data-sample="${was}" title="Listen">${PLAY}<span>Listen</span></button><button type="button" class="vo-btn" data-change aria-expanded="false">Change</button></div>
-      <div class="vo-pickall" hidden><div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, v[0] === 'device' ? 'row dev' : 'row')).join('')}</div></div>`;
+    // What the reader came for comes first (asked for, Nov 2026: "they want to provide the prompt and they want to
+    // create the voiceover. That's it"): the prompt, then the two choices as small chips (the voice, the period),
+    // each opening in place only when pressed, then the script once there is one, and one lit button.
+    const CAL = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>';
+    const CARET = '<svg class="vo-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+    const guide = has ? `<label class="vo-guide dimmable"><span>What should change?</span><textarea name="guide" rows="3" maxlength="400" placeholder="Make it shorter, funnier, for children, more on the early years… or leave empty to write it afresh"></textarea></label>`
+      : `<label class="vo-guide dimmable"><span>How should it be told?</span><textarea name="guide" rows="3" maxlength="400" placeholder="For children, in short lines · light and funny · in more detail · or leave empty">${esc(has?.guide || '')}</textarea></label>`;
+    const opts = `<div class="vo-opts dimmable">
+        <button type="button" class="vo-opt" data-change aria-expanded="false"><span class="vo-av" data-vinit aria-hidden="true"></span><span class="vo-opt-tx"><small>Voice</small><b data-vnow></b></span>${CARET}</button>
+        ${span.html ? `<button type="button" class="vo-opt" data-period aria-expanded="false"><span class="vo-av">${CAL}</span><span class="vo-opt-tx"><small>Period</small><b data-pnow>All ${byId.size} entries</b></span>${CARET}</button>` : ''}
+        <button type="button" class="vo-listen vo-btn" data-sample="${was}" title="Listen to this voice">${PLAY}<span>Listen</span></button></div>
+      <div class="vo-pickall dimmable" hidden><div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, v[0] === 'device' ? 'row dev' : 'row')).join('')}</div><small class="vo-said" data-vsay></small></div>
+      <div class="vo-periodbox dimmable" hidden>${span.html}</div>`;
     const d = modal(`<form class="vo-form vx">
       <div class="vo-top"><h2>Voiceover</h2><small>${esc(row.title || 'This timeline')}${byId.size ? ` · ${byId.size} entries` : ''}</small></div>
       ${tabs}
-      <div class="vo-main">${modeBar}${cur}
+      <div class="vo-main">${modeBar}${guide}${opts}
         ${has ? `<div class="vo-shead dimmable"><span class="cap">Script${row.own ? '' : base ? ', the default for this timeline' : ', kept in this browser'}</span>${base ? '' : '<button type="button" class="vo-del" data-unvoice title="Delete this voiceover">Delete</button>'}</div>
-        <ol class="vo-lines dimmable">${has.lines.map(lineEl).join('')}</ol>
-        <label class="vo-guide dimmable"><span>What should change? <small>Leave empty to write it afresh</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: make it shorter · funnier, for children · more on the early years · write it again from scratch"></textarea></label>`
-        : `<p class="dlg-sub dimmable">It tells ${esc(row.title || 'this timeline')} while it plays: an opening, a line for each entry, and a closing.${row.own ? '' : ' Kept in this browser, for you alone.'}</p>
-        <label class="vo-guide dimmable"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>`}
-        <div class="dimmable">${span.html}</div>${notes}</div>
-      <div class="exf"><span class="ex-say"><span>${has ? `${has.lines.length} lines. Changing the voice is free.` : 'Uses one of today’s requests.'}</span></span>${has ? '<button type="button" class="big" data-revoice hidden>Use <span data-vname></span></button><button type="submit" class="big pri">Rewrite</button>' : '<button type="submit" class="big pri">Generate with <span data-vname></span></button>'}</div></form>`, 'vodlg vx');
+        <ol class="vo-lines dimmable">${has.lines.map(lineEl).join('')}</ol>` : ''}
+        ${notes}</div>
+      <div class="exf"><span class="ex-say"><span>${has ? `${has.lines.length} lines. Changing the voice is free.` : `Uses one of today’s requests.`}</span></span>${has ? '<button type="button" class="big" data-revoice hidden>Use <span data-vname></span></button><button type="submit" class="big pri">Rewrite</button>' : '<button type="submit" class="big pri">Generate voiceover</button>'}</div></form>`, 'vodlg vx');
     const nameIt = () => { const n = d.querySelector('[data-vname]'); if (n) n.textContent = voiceLabel(d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE); };
     const pickAll = d.querySelector('.vo-pickall'), chg = d.querySelector('[data-change]');
-    const openList = (on) => { pickAll.hidden = !on; chg.setAttribute('aria-expanded', on); chg.textContent = on ? 'Done' : 'Change'; };
+    const openList = (on) => { pickAll.hidden = !on; chg.setAttribute('aria-expanded', on); };
     chg.addEventListener('click', () => openList(pickAll.hidden));
+    const perBtn = d.querySelector('[data-period]'), perBox = d.querySelector('.vo-periodbox');
+    perBtn?.addEventListener('click', () => { const on = perBox.hidden; perBox.hidden = !on; perBtn.setAttribute('aria-expanded', on); });
+    d.addEventListener('input', (e) => { if (!e.target.closest('.vo-periodbox')) return; const t = perBox.querySelector('.ex-snote')?.textContent || ''; d.querySelector('[data-pnow]').textContent = /all \d+ entries/.test(t) ? `All ${byId.size} entries` : t.replace(' · ', ', '); });
     nameIt(); d.addEventListener('change', (e) => { nameIt(); if (e.target.name === 'voice') openList(false); }); span.wire(d);
     // The voice starts downloading as the dialog opens, and the dialog says how far it has come. Where the
     // graphics card can make it, the GPU voice is offered with its size.
@@ -898,8 +909,8 @@ export function createAccount(app) {
       form.querySelectorAll('button[type=submit], [data-revoice]').forEach((b) => { b.disabled = dim; });
       d.querySelector('[data-vinit]').textContent = v === 'device' ? '·' : name[0];
       d.querySelector('[data-vnow]').textContent = name;
-      d.querySelector('[data-vsay]').textContent = v === 'device' ? w : `${w} · ${off ? 'on this computer' : 'said by the server'}`;
-      d.querySelector('.vo-cur [data-sample]').dataset.sample = v;
+      d.querySelector('[data-vsay]').textContent = v === 'device' ? '' : off ? 'The voice is made on this computer.' : 'The voice is said by the server.';
+      d.querySelector('.vo-opts [data-sample]').dataset.sample = v;
       const rv = d.querySelector('[data-revoice]'); if (rv) rv.hidden = !has || v === has.voice;
     };
     const drawPick = () => { drawMode(); gp.hidden = !gpuFine || !kokoro() || !offlineOn(); drawGpu(); if (kokoro() && offlineOn() && (have() || getting)) sp.warm(); };
@@ -1325,7 +1336,7 @@ export function createAccount(app) {
         const d = popover(el('#sb-me'), `<div class="m-head"><i class="m-av" aria-hidden="true">${esc((who || '?').trim().charAt(0).toUpperCase())}</i><span><b>${esc(who)}</b><small>${esc(user.email || who)}</small></span><em class="m-chip${pro ? ' pro' : ''}">${pro ? 'Pro' : 'Free'}</em></div>
           <div class="m-meter" id="me-ai"><div><small>AI requests today</small><span>&nbsp;</span></div><i><u></u></i></div>
           <div class="m-meter" id="me-say"><div><small>Voice this month</small><span>&nbsp;</span></div><i><u></u></i></div>
-          <div id="me-plan">${pro ? `<button type="button" class="nv" data-act="plan">${ICON.plan}<span>Manage plan</span><small>Pro</small></button>` : '<button type="button" class="m-pri" data-act="plan"><b>Go Pro</b><small>Far more requests and voice</small></button>'}</div>
+          <div id="me-plan">${pro ? `<button type="button" class="nv" data-act="plan">${ICON.plan}<span>Manage plan</span><small>Pro</small></button>` : '<button type="button" class="m-pri" data-act="plan"><b>Upgrade to Pro</b><small>Higher limits for AI and voice</small></button>'}</div>
           <hr><div class="m-row">${ICON.moon}<span>Theme</span><div class="seg" role="radiogroup" aria-label="Theme"><button type="button" role="radio" data-theme-to="light">Light</button><button type="button" role="radio" data-theme-to="dark">Dark</button></div></div>
           ${profile?.username ? `<div class="m-row">${ICON.globe}<span>Publishes as</span><small>/${esc(profile.username)}</small></div>` : ''}
           <hr><button type="button" class="nv out" data-act="out">${ICON.out}<span>Sign out</span></button>`, 'menu wide acct');
