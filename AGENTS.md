@@ -512,7 +512,7 @@ How the page is put together:
   line at a time, kept in the browser like any other line and never on the server (`speaker.server()` in
   `site/voice.js`). Each signed-in account has a share of it a month (free a taste, pro far more; `#me-say` in
   the account menu shows what is left), and the key has a spending limit. A line the server does not give is
-  said by the browser's own voice. Online or Offline is one switch at the top of the voice dialog (`.vo-mode` in `voiceMenu()`; a row in the menu by play and then a box under the voices were both found confusing; `cg-voice-offline`,
+  said by the browser's own voice. Online or Offline is a small pill beside the voice dialog's title (`.vo-pill` in `voiceMenu()`: a green dot, Online; a grey dot, Offline; a press changes it. A row in the menu by play, a box under the voices and a switch in a box were each found confusing). Only offline has a box of its own under the title (`.vo-mode`), which offers the download; nothing is downloaded until Download is pressed (`cg-voice-have`; `cg-voice-offline`,
   `offlineOn()`) downloads the model and makes such lines on the device: off unless the reader turns it on, and
   never on a phone (`isMobile()`), in his words "not selected by default. And also not available in mobile
   devices". The two are plain modes: online the server says the lines, offline this computer makes

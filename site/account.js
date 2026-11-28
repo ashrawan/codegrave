@@ -827,7 +827,8 @@ export function createAccount(app) {
     // script as it is told at the right, "this is your script", to write again or to try in another voice.
     const kok = VOICES.filter(([v]) => v !== 'device'), dev = VOICES.find(([v]) => v === 'device');
     const voiceEl = ([v, name, w], cls = '') => `<label class="vo-voice ${cls}"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}" title="Listen">${PLAY}<span>Listen</span></button><span><b>${esc(name)}</b><small>${esc(w)}</small></span><i aria-hidden="true"></i></label>`;
-    const modeBar = `<div class="vo-mode" hidden><div class="vo-mode-top"><span><b>Where the voice is made</b><small></small></span><div class="seg" role="radiogroup" aria-label="Where the voice is made"><button type="button" role="radio" data-mode="online">Online</button><button type="button" role="radio" data-mode="offline">Offline</button></div></div></div>`;
+    const modePill = '<button type="button" class="vo-pill" hidden><i></i><span></span></button>';
+    const modeBar = '<div class="vo-mode" hidden><div class="vo-mode-top"><span><b>Offline voice</b><small></small></span><button type="button" class="big" data-get></button></div></div>';
     const notes = `<div class="vo-gpu" hidden><span><b></b><small></small></span><button type="button" class="big"></button></div>
       <p class="vo-load" hidden></p>
       <p class="vo-fetch" hidden></p>
@@ -837,14 +838,14 @@ export function createAccount(app) {
     const byId = new Map(ents.map((e) => [e.id, e]));
     const lineEl = (l) => { const e = byId.get(l.id), edge = l.id === 'intro' ? 'Opening' : l.id === 'outro' ? 'Closing' : ''; return `<li${edge ? ' class="edge"' : ''}><span>${esc(edge || e?.when || '')}</span><div>${e ? `<b>${esc(e.name)}</b>` : ''}<p>${esc(l.text)}</p></div></li>`; };
     const d = modal(has ? `<form class="vo-form vb">
-      <div class="vo-list"><h2>Voiceover</h2>${modeBar}<div class="cap">Voice</div>
+      <div class="vo-list"><h2>Voiceover ${modePill}</h2>${modeBar}<div class="cap">Voice</div>
         <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, 'row')).join('')}</div>${notes}</div>
       <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : base ? ', the default for this timeline' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span>${base ? '' : '<button type="button" class="vo-del" data-unvoice title="Delete this voiceover">Delete</button>'}</div>
         <label class="vo-guide"><span>What should change? <small>Leave empty to write it afresh</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: make it shorter · funnier, for children · more on the early years · write it again from scratch"></textarea></label>${span.html}<div class="vo-re"><small>Uses one of today’s requests.</small><button type="submit" class="big">Rewrite</button></div>
         <ol>${has.lines.map(lineEl).join('')}</ol></div>
       <div class="exf"><span class="ex-say"><span>${has.lines.length} lines. Changing the voice does not use a request.</span></span><button type="button" class="big" data-close>Close</button><button type="button" class="big pri" data-revoice>Use <span data-vname></span></button></div></form>`
       : `<form class="vo-form va">
-      <div class="vo-head"><h2>Choose a voice</h2><p class="dlg-sub">It tells ${esc(row.title || 'this timeline')} while it plays: an opening, a line for each entry${byId.size ? ` (${byId.size})` : ''}, and a closing.${row.own ? '' : ' Kept in this browser, for you alone.'}</p></div>
+      <div class="vo-head"><h2>Choose a voice ${modePill}</h2><p class="dlg-sub">It tells ${esc(row.title || 'this timeline')} while it plays: an opening, a line for each entry${byId.size ? ` (${byId.size})` : ''}, and a closing.${row.own ? '' : ' Kept in this browser, for you alone.'}</p></div>
       <div class="vo-body">${modeBar}<div class="vo-voices cards" role="radiogroup" aria-label="Voice">${kok.map((v) => voiceEl(v, 'card')).join('')}</div>
         ${voiceEl(dev, 'row dev')}
         <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>${span.html}${notes}</div>
@@ -854,7 +855,7 @@ export function createAccount(app) {
     // The voice starts downloading as the dialog opens, and the dialog says how far it has come. Where the
     // graphics card can make it, the GPU voice is offered with its size.
     const pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
-    const sp = app.speaker(), gp = d.querySelector('.vo-gpu'), mode = d.querySelector('.vo-mode'), slow = d.querySelector('.vo-slow');
+    const sp = app.speaker(), gp = d.querySelector('.vo-gpu'), mode = d.querySelector('.vo-mode'), pill = d.querySelector('.vo-pill'), slow = d.querySelector('.vo-slow');
     const drawSlow = () => { slow.hidden = !isSlow(); };
     // "This device" downloads nothing: the model is fetched only once a Kokoro voice is picked.
     let gpuFine = false;
@@ -868,23 +869,31 @@ export function createAccount(app) {
       gp.querySelector('small').textContent = on ? `Made on your graphics card with the full model (${GPU_MB} MB).` : `Faster, with the full model, on your graphics card. A one-time ${GPU_MB} MB download.`;
       gp.querySelector('button').textContent = on ? 'Turn off' : `Download ${GPU_MB} MB`;
     };
-    // Online or Offline is one switch at the top of the dialog (asked for, Nov 2026, after a box under the
-    // voices was found confusing: "one toggle ... in the top", "clearly know whether it is the online active or it
-    // is the offline"). Online, the server says the lines. Offline, this computer makes them: the model is
-    // downloaded once, and the GPU voice is a way of making them here. Never on a phone.
+    // Online or Offline is a small pill beside the dialog's title, top left (asked for, Nov 2026, after a row in
+    // the menu by play, a box under the voices and a switch in a box were each found confusing): a green dot,
+    // "Online", the server says the lines; a grey dot, "Offline", this computer makes them. A press changes it.
+    // Only offline has more to say, in a box of its own under the title: that the model can be downloaded and the
+    // device will then make the voice, the download as it comes, and the GPU voice. Nothing is downloaded until
+    // Download is pressed (`cg-voice-have` remembers that it was). Never on a phone.
     mode.append(d.querySelector('.vo-load'), gp);
+    const HAVE = 'cg-voice-have', have = () => { try { return localStorage.getItem(HAVE) === '1'; } catch (e) { return false; } };
+    let getting = false;
     const drawMode = () => {
-      const on = offlineOn();
-      mode.hidden = isMobile() || !kokoro();
-      mode.classList.toggle('off', on);
-      for (const b of mode.querySelectorAll('[data-mode]')) b.setAttribute('aria-checked', String((b.dataset.mode === 'offline') === on));
-      mode.querySelector('small').textContent = !on ? (user ? 'Online: the server says it. Nothing to download; it uses your monthly share.' : 'Online: the server says it once you sign in. Nothing to download.')
-        : sp.ready() ? 'Offline: made on this computer. Ready, and works with no connection.' : `Offline: made on this computer, after a one-time ${sp.gpu() ? GPU_MB : MODEL_MB} MB download.`;
+      const on = offlineOn(), ok = !isMobile() && kokoro();
+      pill.hidden = !ok; pill.classList.toggle('off', on);
+      pill.querySelector('span').textContent = on ? 'Offline' : 'Online';
+      pill.title = on ? 'Offline: the voice is made on this computer. Press for Online.' : 'Online: the server says the voice. Press for Offline, made on this computer.';
+      mode.hidden = !ok || !on;
+      if (sp.ready() && !have()) { try { localStorage.setItem(HAVE, '1'); } catch (e) {} }
+      const ready = sp.ready(), busy = !ready && (getting || have());
+      mode.querySelector('small').textContent = ready ? 'Ready. This computer makes the voice, with no connection needed.' : busy ? 'Getting the voice ready on this computer.' : `Download the voice once (${sp.gpu() ? GPU_MB : MODEL_MB} MB) and this computer makes it, with no connection needed.`;
+      const get = mode.querySelector('[data-get]'); get.hidden = ready || busy; get.textContent = `Download ${sp.gpu() ? GPU_MB : MODEL_MB} MB`;
     };
-    const drawPick = () => { drawMode(); gp.hidden = !gpuFine || !kokoro() || !offlineOn(); drawGpu(); if (kokoro()) sp.warm(); };
-    mode.addEventListener('click', (e) => { const b = e.target.closest('[data-mode]'); if (!b) return; e.preventDefault(); const to = b.dataset.mode === 'offline'; if (to !== offlineOn()) sp.offline(to); drawPick(); });
+    const drawPick = () => { drawMode(); gp.hidden = !gpuFine || !kokoro() || !offlineOn(); drawGpu(); if (kokoro() && offlineOn() && (have() || getting)) sp.warm(); };
+    pill.addEventListener('click', (e) => { e.preventDefault(); sp.offline(!offlineOn()); drawPick(); });
+    mode.querySelector('[data-get]').addEventListener('click', (e) => { e.preventDefault(); getting = true; sp.warm(); drawPick(); });
     gpuOk().then((ok) => { gpuFine = ok && !isMobile(); drawPick(); });
-    gp.querySelector('button').addEventListener('click', () => { sp.engine(!sp.gpu()); drawGpu(); drawSlow(); sp.warm(); });
+    gp.querySelector('button').addEventListener('click', () => { getting = true; sp.engine(!sp.gpu()); drawGpu(); drawSlow(); sp.warm(); });
     d.addEventListener('change', (e) => { if (e.target.name === 'voice') drawPick(); });
     const ld = d.querySelector('.vo-load'), tick = setInterval(() => {
       if (!d.isConnected) return clearInterval(tick);
