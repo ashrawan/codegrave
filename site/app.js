@@ -2731,6 +2731,14 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // paused, the line is held where it was and play goes on from there when it is pressed again.
   document.addEventListener('visibilitychange', () => {
     if (document.hidden && play.on) pausePlay();
+    // Back on the page: a frame asked for while it was away may never come (the picture then stood frozen while the
+    // sound went on), so the road and the globes start their frames again.
+    if (!document.hidden) {
+      if (road.raf) { cancelAnimationFrame(road.raf); road.raf = 0; road.live = false; }
+      if (globe) globe.wake();
+      for (const pn of panes.values()) pn.g.wake();
+      roadKick();
+    }
     if (!music.el) return;
     if (document.hidden) music.el.pause(); else if (music.want) { const p = music.el.play(); if (p && p.catch) p.catch(() => {}); }
   });

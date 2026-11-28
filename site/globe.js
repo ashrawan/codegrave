@@ -233,6 +233,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     map.touchZoomRotate.disableRotation();
     // The credits the map's licences ask for are folded behind their small button (asked for, Nov 2026: no line of text on the map).
     map.on('idle', () => { host.dataset.idle = '1'; }); map.on('dataloading', () => { host.dataset.idle = '0'; });
+    // A phone can take the map's drawing away while the page is left (reported, Nov 2026: back on the page, the sound
+    // played and the picture stood frozen). If it does not come back by itself, the map is made again.
+    let lost = 0;
+    map.on('webglcontextlost', () => { lost = setTimeout(() => { if (S.map === map && !document.hidden) remake(); }, 1500); });
+    map.on('webglcontextrestored', () => { clearTimeout(lost); lost = 0; });
     map.on('load', () => {
       map.addSource('arc', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       const kind = (k) => ['==', ['get', 'k'], k];
@@ -662,6 +667,16 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // A drag turns the globe; it must not also carry the reader through time, which the stage under it does.
   for (const ev of ['pointerdown', 'pointermove', 'pointerup']) box.addEventListener(ev, (e) => e.stopPropagation());
 
+  function remake() {
+    const m = S.map; S.map = null; S.asked = false; S.said = null;
+    try { m.remove(); } catch (e) { /* gone already */ }
+    needMap(); run();
+  }
+  function lostGl() {
+    const c = S.map && S.map.getCanvas();
+    const gl = c && (c.getContext('webgl2') || c.getContext('webgl'));
+    return !!gl && gl.isContextLost();
+  }
   function needMap() {
     if (S.bare || S.map || S.asked || !S.steps.some((s) => s.place)) return;
     S.asked = true; note.hidden = true;
@@ -722,6 +737,13 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       if (S.map) S.map.resize();
       if (!shelf.hidden) measure();
       cams(); place(); run();
+    },
+    // Back on the page: a frame asked for while it was away may never come, and the map may have lost its drawing.
+    wake() {
+      if (S.gone) return;
+      if (S.raf > 0) { K.caf(S.raf); S.raf = 0; }
+      if (lostGl()) remake(); else if (S.map) S.map.triggerRepaint();
+      this.resize();
     },
     stage: () => S.stage,
     // 'globe' (the map where entries have places) or 'full' (the stars for every entry). Kept in this browser.
