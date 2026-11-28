@@ -60,3 +60,12 @@ test('the server sends 16-bit samples, low byte first, and the page plays floats
   assert.equal(out.length, 4);
   assert.deepEqual([...out].map((x) => Math.round(x * 1000) / 1000), [0, 0.5, -1, 1]);
 });
+
+test('a line has one name in the store, whoever asks', async () => {
+  const { storeKey, sayText } = await import('../site/voice.js');
+  const a = await storeKey('af_heart', 'Hello  there ');
+  assert.equal(a, await storeKey('af_heart', 'Hello there'));
+  assert.notEqual(a, await storeKey('bm_george', 'Hello there'));
+  assert.match(a, /^v1\/af_heart\/[0-9a-f]{64}\.pcm$/);
+  assert.equal(sayText(' a \n b '), 'a b');
+});

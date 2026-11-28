@@ -26,6 +26,8 @@
 //   SPEECH_PRO           optional: the same for a pro account (500000)
 //   VOICE_SCRIPT_MODEL   optional: the OpenRouter model that writes the script
 
+import { AwsClient } from "npm:aws4fetch@1.0.20";
+
 const WRITER = Deno.env.get("VOICE_SCRIPT_MODEL") ?? "deepseek/deepseek-v4.1-flash";
 // A long timeline is written in parts of PART entries, side by side, so the last entries get their lines too
 // (asked for, Nov 2026, after a timeline of two or three hundred entries came back with no lines at its end).
@@ -50,11 +52,37 @@ const SPEECH_PRO = Number(Deno.env.get("SPEECH_PRO")) || 500_000;
 const SPEECH_VOICES = ["af_heart", "am_michael", "af_bella", "af_nicole", "bf_emma", "bm_george"];
 const SPEECH_RATE = 24000;   // Kokoro's own: the sound comes back as plain 16-bit samples at this rate
 
+// Where the sound is kept (asked for, Nov 2026: Cloudflare R2, "the users ones also goes to the Cloudflare", and
+// what is heard often served from its cache). One file a line, named by the voice and a hash of the words
+// (`storeKey()`, the same in site/voice.js; change the two together), so a line is paid for once however many
+// accounts ask for it, and the page reads it straight from the store's public address without coming here.
+// A line found in the store is not counted against the account. Without the secrets nothing is kept.
+//   R2_ENDPOINT, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY   the bucket, written with the S3 API
+//   VOICE_PUBLIC_URL                                                 its public address, no slash at the end
+const R2 = { at: Deno.env.get("R2_ENDPOINT"), bucket: Deno.env.get("R2_BUCKET"), id: Deno.env.get("R2_ACCESS_KEY_ID"), secret: Deno.env.get("R2_SECRET_ACCESS_KEY"), open: Deno.env.get("VOICE_PUBLIC_URL") };
+const r2 = R2.at && R2.bucket && R2.id && R2.secret ? new AwsClient({ accessKeyId: R2.id, secretAccessKey: R2.secret, service: "s3", region: "auto" }) : null;
+const r2Url = (key: string) => `${R2.at!.replace(/\/+$/, "")}/${R2.bucket}/${key}`;
+async function storeKey(voice: string, text: string) {
+  const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(voice + "\n" + text));
+  return `v1/${voice}/${[...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join("")}.pcm`;
+}
+const kept = async (key: string) => {
+  if (!r2) return null;
+  const r = await r2.fetch(r2Url(key), { signal: AbortSignal.timeout(8000) }).catch(() => null);
+  return r?.ok ? r.arrayBuffer() : null;
+};
+const keep = (key: string, sound: ArrayBuffer) =>
+  r2 ? r2.fetch(r2Url(key), { method: "PUT", body: sound, headers: { "Content-Type": "application/octet-stream", "Cache-Control": "public, max-age=31536000, immutable" } })
+    .then((r) => { if (!r.ok) console.error("keep", r.status); }).catch((e) => console.error("keep", String(e))) : Promise.resolve();
+const sound = (buf: ArrayBuffer, left: number | null, from: string) => new Response(buf, { headers: { ...cors, "Content-Type": "application/octet-stream", "x-rate": String(SPEECH_RATE), ...(left === null ? {} : { "x-left": String(left) }), "x-from": from, "Access-Control-Expose-Headers": "x-rate, x-left, x-from", "Cache-Control": "no-store" } });
+
 async function speak(account: string, ask: any): Promise<Response> {
   const text = String(ask?.text ?? "").replace(/\s+/g, " ").trim().slice(0, 700), voice = String(ask?.voice ?? "");
   if (!text || !SPEECH_VOICES.includes(voice)) return json({ error: "That request could not be read." }, 400);
   const key = Deno.env.get("VOICE_API_KEY") ?? Deno.env.get("OPENROUTER_API_KEY");
   if (!key) return json({ error: "The server voice is not switched on yet.", code: "not_configured" }, 503);
+  const at = await storeKey(voice, text), had = await kept(at);
+  if (had) return sound(had, null, "store");
   const own = await service(`/rest/v1/profiles?id=eq.${account}&select=plan`).then((r) => (r.ok ? r.json() : [])).catch(() => []);
   const SPEECH_MONTHLY = own[0]?.plan === "pro" ? SPEECH_PRO : SPEECH_FREE;
   const count = (n: number) => service("/rest/v1/rpc/speech_add", { method: "POST", body: JSON.stringify({ who: account, n, most: SPEECH_MONTHLY }) }).then((r) => (r.ok ? r.json() : -2)).catch(() => -2);
@@ -68,8 +96,10 @@ async function speak(account: string, ask: any): Promise<Response> {
       body: JSON.stringify({ model: SPEECH_MODEL, input: text, voice, response_format: "pcm", provider: { only: [SPEECH_HOST] } }),
       signal: AbortSignal.timeout(60_000),
     });
-    if (!r.ok || !r.body) { console.error("speak", r.status, (await r.text().catch(() => "")).slice(0, 400)); await count(-text.length); return json({ error: "The server voice is busy just now." }, 502); }
-    return new Response(r.body, { headers: { ...cors, "Content-Type": "application/octet-stream", "x-rate": String(SPEECH_RATE), "x-left": String(Math.max(0, SPEECH_MONTHLY - total)), "Access-Control-Expose-Headers": "x-rate, x-left", "Cache-Control": "no-store" } });
+    if (!r.ok) { console.error("speak", r.status, (await r.text().catch(() => "")).slice(0, 400)); await count(-text.length); return json({ error: "The server voice is busy just now." }, 502); }
+    const buf = await r.arrayBuffer();
+    if (buf.byteLength > 2000) await keep(at, buf);
+    return sound(buf, Math.max(0, SPEECH_MONTHLY - total), "made");
   } catch (e) {
     console.error("speak", String(e)); await count(-text.length);
     return json({ error: "The server voice took too long." }, 504);

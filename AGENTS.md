@@ -518,6 +518,14 @@ How the page is put together:
   devices". The two are plain modes: online the server says the lines, offline this computer makes
   them and the server is not asked (`line()` in `site/voice.js`); the switch says which is on and whether the
   model is downloaded, and the download's progress and the GPU voice stand inside it. The GPU voice shows only with offline mode on. Server video export is planned, not built.
+- **The voice's sound is kept in Cloudflare R2 (Nov 2026, asked for: "the users ones also goes to the
+  Cloudflare", and what is heard often is served from its cache; this replaces "never on the server" above for
+  the server voice).** One file a line, named by the voice and a hash of the words (`storeKey()` in
+  `site/voice.js` and in the function `voiceover`; change the two together), so a line is made and paid for once,
+  whoever asks. The function looks in the store before it counts a line against the account, and writes what it
+  makes. The page asks the store's public address first (`STORE` in `site/voice.js`, `fromStore()`; empty until
+  the bucket has one), which needs no sign-in, and gives up after `STORE_MISSES` misses in a row. Voiceovers for
+  the built views are to be made into the same store. Without the function's R2 secrets nothing is kept.
 - **The four menus are one design (A, "Glass list", picked from three, Nov 2026, after the menus were called
   generic).** The account menu, the timeline's three dots, the settings and the menu by play share one sheet
   (the block "Menus, design A" at the end of `site/account.css`): each opens with who or what it is about
