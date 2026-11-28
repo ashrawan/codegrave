@@ -958,3 +958,26 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
   body.playing #globe .g-card[data-shape="tall"]:is([data-pan="0"], [data-pan="3"]) img { animation-name: g-pan-t; }
   body.playing #globe .g-card[data-shape="tall"][data-pan="1"] img { animation-name: g-pan-u; }
 }
+
+/* The globe in the light theme (reported, Nov 2026: parts of it stayed dark). The same place by day: the strip at
+   the foot, the card's plate, the small pictures and their text are light, with dark ink. */
+[data-theme="light"] #globe .g-shelf { background: linear-gradient(transparent, rgba(246, 243, 236, .92) 40%); }
+[data-theme="light"] #globe .g-ax { background: rgba(28, 28, 26, .2); }
+[data-theme="light"] #globe .g-nm { color: #5d6470; }
+[data-theme="light"] #globe .g-nm b { border-color: rgba(28, 28, 26, .45); }
+[data-theme="light"] #globe .g-nm.on { color: #1c1c1a; text-shadow: none; }
+[data-theme="light"] #globe .g-track u { color: #6d7380; }
+[data-theme="light"] #globe .g-track .on u { color: #1c1c1a; }
+[data-theme="light"] #globe .g-card { color: #1c1c1a; background: rgba(250, 248, 243, .9); box-shadow: 0 0 0 1px rgba(40, 30, 10, .08), 0 18px 50px rgba(40, 30, 10, .18); }
+[data-theme="light"] #globe .g-k small, [data-theme="light"] #globe .g-s { color: #4a505c; }
+[data-theme="light"] #globe .g-card.bare { background: none; }
+[data-theme="light"] #globe .g-past img { background: rgba(250, 248, 243, .7); border-color: rgba(28, 28, 26, .18); }
+[data-theme="light"] #globe .g-mode { color: #5d6470; background: rgba(250, 248, 243, .6); border-color: rgba(28, 28, 26, .14); }
+[data-theme="light"] #globe .g-mode:hover { color: #1c1c1a; }
+@media (min-width: 700px) {
+  [data-theme="light"] #globe[data-card="b"] .g-card { background: none; box-shadow: none; text-shadow: none; }
+  [data-theme="light"] #globe[data-card="b"] .g-card::before { background: rgba(250, 248, 243, .9); box-shadow: 0 0 0 1px rgba(40, 30, 10, .08), 0 18px 50px rgba(40, 30, 10, .18); }
+  [data-theme="light"] #globe[data-card="b"] .g-s { color: #3a3f4a; }
+}
+@media (max-width: 699px) { [data-theme="light"] #globe .g-card.bare { background: rgba(250, 248, 243, .85); } }
+[data-theme="light"] #globe .g-pane .g-card, [data-theme="light"] #globe[data-card] .g-pane .g-card { text-shadow: 0 0 2px #fff, 0 0 14px rgba(255, 255, 255, .9); }

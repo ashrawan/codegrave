@@ -795,7 +795,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   const PASSED = 0.05;                         // focal lengths behind the reader at which the selected card is passed
   function camLimits() {
     const m = 0.22 * L.D;
-    return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), L.tMax];
+    // Turned round, the reader may stand a little past the end, so the latest start can be the first in front.
+    return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), Math.max(L.tMax, (L.lastA ?? -Infinity) + 0.25 * L.D)];
   }
   const camClamp = (t) => { const [lo, hi] = camLimits(); return clamp(t, lo, hi); };
   const camAtEnd = () => { const [lo, hi] = camLimits(); return camDir() > 0 ? road.t >= hi - L.D * 0.01 : road.t <= lo + L.D * 0.01; };
@@ -843,7 +844,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // other subjects (reported, Nov 2026: "it was showing all other images from previous loaded view").
     // A stored timeline counts even while it is still empty, being made, so no stand-in shows behind it.
     const own = state.views.some((id) => viewById.get(id)?.stored) || shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
-    L = { eps: Math.min(0.01, (tMax - tMin) / 2000), own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
+    // The latest start on the road: turned round, the reader opens just before it, even when it stands close to the end.
+    const lastA = shown.reduce((m, p) => (p.a <= tMax && p.a > m ? p.a : m), -Infinity);
+    L = { eps: Math.min(0.01, (tMax - tMin) / 2000), own, tMin, tMax, lastA, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
   }

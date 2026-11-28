@@ -431,11 +431,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     const els = track.children;
     for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
-  // The marker stands at the right end (asked for, Nov 2026, in both directions of the timeline: "those items
+  // The marker stands near the right end, a little in from play (asked for, Nov 2026, in both directions of the timeline: "those items
   // not yet visible should not be in timeline"): the entry in front stands just before it, what has been passed
   // stays in sight at its left, and what is still to come is not shown until its turn, coming in from the right.
   // (Before, the marker stood at the left and the strip showed what was to come.)
-  const nowAt = () => rows.clientWidth - (S.phone ? 26 : 44);
+  const nowAt = () => rows.clientWidth - (S.phone ? 48 : 112);
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;
