@@ -2624,7 +2624,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // How long before the end of a line the reader sets off for the next card: the time the way takes at this
   // speed, plus `EASE_SECS` because play eases up to speed from a stand, less `TOLD_GAP`, the pause wanted
   // between two lines. Arriving early does no harm: the last words are let finish first.
-  const TOLD_GAP = 0.35, EASE_SECS = 0.9;
+  const TOLD_GAP = 1.1, EASE_SECS = 0.9;
   const leadSecs = () => (globe ? Math.max(0, globe.legSecs() / play.speed + EASE_SECS - TOLD_GAP) : 0);
   function tell(id, next) {
     if (!telling()) { if (told.cue !== undefined) { voice.stop(); told.cue = undefined; } return; }

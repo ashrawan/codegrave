@@ -234,11 +234,11 @@ export function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
         x += w + gap; return o;
       });
     }
-    // As on the page: the marker stands just before the entry in front, its dot first, what has passed at its
+    // As on the page: the marker stands on the dot of the entry in front, what has passed at its
     // left, and what is still to come is not drawn until its turn (asked for, Nov 2026).
     const pos = posAt(scenes, t), k = Math.min(strip.length - 1, Math.max(0, Math.floor(pos))), nx = strip[k + 1];
     const at = pos < 0 ? strip[0].x + px(40) * pos : nx ? strip[k].x + (nx.x - strip[k].x) * (pos - k) : strip[k].x;
-    const xm = x1 - px(lay.wide ? 380 : 300), off = xm + px(14) - at, acc = steps[now].rgb || '#e8b04a';
+    const xm = x1 - px(lay.wide ? 380 : 300), off = xm - px(5) - at, acc = steps[now].rgb || '#e8b04a';
     c.save(); c.textBaseline = 'alphabetic'; c.textAlign = 'left';
     strip.forEach((o, n) => {
       const x = o.x + off; if (n > now || x + o.w < 0 || x > W) return;
