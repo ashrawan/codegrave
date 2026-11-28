@@ -67,7 +67,7 @@ const PHONE = '(max-width: 699px)';
 const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt', FAILED = 'cg-ai-failed';
 // An account's share of the server voice a month, in characters (the function `voiceover` holds the same
 // numbers and is the one that counts), and about how many characters make a minute of speech.
-export const SPEECH = { free: 50000, pro: 500000 }, CHARS_A_MINUTE = 900;
+export const SPEECH = { free: 5000, pro: 500000 }, CHARS_A_MINUTE = 900;
 const AI_PER_DAY = 20;      // the allowance until the account's row is read (`profiles.ai_daily`)
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),
@@ -128,7 +128,7 @@ export function createAccount(app) {
   async function refreshList() {
     if (!user) return;
     const [p, l] = await Promise.all([
-      api(`/rest/v1/profiles?id=eq.${user.id}&select=username,ai_daily,plan`),
+      api(`/rest/v1/profiles?id=eq.${user.id}&select=username,ai_daily,plan,voice_monthly`),
       api(`/rest/v1/timelines?owner=eq.${user.id}&select=id,slug,title,visibility,entries,updated_at&order=updated_at.desc`),
     ]);
     profile = p[0] || { username: null };
@@ -1394,7 +1394,7 @@ export function createAccount(app) {
         // the characters said; `SPEECH` here only says how large the share is, to draw it).
         api(`/rest/v1/speech_use?select=chars&month=eq.${new Date().toISOString().slice(0, 7)}-01`).then((got) => {
           const box = d.querySelector('#me-say'); if (!box) return;
-          const most = SPEECH[isPro() ? 'pro' : 'free'], left = Math.max(0, most - (got?.[0]?.chars || 0));
+          const most = Number(profile?.voice_monthly) || SPEECH[isPro() ? 'pro' : 'free'], left = Math.max(0, most - (got?.[0]?.chars || 0));
           box.querySelector('span').textContent = `${Math.round(left / CHARS_A_MINUTE).toLocaleString('en-US')} of ${Math.round(most / CHARS_A_MINUTE).toLocaleString('en-US')} min left`;
           box.querySelector('u').style.width = (100 * left / most) + '%';
           box.classList.toggle('none', !left);

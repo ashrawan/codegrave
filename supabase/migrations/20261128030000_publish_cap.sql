@@ -1,16 +1,23 @@
--- How many timelines a free account may have published at once (asked for, Nov 2026: free use must stay
--- within a small known cost, "even if 100 users use, our $10 should be enough"). Each published timeline
--- with a voiceover keeps one MP3 in the store, so this also caps what a free account keeps there. A pro
--- account has no cap. Checked in the database, so no way round the page gets past it.
+-- The limits of an account, on its own row like `ai_daily`, so each can be changed without new code
+-- (asked for, Nov 2026: "in the future, we can make it configurable"; free use must stay within a small,
+-- known cost even with many accounts). `stripe-webhook` sets them by plan; one account can be changed by hand.
+--   publish_max     how many timelines it may have published at once (each with a voiceover keeps one MP3)
+--   voice_monthly   how many characters a month the server voice may say for it
+-- Accounts may still write only their username, so they cannot raise their own limits.
+alter table public.profiles add column publish_max integer not null default 10 check (publish_max >= 0);
+alter table public.profiles add column voice_monthly integer not null default 5000 check (voice_monthly >= 0);
+update public.profiles set publish_max = 1000, voice_monthly = 500000 where plan = 'pro';
+
+-- Publishing past the limit is refused here, so no way round the page gets past it.
 create function public.publish_cap() returns trigger
 language plpgsql security definer set search_path = '' as $$
-declare n integer;
+declare n integer; most integer;
 begin
   if new.visibility = 'private' or (tg_op = 'UPDATE' and old.visibility <> 'private') then return new; end if;
-  if exists (select 1 from public.profiles p where p.id = new.owner and p.plan = 'pro') then return new; end if;
+  select p.publish_max into most from public.profiles p where p.id = new.owner;
   select count(*) into n from public.timelines t where t.owner = new.owner and t.visibility <> 'private' and t.id <> new.id;
-  if n >= 10 then
-    raise exception 'A free account can have 10 timelines published at once. Make one private first, or go Pro.' using errcode = 'P0001';
+  if n >= coalesce(most, 10) then
+    raise exception 'You can have % timelines published at once. Make one private or delete one first, or go Pro.', coalesce(most, 10) using errcode = 'P0001';
   end if;
   return new;
 end $$;
