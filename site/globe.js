@@ -240,8 +240,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       map.addLayer({ id: 'came', type: 'line', source: 'arc', filter: kind('came'), paint: { 'line-color': ['get', 'c'], 'line-width': 1.2, 'line-opacity': 0.28, 'line-dasharray': [1, 3] } });
       map.addLayer({ id: 'done-glow', type: 'line', source: 'arc', filter: kind('done'), paint: { 'line-color': ['get', 'c'], 'line-width': 7, 'line-opacity': 0.18, 'line-blur': 4 } });
       map.addLayer({ id: 'done', type: 'line', source: 'arc', filter: kind('done'), paint: { 'line-color': ['get', 'c'], 'line-width': 1.8, 'line-opacity': 0.95 } });
-      map.addLayer({ id: 'head-glow', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 11, 'circle-color': ['get', 'c'], 'circle-opacity': 0.3, 'circle-blur': 0.9 } });
-      map.addLayer({ id: 'head', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 3.2, 'circle-color': '#fff6e2' } });
+      map.addLayer({ id: 'head-glow', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 11, 'circle-color': ['get', 'c'], 'circle-opacity': 0.15, 'circle-blur': 0.9 } });
+      map.addLayer({ id: 'head', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 3.2, 'circle-color': '#fff6e2', 'circle-opacity': 0.5 } });
       map.addSource('pins', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       const now = ['==', ['get', 'st'], 'now'];
       map.addLayer({ id: 'halo', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 26, 'circle-color': ['get', 'c'], 'circle-opacity': 0.07, 'circle-blur': 0.8, 'circle-pitch-alignment': 'map' } });
