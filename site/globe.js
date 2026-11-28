@@ -423,19 +423,20 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   }
   // Where each entry stands on the strip.
   function measure() {
-    // An entry is placed by its right edge: it stands just before the marker, which is at the right.
-    S.xs = Array.from(track.children, (el) => el.offsetLeft + el.offsetWidth);
+    // An entry is placed by its left edge, where its dot is: the marker stands just before it, so the reader is seen going to it.
+    S.xs = Array.from(track.children, (el) => el.offsetLeft);
     rows.style.setProperty('--now', Math.round(nowAt()) + 'px');
   }
   function markShelf() {
     const els = track.children;
     for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
-  // The marker stands near the right end, a little in from play (asked for, Nov 2026, in both directions of the timeline: "those items
+  // The marker stands before the entry in front, which is just at its right, its dot first (asked for, Nov 2026: the
+  // line "should be on the left of that first dot, so it feels like it's going to that start"), in both directions of the timeline: "those items
   // not yet visible should not be in timeline"): the entry in front stands just before it, what has been passed
   // stays in sight at its left, and what is still to come is not shown until its turn, coming in from the right.
   // (Before, the marker stood at the left and the strip showed what was to come.)
-  const nowAt = () => rows.clientWidth - (S.phone ? 48 : 112);
+  const nowAt = () => Math.max(30, rows.clientWidth - (S.phone ? 160 : 300));
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;
@@ -540,8 +541,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
       if (d) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }
-    // The entry in front stands just before the marker, not under it.
-    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() - (S.phone ? 12 : 16) - xAt(S.pos)).toFixed(1)}px)`;
+    // The entry in front stands just after the marker, its dot first: the marker is on its way to it (asked for, Nov 2026).
+    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + (S.phone ? 8 : 10) - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
       S.warp = still ? 0 : d ? d.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);

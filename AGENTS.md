@@ -440,8 +440,9 @@ How the page is put together:
   'space' before the first entry and for a run without places at the very beginning, however short, and
   `globe.intro()` does no glide from the whole globe. The globe comes in at the first entry that has a place.
 - **The time line at the foot shows what has been told, not what is to come (Nov 2026, asked for; this replaces
-  what the points above say about the marker standing at the left).** The marker of the strip stands near the right
-  end, a little in from play (`nowAt()` in `site/globe.js`): the entry in front stands just before it, what was passed stays in sight at
+  what the points above say about the marker standing at the left).** The marker of the strip stands towards the right
+  (`nowAt()` in `site/globe.js`) and just before the entry in front, whose dot comes first, so the reader is seen
+  going to it (asked for, Nov 2026, in both directions); what was passed stays in sight at
   its left, and what is still to come is not shown until its turn, coming in from the right ("those items not yet
   visible should not be in timeline"). It is so in both directions of the timeline, and the exported film draws
   its time line the same way (`shelf()` in `site/export.js`; change the two together).
@@ -532,8 +533,9 @@ How the page is put together:
   row with Listen and Change (`.vo-cur`; the list of voices opens only from Change, `.vo-pickall`), then the
   script, the prompt and one lit button. On Offline, until the voice is downloaded, one panel offers the download
   (`.vo-mode`) and everything else is grey (`.vo-form.dim .dimmable`).
-- **The light theme covers the globe too (Nov 2026, asked for):** the strip at the foot, the card's plate and the
-  small pictures are light with dark ink (the block at the end of `site/styles.css`). Turned round, the road opens on
+- **The light theme covers the globe too, and the card is glass (Nov 2026, asked for):** the strip at the foot and
+  the small pictures are light with dark ink; the card's plate is see-through glass with a blur in both themes, never
+  solid white or black (the block at the end of `site/styles.css`). Turned round, the road opens on
   its latest entry: the reader may stand a little past the end (`L.lastA` in `camLimits()`).
 - **The accent is Glacier blue (Nov 2026, picked from five, in place of the amber).** `--acc` is `#6cb6ff` on
   dark and `#1f63b8` on light, and what stands on it is `--on-acc`. The views' own colours (`--p0` to `--p7`) and

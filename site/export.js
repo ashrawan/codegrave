@@ -234,12 +234,11 @@ export function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
         x += w + gap; return o;
       });
     }
-    // As on the page: the marker stands at the right, the entry in front just before it, what has passed at its
+    // As on the page: the marker stands just before the entry in front, its dot first, what has passed at its
     // left, and what is still to come is not drawn until its turn (asked for, Nov 2026).
     const pos = posAt(scenes, t), k = Math.min(strip.length - 1, Math.max(0, Math.floor(pos))), nx = strip[k + 1];
-    const end = (o) => o.x + o.w;
-    const at = pos < 0 ? end(strip[0]) + px(40) * pos : nx ? end(strip[k]) + (end(nx) - end(strip[k])) * (pos - k) : end(strip[k]);
-    const off = x1 - px(16) - at, acc = steps[now].rgb || '#e8b04a';
+    const at = pos < 0 ? strip[0].x + px(40) * pos : nx ? strip[k].x + (nx.x - strip[k].x) * (pos - k) : strip[k].x;
+    const xm = x1 - px(lay.wide ? 380 : 300), off = xm + px(14) - at, acc = steps[now].rgb || '#e8b04a';
     c.save(); c.textBaseline = 'alphabetic'; c.textAlign = 'left';
     strip.forEach((o, n) => {
       const x = o.x + off; if (n > now || x + o.w < 0 || x > W) return;
@@ -247,11 +246,11 @@ export function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
       const edge = Math.min(1, Math.max(0, (x + o.w * 0.5) / (x0 + px(120))));
       const st = n === now ? 1 : 0.4;
       c.globalAlpha = edge * st; c.font = font(o.it);
-      c.fillStyle = n === now ? (steps[n].rgb || '#e8b04a') : '#aab1c0'; c.beginPath(); c.arc(x + o.w - px(5), yn - fs * 0.32, px(n === now ? 5 : 3.5), 0, 6.3); c.fill();
-      c.fillStyle = n === now ? '#f4efe6' : '#c9ced9'; c.fillText(o.nm, x, yn);
-      if (o.yr) { c.font = `400 ${ys}px ${sans}`; c.fillStyle = n === now ? '#ece7dc' : '#8f97a8'; c.fillText(o.yr, x, yn + ys + px(10)); }
+      c.fillStyle = n === now ? (steps[n].rgb || '#e8b04a') : '#aab1c0'; c.beginPath(); c.arc(x + px(5), yn - fs * 0.32, px(n === now ? 5 : 3.5), 0, 6.3); c.fill();
+      c.fillStyle = n === now ? '#f4efe6' : '#c9ced9'; c.fillText(o.nm, x + px(18), yn);
+      if (o.yr) { c.font = `400 ${ys}px ${sans}`; c.fillStyle = n === now ? '#ece7dc' : '#8f97a8'; c.fillText(o.yr, x + px(18), yn + ys + px(10)); }
     });
-    c.globalAlpha = 1; c.shadowColor = acc; c.shadowBlur = px(10); c.fillStyle = acc; c.fillRect(x1 - 1, yn - fs, 2, Math.round(fs * 1.3));
+    c.globalAlpha = 1; c.shadowColor = acc; c.shadowBlur = px(10); c.fillStyle = acc; c.fillRect(xm - 1, yn - fs, 2, Math.round(fs * 1.3));
     c.restore();
     return yn - fs;
   }

@@ -678,7 +678,7 @@ body.globe #wall .w-scene { transition: opacity .6s; }
 body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
 #globe .g-ov { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
 #globe .g-lead { position: absolute; left: 0; top: 0; width: 34px; height: 1.5px; transform-origin: 0 50%; background: linear-gradient(90deg, var(--c), color-mix(in srgb, var(--c) 45%, transparent)); border-radius: 1px; pointer-events: none; }
-#globe .g-card { position: absolute; left: 0; top: 0; width: 300px; padding: 13px 14px 14px; display: block; text-align: left; color: #ece7dc; background: rgba(7, 10, 16, .88); border: 1px solid var(--c); border-radius: 4px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .4), 0 18px 50px rgba(0, 0, 0, .55), 0 0 28px -6px var(--c); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); pointer-events: auto; cursor: pointer; }
+#globe .g-card { position: absolute; left: 0; top: 0; width: 300px; padding: 13px 14px 14px; display: block; text-align: left; color: #ece7dc; background: rgba(10, 14, 22, .55); border: 1px solid var(--c); border-radius: 4px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .4), 0 18px 50px rgba(0, 0, 0, .55), 0 0 28px -6px var(--c); -webkit-backdrop-filter: blur(18px) saturate(1.3); backdrop-filter: blur(18px) saturate(1.3); pointer-events: auto; cursor: pointer; }
 #globe .g-card[hidden], #globe .g-lead[hidden] { display: none; }
 #globe .g-card img { display: block; width: 100%; height: 150px; margin-bottom: 11px; object-fit: contain; background: #0b0f17; border-radius: 2px; }
 #globe .g-k { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
@@ -694,9 +694,9 @@ body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
 
 
 #globe .g-rows { position: relative; flex: 1; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 calc(100% - 14px), transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 calc(100% - 14px), transparent); }
-/* The marker at the right, what was passed at its left, what is to come not shown yet. */
+/* The marker just before the entry in front, what was passed at its left, what is to come not shown yet. */
 #globe .g-rows .g-nm { transition: opacity .35s; }
-#globe .g-rows .g-nm b { left: auto; right: 0; }
+#globe .g-rows .g-nm b { left: 0; right: auto; }
 #globe .g-rows .g-nm:not(.on):not(.past) { opacity: 0; pointer-events: none; }
 #globe .g-ax { position: absolute; left: 0; right: 0; bottom: 30px; height: 1px; background: rgba(200, 215, 255, .26); }
 #globe .g-now { position: absolute; left: var(--now, 40%); bottom: 20px; width: 2px; margin-left: -1px; height: 21px; border-radius: 1px; background: var(--acc); box-shadow: 0 0 10px var(--acc); }
@@ -745,7 +745,7 @@ body.globe #axisbar .ends.foot { flex-direction: row-reverse; }
   /* The text of the entry in front stands under its large picture, the same on the globe as in full view (asked for,
      Nov 2026): centred text on a plain plate, so it reads over the map and over the picture alike. */
   #globe[data-card="b"] .g-card { width: calc(540px + var(--sp) * 120px); padding: 0; text-align: center; background: none; border: 0; border-radius: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 16px rgba(0, 0, 0, .9); }
-  #globe[data-card="b"] .g-card::before { content: ''; position: absolute; inset: -14px -22px; z-index: -1; border-radius: 6px; background: rgba(6, 8, 13, .8); box-shadow: 0 0 14px 4px rgba(6, 8, 13, .45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  #globe[data-card="b"] .g-card::before { content: ''; position: absolute; inset: -14px -22px; z-index: -1; border-radius: 6px; background: rgba(10, 14, 22, .5); border: 1px solid rgba(200, 215, 255, .16); box-shadow: 0 18px 50px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .06); -webkit-backdrop-filter: blur(18px) saturate(1.3); backdrop-filter: blur(18px) saturate(1.3); }
   #globe[data-card="b"] .g-k { justify-content: center; gap: 12px; }
   #globe[data-card="b"] .g-card strong { font-size: 52px; margin: 3px 0 7px; }
   /* The picture and the text are one card: the picture on top, whole, the text under it on the same plate. */
@@ -968,7 +968,7 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 [data-theme="light"] #globe .g-nm.on { color: #1c1c1a; text-shadow: none; }
 [data-theme="light"] #globe .g-track u { color: #6d7380; }
 [data-theme="light"] #globe .g-track .on u { color: #1c1c1a; }
-[data-theme="light"] #globe .g-card { color: #1c1c1a; background: rgba(250, 248, 243, .9); box-shadow: 0 0 0 1px rgba(40, 30, 10, .08), 0 18px 50px rgba(40, 30, 10, .18); }
+[data-theme="light"] #globe .g-card { color: #1c1c1a; background: rgba(255, 255, 255, .45); box-shadow: 0 0 0 1px rgba(40, 30, 10, .08), 0 18px 50px rgba(40, 30, 10, .18); }
 [data-theme="light"] #globe .g-k small, [data-theme="light"] #globe .g-s { color: #4a505c; }
 [data-theme="light"] #globe .g-card.bare { background: none; }
 [data-theme="light"] #globe .g-past img { background: rgba(250, 248, 243, .7); border-color: rgba(28, 28, 26, .18); }
@@ -976,8 +976,8 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 [data-theme="light"] #globe .g-mode:hover { color: #1c1c1a; }
 @media (min-width: 700px) {
   [data-theme="light"] #globe[data-card="b"] .g-card { background: none; box-shadow: none; text-shadow: none; }
-  [data-theme="light"] #globe[data-card="b"] .g-card::before { background: rgba(250, 248, 243, .9); box-shadow: 0 0 0 1px rgba(40, 30, 10, .08), 0 18px 50px rgba(40, 30, 10, .18); }
+  [data-theme="light"] #globe[data-card="b"] .g-card::before { background: rgba(255, 255, 255, .42); border-color: rgba(255, 255, 255, .6); box-shadow: 0 18px 50px rgba(40, 50, 80, .16), inset 0 1px 0 rgba(255, 255, 255, .7); }
   [data-theme="light"] #globe[data-card="b"] .g-s { color: #3a3f4a; }
 }
-@media (max-width: 699px) { [data-theme="light"] #globe .g-card.bare { background: rgba(250, 248, 243, .85); } }
+@media (max-width: 699px) { [data-theme="light"] #globe .g-card.bare { background: rgba(255, 255, 255, .45); } }
 [data-theme="light"] #globe .g-pane .g-card, [data-theme="light"] #globe[data-card] .g-pane .g-card { text-shadow: 0 0 2px #fff, 0 0 14px rgba(255, 255, 255, .9); }

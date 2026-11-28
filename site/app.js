@@ -796,7 +796,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function camLimits() {
     const m = 0.22 * L.D;
     // Turned round, the reader may stand a little past the end, so the latest start can be the first in front.
-    return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), Math.max(L.tMax, (L.lastA ?? -Infinity) + 0.25 * L.D)];
+    return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), Math.max(L.tMax, (L.lastA ?? -Infinity) + (AHEAD - 1e-4) * L.D)];
   }
   const camClamp = (t) => { const [lo, hi] = camLimits(); return clamp(t, lo, hi); };
   const camAtEnd = () => { const [lo, hi] = camLimits(); return camDir() > 0 ? road.t >= hi - L.D * 0.01 : road.t <= lo + L.D * 0.01; };
