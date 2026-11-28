@@ -399,6 +399,12 @@ export function createVoice({ ctx, said, speaker }) {
     },
     // A line is being said, or is being made.
     busy: () => !!S.cur && !S.cur.done,
+    // Seconds left of the line being said (Infinity while it is still being made, held, or said by the device).
+    left() {
+      const c = ctx();
+      if (!S.cur || S.cur.done || !S.src || !S.cur.buf || !c) return Infinity;
+      return Math.max(0, S.cur.buf.duration - (c.currentTime - S.t0));
+    },
     device,
     // Play speed: lines begun from now on are said this much quicker (1 is as made), at the same pitch.
     rate(r) { S.rate = voiceRate(r); },

@@ -956,7 +956,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       let want = !play.on || (play.step && !stepping) ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
       // With a voiceover, the reader stops at each card until its line is said, then goes on, like Arrow keys
       // play (asked for, Nov 2026: "we need to stop in the card").
-      if (want && !play.step && telling() && voice.busy()) { want = 0; road.vel = 0; }
+      // The move to the next card starts as the line nears its end, so the next line begins a moment after this
+      // one ends, not after the whole way between them (asked for, Nov 2026: "only a little gap in between").
+      if (want && !play.step && telling() && voice.busy() && !(told.at === told.cue && !told.then && voice.left() <= leadSecs())) { want = 0; road.vel = 0; }
       if (road.intro) { if (performance.now() < road.intro) { want = 0; road.vel = 0; } else road.intro = 0; }
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
@@ -2524,7 +2526,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // when play is first pressed with the sound on, it eases in and out so nothing starts or stops with a
   // jolt, and pausing keeps its place. Showing another view, or playing again from the beginning, starts
   // the track from its beginning too. The sound button silences it.
-  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.08;   // under a voiceover the music is only a background
+  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.05;   // under a voiceover the music is only a background
   const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
   // The track for what is on the road: the view's own when its play was pressed, else the house track.
   function trackNow() {
@@ -2619,6 +2621,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     el.classList.toggle('wait', wait);
   }
   // Called whenever the reader moves: `id` is the entry in front (null before the first), `next` the one after.
+  // How long before the end of a line the reader sets off for the next card: the time the way takes at this
+  // speed, less `TOLD_GAP`, the pause wanted between two lines.
+  const TOLD_GAP = 0.35;
+  const leadSecs = () => (globe ? Math.max(0, globe.legSecs() / play.speed - TOLD_GAP) : 0);
   function tell(id, next) {
     if (!telling()) { if (told.cue !== undefined) { voice.stop(); told.cue = undefined; } return; }
     const key = id ?? 'intro';
@@ -2626,6 +2632,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!play.on) { if (told.cue !== undefined && key !== told.cue && told.cue !== 'outro') { voice.stop(); told.cue = undefined; } return; }
     if (told.cue === 'outro') return;
     const after = next ? next.t.id : 'outro';
+    told.at = key;
+    // Arrived while the last line still has its last words: they are let finish, and this line follows them.
+    if (key !== told.cue && told.cue !== undefined && voice.busy() && voice.left() < Infinity) return;
     if (key !== told.cue) {
       told.cue = key; told.then = null;
       // The opening is said on the first entry that has a line and the closing after the last that has one:

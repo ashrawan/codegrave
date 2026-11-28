@@ -399,8 +399,8 @@ How the page is put together:
 - **Voiceover and export, round 5 (Nov 2026, asked for), which replaces the rounds above where they differ.**
   The sound switch is a row in the menu by play ("Sound", `#sound-seg`), not a button of its own beside play
   (`#sound` is kept, unseen); the menu is headed "Sound and voice" and its one speed is "Play speed", which the
-  voice follows. Under a voice the music is louder than it first was (`MUSIC_UNDER` 0.08 on the page, 0.09 in a
-  film; it was found "a little bit too subtle" at 0.09, then a bit strong at 0.14 and at 0.1; the usual level under a voice is wanted, Nov 2026). The export dialog has no "Audio only" (the engine can still
+  voice follows. Under a voice the music is louder than it first was (`MUSIC_UNDER` 0.05 on the page, 0.06 in a
+  film; it was found "a little bit too subtle" at 0.09, then a bit strong at 0.14, 0.1 and 0.08; the usual level under a voice is wanted, Nov 2026). The export dialog has no "Audio only" (the engine can still
   make the WAV). Scene is "Default" (as play shows it: the globe, and the stars where entries have no place)
   or "Full view". Quality is Quick test (240p, the smallest and fastest, for checking a film first), 720p or 1080p (4K and 8K were offered and then removed on request, Nov 2026; `QUALITY`; `canSize()` in `site/export.js` asks the
   browser's encoder, and a size it cannot make is not offered). The dialog has a foot of its own (`.exf`):
