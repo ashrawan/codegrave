@@ -254,6 +254,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
         'circle-opacity': ['match', ['get', 'st'], 'past', 0.75, 'now', 0.14, 1],
         // The edge of the pin in front is its own colour, not a dark ring (asked for, Nov 2026: the black did not match).
         'circle-stroke-color': ['match', ['get', 'st'], 'next', 'rgba(255,255,255,.75)', 'now', ['get', 'c'], 'rgba(5,8,15,.7)'], 'circle-stroke-width': 1, 'circle-stroke-opacity': ['match', ['get', 'st'], 'now', 0.5, 1] } });
+      // A small see-through white dot stays at the place in front while its card is up (asked for, Nov 2026), like the
+      // one that travels along the way.
+      map.addLayer({ id: 'now-dot', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 2.4, 'circle-color': '#fff6e2', 'circle-opacity': 0.5, 'circle-pitch-alignment': 'map' } });
       map.addLayer({ id: 'pin-name', type: 'symbol', source: 'pins', filter: ['all', ['get', 'near'], ['!=', ['get', 'st'], 'now']],
         layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-anchor': 'left', 'text-offset': [0.8, 0], 'text-max-width': 14, 'text-optional': true },
         paint: { 'text-color': ['match', ['get', 'st'], 'past', '#ffffff', 'rgba(255,255,255,.72)'], 'text-halo-color': 'rgba(5,8,15,.85)', 'text-halo-width': 1.4 } });
