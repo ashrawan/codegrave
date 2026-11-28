@@ -2593,7 +2593,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (state.views.length !== 1) return null;
     const v = viewById.get(state.views[0]);
     if (v?.stored) return v.voice || null;
-    return localVoice(state.views[0]) || (v?.voice ? { ...v.voice, base: true } : null);
+    // A built view with a default voiceover always tells that one, and it cannot be rewritten or voiced again
+    // here (asked for, Nov 2026: to change it, the reader makes the timeline their own first).
+    if (v?.voice) return { ...v.voice, base: true };
+    return localVoice(state.views[0]);
   };
   function keepLocalVoice(v) {
     if (state.views.length !== 1) return;
@@ -2650,7 +2653,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   function drawTold() {
     const any = voice.any();
-    $('voice-row').hidden = $('subs-row').hidden = $('pick-row').hidden = !any;
+    $('voice-row').hidden = $('subs-row').hidden = !any;
+    $('pick-row').hidden = !any || !!voiceNow()?.base;
     // With no voiceover yet, the menu by play offers to make one there and then (asked for, Nov 2026: "the user
     // doesn't even need to go over click on the 3 dot").
     $('gen-row').hidden = any || state.views.length !== 1;

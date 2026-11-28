@@ -626,7 +626,8 @@ export function createAccount(app) {
     const cur = current();
     if (cur) return { own: true, title: cur.title, description: cur.description || '', get: () => JSON.parse(cur.text).voice, set: (v) => { const data = JSON.parse(cur.text); if (v) data.voice = v; else delete data.voice; return patch(cur, { data }); } };
     const o = app.one();
-    return o ? { own: false, title: o.title, description: o.description, get: () => app.one()?.voice, set: async (v) => app.keepVoice(v) } : null;
+    // `fixed`: a built view's default voiceover, which is told as it is (Make it your own to change it).
+    return o ? { own: false, fixed: !!o.voice?.base, title: o.title, description: o.description, get: () => app.one()?.voice, set: async (v) => app.keepVoice(v) } : null;
   }
   const onNow = () => app.views().join();
   // `guide` is the reader's own words on how to tell it (asked for, Nov 2026; not needed): the function gives
@@ -696,7 +697,7 @@ export function createAccount(app) {
   // opens its dialog (another voice, write again, remove).
   function voiceQuick() {
     const h = working ? null : holder();
-    if (!h || voicing) return;
+    if (!h || h.fixed || voicing) return;
     let v = null; try { v = localStorage.getItem('cg-voice-name'); } catch (e) { /* private window */ }
     if (voiceOf(h.get()) || !isVoice(v)) return voiceMenu($('tl-more'), h);
     if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.');
@@ -748,7 +749,7 @@ export function createAccount(app) {
       <div class="cap">Export</div>
       ${item('video', TL.film, 'Video', 'MP4')}
       ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Document', 'PDF')}
-      ${hold ? '<div class="cap">Sound</div>' + item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', vo ? `${esc(voiceLabel(vo.voice))} · Ready` : '', told ? ' has' : ' lit') : ''}
+      ${hold && !hold.fixed ? '<div class="cap">Sound</div>' + item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', vo ? `${esc(voiceLabel(vo.voice))} · Ready` : '', told ? ' has' : ' lit') : ''}
       <div class="cap">${cur ? 'Edit' : 'This timeline'}</div>
       ${free && cur.text.includes('"spec":{') ? item('edit', TL.edit, 'Open in editor') : ''}
       ${!cur && hold ? item('mine', TL.edit, 'Make it your own', 'Edit a copy') : ''}
