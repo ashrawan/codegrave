@@ -963,3 +963,10 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .pub-top { display: flex; align-items: center; gap: 6px; margin: -4px -6px 2px; }
 .pub-top h2 { flex: 1; margin: 0; }
 .pub-top .ibtn { width: 30px; height: 30px; flex: none; }
+/* Full screen on a phone: the search and the menu button have gone, so the title of the view and the period move
+   up into the room they leave, under the notch (asked for, Nov 2026). They step back down while the top peeks in. */
+@media (max-width: 699px) {
+  #road-views, #road-head { transition: top .3s; }
+  body.fullscreen:not(.peek) #road-views { top: calc(14px + env(safe-area-inset-top)); }
+  body.fullscreen:not(.peek):not(.multi) #road-head { top: calc(10px + env(safe-area-inset-top)); }
+}
