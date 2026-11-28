@@ -31,7 +31,7 @@
 // Secrets (Supabase → Edge Functions → Secrets):
 //   OPENROUTER_API_KEY   required: the same one Create with AI uses
 //   VOICE_API_KEY        optional: an OpenRouter key of its own for the server voice, with a spending limit
-//   SPEECH_FREE          optional: the most characters a month a free account may have said (30000)
+//   SPEECH_FREE          optional: the most characters a month a free account may have said (50000)
 //   SPEECH_PRO           optional: the same for a pro account (500000)
 //   VOICE_SCRIPT_MODEL   optional: the OpenRouter model that writes the script
 
@@ -55,9 +55,10 @@ const SERVICE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 // the same model costs four times as much at another.
 const SPEECH_MODEL = Deno.env.get("SPEECH_MODEL") ?? "hexgrad/kokoro-82m";
 const SPEECH_HOST = Deno.env.get("SPEECH_HOST") ?? "deepinfra";
-// The most characters a month an account may have said: a taste for a free account (about half an hour of
-// speech, three cents), and far more for pro (about nine hours, fifty cents).
-const SPEECH_FREE = Number(Deno.env.get("SPEECH_FREE")) || 30_000;
+// The most characters a month an account may have said: for a free account about fifty minutes of speech,
+// five cents, so a hundred free accounts cost at most five dollars a month (asked for, Nov 2026: "even if 100
+// users use, our $10 should be enough"), and far more for pro (about nine hours, fifty cents).
+const SPEECH_FREE = Number(Deno.env.get("SPEECH_FREE")) || 50_000;
 const SPEECH_PRO = Number(Deno.env.get("SPEECH_PRO")) || 500_000;
 const SPEECH_VOICES = ["af_heart", "am_michael", "af_bella", "af_nicole", "bf_emma", "bm_george"];
 const SPEECH_RATE = 24000;   // Kokoro's own: the sound comes back as plain 16-bit samples at this rate

@@ -67,7 +67,7 @@ const PHONE = '(max-width: 699px)';
 const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt', FAILED = 'cg-ai-failed';
 // An account's share of the server voice a month, in characters (the function `voiceover` holds the same
 // numbers and is the one that counts), and about how many characters make a minute of speech.
-export const SPEECH = { free: 30000, pro: 500000 }, CHARS_A_MINUTE = 900;
+export const SPEECH = { free: 50000, pro: 500000 }, CHARS_A_MINUTE = 900;
 const AI_PER_DAY = 20;      // the allowance until the account's row is read (`profiles.ai_daily`)
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),

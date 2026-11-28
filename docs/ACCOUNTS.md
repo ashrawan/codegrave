@@ -292,8 +292,12 @@ starts goes on the row (`voice.audio`), so every reader plays the one file. The 
 are made once; the characters count against the owner's month. Taking the timeline down deletes the file: an
 unpublished timeline's voice stays on the reader's device.
 
+**A free account may have 10 timelines published at once** (a check in the database, `publish_cap`); a pro
+account has no cap. The publish dialog says so when the cap is reached. With the voice's share above, this keeps
+what a free account costs within a few cents a month.
+
 Every signed-in account has a share of it a month, counted in characters by the server: a taste
-for a free account (30,000, about half an hour of speech) and far more for pro (500,000, about
+for a free account (50,000, about fifty minutes of speech, so a hundred free accounts cost at most about $5 a month) and far more for pro (500,000, about
 nine hours). The account menu shows what is left. When the share is used up, and for a reader who
 is not signed in, the browser's own voice says the lines.
 
