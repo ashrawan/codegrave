@@ -45,6 +45,9 @@ export const isStored = (id) => /^t\/[0-9a-f-]{36}$/.test(id);
 export const uuidOf = (id) => id.slice(2);
 
 const ICON = {
+  moon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>',
+  globe: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.5 2.6 14.5 0 17M12 3.5c-2.6 2.5-2.6 14.5 0 17"/></svg>',
+  plan: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M3 10.5h18M7 14.5h3"/></svg>',
   // a door with an arrow going in: Sign in (asked for, Nov 2026)
   out: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></svg>',
   login: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/><path d="M3.5 12H14M10 8l4 4-4 4"/></svg>',
@@ -740,8 +743,8 @@ export function createAccount(app) {
     const ents = app.told()?.entries || [], one = hold || {}, vo = told ? voiceOf(hold.get()) : null;
     const span = ents.length ? `${ents[0].mark || ''}${ents[0].mark && ents[ents.length - 1].mark && ents[0].mark !== ents[ents.length - 1].mark ? ' to ' + ents[ents.length - 1].mark : ''}` : '';
     const priv = cur?.visibility === 'private';
-    const d = popover(anchor, `<div class="tl-head"><b>${esc(one.title || 'This timeline')}</b><small>${[ents.length ? `${ents.length} ${ents.length === 1 ? 'entry' : 'entries'}` : '', esc(span), cur ? SEEN[cur.visibility] : ''].filter(Boolean).join(' · ')}</small></div>
-      ${cur ? `<button type="button" class="tl-pub" data-act="publish" role="menuitem">${TL.share}<span><b>${priv ? 'Publish' : 'Sharing'}</b><small>${priv ? 'Private: only you can open it' : cur.visibility === 'public' ? 'Public: anyone can find it' : 'Anyone with the link can open it'}</small></span><i>${priv ? 'Share' : 'Manage'}</i></button>` : ''}
+    const d = popover(anchor, `<div class="m-head"><i class="m-av sq" aria-hidden="true">${esc((one.title || 'T').trim().charAt(0).toUpperCase())}</i><span><b>${esc(one.title || 'This timeline')}</b><small>${[ents.length ? `${ents.length} ${ents.length === 1 ? 'entry' : 'entries'}` : '', esc(span)].filter(Boolean).join(' · ')}</small></span>${cur ? `<em class="m-chip">${SEEN[cur.visibility]}</em>` : ''}</div>
+      ${cur ? `<button type="button" class="m-out" data-act="publish" role="menuitem"><b>${priv ? 'Publish' : 'Sharing'}</b><small>${priv ? 'Share a link' : cur.visibility === 'public' ? 'Public · Manage' : 'By link · Manage'}</small></button>` : ''}
       <div class="cap">Export</div>
       ${item('video', TL.film, 'Video', 'MP4')}
       ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Document', 'PDF')}
@@ -1290,7 +1293,17 @@ export function createAccount(app) {
         return undefined;
       }
       if (el('#sb-me')) {
-        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><div class="me" id="me-ai"><small>Create with AI</small><span>&nbsp;</span><i><u></u></i></div><div class="me" id="me-say"><small>Voice this month</small><span>&nbsp;</span><i><u></u></i></div><hr><div class="me-row" id="me-plan"><span>Plan <b>${profile?.plan === 'pro' ? 'Pro' : 'Free'}</b></span><button type="button" class="${profile?.plan === 'pro' ? 'quiet' : 'go'}" data-act="plan">${profile?.plan === 'pro' ? 'Manage' : 'Go Pro'}</button></div><hr><div class="me-row"><span>Theme</span><div class="seg" role="radiogroup" aria-label="Theme"><button type="button" role="radio" data-theme-to="light">Light</button><button type="button" role="radio" data-theme-to="dark">Dark</button></div></div><hr><button type="button" class="nv out" data-act="out">${ICON.out}<span>Sign out</span></button>`, 'menu wide acct');
+        // Design A, "Glass list" (picked from three, Nov 2026; the same sheet as the timeline's menu, the settings
+        // and the menu by play): who it is with the plan as a chip, what is left as two meters, the one lit button,
+        // then rows with an icon each. Every line has its room from the start, since the menu is placed by its height.
+        const pro = profile?.plan === 'pro', who = shown();
+        const d = popover(el('#sb-me'), `<div class="m-head"><i class="m-av" aria-hidden="true">${esc((who || '?').trim().charAt(0).toUpperCase())}</i><span><b>${esc(who)}</b><small>${esc(user.email || who)}</small></span><em class="m-chip${pro ? ' pro' : ''}">${pro ? 'Pro' : 'Free'}</em></div>
+          <div class="m-meter" id="me-ai"><div><small>AI requests today</small><span>&nbsp;</span></div><i><u></u></i></div>
+          <div class="m-meter" id="me-say"><div><small>Voice this month</small><span>&nbsp;</span></div><i><u></u></i></div>
+          <div id="me-plan">${pro ? `<button type="button" class="nv" data-act="plan">${ICON.plan}<span>Manage plan</span><small>Pro</small></button>` : '<button type="button" class="m-pri" data-act="plan"><b>Go Pro</b><small>Far more requests and voice</small></button>'}</div>
+          <hr><div class="m-row">${ICON.moon}<span>Theme</span><div class="seg" role="radiogroup" aria-label="Theme"><button type="button" role="radio" data-theme-to="light">Light</button><button type="button" role="radio" data-theme-to="dark">Dark</button></div></div>
+          ${profile?.username ? `<div class="m-row">${ICON.globe}<span>Publishes as</span><small>/${esc(profile.username)}</small></div>` : ''}
+          <hr><button type="button" class="nv out" data-act="out">${ICON.out}<span>Sign out</span></button>`, 'menu wide acct');
         // Light or dark: said as it is, and the menu stays open (asked for, Nov 2026, in place of "Switch theme").
         const themed = () => { const now = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark'; for (const b of d.querySelectorAll('[data-theme-to]')) b.setAttribute('aria-checked', String(b.dataset.themeTo === now)); return now; };
         themed();
@@ -1306,7 +1319,7 @@ export function createAccount(app) {
         api(`/rest/v1/ai_requests?select=id&created_at=gte.${new Date(Date.now() - 864e5).toISOString()}&limit=20000`).then((used) => {
           const box = d.querySelector('#me-ai'); if (!box) return;
           const most = Number.isFinite(Number(profile?.ai_daily)) ? Number(profile.ai_daily) : AI_PER_DAY, left = Math.max(0, most - (used?.length || 0));
-          box.querySelector('span').textContent = `${left.toLocaleString('en-US')} of ${most.toLocaleString('en-US')} requests left today`;
+          box.querySelector('span').textContent = `${left.toLocaleString('en-US')} of ${most.toLocaleString('en-US')} left`;
           box.querySelector('u').style.width = (most ? 100 * left / most : 0) + '%';
           box.classList.toggle('none', !left);
         }).catch(() => {});
@@ -1315,7 +1328,7 @@ export function createAccount(app) {
         api(`/rest/v1/speech_use?select=chars&month=eq.${new Date().toISOString().slice(0, 7)}-01`).then((got) => {
           const box = d.querySelector('#me-say'); if (!box) return;
           const most = SPEECH[isPro() ? 'pro' : 'free'], left = Math.max(0, most - (got?.[0]?.chars || 0));
-          box.querySelector('span').textContent = `${Math.round(left / CHARS_A_MINUTE).toLocaleString('en-US')} of ${Math.round(most / CHARS_A_MINUTE).toLocaleString('en-US')} minutes left`;
+          box.querySelector('span').textContent = `${Math.round(left / CHARS_A_MINUTE).toLocaleString('en-US')} of ${Math.round(most / CHARS_A_MINUTE).toLocaleString('en-US')} min left`;
           box.querySelector('u').style.width = (100 * left / most) + '%';
           box.classList.toggle('none', !left);
         }).catch(() => {});

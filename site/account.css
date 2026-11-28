@@ -753,3 +753,65 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 
 .ex.asking [data-ex-cancel] { color: #e58a7a; border-color: color-mix(in srgb, #e58a7a 50%, transparent); }
 .ex.asking .ex-say { color: var(--text); }
+
+/* ---- Menus, design A "Glass list" (picked from three, Nov 2026): the account menu, the timeline's three dots,
+   the settings and the menu by play are one sheet. Each opens with who or what it is about (.m-head), a row has
+   an icon, an On / Off pair is a switch (.seg.sw: both buttons stay, the one that is on lets the press through
+   to the other), what is left is a meter (.m-meter) and the one thing to press is lit (.m-pri, .m-out). ---- */
+.pop.menu:is(.acct, .tl) .dlg, #more-menu, #vo-menu { padding: 8px; font-size: 13.5px; background: color-mix(in srgb, var(--surf) 94%, transparent); border: 1px solid var(--glass-edge); border-radius: 16px; box-shadow: 0 18px 50px rgba(0, 0, 0, .45); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.pop.menu.acct .dlg { width: 296px; }
+.pop.menu.tl .dlg { width: 300px; }
+#more-menu { width: 340px; }
+#vo-menu { width: 312px; }
+.m-head { display: flex; align-items: center; gap: 12px; padding: 8px 10px 12px; }
+.m-head > span { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.m-head b { font-size: 14.5px; font-weight: 600; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.m-head small { font-size: 12px; color: var(--faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.m-head small:empty { display: none; }
+.m-av { flex: none; display: grid; place-items: center; width: 38px; height: 38px; font-style: normal; font-weight: 600; color: var(--text); background: var(--raised); border: 1px solid var(--glass-edge); border-radius: 50%; }
+.m-av.sq { width: 42px; height: 42px; font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--acc); border-radius: 10px; }
+.m-chip { flex: none; padding: 3px 8px; font-size: 11px; font-style: normal; color: var(--muted); border: 1px solid var(--rule2); border-radius: 99px; white-space: nowrap; }
+.m-chip.pro { color: var(--acc); border-color: color-mix(in srgb, var(--acc) 60%, transparent); }
+.m-meter { padding: 5px 10px 8px; }
+.m-meter > div { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; }
+.m-meter small { font-size: 12.5px; color: var(--muted); }
+.m-meter span { color: var(--text); font-variant-numeric: tabular-nums; }
+.m-meter > i { display: block; height: 4px; margin-top: 6px; background: var(--raised); border-radius: 9px; overflow: hidden; }
+.m-meter u { display: block; width: 0; height: 100%; background: var(--acc); border-radius: 9px; text-decoration: none; transition: width .3s; }
+.m-meter.none span { color: #e58f8f; }
+.m-pri, .m-out { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: calc(100% - 8px); box-sizing: border-box; height: 44px; margin: 6px 4px; padding: 0 14px; font: inherit; border-radius: 11px; cursor: pointer; }
+.m-pri { color: #16110a; background: var(--acc); border: 0; }
+.m-pri b, .m-out b { font-size: 14px; font-weight: 600; }
+.m-pri small { font-size: 12px; font-weight: 500; }
+.m-pri:hover { filter: brightness(1.07); }
+.m-out { color: var(--acc); background: transparent; border: 1px solid color-mix(in srgb, var(--acc) 60%, transparent); }
+.m-out small { font-size: 12px; color: var(--muted); }
+.m-out:hover { background: color-mix(in srgb, var(--acc) 10%, transparent); }
+[data-theme="light"] .m-pri { color: #fff; }
+.pop.menu.acct #me-plan { padding: 0; }
+.pop.menu.acct #me-plan .nv small { margin-left: auto; color: var(--acc); }
+.m-row { display: flex; align-items: center; gap: 11px; min-height: 38px; padding: 0 6px 0 10px; color: var(--text); }
+.m-row > span { flex: 1; min-width: 0; }
+.m-row > small { font-size: 12.5px; color: var(--faint); padding-right: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 150px; }
+.m-row > svg, .pop.menu:is(.acct, .tl) .nv > svg, :is(#more-menu, #vo-menu) .ic { flex: none; width: 16px; height: 16px; color: var(--muted); }
+.pop.menu:is(.acct, .tl) .nv { min-height: 38px; gap: 11px; padding: 0 10px; font-size: 13.5px; color: var(--text); }
+.pop.menu:is(.acct, .tl) hr { margin: 6px 2px; }
+.pop.menu.acct .seg { margin: 0; padding: 2px; border-radius: 9px; }
+.pop.menu.acct .seg button { flex: none; height: 26px; padding: 0 10px; font-size: 12px; }
+.pop.menu.acct .nv.out { color: var(--text); }
+.pop.menu.tl .cap, :is(#more-menu, #vo-menu) .cap { margin: 0; padding: 9px 10px 4px; font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+:is(#more-menu, #vo-menu) .set { min-height: 38px; padding: 0 6px 0 10px; }
+:is(#more-menu, #vo-menu) .set .lbl { display: flex; align-items: center; gap: 11px; }
+:is(#more-menu, #vo-menu) .m-head { padding-bottom: 8px; }
+/* A switch for an On / Off pair. */
+:is(#more-menu, #vo-menu) .seg.sw { position: relative; display: block; justify-self: end; width: 34px; height: 20px; padding: 0; background: color-mix(in srgb, var(--text) 18%, transparent); border-radius: 99px; transition: background .15s; }
+:is(#more-menu, #vo-menu) .seg.sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; background: var(--muted); border-radius: 50%; pointer-events: none; transition: left .15s, background .15s; }
+:is(#more-menu, #vo-menu) .seg.sw:has(button[data-v="on"][aria-pressed="true"]) { background: var(--acc); }
+:is(#more-menu, #vo-menu) .seg.sw:has(button[data-v="on"][aria-pressed="true"])::after { left: 17px; background: #16110a; }
+:is(#more-menu, #vo-menu) .seg.sw button { position: absolute; inset: -9px -6px; width: auto; height: auto; padding: 0; opacity: 0; cursor: pointer; }
+:is(#more-menu, #vo-menu) .seg.sw button[aria-pressed="true"] { pointer-events: none; }
+:is(#more-menu, #vo-menu) .seg.sw:focus-within { outline: 2px solid var(--acc); outline-offset: 2px; }
+.m-pri b { color: inherit; }
+:is(#more-menu, #vo-menu) .set:has(.sw) { grid-template-columns: minmax(0, 1fr) auto; padding-right: 10px; }
+#more-menu { width: 358px; }
+#vo-menu :is(#gen-row, #pick-row) { padding-right: 4px; }

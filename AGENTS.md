@@ -516,6 +516,13 @@ How the page is put together:
   `offlineOn()`) downloads the model and makes such lines on the device: off unless the reader turns it on, and
   never on a phone (`isMobile()`), in his words "not selected by default. And also not available in mobile
   devices". The GPU voice shows only with offline mode on. Server video export is planned, not built.
+- **The four menus are one design (A, "Glass list", picked from three, Nov 2026, after the menus were called
+  generic).** The account menu, the timeline's three dots, the settings and the menu by play share one sheet
+  (the block "Menus, design A" at the end of `site/account.css`): each opens with who or what it is about
+  (`.m-head`, with a chip for the plan or the state), every row has an icon, an On / Off pair is a switch
+  (`.seg.sw`: both buttons stay in the page, so the handlers are unchanged), what is left is a meter
+  (`.m-meter`) and the one thing to press is lit (`.m-pri` Go Pro, `.m-out` Publish). Keep new menus and rows
+  in these shapes.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

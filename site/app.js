@@ -2652,6 +2652,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // doesn't even need to go over click on the 3 dot").
     $('gen-row').hidden = any || state.views.length !== 1;
     if (any) $('vo-name').textContent = voiceLabel(voice.name());
+    $('vo-by').textContent = any ? 'Told by ' + voiceLabel(voice.name()) : state.views.length === 1 ? 'No voiceover yet' : '';
     drawChip(); keptSoon();
     // Offered where the device has a graphics card; off until the reader turns it on (asked for, Nov 2026).
     // Offline mode (asked for, Nov 2026): the voice made on this computer, off unless the reader turns it on,
