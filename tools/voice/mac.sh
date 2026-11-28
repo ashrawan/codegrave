@@ -6,6 +6,7 @@
 # what it needs (Homebrew's ffmpeg and node if missing, then the voice tool), keeps the Mac awake, and writes
 # the MP3s to ~/codegrave-voice/tools/voice/out. Running it again carries on where it stopped.
 set -euo pipefail
+trap 'echo; echo "STOPPED: the step above failed (mac.sh line $LINENO). Send Claude the lines above."' ERR
 BRANCH=claude/project-thread-a9lcvq
 HERE="${CODEGRAVE_VOICE_DIR:-$HOME/codegrave-voice}"
 
@@ -19,7 +20,9 @@ if ! command -v node >/dev/null || [ "$(node -p 'process.versions.node.split("."
 fi
 
 if [ -d "$HERE/.git" ]; then
-  say "carrying on in $HERE (delete that folder to start from scratch)"
+  say "updating the tools in $HERE (the voiceovers made so far are kept)"
+  git -C "$HERE" fetch --quiet --depth 1 origin "$BRANCH"
+  git -C "$HERE" checkout --quiet FETCH_HEAD -- . ':(exclude)data/community/wiki/voices'
 else
   say "copying the repository to $HERE"
   git clone --quiet --depth 1 --branch "$BRANCH" https://github.com/ashrawan/codegrave.git "$HERE"
@@ -27,7 +30,7 @@ fi
 cd "$HERE"
 
 say "installing the voice tool"
-(cd tools/voice && npm install --silent --no-audit --no-fund --onnxruntime-node-install-cuda=skip)
+(cd tools/voice && npm install --no-audit --no-fund --onnxruntime-node-install-cuda=skip)
 
 say "making the voiceovers (the Mac stays awake until it is done)"
 caffeinate -i node tools/voice/local.mjs "$@"
