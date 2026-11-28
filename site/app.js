@@ -2845,7 +2845,14 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (e.key === 'Home' || e.key === 'End') { road.target = null; road.vel = 0; road.t = road.prev = (e.key === 'Home') === fwd ? lo : hi; if (play.on) pausePlay(); return roadKick(); }
       roadBy((e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1) * Math.max(0.3, (L.tMax - L.tMin) / L.D / 100), 8);
     });
-    $('reverse').addEventListener('click', () => { state.order = state.order === 'new' ? 'old' : 'new'; drawReverse(); changed(); });
+    $('reverse').addEventListener('click', () => {
+      // Turned round, the timeline starts again from its new beginning, ready to play (reported, Nov 2026: it was
+      // left at the far end, and the reader had to drag all the way back).
+      if (play.on) pausePlay();
+      state.order = state.order === 'new' ? 'old' : 'new';
+      road.t = road.prev = null; road.target = null;
+      drawReverse(); changed();
+    });
     $('info-btn').addEventListener('click', () => {
       const on = $('info').hidden;
       if (on) drawInfo();

@@ -536,7 +536,8 @@ How the page is put together:
 - **The light theme covers the globe too, and the card is glass (Nov 2026, asked for):** the strip at the foot and
   the small pictures are light with dark ink; the card's plate is see-through glass with a blur in both themes, never
   solid white or black (the block at the end of `site/styles.css`). Turned round, the road opens on
-  its latest entry: the reader may stand a little past the end (`L.lastA` in `camLimits()`).
+  its latest entry: the reader may stand a little past the end (`L.lastA` in `camLimits()`), and pressing Turn round
+  takes the reader to the new beginning, ready to play.
 - **The accent is Glacier blue (Nov 2026, picked from five, in place of the amber).** `--acc` is `#6cb6ff` on
   dark and `#1f63b8` on light, and what stands on it is `--on-acc`. The views' own colours (`--p0` to `--p7`) and
   the warm light of the map and the wall did not change.
