@@ -526,6 +526,15 @@ How the page is put together:
   makes. The page asks the store's public address first (`STORE` in `site/voice.js`, `fromStore()`; empty until
   the bucket has one), which needs no sign-in, and gives up after `STORE_MISSES` misses in a row. Voiceovers for
   the built views are to be made into the same store. Without the function's R2 secrets nothing is kept.
+- **The voice dialog is design A, "Two tabs" (Nov 2026, picked from three after the pill and box were found "too
+  noisy"; this replaces what the points above say about the voice dialogs).** `voiceMenu()` draws one column
+  (`.vo-form.vx`): the title, Online and Offline as two tabs (`.vo-tabs`, hidden on a phone), the voice as one
+  row with Listen and Change (`.vo-cur`; the list of voices opens only from Change, `.vo-pickall`), then the
+  script, the prompt and one lit button. On Offline, until the voice is downloaded, one panel offers the download
+  (`.vo-mode`) and everything else is grey (`.vo-form.dim .dimmable`).
+- **The accent is Glacier blue (Nov 2026, picked from five, in place of the amber).** `--acc` is `#6cb6ff` on
+  dark and `#1f63b8` on light, and what stands on it is `--on-acc`. The views' own colours (`--p0` to `--p7`) and
+  the warm light of the map and the wall did not change.
 - **The four menus are one design (A, "Glass list", picked from three, Nov 2026, after the menus were called
   generic).** The account menu, the timeline's three dots, the settings and the menu by play share one sheet
   (the block "Menus, design A" at the end of `site/account.css`): each opens with who or what it is about

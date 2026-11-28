@@ -4,8 +4,8 @@
   --bg: #070a10; --surf: #0d121b; --raised: #1a2232; --ph: #141b28;
   --text: #ece7dc; --muted: #bcc2cf; --faint: #8f97a8;
   --rule: rgba(190, 210, 255, .10); --rule2: rgba(200, 215, 255, .26);
-  --band-hot: rgba(231, 180, 90, .16); --bandtext: #e2bf7c;
-  --line: #d9deea; --acc: #e7b45a; --cool: #78a9f0;
+  --band-hot: rgba(108, 182, 255, .16); --bandtext: #9ccdff;
+  --line: #d9deea; --acc: #6cb6ff; --on-acc: #06182c; --cool: #78a9f0;
   --p0: #e3b25f; --p1: #7fb0f5; --p2: #dc9ab3; --p3: #8fcdb2; --p4: #bba6e3; --p5: #cfc489; --p6: #93c7d9; --p7: #e3a08c;
   --glass: rgba(16, 22, 34, .52); --glass-hi: rgba(255, 255, 255, .07); --glass-edge: rgba(210, 225, 255, .22);
   --chrome: rgba(7, 10, 16, .72);
@@ -18,7 +18,7 @@
   --text: #121211; --muted: #3f3f3a; --faint: #55554e;
   --rule: rgba(0, 0, 0, .12); --rule2: rgba(0, 0, 0, .4);
   --band-hot: rgba(120, 95, 20, .16); --bandtext: #66520f;
-  --line: #1c1c1a; --acc: #9a6c00; --cool: #2c58a6;
+  --line: #1c1c1a; --acc: #1f63b8; --on-acc: #ffffff; --cool: #2c58a6;
   --p0: #a5621a; --p1: #2c58a6; --p2: #a23b67; --p3: #1f7a5c; --p4: #6a4aa8; --p5: #7a6a1c; --p6: #1f7187; --p7: #a2492f;
   --glass: rgba(255, 253, 247, .72); --glass-hi: rgba(255, 255, 255, .5); --glass-edge: rgba(0, 0, 0, .16);
   --chrome: rgba(246, 243, 236, .82);
@@ -464,9 +464,9 @@ small > .ctag, small .ctag { margin-left: 0; }
 /* the bar of years: thin lit ticks, an amber marker and a round amber play button */
 #axis-win { background: linear-gradient(to bottom, color-mix(in srgb, var(--acc) 14%, transparent), color-mix(in srgb, var(--cool) 10%, transparent)); opacity: 1; border-left: 2px solid color-mix(in srgb, var(--acc) 55%, transparent); }
 #playhead i { background: var(--acc); box-shadow: 0 0 0 2px var(--bg), 0 0 12px color-mix(in srgb, var(--acc) 60%, transparent); }
-#playhead span { color: #17120a; background: var(--acc); box-shadow: 0 0 14px color-mix(in srgb, var(--acc) 45%, transparent); }
+#playhead span { color: var(--on-acc); background: var(--acc); box-shadow: 0 0 14px color-mix(in srgb, var(--acc) 45%, transparent); }
 [data-theme="light"] #playhead span { color: #fff; }
-#play.abtn.solid { color: #17120a; background: var(--acc); border-color: var(--acc); box-shadow: 0 0 18px color-mix(in srgb, var(--acc) 45%, transparent); }
+#play.abtn.solid { color: var(--on-acc); background: var(--acc); border-color: var(--acc); box-shadow: 0 0 18px color-mix(in srgb, var(--acc) 45%, transparent); }
 [data-theme="light"] #play.abtn.solid { color: #fff; }
 .abtn { background: rgba(255, 255, 255, .03); }
 #ticks .yr.now { color: var(--acc); }
