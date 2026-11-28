@@ -441,7 +441,7 @@ How the page is put together:
   `globe.intro()` does no glide from the whole globe. The globe comes in at the first entry that has a place.
 - **The time line at the foot shows what has been told, not what is to come (Nov 2026, asked for; this replaces
   what the points above say about the marker standing at the left).** The marker of the strip stands towards the right
-  (`nowAt()` in `site/globe.js`); at a card it stands right on the entry's dot (`DOT_MID`; asked for, Nov 2026,
+  (`nowAt()` in `site/globe.js`); at a card it stands right on the entry's dot (`DOT_SHIFT`; asked for, Nov 2026,
   after it stood just before it), and between cards it travels from dot to dot, in both directions; what was passed stays in sight at
   its left, and what is still to come is not shown until its turn, coming in from the right ("those items not yet
   visible should not be in timeline"). It is so in both directions of the timeline, and the exported film draws
