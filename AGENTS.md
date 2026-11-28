@@ -527,7 +527,8 @@ How the page is put together:
   shade lighter, not amber. The menu by play is Music and sound, Play speed, then "Voiceover" with its
   switch, its voice and Subtitles together (asked for: "voiceover falls under the same"). The settings hold the
   globe only: View, Look and Detail are a grid of tiles, a symbol over its name (`.seg.tiles`, asked for), then
-  Highlight country and Several views. "Advance: Auto / Arrow keys" was removed on request (`play.step` is
+  Highlight country and Several views. Day is the default look (asked for; Atlas was), and pointing at its tile
+  says it is seen from far off and that close in the map is Atlas (`data-tip`). "Advance: Auto / Arrow keys" was removed on request (`play.step` is
   always false; the arrows already skip during play), and Theme left the settings because the account menu
   has it; it still shows there for a reader who is not signed in (`#app-grp`), who has no account menu.
 - **The sound of play.** A card that opens while play travels gets a ring

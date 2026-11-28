@@ -2867,9 +2867,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // How much the map says (Less, Medium, Full; cg-detail in this browser, kept by the globe).
     const detailShow = (v) => { for (const b of $('detail').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
     { const d = store.get('cg-detail'); detailShow(d === 'medium' || d === 'full' ? d : 'less'); }
-    // The look of the globe (Atlas, Day, Dots; cg-look in this browser, kept by the globe).
+    // The look of the globe (Atlas, Day, Dots; cg-look in this browser, kept by the globe). Day is the default
+    // (asked for, Nov 2026; Atlas was before).
     const lookShow = (v) => { for (const b of $('look').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
-    { const l = store.get('cg-look'); lookShow(l === 'day' || l === 'dots' ? l : 'atlas'); }
+    { const l = store.get('cg-look'); lookShow(l === 'atlas' || l === 'dots' ? l : 'day'); }
     $('look-row').addEventListener('click', (e) => {
       e.stopPropagation();
       const b = e.target.closest('button[data-v]');

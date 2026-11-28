@@ -152,9 +152,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // How much the map says (asked for, Nov 2026, so the globe is less crowded; `cg-detail` in this browser):
   // 'full' names every country; 'medium' names and tints only the countries the timeline's entries fall in;
   // 'less' only the country of the entry in front, and shows only its pin.
-  // The look of the globe (asked for, Nov 2026; `cg-look` in this browser): 'atlas', the default, 'day' or
+  // The look of the globe (asked for, Nov 2026; `cg-look` in this browser): 'day', the default since Nov 2026, 'atlas' or
   // 'dots'. What a look needs is fetched only when that look is picked.
-  try { const l = localStorage.getItem('cg-look'); S.look = LOOKS.includes(l) ? l : 'atlas'; } catch (e) { S.look = 'atlas'; }
+  try { const l = localStorage.getItem('cg-look'); S.look = LOOKS.includes(l) ? l : 'day'; } catch (e) { S.look = 'day'; }
   try { const d = localStorage.getItem('cg-detail'); S.detail = d === 'medium' || d === 'full' ? d : 'less'; } catch (e) { S.detail = 'less'; }
   // The country the entry in front falls in is lit in the accent colour, whatever the detail (asked for, Nov 2026:
   // "when that map falls into the particular country, we want that country to be highlighted"; `cg-land`, on).
