@@ -447,9 +447,9 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road.short .rc.full .rs, #road.short .rc.full img { display: none; }
 @media (max-width: 699px) {
   #road-head { right: 14px; top: 104px; gap: 4px; max-width: 50%; }
-  #road-year { font-size: 34px; }
+  #road-year { font-size: 21px; }
   #road-views { top: 58px; max-width: calc(100% - 28px); gap: 4px 16px; }
-  .rv b, #road-views[data-n="2"] .rv b { font-size: 18px; }
+  .rv b, #road-views[data-n="2"] .rv b { font-size: 15px; }
   #road-views:not([data-n="1"]):not([data-n="2"]) .rv b { font-size: 14px; }
   #road-views.bare .rch { display: none; }
   .rch { font-size: 10.5px; line-height: 1.25; }
@@ -984,3 +984,9 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 }
 @media (max-width: 699px) { [data-theme="light"] #globe .g-card.bare { background: rgba(255, 255, 255, .25); } }
 [data-theme="light"] #globe .g-pane .g-card, [data-theme="light"] #globe[data-card] .g-pane .g-card { text-shadow: 0 0 2px #fff, 0 0 14px rgba(255, 255, 255, .9); }
+/* On a phone the card is the same glass as on a wide screen (asked for, Nov 2026): see-through, blurred, with a pale
+   lit edge, not a dark box ringed in the view's colour. */
+@media (max-width: 699px) {
+  #globe .g-card, #globe .g-card.bare { background: rgba(10, 14, 22, .25); border-color: rgba(200, 215, 255, .16); box-shadow: 0 18px 50px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .06); border-radius: 6px; text-shadow: 0 1px 2px rgba(0, 0, 0, .7); }
+  [data-theme="light"] #globe .g-card, [data-theme="light"] #globe .g-card.bare { background: rgba(255, 255, 255, .25); border-color: rgba(255, 255, 255, .6); box-shadow: 0 18px 50px rgba(40, 50, 80, .16), inset 0 1px 0 rgba(255, 255, 255, .7); text-shadow: none; }
+}

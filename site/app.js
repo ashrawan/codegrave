@@ -2530,7 +2530,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     try {
       const AC = window.AudioContext || window.webkitAudioContext;
       if (!sound.ctx && AC) sound.ctx = new AC();
-      if (sound.ctx && sound.ctx.state === 'suspended') sound.ctx.resume();
+      // A phone puts the sound to sleep when the page is left ('suspended', or Safari's 'interrupted'); wake it.
+      if (sound.ctx && sound.ctx.state !== 'running' && sound.ctx.state !== 'closed') sound.ctx.resume().catch(() => {});
     } catch { sound.ctx = null; }
   }
   // One breath of air: noise through a filter that closes as the sound settles, so it starts soft, sinks and
@@ -2725,7 +2726,19 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     drawSubs(); tune();
   }
   // The road rests while the tab is hidden, so the music does too.
+  // Leaving the page pauses play (reported on a phone, Nov 2026: back on the page, play did not move at all). A phone
+  // stops the sound while the page is away, so a line being said never ends and play would wait on it for good;
+  // paused, the line is held where it was and play goes on from there when it is pressed again.
   document.addEventListener('visibilitychange', () => {
+    if (document.hidden && play.on) pausePlay();
+    // Back on the page: a frame asked for while it was away may never come (the picture then stood frozen while the
+    // sound went on), so the road and the globes start their frames again.
+    if (!document.hidden) {
+      if (road.raf) { cancelAnimationFrame(road.raf); road.raf = 0; road.live = false; }
+      if (globe) globe.wake();
+      for (const pn of panes.values()) pn.g.wake();
+      roadKick();
+    }
     if (!music.el) return;
     if (document.hidden) music.el.pause(); else if (music.want) { const p = music.el.play(); if (p && p.catch) p.catch(() => {}); }
   });
@@ -3324,7 +3337,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     about: (e) => { const c = catById.get(e.category), w = places[e.id]; return { kind: c?.name || e.category || '', type: c?.domain || e.domain || '', where: !e.where && w ? [w[0], w[1]] : null }; },
     first: () => { const p = (road.gorder || [])[0]; return p ? stepOf(p) : null; },
     voiceLoad: () => (told.load != null && told.load < 1 ? { part: told.load, mb: Math.round((told.bytes || 0) / 1e6) || MODEL_MB } : null),
-    audio: () => { try { const AC = window.AudioContext || window.webkitAudioContext; if (!sound.ctx && AC) sound.ctx = new AC(); if (sound.ctx?.state === 'suspended') sound.ctx.resume(); } catch { sound.ctx = null; } return sound.ctx; },
+    audio: () => { try { const AC = window.AudioContext || window.webkitAudioContext; if (!sound.ctx && AC) sound.ctx = new AC(); if (sound.ctx && sound.ctx.state !== 'running' && sound.ctx.state !== 'closed') sound.ctx.resume().catch(() => {}); } catch { sound.ctx = null; } return sound.ctx; },
     told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), mark: stepOf(p).mark || '', summary: p.t.summary || '' })) }; },
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
   });
