@@ -305,10 +305,30 @@ export function createSpeaker(status = () => {}) {
   return { line, warm, engine, kept, server, offline, far: () => has(), gpu: () => gpu, ready: () => booted };
 }
 
+// A built view's default voiceover can come as one file (asked for, Nov 2026: one MP3 a view and voice in the
+// public store, fetched all at once when play starts, since it is only a few megabytes). `audio` on the voiceover
+// names it ({ voice, src, cues }: one [start, end] in seconds for each line, in order); a line is cut from it.
+function fileOf(v) {
+  const a = v?.audio;
+  if (!STORE || !a || typeof a.src !== 'string' || !Array.isArray(a.cues) || a.cues.length !== v.lines.length) return null;
+  return { voice: a.voice, url: STORE + '/' + a.src, at: new Map(v.lines.map((l, i) => [l.id, a.cues[i]])), got: null, buf: null };
+}
+let decoder = null;
+function whole(f) {
+  return (f.got ??= fetch(f.url).then((r) => { if (!r.ok) throw new Error('no file'); return r.arrayBuffer(); })
+    .then((b) => (decoder ??= new OfflineAudioContext(1, 1, 24000)).decodeAudioData(b))
+    .then((buf) => { f.buf = buf; return buf; })
+    .catch((e) => { f.got = null; f.fail = (f.fail || 0) + 1; if (f.fail >= 2) f.at = new Map(); throw e; }));
+}
+async function part(f, id) {
+  const buf = await whole(f), [a, b] = f.at.get(id), r = buf.sampleRate;
+  return { audio: buf.getChannelData(0).slice(Math.floor(a * r), Math.min(buf.length, Math.ceil(b * r))), rate: r };
+}
+
 // ---- playing it. `ctx()` gives the page's audio context once the reader has pressed play (null: no sound);
 // `said(text, waiting)` is told the line being spoken ('' when none), or that the voice is being got ready.
 export function createVoice({ ctx, said, speaker }) {
-  const S = { sig: '', lines: new Map(), order: [], voice: DEFAULT_VOICE, cur: null, src: null, gain: null, t0: 0, off: 0, held: false, utter: null, rate: 1 };
+  const S = { sig: '', lines: new Map(), order: [], file: null, voice: DEFAULT_VOICE, cur: null, src: null, gain: null, t0: 0, off: 0, held: false, utter: null, rate: 1 };
   const device = () => S.voice === 'device';
   function quit() {
     const s = S.src; S.src = null;
@@ -341,17 +361,19 @@ export function createVoice({ ctx, said, speaker }) {
   return {
     // The voiceover of the timeline on show (null: none).
     set(v) {
-      const sig = v ? v.at + v.voice + v.lines.length : '';
+      const sig = v ? v.at + v.voice + v.lines.length + (v.audio?.src || '') : '';
       if (sig === S.sig) return;
       this.stop();
       S.sig = sig; S.voice = v ? v.voice : DEFAULT_VOICE;
       S.lines = new Map(v ? v.lines.map((l) => [l.id, l]) : []); S.order = v ? v.lines.map((l) => l.id) : [];
+      S.file = fileOf(v);
     },
     any: () => S.lines.size > 0,
     has: (id) => S.lines.has(id),
     // Have every line made, from `from` on, while play goes; a line already made is only looked up.
     prepare(from) {
       if (device() || !S.order.length || !ctx()) return;
+      if (S.file && S.file.voice === S.voice) { whole(S.file).catch(() => {}); return; }
       for (const id of madeOrder(S.order, from ?? S.order[0])) speaker.line(S.lines.get(id).text, S.voice).catch(() => {});
     },
     // Start the line of this entry; whatever was being said stops.
@@ -364,7 +386,8 @@ export function createVoice({ ctx, said, speaker }) {
       if (device()) { speakDevice(cur); return true; }
       if (!speaker.ready()) said('', true);
       // A line that cannot be made is passed over, so play never waits for nothing.
-      speaker.line(l.text, S.voice, true).then(({ audio, rate }) => {
+      const fromFile = S.file && S.file.voice === S.voice && S.file.at.has(id);
+      (fromFile ? part(S.file, id).catch(() => speaker.line(l.text, S.voice, true)) : speaker.line(l.text, S.voice, true)).then(({ audio, rate }) => {
         if (S.cur !== cur || cur.done) return;
         const a = stretch(audio, S.rate, rate), buf = c.createBuffer(1, a.length, rate);
         buf.copyToChannel(a, 0);
@@ -379,6 +402,8 @@ export function createVoice({ ctx, said, speaker }) {
     device,
     // Play speed: lines begun from now on are said this much quicker (1 is as made), at the same pitch.
     rate(r) { S.rate = voiceRate(r); },
+    // Every line is in hand: the view's one file has come, so nothing is left to make.
+    whole: () => !!S.file?.buf,
     name: () => S.voice,
     texts: () => [...S.lines.values()].map((l) => l.text),
     now: () => (S.cur && !S.cur.done ? S.cur.id : null),

@@ -265,7 +265,17 @@ if (existsSync(communityDir)) {
         const vo = readJson(told), at2 = `${at}/voices/${f}`;
         const ok = vo && Array.isArray(vo.lines) && vo.lines.length && vo.lines.every((l) => l && typeof l.id === 'string' && typeof l.text === 'string' && l.text.trim() && l.text.length <= 400);
         if (!ok) err(at2, 'needs "lines": [{ "id", "text" }], each text at most 400 characters');
-        else v._voice = { ...(typeof vo.voice === 'string' ? { voice: vo.voice } : {}), style: String(vo.style || ''), lines: vo.lines.map((l) => ({ id: l.id, text: l.text.trim() })) };
+        else {
+          v._voice = { ...(typeof vo.voice === 'string' ? { voice: vo.voice } : {}), style: String(vo.style || ''), lines: vo.lines.map((l) => ({ id: l.id, text: l.text.trim() })) };
+          // Its sound, once tools/voice/make.mjs has made it: one MP3 in the public store, and where each line
+          // starts and ends in it. The page plays a card's part of the one file.
+          const a = vo.audio;
+          if (a != null) {
+            if (!a || typeof a.voice !== 'string' || !/^[0-9a-f]{8,32}$/.test(a.v || '') || !Array.isArray(a.cues) || a.cues.length !== vo.lines.length || !a.cues.every((c) => Array.isArray(c) && c.length === 2 && c[0] >= 0 && c[1] > c[0]))
+              err(at2, '"audio" needs "voice", "v" and one [start, end] in "cues" for each line (tools/voice/make.mjs writes it)');
+            else { v._voice.voice ??= a.voice; v._voice.audio = { voice: a.voice, src: `views/${owner}/${v.id}/${a.voice}/${a.v}.mp3`, secs: +a.secs || 0, cues: a.cues }; }
+          }
+        }
       }
       views.push(v);
     }

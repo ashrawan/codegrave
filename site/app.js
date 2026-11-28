@@ -2636,7 +2636,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // The chip by play: how many of this timeline's lines this browser has already made in its voice.
   let keptAt = 0;
   function keptSoon() { clearTimeout(keptAt); keptAt = setTimeout(async () => {
-    const texts = voice.texts(), n = !texts.length ? 0 : voice.device() ? texts.length : await speaker.kept(texts, voice.name());
+    const texts = voice.texts(), n = !texts.length ? 0 : voice.device() || voice.whole() ? texts.length : await speaker.kept(texts, voice.name());
     told.kept = n; told.lines = texts.length; drawChip();
   }, 300); }
   function drawChip() {
