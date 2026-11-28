@@ -488,7 +488,7 @@ How the page is put together:
 - **Arrows during play (Nov 2026, asked for).** While automatic play travels, the left and right arrow keys glide
   to the entry before or the next one and play goes on (`playSkip()` in `site/app.js`); they no longer pause it.
   A name on the time line, a small picture at the left or a pin pressed during play does the same (`playTo()`).
-  Standing still they travel by hand as before, and with "Play: Arrow keys" they step (`playStep()`).
+  Standing still they glide to the next entry or the one before and stop with its dot under the marker (`stepTo()`; asked for, Nov 2026), and with "Play: Arrow keys" they step (`playStep()`).
 - **Ask AI folds (Nov 2026, asked for).** Folded (`body.ask-min`) the Ask AI box is a small "Ask AI" pill in the
   middle, a little lower than the open box; a press opens it again (`#ask.open`), and the small arrow at the end of
   the open box (`.ask-fold`) folds it at any time. Pressing play folds it too.

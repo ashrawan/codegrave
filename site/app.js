@@ -1783,6 +1783,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // While play travels by itself the arrows go to the next entry or the one before, and play goes on
       // (asked for, Nov 2026: "it should not pause").
       if (play.on && road.gorder?.length) return playSkip(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1);
+      // Standing still they go to the next entry's dot, or the one before, and stop there (asked for, Nov 2026:
+      // "the arrow keys should actually move to the next dot ... back, then move to the previous dot. Exactly").
+      if (road.gorder?.length) return stepTo(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1);
       roadBy(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 0.3 : -0.3, 8);
     });
     if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); if (globe) { globe.resize(); for (const pn of panes.values()) pn.g.resize(); } }).observe(box);
@@ -2469,6 +2472,21 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     j = clamp(j, 0, o.length - 1);
     if (j === i) return;
     glideTo(j);
+  }
+  // Standing still: glide to the next entry, or the one before, and stop with it in front, its dot under the marker.
+  function stepTo(n) {
+    const o = road.gorder, dir = camDir(), edge = road.t + dir * AHEAD * L.D;
+    let i = -1;
+    for (let k = 0; k < o.length; k++) { if (dir * (o[k].a - edge) > 1e-5 * L.D) break; i = k; }
+    // A press while still gliding counts from where the last press was going.
+    if (road.target != null && road.skipI != null && o[road.skipI]) i = road.skipI;
+    let j = i + n;
+    while (j >= 0 && j < o.length && i >= 0 && o[j].t.id === o[i].t.id) j += n;
+    if (j < 0 || j >= o.length) return;
+    road.intro = 0; road.vel = 0; road.skipI = j; turnsOver();
+    road.target = camClamp(o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D); road.rate = 6;
+    if (calm()) { road.t = road.prev = road.target; road.target = null; }
+    roadKick();
   }
   // During play: glide to the entry at `j` of the play order and go on playing from there; its line starts on
   // arrival (what was being said stops, since the reader chose to move on).
