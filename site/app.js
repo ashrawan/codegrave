@@ -995,7 +995,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!globe) {
       document.body.classList.add('globe');
       $('globe').hidden = false;
-      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => roadToThing(id), seek: globeSeek, credit: document.querySelector('.dock-tools') });
+      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => playTo(id), seek: globeSeek, credit: document.querySelector('.dock-tools') });
     }
     const dir = camDir(), P = roadPalette(), seen = new Set(), steps = [];
     road.gorder = L.shown.filter((p) => p.a >= L.tMin && p.a <= L.tMax && L.at.get(p.t.id) === p).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
@@ -2459,10 +2459,23 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     while (j >= 0 && j < o.length && i >= 0 && o[j].t.id === o[i].t.id) j += n;
     j = clamp(j, 0, o.length - 1);
     if (j === i) return;
+    glideTo(j);
+  }
+  // During play: glide to the entry at `j` of the play order and go on playing from there; its line starts on
+  // arrival (what was being said stops, since the reader chose to move on).
+  function glideTo(j) {
+    const o = road.gorder, dir = camDir();
+    if (telling()) { voice.stop(); told.cue = undefined; }
     road.intro = 0; road.vel = 0; road.skipI = j;
     road.target = camClamp(o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D); road.rate = 4;
     if (calm()) { road.t = road.prev = road.target; road.target = null; }
     roadKick();
+  }
+  // A name on the time line was pressed: while play travels the reader glides there and play goes on
+  // (asked for, Nov 2026: "it doesn't need to pause"); standing still it goes there as before.
+  function playTo(id) {
+    const j = play.on && road.gorder ? road.gorder.findIndex((p) => p.t.id === id) : -1;
+    if (j >= 0) glideTo(j); else roadToThing(id);
   }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
