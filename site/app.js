@@ -890,7 +890,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!L) return;
     const to = camClamp(x - camDir() * 0.2 * L.D);
     if (play.on) pausePlay();
-    road.vel = 0; turnsOver();
+    road.vel = 0; road.skipI = null; turnsOver();
     if (smooth && !calm()) { road.target = to; road.rate = 6; } else { road.t = road.prev = to; road.target = null; }
     roadKick();
   }
@@ -1053,7 +1053,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const from = i < 0 ? (dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D) : road.gorder[i].a, next = road.gorder[j];
     const edge = next ? from + (next.a - from) * clamp(frac, 0, 1) : from;
     road.gfree = state.open || null;
-    road.target = null; road.vel = 0;
+    road.target = null; road.vel = 0; road.skipI = null;
+    // Pulled to another entry: what was being said stops, and that entry's line starts (asked for, Nov 2026).
+    if (telling() && (id ?? 'intro') !== told.at) { voice.stop(); told.cue = undefined; }
     road.t = camClamp(edge - dir * AHEAD * L.D + dir * 1e-6 * L.D);
     roadKick();
   }
@@ -2645,6 +2647,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // Standing still, a line that was being said belongs to where the reader was: moving on ends it.
     if (!play.on) { if (told.cue !== undefined && key !== told.cue && told.cue !== 'outro') { voice.stop(); told.cue = undefined; } return; }
     if (told.cue === 'outro') return;
+    // Gliding to an entry the reader pressed: nothing on the way is said; its line starts on arrival.
+    if (road.target != null && road.skipI != null) return;
     const after = next ? next.t.id : 'outro';
     told.at = key;
     // Arrived while the last line still has its last words: they are let finish, and this line follows them.
