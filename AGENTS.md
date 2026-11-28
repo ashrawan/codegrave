@@ -512,10 +512,12 @@ How the page is put together:
   line at a time, kept in the browser like any other line and never on the server (`speaker.server()` in
   `site/voice.js`). Each signed-in account has a share of it a month (free a taste, pro far more; `#me-say` in
   the account menu shows what is left), and the key has a spending limit. A line the server does not give is
-  said by the browser's own voice. "Offline voice" in the voice dialog, with the voices (`.vo-off` in `voiceMenu()`; it stood in the menu by play first and was moved on request; `cg-voice-offline`,
+  said by the browser's own voice. Online or Offline is one switch at the top of the voice dialog (`.vo-mode` in `voiceMenu()`; a row in the menu by play and then a box under the voices were both found confusing; `cg-voice-offline`,
   `offlineOn()`) downloads the model and makes such lines on the device: off unless the reader turns it on, and
   never on a phone (`isMobile()`), in his words "not selected by default. And also not available in mobile
-  devices". The GPU voice shows only with offline mode on. Server video export is planned, not built.
+  devices". The two are plain modes: online the server says the lines, offline this computer makes
+  them and the server is not asked (`line()` in `site/voice.js`); the switch says which is on and whether the
+  model is downloaded, and the download's progress and the GPU voice stand inside it. The GPU voice shows only with offline mode on. Server video export is planned, not built.
 - **The four menus are one design (A, "Glass list", picked from three, Nov 2026, after the menus were called
   generic).** The account menu, the timeline's three dots, the settings and the menu by play share one sheet
   (the block "Menus, design A" at the end of `site/account.css`): each opens with who or what it is about

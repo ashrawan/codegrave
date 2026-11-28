@@ -194,7 +194,9 @@ export function createSpeaker(status = () => {}) {
     const p = opened().then((c) => c?.match(key)).then(async (r) => {
       if (r) return { audio: new Float32Array(await r.arrayBuffer()), rate: Number(r.headers.get('x-rate')) || 24000 };
       // A pro account's line is said by the server (nothing to download); if that cannot be, by this device.
-      const far = await fromServer(key, text, voice, now);
+      // Two plain modes (asked for, Nov 2026: "clearly know whether it is the online active or it is the offline"):
+      // online, the server says the line; offline, this computer makes it and the server is not asked.
+      const far = offlineOn() ? null : await fromServer(key, text, voice, now);
       if (far) return far;
       // Not from the server and offline mode is off: nothing is downloaded, and whoever asked says the line
       // with the browser's own voice.

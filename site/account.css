@@ -849,3 +849,19 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 #more-menu .set:has(.tiles) { padding-top: 2px; padding-bottom: 2px; }
 #more-menu .seg.tiles button[data-tip] { position: relative; }
 #more-menu .seg.tiles button[data-tip]:is(:hover, :focus-visible)::after { content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 6px); z-index: 2; width: 168px; transform: translateX(-50%); padding: 7px 9px; font-size: 11.5px; font-weight: 400; line-height: 1.4; white-space: normal; text-align: left; color: var(--text); background: var(--bg); border: 1px solid var(--glass-edge); border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, .4); pointer-events: none; }
+/* Where the voice is made: Online or Offline, one switch at the top of the voice dialog. */
+.vo-mode { display: flex; flex-direction: column; gap: 8px; margin: 0 0 10px; padding: 10px 12px; background: color-mix(in srgb, var(--raised) 60%, transparent); border: 1px solid var(--rule2); border-radius: 12px; }
+.vo-mode[hidden] { display: none; }
+.vo-mode.off { border-color: color-mix(in srgb, var(--acc) 55%, transparent); }
+.vo-mode-top { display: flex; align-items: center; gap: 12px; }
+.vo-mode-top > span { flex: 1; min-width: 0; }
+.vo-mode-top b { display: block; font-size: 13.5px; font-weight: 600; }
+.vo-mode-top small { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.45; color: var(--muted); }
+.vo-mode .seg { flex: none; margin: 0; padding: 2px; background: var(--raised); border-radius: 9px; }
+.vo-mode .seg button { flex: none; height: 28px; padding: 0 12px; font-size: 12.5px; cursor: pointer; }
+.vo-mode .seg button[aria-checked="true"] { font-weight: 600; color: var(--text); background: color-mix(in srgb, var(--text) 16%, var(--raised)); box-shadow: none; }
+.vo-mode.off .seg button[aria-checked="true"] { color: #16110a; background: var(--acc); }
+.vo-mode .vo-gpu { border-color: var(--rule); }
+.vo-list .vo-mode { margin: 0 10px 10px; }
+.vo-list .vo-mode .vo-mode-top { flex-direction: column; align-items: stretch; gap: 8px; }
+.vo-list .vo-mode .seg button { flex: 1; }
