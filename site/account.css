@@ -254,22 +254,31 @@ body:not(.sb-open) .rail-only { display: flex; transform: rotate(90deg); }
 .pop.menu hr { height: 1px; margin: 6px -6px; border: 0; background: var(--rule); }
 .pop.menu .me { display: flex; flex-direction: column; padding: 8px 10px; }
 /* Requests left today: a line and a thin bar that empties (asked for, Nov 2026). */
-.pop.menu #me-ai span { font-size: 13.5px; }
+.pop.menu #me-ai span, .pop.menu #me-say span { font-size: 13.5px; }
 .pop.menu #me-ai i { display: block; height: 3px; margin-top: 7px; background: var(--raised); border-radius: 2px; overflow: hidden; }
+.pop.menu #me-say i { display: block; height: 3px; margin-top: 7px; background: var(--raised); border-radius: 2px; overflow: hidden; }
 .pop.menu #me-ai u { display: block; height: 100%; background: var(--acc); border-radius: 2px; }
+.pop.menu #me-say u { display: block; height: 100%; background: var(--acc); border-radius: 2px; }
 .pop.menu #me-ai.none span { color: #e58f8f; }
+.pop.menu #me-say.none span { color: #e58f8f; }
 .pop.menu #me-ai { padding-bottom: 10px; }
+.pop.menu #me-say { padding-bottom: 10px; }
 .pop.menu #me-ai u { width: 0; text-decoration: none; transition: width .3s; }
+.pop.menu #me-say u { width: 0; text-decoration: none; transition: width .3s; }
 .pop.menu #me-ai span { min-height: 1.3em; }
+.pop.menu #me-say span { min-height: 1.3em; }
 /* The account's menu: small and quiet, with the theme as a Light / Dark switch (asked for, Nov 2026). */
 .pop.menu.acct .dlg { width: 224px; padding: 5px; border-radius: 13px; font-size: 13px; }
 .pop.menu.acct .me { padding: 6px 9px; }
 .pop.menu.acct .me b { font-size: 13.5px; }
 .pop.menu.acct .me small { font-size: 11.5px; }
 .pop.menu.acct .me span, .pop.menu.acct #me-ai span { font-size: 12.5px; }
+.pop.menu.acct .me span, .pop.menu.acct #me-say span { font-size: 12.5px; }
 .pop.menu.acct hr { margin: 4px -5px; }
 .pop.menu.acct #me-ai { padding-bottom: 8px; }
+.pop.menu.acct #me-say { padding-bottom: 8px; }
 .pop.menu.acct #me-ai i { margin-top: 5px; }
+.pop.menu.acct #me-say i { margin-top: 5px; }
 .pop.menu.acct .me-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 4px 4px 4px 9px; color: var(--muted); }
 .pop.menu.acct #me-plan b { margin-left: 4px; color: var(--text); font-weight: 600; }
 .pop.menu.acct #me-plan button { height: 26px; padding: 0 12px; border: 0; border-radius: 8px; font-size: 12px; cursor: pointer; }

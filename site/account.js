@@ -10,7 +10,7 @@ import { EFFORTS, MAX_ENTRIES, MODELS, findPictures, partialSpec, specToView, vi
 import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
-import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, isSlow, gpuOk, GPU_MB, MODEL_MB, listen as hear } from './voice.js';
+import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, isSlow, gpuOk, GPU_MB, MODEL_MB, isMobile, listen as hear } from './voice.js';
 export const CONFIG = {
   url: 'https://wwgmelafchslapxiccot.supabase.co',
   key: 'sb_publishable_IykysSfgNLw4CfaqxP2CqA_YNcfq0SW',
@@ -62,6 +62,9 @@ const LOGO = '<svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke
 const SEEN = { private: 'Private draft', link: 'Link only', public: 'Public' };
 const PHONE = '(max-width: 699px)';
 const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt', FAILED = 'cg-ai-failed';
+// An account's share of the server voice a month, in characters (the function `voiceover` holds the same
+// numbers and is the one that counts), and about how many characters make a minute of speech.
+export const SPEECH = { free: 30000, pro: 500000 }, CHARS_A_MINUTE = 900;
 const AI_PER_DAY = 20;      // the allowance until the account's row is read (`profiles.ai_daily`)
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),
@@ -145,13 +148,21 @@ export function createAccount(app) {
   }
   // The server voice (pro): one line of a voiceover said by the server, as 16-bit samples. Null when this
   // reader has none (not signed in, not pro, or this month's share is used), and the device then makes it.
-  let spent = false;
-  const hasSpeak = () => !!user && isPro() && !spent;
+  // Every account has a share of the server voice a month (the server keeps count; pro has far more). When
+  // it is used up, or for a reader not signed in, the browser's own voice speaks, and on a computer the reader
+  // may turn on Offline voice, which downloads the model and makes the voice there.
+  let spent = false, plainSaid = false;
+  const hasSpeak = () => !!user && !spent;
+  const offlineHint = () => (isMobile() ? '' : ' Or turn on Offline voice in the menu by play.');
+  function plainVoice() {
+    if (plainSaid) return; plainSaid = true;
+    if (!user) toast('This is your browser’s own voice. Sign in to hear the full voice.' + offlineHint());
+  }
   async function speak(text, voice) {
     if (!hasSpeak()) return null;
     const t = await token();
     const r = await fetch(CONFIG.url + '/functions/v1/voiceover', { method: 'POST', headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' }, body: JSON.stringify({ speak: { text, voice } }) });
-    if (r.status === 429 && !spent) { spent = true; toast('This month’s server voice is used up, so your browser makes the voice.'); }
+    if (r.status === 429 && !spent) { spent = true; toast((isPro() ? 'This month’s voice is used up, so your browser’s own voice speaks.' : 'This month’s free voice is used up, so your browser’s own voice speaks. Pro has far more.') + offlineHint()); }
     if (!r.ok) return null;
     return { pcm: await r.arrayBuffer(), rate: Number(r.headers.get('x-rate')) || 24000 };
   }
@@ -773,7 +784,7 @@ export function createAccount(app) {
     const note = b.closest('.dlg, form')?.querySelector('.vo-fetch');
     if (note && b.dataset.sample !== 'device') { note.textContent = `Getting ${voiceLabel(b.dataset.sample)} ready…`; note.hidden = false; }
     const quiet = () => { if (note) note.hidden = true; };
-    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { quiet(); if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } }, text || undefined,
+    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { quiet(); if (sample === me) { hush(); fail(e.message === 'no server' ? (user ? 'The voice is not available just now.' : 'Sign in to hear this voice.') + offlineHint() : e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } }, text || undefined,
       () => { quiet(); if (sample === me) { b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } });
     const stop = me.stop; me.stop = () => { quiet(); stop(); };
   }
@@ -854,7 +865,7 @@ export function createAccount(app) {
       gp.querySelector('button').textContent = on ? 'Turn off' : `Download ${GPU_MB} MB`;
     };
     const drawPick = () => { gp.hidden = !gpuFine || !kokoro(); drawGpu(); if (kokoro()) sp.warm(); };
-    gpuOk().then((ok) => { gpuFine = ok; drawPick(); });
+    gpuOk().then((ok) => { gpuFine = ok && !isMobile(); drawPick(); });
     gp.querySelector('button').addEventListener('click', () => { sp.engine(!sp.gpu()); drawGpu(); drawSlow(); sp.warm(); });
     d.addEventListener('change', (e) => { if (e.target.name === 'voice') drawPick(); });
     const ld = d.querySelector('.vo-load'), tick = setInterval(() => {
@@ -1267,7 +1278,7 @@ export function createAccount(app) {
         return undefined;
       }
       if (el('#sb-me')) {
-        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><div class="me" id="me-ai"><small>Create with AI</small><span>&nbsp;</span><i><u></u></i></div><hr><div class="me-row" id="me-plan"><span>Plan <b>${profile?.plan === 'pro' ? 'Pro' : 'Free'}</b></span><button type="button" class="${profile?.plan === 'pro' ? 'quiet' : 'go'}" data-act="plan">${profile?.plan === 'pro' ? 'Manage' : 'Go Pro'}</button></div><hr><div class="me-row"><span>Theme</span><div class="seg" role="radiogroup" aria-label="Theme"><button type="button" role="radio" data-theme-to="light">Light</button><button type="button" role="radio" data-theme-to="dark">Dark</button></div></div><hr><button type="button" class="nv out" data-act="out">${ICON.out}<span>Sign out</span></button>`, 'menu wide acct');
+        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><div class="me" id="me-ai"><small>Create with AI</small><span>&nbsp;</span><i><u></u></i></div><div class="me" id="me-say"><small>Voice this month</small><span>&nbsp;</span><i><u></u></i></div><hr><div class="me-row" id="me-plan"><span>Plan <b>${profile?.plan === 'pro' ? 'Pro' : 'Free'}</b></span><button type="button" class="${profile?.plan === 'pro' ? 'quiet' : 'go'}" data-act="plan">${profile?.plan === 'pro' ? 'Manage' : 'Go Pro'}</button></div><hr><div class="me-row"><span>Theme</span><div class="seg" role="radiogroup" aria-label="Theme"><button type="button" role="radio" data-theme-to="light">Light</button><button type="button" role="radio" data-theme-to="dark">Dark</button></div></div><hr><button type="button" class="nv out" data-act="out">${ICON.out}<span>Sign out</span></button>`, 'menu wide acct');
         // Light or dark: said as it is, and the menu stays open (asked for, Nov 2026, in place of "Switch theme").
         const themed = () => { const now = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark'; for (const b of d.querySelectorAll('[data-theme-to]')) b.setAttribute('aria-checked', String(b.dataset.themeTo === now)); return now; };
         themed();
@@ -1285,6 +1296,15 @@ export function createAccount(app) {
           const most = Number.isFinite(Number(profile?.ai_daily)) ? Number(profile.ai_daily) : AI_PER_DAY, left = Math.max(0, most - (used?.length || 0));
           box.querySelector('span').textContent = `${left.toLocaleString('en-US')} of ${most.toLocaleString('en-US')} requests left today`;
           box.querySelector('u').style.width = (most ? 100 * left / most : 0) + '%';
+          box.classList.toggle('none', !left);
+        }).catch(() => {});
+        // The same for the voice: what is left of this month's share of the server voice (the server counts
+        // the characters said; `SPEECH` here only says how large the share is, to draw it).
+        api(`/rest/v1/speech_use?select=chars&month=eq.${new Date().toISOString().slice(0, 7)}-01`).then((got) => {
+          const box = d.querySelector('#me-say'); if (!box) return;
+          const most = SPEECH[isPro() ? 'pro' : 'free'], left = Math.max(0, most - (got?.[0]?.chars || 0));
+          box.querySelector('span').textContent = `${Math.round(left / CHARS_A_MINUTE).toLocaleString('en-US')} of ${Math.round(most / CHARS_A_MINUTE).toLocaleString('en-US')} minutes left`;
+          box.querySelector('u').style.width = (100 * left / most) + '%';
           box.classList.toggle('none', !left);
         }).catch(() => {});
         return undefined;
@@ -1336,5 +1356,5 @@ export function createAccount(app) {
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { voiceQuick, boot, start, api, ask: ask_ai, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, isPro, speak, hasSpeak, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
+  return { voiceQuick, boot, start, api, ask: ask_ai, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, isPro, speak, hasSpeak, plainVoice, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
 }

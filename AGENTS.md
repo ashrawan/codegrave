@@ -504,14 +504,18 @@ How the page is put together:
 - **Export says when the graphics hardware helps (Nov 2026, asked for).** The browser's encoder already uses the
   device's video hardware where there is one; `canFast()` in `site/export.js` only asks whether it can, and the
   dialog's foot then reads "Made on your device, sped up by its graphics hardware. Nothing is uploaded."
-- **The pro plan and the server voice (Nov 2026, asked for; `docs/ACCOUNTS.md`, "The pro plan").** An account
-  is free or pro (`plan` on its row, written only by the function `stripe-webhook`). The account menu has "Go
-  Pro" or "Manage" (`#me-plan`, `billing()` in `site/account.js`), which open Stripe's own pages through the
-  function `billing`. For a pro account the voiceover's lines are said by a hosted Kokoro through the function
-  `voiceover` (`{ speak }`), one line at a time, kept in the browser like any other line and never on the
-  server; the device makes any line the server cannot give (`speaker.server()` in `site/voice.js`). A most a
-  month for each account and a spending limit on the key keep the cost known. A free account keeps everything
-  it had. Server video export is planned, not built.
+- **The pro plan, the server voice and offline mode (Nov 2026, asked for; `docs/ACCOUNTS.md`, "The pro plan";
+  this replaces what the voiceover points above say about the model downloading by itself).** An account is free
+  or pro (`plan` on its row, written only by the function `stripe-webhook`). The account menu has "Go Pro" or
+  "Manage" (`#me-plan`, `billing()` in `site/account.js`), which open Stripe's own pages through the function
+  `billing`. A voiceover's lines are said by a hosted Kokoro through the function `voiceover` (`{ speak }`), one
+  line at a time, kept in the browser like any other line and never on the server (`speaker.server()` in
+  `site/voice.js`). Each signed-in account has a share of it a month (free a taste, pro far more; `#me-say` in
+  the account menu shows what is left), and the key has a spending limit. A line the server does not give is
+  said by the browser's own voice. "Offline voice" in the menu by play (`#off-row`, `cg-voice-offline`,
+  `offlineOn()`) downloads the model and makes such lines on the device: off unless the reader turns it on, and
+  never on a phone (`isMobile()`), in his words "not selected by default. And also not available in mobile
+  devices". The GPU voice shows only with offline mode on. Server video export is planned, not built.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

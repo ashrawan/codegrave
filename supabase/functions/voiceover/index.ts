@@ -16,13 +16,14 @@
 // the hours people listen).
 //
 //   { speak: { text, voice } }
-//       For a pro account only: one line said by a hosted copy of the same voice. Answer: the sound itself,
+//       One line said by a hosted copy of the same voice. Answer: the sound itself,
 //       16-bit samples at the rate in the header `x-rate`. Nothing is kept here: the reader's browser keeps it.
 //
 // Secrets (Supabase → Edge Functions → Secrets):
 //   OPENROUTER_API_KEY   required: the same one Create with AI uses
 //   VOICE_API_KEY        optional: an OpenRouter key of its own for the server voice, with a spending limit
-//   SPEECH_MONTHLY       optional: the most characters a month a pro account may have said (500000)
+//   SPEECH_FREE          optional: the most characters a month a free account may have said (30000)
+//   SPEECH_PRO           optional: the same for a pro account (500000)
 //   VOICE_SCRIPT_MODEL   optional: the OpenRouter model that writes the script
 
 const WRITER = Deno.env.get("VOICE_SCRIPT_MODEL") ?? "deepseek/deepseek-v4.1-flash";
@@ -34,15 +35,18 @@ const URL_ = Deno.env.get("SUPABASE_URL")!;
 const ANON = Deno.env.get("SUPABASE_ANON_KEY")!;
 const SERVICE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
-// The server voice (asked for, Nov 2026: voiceover "with server for pro users"): the same Kokoro voices the
+// The server voice (asked for, Nov 2026: voiceover made on a server, each account with its own limit): the same Kokoro voices the
 // browser runs, said by a hosted copy and paid for by the character, about a dollar a million. What keeps
 // the bill within a known most: the key's own spending limit at OpenRouter (set VOICE_API_KEY to a key made
-// for this, with a limit), the most characters a month for each account (SPEECH_MONTHLY), and the reader's
+// for this, with a limit), the most characters a month for each account (SPEECH_FREE, SPEECH_PRO), and the reader's
 // browser, which keeps every line it was sent so that hearing it again costs nothing. The host is named, since
 // the same model costs four times as much at another.
 const SPEECH_MODEL = Deno.env.get("SPEECH_MODEL") ?? "hexgrad/kokoro-82m";
 const SPEECH_HOST = Deno.env.get("SPEECH_HOST") ?? "deepinfra";
-const SPEECH_MONTHLY = Number(Deno.env.get("SPEECH_MONTHLY")) || 500_000;
+// The most characters a month an account may have said: a taste for a free account (about half an hour of
+// speech, three cents), and far more for pro (about nine hours, fifty cents).
+const SPEECH_FREE = Number(Deno.env.get("SPEECH_FREE")) || 30_000;
+const SPEECH_PRO = Number(Deno.env.get("SPEECH_PRO")) || 500_000;
 const SPEECH_VOICES = ["af_heart", "am_michael", "af_bella", "af_nicole", "bf_emma", "bm_george"];
 const SPEECH_RATE = 24000;   // Kokoro's own: the sound comes back as plain 16-bit samples at this rate
 
@@ -52,11 +56,11 @@ async function speak(account: string, ask: any): Promise<Response> {
   const key = Deno.env.get("VOICE_API_KEY") ?? Deno.env.get("OPENROUTER_API_KEY");
   if (!key) return json({ error: "The server voice is not switched on yet.", code: "not_configured" }, 503);
   const own = await service(`/rest/v1/profiles?id=eq.${account}&select=plan`).then((r) => (r.ok ? r.json() : [])).catch(() => []);
-  if (own[0]?.plan !== "pro") return json({ error: "The server voice is part of the pro plan.", code: "plan" }, 403);
+  const SPEECH_MONTHLY = own[0]?.plan === "pro" ? SPEECH_PRO : SPEECH_FREE;
   const count = (n: number) => service("/rest/v1/rpc/speech_add", { method: "POST", body: JSON.stringify({ who: account, n, most: SPEECH_MONTHLY }) }).then((r) => (r.ok ? r.json() : -2)).catch(() => -2);
   const total = await count(text.length);
   if (total === -2) return json({ error: "The server voice could not be reached. Try again." }, 502);
-  if (total < 0) return json({ error: "That is this month's server voice used up. Your browser's voice takes over.", code: "limit" }, 429);
+  if (total < 0) return json({ error: "That is this month's voice used up.", code: "limit" }, 429);
   try {
     const r = await fetch("https://openrouter.ai/api/v1/audio/speech", {
       method: "POST",
@@ -145,7 +149,7 @@ Deno.serve(async (req) => {
   let body: Record<string, any>;
   try { body = await req.json(); } catch (_e) { return json({ error: "That request could not be read." }, 400); }
 
-  // ---- a line said by the server, for a pro account
+  // ---- a line said by the server, within the account's share of the month
   if (body.speak) return speak(user.id, body.speak);
 
   const router = Deno.env.get("OPENROUTER_API_KEY");

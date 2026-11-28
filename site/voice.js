@@ -53,6 +53,16 @@ export function gpuOk() {
     } catch (e) { return false; }
   })());
 }
+// Offline mode (asked for, Nov 2026: the voice is made on the server, within each account's share of the month;
+// "if its expires, the user can still download on their device and go with that. This is offline mode", "not
+// selected by default. And also not available in mobile devices"). Off, nothing is ever downloaded: a line the
+// server does not give is said by the browser's own voice. On, the model is fetched once and lines are made here.
+const OFFLINE = 'cg-voice-offline';
+export function isMobile(n = typeof navigator === 'undefined' ? null : navigator) {
+  if (!n) return false;
+  return !!n.userAgentData?.mobile || /Android|iPhone|iPad|iPod|Mobile/i.test(n.userAgent || '') || (/Mac/i.test(n.platform || '') && n.maxTouchPoints > 1);
+}
+export function offlineOn() { try { return !isMobile() && localStorage.getItem(OFFLINE) === '1'; } catch (e) { return false; } }
 export const isSlow = (r = speedOf()) => r != null && r > SLOW;
 
 export const isVoice = (v) => VOICES.some(([id]) => id === v);
@@ -186,6 +196,9 @@ export function createSpeaker(status = () => {}) {
       // A pro account's line is said by the server (nothing to download); if that cannot be, by this device.
       const far = await fromServer(key, text, voice, now);
       if (far) return far;
+      // Not from the server and offline mode is off: nothing is downloaded, and whoever asked says the line
+      // with the browser's own voice.
+      if (!offlineOn()) { status({ plain: true }); throw new Error('no server'); }
       boot();
       return new Promise((ok, no) => {
         const j = { id: ++n, key, text, voice, ok, no };
@@ -231,12 +244,12 @@ export function createSpeaker(status = () => {}) {
   }
   // Have the model ready before anything is said: when a timeline with a voiceover is opened.
   let warmed = false;
-  function warm() { if (warmed || booted || has()) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
+  function warm() { if (warmed || booted || has() || !offlineOn()) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
   // Change between the processor and the graphics card: the worker starts again on the other model; lines
   // waiting to be made are made by it. `failed` is set when the graphics card could not load it.
   function engine(on, failed = false) {
     on = !!on;
-    try { localStorage.setItem(GPU, on ? '1' : '0'); } catch (e) {}
+    try { localStorage.setItem(GPU, on ? '1' : '0'); if (on) localStorage.setItem(OFFLINE, '1'); } catch (e) {}
     if (on === gpu && !failed) return;
     gpu = on;
     const was = warmed || booted;
@@ -253,7 +266,12 @@ export function createSpeaker(status = () => {}) {
     for (const t of texts) if (await c.match(lineKey(voice, t)).catch(() => null)) n++;
     return n;
   }
-  return { line, warm, engine, kept, server, far: () => has(), gpu: () => gpu, ready: () => booted };
+  // Offline mode on or off. A line that failed for want of it is asked for afresh next time.
+  function offline(on) {
+    try { localStorage.setItem(OFFLINE, on ? '1' : '0'); } catch (e) {}
+    status({ offline: offlineOn() });
+  }
+  return { line, warm, engine, kept, server, offline, far: () => has(), gpu: () => gpu, ready: () => booted };
 }
 
 // ---- playing it. `ctx()` gives the page's audio context once the reader has pressed play (null: no sound);

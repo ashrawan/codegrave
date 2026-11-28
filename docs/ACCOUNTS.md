@@ -278,18 +278,28 @@ What pro is for: the work a free account does in its own browser, done on a serv
 
 ### The server voice
 
-For a pro account the voiceover's lines are said by a server instead of the reader's device: the
+A voiceover's lines are said by a server, not by a model downloaded to the reader's device: the
 same Kokoro voices, from a hosted copy reached through OpenRouter, asked for one line at a time by
-the function `voiceover` (`{ speak }`). There is no model to download, so it starts at once and
+the function `voiceover` (`{ speak }`). There is nothing to download, so it starts at once and
 works on a phone. Nothing is stored on the server: the sound goes to the reader's browser, which
-keeps each line as it keeps the ones it makes itself. A line the server cannot give is made on the
-device as before (`server()` in `site/voice.js`, `speak()` in `site/account.js`).
+keeps each line (`server()` in `site/voice.js`, `speak()` in `site/account.js`).
+
+Every signed-in account has a share of it a month, counted in characters by the server: a taste
+for a free account (30,000, about half an hour of speech) and far more for pro (500,000, about
+nine hours). The account menu shows what is left. When the share is used up, and for a reader who
+is not signed in, the browser's own voice says the lines.
+
+**Offline mode.** On a computer the reader may turn on "Offline voice" in the menu by play: the
+model is then downloaded once (92 MB) and lines the server does not give are made on the device.
+It is off unless the reader turns it on, and it is not offered on a phone. The GPU voice is a way
+of making the voice on the device, so it shows only with offline mode on.
 
 It is paid for by the character (about a dollar a million), and three things keep the bill within
 a known most: a spending limit on the key itself at OpenRouter (the secret `VOICE_API_KEY`, a key
-made for this), a most a month for each account (`SPEECH_MONTHLY`, 500,000 characters, about nine
-hours of speech), and the browser's own store, so a line heard again costs nothing. The host is
-named in the request, since the same model costs several times more at another.
+made for the voice alone, which also shows what the voice costs apart from everything else), the
+share a month for each account (`SPEECH_FREE`, `SPEECH_PRO`), and the browser's own store, so a
+line heard again costs nothing. The host is named in the request, since the same model costs
+several times more at another.
 
 Setting it up (once, by the owner):
 
