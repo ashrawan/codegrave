@@ -525,7 +525,11 @@ How the page is put together:
   in these shapes. The settings' groups no longer fold: they are flat under small capitals, as drawn (the
   `details` stay in the page, always open), and a choice is a quiet pair at the right, the one that is on a
   shade lighter, not amber. The menu by play is Music and sound, Play speed, then "Voiceover" with its
-  switch, its voice and Subtitles together (asked for: "voiceover falls under the same").
+  switch, its voice and Subtitles together (asked for: "voiceover falls under the same"). The settings hold the
+  globe only: View, Look and Detail are a grid of tiles, a symbol over its name (`.seg.tiles`, asked for), then
+  Highlight country and Several views. "Advance: Auto / Arrow keys" was removed on request (`play.step` is
+  always false; the arrows already skip during play), and Theme left the settings because the account menu
+  has it; it still shows there for a reader who is not signed in (`#app-grp`), who has no account menu.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

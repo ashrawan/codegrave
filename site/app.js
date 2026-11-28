@@ -2816,7 +2816,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // The settings are in groups that fold (asked for, Nov 2026: "collapsible, like for the globe", so the menu
     // stays quiet however many settings come). A folded group says what is chosen in it; Globe opens folded.
     const groupsSay = () => { for (const g of $('more-menu').querySelectorAll('details.grp')) g.querySelector('summary small').textContent = [...g.querySelectorAll('.set:not([hidden]) .seg button[aria-pressed="true"]')].map((b) => b.textContent).join(' · '); };
-    const more = (on) => { if (on) groupsSay(); $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
+    const more = (on) => { if (on) { groupsSay(); $('app-grp').hidden = account.signedIn(); } $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
     $('more-menu').addEventListener('click', (e) => { e.stopPropagation(); setTimeout(groupsSay); });
     $('more-btn').addEventListener('click', (e) => { e.stopPropagation(); more($('more-menu').hidden); });
     document.addEventListener('click', () => more(false));
@@ -2906,16 +2906,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!b) return;
       told.subs = b.dataset.v === 'on'; store.set('cg-subs', told.subs ? '1' : '0'); drawTold();
     });
-    // Play: by itself, or one entry at a time by the arrow keys.
-    const stepShow = () => { for (const b of $('step').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'keys') === play.step)); };
-    play.step = store.get('cg-step') === 'keys'; stepShow();
-    $('step-row').addEventListener('click', (e) => {
-      e.stopPropagation();
-      const b = e.target.closest('button[data-v]');
-      if (!b) return;
-      play.step = b.dataset.v === 'keys'; store.set('cg-step', b.dataset.v); stepShow();
-      if (play.on) roadKick();
-    });
+    // "Advance: Auto / Arrow keys" was removed from the settings on request (Nov 2026): the arrows already go from
+    // entry to entry while play travels (`playSkip()`), so play is always automatic.
+    play.step = false;
     // In full screen a click on the stage brings the search and the menu button back for a moment.
     let peekT = null;
     $('stage').addEventListener('click', (e) => {

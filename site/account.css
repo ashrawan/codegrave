@@ -835,3 +835,12 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 :is(#more-menu, #vo-menu) .cap[hidden] { display: none; }
 :is(#more-menu, #vo-menu) .set:has(.sw) { padding-right: 9px; }
 #vo-menu :is(#gen-row, #pick-row) { padding-right: 0; }
+/* The globe's View, Look and Detail as a grid of tiles, a symbol over its name (asked for, Nov 2026). */
+#more-menu .set:has(.tiles) { grid-template-columns: 58px minmax(0, 1fr); align-items: center; gap: 8px; min-height: 0; padding: 3px 8px 3px 10px; }
+#more-menu .set:has(.tiles) .lbl { font-size: 12.5px; color: var(--muted); }
+#more-menu .seg.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); justify-self: stretch; gap: 6px; padding: 0; background: none; }
+#more-menu .seg.tiles button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; height: 54px; padding: 0 2px; font-size: 11.5px; color: var(--muted); background: var(--raised); border: 1px solid transparent; border-radius: 10px; }
+#more-menu .seg.tiles button:hover { color: var(--text); }
+#more-menu .seg.tiles button[aria-pressed="true"] { font-weight: 500; color: var(--text); background: color-mix(in srgb, var(--acc) 12%, var(--raised)); border-color: color-mix(in srgb, var(--acc) 55%, transparent); }
+#more-menu .seg.tiles button[aria-pressed="true"] svg { color: var(--acc); }
+#more-menu details[hidden] { display: none; }
