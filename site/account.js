@@ -10,7 +10,7 @@ import { EFFORTS, MAX_ENTRIES, MODELS, findPictures, partialSpec, specToView, vi
 import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
-import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, isSlow, gpuOk, GPU_MB, MODEL_MB, isMobile, listen as hear } from './voice.js';
+import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, isSlow, gpuOk, GPU_MB, MODEL_MB, isMobile, offlineOn, listen as hear } from './voice.js';
 export const CONFIG = {
   url: 'https://wwgmelafchslapxiccot.supabase.co',
   key: 'sb_publishable_IykysSfgNLw4CfaqxP2CqA_YNcfq0SW',
@@ -153,7 +153,7 @@ export function createAccount(app) {
   // may turn on Offline voice, which downloads the model and makes the voice there.
   let spent = false, plainSaid = false;
   const hasSpeak = () => !!user && !spent;
-  const offlineHint = () => (isMobile() ? '' : ' Or turn on Offline voice in the menu by play.');
+  const offlineHint = () => (isMobile() ? '' : ' Or turn on Offline voice where you choose the voice.');
   function plainVoice() {
     if (plainSaid) return; plainSaid = true;
     if (!user) toast('This is your browser’s own voice. Sign in to hear the full voice.' + offlineHint());
@@ -824,7 +824,8 @@ export function createAccount(app) {
     // script as it is told at the right, "this is your script", to write again or to try in another voice.
     const kok = VOICES.filter(([v]) => v !== 'device'), dev = VOICES.find(([v]) => v === 'device');
     const voiceEl = ([v, name, w], cls = '') => `<label class="vo-voice ${cls}"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}" title="Listen">${PLAY}<span>Listen</span></button><span><b>${esc(name)}</b><small>${esc(w)}</small></span><i aria-hidden="true"></i></label>`;
-    const notes = `<div class="vo-gpu" hidden><span><b></b><small></small></span><button type="button" class="big"></button></div>
+    const notes = `<div class="vo-gpu vo-off" hidden><span><b></b><small></small></span><button type="button" class="big"></button></div>
+      <div class="vo-gpu" hidden><span><b></b><small></small></span><button type="button" class="big"></button></div>
       <p class="vo-load" hidden></p>
       <p class="vo-fetch" hidden></p>
       <p class="vo-slow" hidden>This device makes the voice slowly. Play will pause at each card until its line is ready.</p>
@@ -850,7 +851,7 @@ export function createAccount(app) {
     // The voice starts downloading as the dialog opens, and the dialog says how far it has come. Where the
     // graphics card can make it, the GPU voice is offered with its size.
     const pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
-    const sp = app.speaker(), gp = d.querySelector('.vo-gpu'), slow = d.querySelector('.vo-slow');
+    const sp = app.speaker(), gp = d.querySelector('.vo-gpu:not(.vo-off)'), off = d.querySelector('.vo-off'), slow = d.querySelector('.vo-slow');
     const drawSlow = () => { slow.hidden = !isSlow(); };
     // "This device" downloads nothing: the model is fetched only once a Kokoro voice is picked.
     let gpuFine = false;
@@ -864,7 +865,18 @@ export function createAccount(app) {
       gp.querySelector('small').textContent = on ? `Made on your graphics card with the full model (${GPU_MB} MB).` : `Faster, with the full model, on your graphics card. A one-time ${GPU_MB} MB download.`;
       gp.querySelector('button').textContent = on ? 'Turn off' : `Download ${GPU_MB} MB`;
     };
-    const drawPick = () => { gp.hidden = !gpuFine || !kokoro(); drawGpu(); if (kokoro()) sp.warm(); };
+    // Offline voice lives here, with the voices, not in the menu by play (asked for, Nov 2026): off unless
+    // the reader turns it on, and never on a phone. The GPU voice is a way of making it, so it shows only with it.
+    const drawOff = () => {
+      const on = offlineOn();
+      off.hidden = isMobile() || !kokoro();
+      off.classList.toggle('on', on);
+      off.querySelector('b').textContent = on ? 'Offline voice is on' : 'Offline voice';
+      off.querySelector('small').textContent = on ? 'The voice is made on this computer when the server cannot give it.' : `Makes the voice on this computer when your share of the server voice is used up, or with no connection. A one-time ${MODEL_MB} MB download.`;
+      off.querySelector('button').textContent = on ? 'Turn off' : 'Turn on';
+    };
+    const drawPick = () => { drawOff(); gp.hidden = !gpuFine || !kokoro() || !offlineOn(); drawGpu(); if (kokoro()) sp.warm(); };
+    off.querySelector('button').addEventListener('click', () => { sp.offline(!offlineOn()); drawPick(); });
     gpuOk().then((ok) => { gpuFine = ok && !isMobile(); drawPick(); });
     gp.querySelector('button').addEventListener('click', () => { sp.engine(!sp.gpu()); drawGpu(); drawSlow(); sp.warm(); });
     d.addEventListener('change', (e) => { if (e.target.name === 'voice') drawPick(); });

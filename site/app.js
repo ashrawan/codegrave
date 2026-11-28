@@ -12,7 +12,7 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
-import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk, voiceLabel, isMobile, offlineOn } from './voice.js';
+import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk, voiceLabel, offlineOn } from './voice.js';
 import { exportFilm, canExport, canSize, canFast } from './export.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
@@ -2656,8 +2656,6 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // Offered where the device has a graphics card; off until the reader turns it on (asked for, Nov 2026).
     // Offline mode (asked for, Nov 2026): the voice made on this computer, off unless the reader turns it on,
     // and not offered on a phone. The GPU voice is a way of making it here, so it shows only with it.
-    $('off-row').hidden = isMobile();
-    for (const b of $('off-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === offlineOn()));
     $('gpu-row').hidden = !told.gpuOk || !offlineOn();
     for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
     for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
@@ -2895,11 +2893,6 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     $('sound-seg').addEventListener('click', (e) => { const b = e.target.closest('button'); if (b && (b.dataset.v === 'on') !== sound.on) toggleSound(); });
     for (const id of ['vo-gen', 'vo-change']) $(id).addEventListener('click', () => { voMenu(false); account.voiceQuick(); });
     document.addEventListener('click', () => voMenu(false));
-    $('off-row').addEventListener('click', (e) => {
-      e.stopPropagation();
-      const b = e.target.closest('button[data-v]');
-      if (b) { speaker.offline(b.dataset.v === 'on'); if (b.dataset.v === 'on' && telling() && !voice.device()) speaker.warm(); }
-    });
     $('gpu-row').addEventListener('click', (e) => {
       e.stopPropagation();
       const b = e.target.closest('button[data-v]');

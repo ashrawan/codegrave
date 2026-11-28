@@ -289,7 +289,7 @@ for a free account (30,000, about half an hour of speech) and far more for pro (
 nine hours). The account menu shows what is left. When the share is used up, and for a reader who
 is not signed in, the browser's own voice says the lines.
 
-**Offline mode.** On a computer the reader may turn on "Offline voice" in the menu by play: the
+**Offline mode.** On a computer the reader may turn on "Offline voice" in the voice dialog, under the voices: the
 model is then downloaded once (92 MB) and lines the server does not give are made on the device.
 It is off unless the reader turns it on, and it is not offered on a phone. The GPU voice is a way
 of making the voice on the device, so it shows only with offline mode on.

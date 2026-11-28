@@ -512,7 +512,7 @@ How the page is put together:
   line at a time, kept in the browser like any other line and never on the server (`speaker.server()` in
   `site/voice.js`). Each signed-in account has a share of it a month (free a taste, pro far more; `#me-say` in
   the account menu shows what is left), and the key has a spending limit. A line the server does not give is
-  said by the browser's own voice. "Offline voice" in the menu by play (`#off-row`, `cg-voice-offline`,
+  said by the browser's own voice. "Offline voice" in the voice dialog, with the voices (`.vo-off` in `voiceMenu()`; it stood in the menu by play first and was moved on request; `cg-voice-offline`,
   `offlineOn()`) downloads the model and makes such lines on the device: off unless the reader turns it on, and
   never on a phone (`isMobile()`), in his words "not selected by default. And also not available in mobile
   devices". The GPU voice shows only with offline mode on. Server video export is planned, not built.
