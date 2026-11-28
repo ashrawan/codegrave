@@ -443,7 +443,7 @@ How the page is put together:
   what the points above say about the marker standing at the left).** The marker of the strip stands towards the right
   (`nowAt()` in `site/globe.js`); at a card it stands right on the entry's dot (`DOT_SHIFT`; asked for, Nov 2026,
   after it stood just before it), and between cards it travels from dot to dot, in both directions; what was passed stays in sight at
-  its left, and what is still to come is not shown until its turn, coming in from the right ("those items not yet
+  its left, and what is still to come shows only its dot (an empty ring) until its turn, when its name comes in (asked for, Nov 2026) ("those items not yet
   visible should not be in timeline"). It is so in both directions of the timeline, and the exported film draws
   its time line the same way (`shelf()` in `site/export.js`; change the two together).
 - **A default voiceover for a built timeline (Nov 2026, asked for).** `data/community/<owner>/voices/<view>.json`
