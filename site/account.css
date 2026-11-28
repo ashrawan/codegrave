@@ -815,3 +815,23 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 :is(#more-menu, #vo-menu) .set:has(.sw) { grid-template-columns: minmax(0, 1fr) auto; padding-right: 10px; }
 #more-menu { width: 358px; }
 #vo-menu :is(#gen-row, #pick-row) { padding-right: 4px; }
+/* Settings as drawn in design A: flat groups under small capitals (the groups no longer fold), and choices as
+   quiet pairs at the right, the one that is on a shade lighter, not amber. */
+#more-menu .grp { margin: 0; padding: 0; border: 0; }
+#more-menu .grp[open] { padding-bottom: 0; }
+#more-menu .grp summary { height: auto; padding: 9px 10px 4px; font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); pointer-events: none; cursor: default; }
+#more-menu .grp summary .chev, #more-menu .grp summary small { display: none; }
+#more-menu .m-head { padding-bottom: 2px; }
+#more-menu hr, #more-menu .grp + hr { margin: 6px 2px; }
+#more-menu #more-info { min-height: 38px; gap: 11px; color: var(--text); font-size: 13.5px; }
+:is(#more-menu, #vo-menu) .set { grid-template-columns: minmax(0, 1fr) auto; padding-right: 8px; }
+:is(#more-menu, #vo-menu) .seg:not(.sw) { display: flex; justify-self: end; gap: 0; padding: 2px; background: var(--raised); border: 0; border-radius: 9px; }
+:is(#more-menu, #vo-menu) .seg:not(.sw) button { flex: none; height: 26px; padding: 0 9px; font-size: 12px; font-weight: 400; color: var(--muted); background: none; border: 0; border-radius: 7px; box-shadow: none; }
+:is(#more-menu, #vo-menu) .seg:not(.sw) button[aria-pressed="true"] { font-weight: 500; color: var(--text); background: color-mix(in srgb, var(--text) 16%, var(--raised)); box-shadow: none; }
+.pop.menu.acct .seg { background: var(--raised); }
+.pop.menu.acct .seg button[aria-checked="true"] { font-weight: 500; color: var(--text); background: color-mix(in srgb, var(--text) 16%, var(--raised)); box-shadow: none; }
+#vo-menu #pace-row { grid-template-columns: auto minmax(0, 1fr); }
+#more-menu { width: 336px; }
+:is(#more-menu, #vo-menu) .cap[hidden] { display: none; }
+:is(#more-menu, #vo-menu) .set:has(.sw) { padding-right: 9px; }
+#vo-menu :is(#gen-row, #pick-row) { padding-right: 0; }

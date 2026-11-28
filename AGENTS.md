@@ -522,7 +522,10 @@ How the page is put together:
   (`.m-head`, with a chip for the plan or the state), every row has an icon, an On / Off pair is a switch
   (`.seg.sw`: both buttons stay in the page, so the handlers are unchanged), what is left is a meter
   (`.m-meter`) and the one thing to press is lit (`.m-pri` Go Pro, `.m-out` Publish). Keep new menus and rows
-  in these shapes.
+  in these shapes. The settings' groups no longer fold: they are flat under small capitals, as drawn (the
+  `details` stay in the page, always open), and a choice is a quiet pair at the right, the one that is on a
+  shade lighter, not amber. The menu by play is Music and sound, Play speed, then "Voiceover" with its
+  switch, its voice and Subtitles together (asked for: "voiceover falls under the same").
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound
