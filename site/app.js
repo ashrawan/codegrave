@@ -3264,6 +3264,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), mark: stepOf(p).mark || '', summary: p.t.summary || '' })) }; },
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
   });
+  // A pro account's voiceover is said by the server (site/voice.js, `server()`); everyone else's by their own device.
+  speaker.server(account.speak, account.hasSpeak);
   const authFailed = account.boot();      // before the address is read: a returning sign-in leaves its tokens after "#"
   // Only a link with ?film=1 fetches site/film/, and without its key that does nothing and the page starts as ever.
   if (/[?&]film=1(&|$)/.test(location.search)) import('./film/boot.js').then((m) => m.default({ esc, loadView, useView, viewById, stepOf, picturesOf, createGlobe, api: account.api, ask: account.ask, replaceView, boot: () => (bootReady = getJSON('boot.json').then(useBoot)) })).then((on) => on || start(), start);

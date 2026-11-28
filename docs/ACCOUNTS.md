@@ -276,6 +276,21 @@ username, so nobody can switch it on for themselves.
 What pro is for: the work a free account does in its own browser, done on a server instead
 (voiceover and video export), and a larger AI allowance. A free account keeps everything it has.
 
+### The server voice
+
+For a pro account the voiceover's lines are said by a server instead of the reader's device: the
+same Kokoro voices, from a hosted copy reached through OpenRouter, asked for one line at a time by
+the function `voiceover` (`{ speak }`). There is no model to download, so it starts at once and
+works on a phone. Nothing is stored on the server: the sound goes to the reader's browser, which
+keeps each line as it keeps the ones it makes itself. A line the server cannot give is made on the
+device as before (`server()` in `site/voice.js`, `speak()` in `site/account.js`).
+
+It is paid for by the character (about a dollar a million), and three things keep the bill within
+a known most: a spending limit on the key itself at OpenRouter (the secret `VOICE_API_KEY`, a key
+made for this), a most a month for each account (`SPEECH_MONTHLY`, 500,000 characters, about nine
+hours of speech), and the browser's own store, so a line heard again costs nothing. The host is
+named in the request, since the same model costs several times more at another.
+
 Setting it up (once, by the owner):
 
 1. In Stripe, a product "codegrave Pro" with one monthly price.

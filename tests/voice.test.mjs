@@ -53,3 +53,10 @@ test('speech is made quicker or slower to length, and left alone at 1x', () => {
   assert.ok(Math.abs(hz - 220) < 8, 'pitch ' + hz);
   assert.equal(voiceRate(2), 1.6); assert.equal(voiceRate(0.25), 0.7); assert.equal(voiceRate(1), 1);
 });
+
+test('the server sends 16-bit samples, low byte first, and the page plays floats', async () => {
+  const { pcmToFloat } = await import('../site/voice.js');
+  const out = pcmToFloat(new Uint8Array([0, 0, 0, 64, 0, 128, 255, 127, 9]).buffer);
+  assert.equal(out.length, 4);
+  assert.deepEqual([...out].map((x) => Math.round(x * 1000) / 1000), [0, 0.5, -1, 1]);
+});

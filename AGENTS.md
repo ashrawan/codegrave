@@ -504,6 +504,14 @@ How the page is put together:
 - **Export says when the graphics hardware helps (Nov 2026, asked for).** The browser's encoder already uses the
   device's video hardware where there is one; `canFast()` in `site/export.js` only asks whether it can, and the
   dialog's foot then reads "Made on your device, sped up by its graphics hardware. Nothing is uploaded."
+- **The pro plan and the server voice (Nov 2026, asked for; `docs/ACCOUNTS.md`, "The pro plan").** An account
+  is free or pro (`plan` on its row, written only by the function `stripe-webhook`). The account menu has "Go
+  Pro" or "Manage" (`#me-plan`, `billing()` in `site/account.js`), which open Stripe's own pages through the
+  function `billing`. For a pro account the voiceover's lines are said by a hosted Kokoro through the function
+  `voiceover` (`{ speak }`), one line at a time, kept in the browser like any other line and never on the
+  server; the device makes any line the server cannot give (`speaker.server()` in `site/voice.js`). A most a
+  month for each account and a spending limit on the key keep the cost known. A free account keeps everything
+  it had. Server video export is planned, not built.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

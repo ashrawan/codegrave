@@ -110,6 +110,14 @@ export function stretch(x, rate, sr = 24000) {
   return out.subarray(0, n);
 }
 
+// The server's sound is 16-bit samples, low byte first; the page plays floats between -1 and 1.
+export const FAR_AT_ONCE = 3;
+export function pcmToFloat(buf) {
+  const v = new DataView(buf), out = new Float32Array(buf.byteLength >> 1);
+  for (let i = 0; i < out.length; i++) out[i] = v.getInt16(i * 2, true) / 32768;
+  return out;
+}
+
 // ---- making the sound. One worker holds Kokoro and makes one line at a time; a line asked for `now` goes to
 // the front. `status(s)` is told how it goes: { loading: 0..1 }, { ready: true } or { failed: message }.
 export function createSpeaker(status = () => {}) {
@@ -175,6 +183,9 @@ export function createSpeaker(status = () => {}) {
     }
     const p = opened().then((c) => c?.match(key)).then(async (r) => {
       if (r) return { audio: new Float32Array(await r.arrayBuffer()), rate: Number(r.headers.get('x-rate')) || 24000 };
+      // A pro account's line is said by the server (nothing to download); if that cannot be, by this device.
+      const far = await fromServer(key, text, voice, now);
+      if (far) return far;
       boot();
       return new Promise((ok, no) => {
         const j = { id: ++n, key, text, voice, ok, no };
@@ -184,6 +195,29 @@ export function createSpeaker(status = () => {}) {
     }).catch((e) => { made.delete(key); throw e; });
     made.set(key, p);
     return p;
+  }
+  // The server voice (asked for, Nov 2026: voiceover made on a server for pro accounts). `remote(text, voice)`
+  // is lent by the page: it answers the sound as 16-bit samples ({ pcm: ArrayBuffer, rate }), or null when this
+  // reader has no server voice. A few lines are asked for at a time, the one play needs now first. A line that
+  // cannot be had is made on the device like any other. `on()` says whether this reader has the server voice now.
+  let remote = null, has = () => false, asking = 0;
+  const waiting = [];
+  function server(fn, on) { remote = fn; has = on; }
+  function pump() {
+    while (asking < FAR_AT_ONCE && waiting.length) {
+      const w = waiting.shift(); asking++;
+      Promise.resolve().then(() => (remote ? remote(w.text, w.voice) : null)).then((got) => {
+        if (!got) return w.ok(null);
+        const out = { audio: pcmToFloat(got.pcm), rate: got.rate || 24000 };
+        status({ made: true });
+        opened().then((c) => c?.put(w.key, new Response(out.audio.slice(), { headers: { 'x-rate': String(out.rate) } }))).catch(() => {});
+        w.ok(out);
+      }).catch(() => w.ok(null)).finally(() => { asking--; pump(); });
+    }
+  }
+  function fromServer(key, text, voice, now) {
+    if (!remote || !has()) return Promise.resolve(null);
+    return new Promise((ok) => { const w = { key, text, voice, ok }; if (now) waiting.unshift(w); else waiting.push(w); pump(); });
   }
   // How fast this device makes speech: seconds to make one second of it, kept in this browser so the voice
   // dialog can warn before the next time. The first line is left out: it is slow while the engine warms up.
@@ -197,7 +231,7 @@ export function createSpeaker(status = () => {}) {
   }
   // Have the model ready before anything is said: when a timeline with a voiceover is opened.
   let warmed = false;
-  function warm() { if (warmed || booted) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
+  function warm() { if (warmed || booted || has()) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
   // Change between the processor and the graphics card: the worker starts again on the other model; lines
   // waiting to be made are made by it. `failed` is set when the graphics card could not load it.
   function engine(on, failed = false) {
@@ -219,7 +253,7 @@ export function createSpeaker(status = () => {}) {
     for (const t of texts) if (await c.match(lineKey(voice, t)).catch(() => null)) n++;
     return n;
   }
-  return { line, warm, engine, kept, gpu: () => gpu, ready: () => booted };
+  return { line, warm, engine, kept, server, far: () => has(), gpu: () => gpu, ready: () => booted };
 }
 
 // ---- playing it. `ctx()` gives the page's audio context once the reader has pressed play (null: no sound);

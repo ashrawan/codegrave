@@ -143,6 +143,18 @@ export function createAccount(app) {
       location.assign(got.url);
     } catch (e) { toast(e.message); }
   }
+  // The server voice (pro): one line of a voiceover said by the server, as 16-bit samples. Null when this
+  // reader has none (not signed in, not pro, or this month's share is used), and the device then makes it.
+  let spent = false;
+  const hasSpeak = () => !!user && isPro() && !spent;
+  async function speak(text, voice) {
+    if (!hasSpeak()) return null;
+    const t = await token();
+    const r = await fetch(CONFIG.url + '/functions/v1/voiceover', { method: 'POST', headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' }, body: JSON.stringify({ speak: { text, voice } }) });
+    if (r.status === 429 && !spent) { spent = true; toast('This month’s server voice is used up, so your browser makes the voice.'); }
+    if (!r.ok) return null;
+    return { pcm: await r.arrayBuffer(), rate: Number(r.headers.get('x-rate')) || 24000 };
+  }
   // Back from the checkout: Stripe tells the server a moment after it sends the reader back, so the row is
   // read again a few times until it says pro.
   async function welcomed() {
@@ -1324,5 +1336,5 @@ export function createAccount(app) {
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { voiceQuick, boot, start, api, ask: ask_ai, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, isPro, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
+  return { voiceQuick, boot, start, api, ask: ask_ai, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, isPro, speak, hasSpeak, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
 }
