@@ -2585,7 +2585,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (Number.isInteger(o.from) && Number.isInteger(o.to)) { steps.splice(o.to + 1); steps.splice(0, o.from); }
     const css = getComputedStyle(document.documentElement);
     return exportFilm({
-      kind: o.kind, shape: o.shape, short: o.short, scene: o.scene, subs: !!o.subs, steps, step, stop, speaker, voice: voiceNow(),
+      kind: o.kind, shape: o.shape, short: o.short, scene: o.scene, subs: !!o.subs, steps, step, stop, speaker, clip: (id) => voice.clip(id), voice: voiceNow(),
       makeGlobe: (host, opts) => createGlobe(host, { esc, calm: () => false, open() {}, goTo() {}, seek() {}, credit: null, ...opts }),
       title: L && L.lanes.length ? L.lanes.map((ln) => ln.view.name).join(' and ') : 'timeline',
       music: new URL(trackNow() || MUSIC, document.baseURI).href,

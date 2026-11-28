@@ -362,7 +362,7 @@ async function stageGlobe(make, steps, w, h, lay) {
 // line's sound; `step(what, part)` is told how far it has come (what: 'voice', 'sound', 'pictures', 'video',
 // 'saving'; part 0 to 1); `stop()` says the reader gave up. Returns the name of the file saved.
 // `shape` is 'wide', 'tall' or 'square' and `short` 1080 or 720; `scene` is 'globe' or 'full'; `makeGlobe` is lent by the page.
-export async function exportFilm({ kind, title, steps, voice, speaker, music, fonts, subs = false, shape = 'wide', short = 1080, scene = 'full', makeGlobe = null, step = () => {}, stop = () => false }) {
+export async function exportFilm({ kind, title, steps, voice, speaker, clip = null, music, fonts, subs = false, shape = 'wide', short = 1080, scene = 'full', makeGlobe = null, step = () => {}, stop = () => false }) {
   const { w: W, h: H } = sizeOf(shape, short);
   if (!steps.length) throw new Error('There is nothing on the timeline to export.');
   const voiced = kind !== 'video' && !!voice && voice.voice !== 'device' && voice.lines.length > 0;
@@ -374,7 +374,8 @@ export async function exportFilm({ kind, title, steps, voice, speaker, music, fo
     let n = 0;
     for (const l of voice.lines) {
       gone(); step('voice', n++ / voice.lines.length);
-      const s = await speaker.line(l.text, voice.voice).catch(() => null);
+      // `clip(id)`, where the page gives one, takes the line from the view's one file (a built view's default).
+      const s = await (clip ? clip(l.id) : speaker.line(l.text, voice.voice)).catch(() => null);
       if (s) { sounds.set(l.id, s); secs[l.id] = s.audio.length / s.rate; texts.set(l.id, l.text); }
     }
   }

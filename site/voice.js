@@ -397,6 +397,14 @@ export function createVoice({ ctx, said, speaker }) {
       if (!cur.buf) said('', true);
       return true;
     },
+    // A line's sound as made, from the view's one file where there is one, else made or kept as any line (for
+    // an export, which must have the very words the page tells).
+    clip(id) {
+      const l = S.lines.get(id);
+      if (!l) return Promise.reject(new Error('no line'));
+      if (S.file && S.file.voice === S.voice && S.file.at.has(id)) return part(S.file, id).catch(() => speaker.line(l.text, S.voice));
+      return speaker.line(l.text, S.voice);
+    },
     // A line is being said, or is being made.
     busy: () => !!S.cur && !S.cur.done,
     // Seconds left of the line being said (Infinity while it is still being made, held, or said by the device).
