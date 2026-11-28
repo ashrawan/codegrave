@@ -42,7 +42,7 @@ const { KokoroTTS } = await import('kokoro-js');
 const MODEL = 'onnx-community/Kokoro-82M-v1.0-ONNX', THREADS = +process.env.VOICE_THREADS || 0;
 let tts;
 if (THREADS) {
-  // Several runs side by side (tools/voice/local.mjs): each keeps to its share of the processor's cores.
+  // Several runs side by side (the Mac script): each keeps to its share of the processor's cores.
   const { StyleTextToSpeech2Model, AutoTokenizer } = await import('@huggingface/transformers');
   const model = await StyleTextToSpeech2Model.from_pretrained(MODEL, { dtype: 'fp32', device: 'cpu', session_options: { intraOpNumThreads: THREADS, interOpNumThreads: 1 } });
   tts = new KokoroTTS(model, await AutoTokenizer.from_pretrained(MODEL));
