@@ -231,7 +231,9 @@ export function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
         c.font = font(!s.place && globe);
         const nm = s.name.length > 36 ? s.name.slice(0, 34) + '…' : s.name, w = px(18) + c.measureText(nm).width;
         const o = { x, nm, w, yr: s.mark && s.mark !== said ? s.mark : '', it: !s.place && globe }; if (o.yr) said = s.mark;
-        x += w + gap; return o;
+        // A year wider than its name keeps the next name clear of it, as on the page.
+        if (o.yr) { c.font = `500 ${ys}px ${sans}`; o.w = Math.max(o.w, c.measureText(o.yr).width + px(6)); }
+        x += o.w + gap; return o;
       });
     }
     // As on the page: the marker stands on the dot of the entry in front, what has passed at its

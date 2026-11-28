@@ -418,7 +418,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     if (shelf.hidden) return;
     let said = '';
     track.innerHTML = S.steps.map((s, i) => {
-      const yr = s.mark && s.mark !== said ? `<u>${esc(s.mark)}</u>` : '';
+      // The year is written under the entry; a hidden copy in the flow keeps the next name clear of it.
+      const yr = s.mark && s.mark !== said ? `<u>${esc(s.mark)}</u><i class="yw" aria-hidden="true">${esc(s.mark)}</i>` : '';
       if (yr) said = s.mark;
       return `<button type="button" class="g-nm${s.place ? '' : ' off'}" data-i="${i}" style="--c:${s.col}" title="${esc(s.when)}"><b></b>${esc(s.name)}${yr}</button>`;
     }).join('');
