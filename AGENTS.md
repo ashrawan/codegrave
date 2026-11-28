@@ -520,14 +520,17 @@ How the page is put together:
   devices". The two are plain modes: online the server says the lines, offline this computer makes
   them and the server is not asked (`line()` in `site/voice.js`); the switch says which is on and whether the
   model is downloaded, and the download's progress and the GPU voice stand inside it. The GPU voice shows only with offline mode on. Server video export is planned, not built.
-- **The voice's sound is kept in Cloudflare R2 (Nov 2026, asked for: "the users ones also goes to the
-  Cloudflare", and what is heard often is served from its cache; this replaces "never on the server" above for
-  the server voice).** One file a line, named by the voice and a hash of the words (`storeKey()` in
-  `site/voice.js` and in the function `voiceover`; change the two together), so a line is made and paid for once,
-  whoever asks. The function looks in the store before it counts a line against the account, and writes what it
-  makes. The page asks the store's public address first (`STORE` in `site/voice.js`, `fromStore()`; empty until
-  the bucket has one), which needs no sign-in, and gives up after `STORE_MISSES` misses in a row. Voiceovers for
-  the built views are to be made into the same store. Without the function's R2 secrets nothing is kept.
+- **A voiceover is one file in Cloudflare R2 (Nov 2026, asked for: a wiki view and a published timeline alike,
+  "for consistency"; per-line files were found "complicated" and were dropped).** A wiki view's file is made by
+  `tools/voice/` and kept at `views/wiki/<view>/<voice>/<v>.mp3`. A published timeline's is made by the
+  function `voiceover` (`{ record: { id } }`): every line is said by the server voice as an MP3, side by side, and
+  the lines are joined frame by frame with `GAP` seconds of silence between them (`joinMp3()` in
+  `supabase/functions/voiceover/mp3.js`, nothing encoded again), kept at `views/<username>/<slug>/<voice>/<v>.mp3`
+  with its words and cues in the same table as the wiki's. The page asks for it when the timeline is published
+  and when a published timeline's voiceover changes (`voiceFile()` in `site/account.js`), and keeps the answer
+  on the row as `voice.audio`, so every reader plays from that one file (`STORE`, `fileOf()` in `site/voice.js`).
+  An unpublished timeline's voice stays on the reader's device: taking a timeline down deletes its file. Lines on
+  their own are not kept on the server. Without the function's R2 secrets nothing is kept.
 - **The voice dialog is design A, "Two tabs" (Nov 2026, picked from three after the pill and box were found "too
   noisy"; this replaces what the points above say about the voice dialogs).** `voiceMenu()` draws one column
   (`.vo-form.vx`): the title, Online and Offline as two tabs (`.vo-tabs`, hidden on a phone), the voice as one

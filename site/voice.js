@@ -82,20 +82,10 @@ export function lineKey(voice, text) {
   return `https://voice.codegrave.invalid/${voice}/${(h >>> 0).toString(36)}-${text.length}`;
 }
 
-// Where a line's sound is kept for everyone (asked for, Nov 2026: the voice files go to Cloudflare, and what is
-// heard often is served from its cache): one file a line in a public store, named by the voice and a hash of the
-// words, so the same line in the same voice is made once, whoever asks. The function `voiceover` writes it and
-// names it the same way (`storeKey()` there; change the two together). `STORE` is the store's public address,
-// with no slash at its end; while it is empty the page does not ask the store, and the function still does.
+// The public store (Cloudflare R2) where a timeline's voiceover is kept as one file: a wiki view's, and a
+// published timeline's (asked for, Nov 2026). Lines on their own are not kept there; this browser keeps them.
 export const STORE = 'https://pub-f5afdcf4890045a5ab305d4297af0129.r2.dev';
 export const sayText = (s) => String(s ?? '').replace(/\s+/g, ' ').trim().slice(0, 700);
-export async function storeKey(voice, text) {
-  const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(voice + '\n' + sayText(text)));
-  return `v1/${voice}/${[...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, '0')).join('')}.pcm`;
-}
-// After this many lines in a row that the store does not have, it is not asked again for a while: a script
-// nobody has heard yet has no files there, and each miss is a wasted request.
-export const STORE_MISSES = 3;
 
 // The lines in the order they are made: the one asked for now first, then those after it, then the rest.
 export function madeOrder(ids, from) {
@@ -211,7 +201,7 @@ export function createSpeaker(status = () => {}) {
       // A pro account's line is said by the server (nothing to download); if that cannot be, by this device.
       // Two plain modes (asked for, Nov 2026: "clearly know whether it is the online active or it is the offline"):
       // online, the server says the line; offline, this computer makes it and the server is not asked.
-      const far = offlineOn() ? null : (await fromStore(key, text, voice)) || (await fromServer(key, text, voice, now));
+      const far = offlineOn() ? null : await fromServer(key, text, voice, now);
       if (far) return far;
       // Not from the server and offline mode is off: nothing is downloaded, and whoever asked says the line
       // with the browser's own voice.
@@ -244,20 +234,6 @@ export function createSpeaker(status = () => {}) {
         w.ok(out);
       }).catch(() => w.ok(null)).finally(() => { asking--; pump(); });
     }
-  }
-  // The public store first: a line anyone has heard before is there, costs no account anything and comes from
-  // Cloudflare's cache. It needs no sign-in, so a built timeline's voiceover plays for every reader.
-  let misses = 0;
-  async function fromStore(key, text, voice) {
-    if (!STORE || misses >= STORE_MISSES || !isVoice(voice) || voice === 'device') return null;
-    try {
-      const r = await fetch(STORE + '/' + (await storeKey(voice, text)));
-      if (!r.ok) { misses++; return null; }
-      const out = { audio: pcmToFloat(await r.arrayBuffer()), rate: 24000 };
-      misses = 0; status({ made: true });
-      opened().then((c) => c?.put(key, new Response(out.audio.slice(), { headers: { 'x-rate': String(out.rate) } }))).catch(() => {});
-      return out;
-    } catch (e) { misses++; return null; }
   }
   function fromServer(key, text, voice, now) {
     if (!remote || !has()) return Promise.resolve(null);

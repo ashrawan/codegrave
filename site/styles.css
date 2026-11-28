@@ -705,6 +705,7 @@ body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
 #globe .g-track { position: absolute; left: 0; bottom: 0; height: 100%; display: flex; align-items: flex-end; gap: 30px; white-space: nowrap; will-change: transform; }
 #globe .g-track u { position: absolute; left: 50%; top: calc(100% + 8px); transform: translateX(-50%); text-decoration: none; font-size: 10.5px; line-height: 12px; letter-spacing: .02em; font-variant-numeric: tabular-nums; color: #8f97a8; pointer-events: none; }
 #globe .g-track .on u { color: #ece7dc; }
+#globe .g-track .yw { display: block; height: 0; overflow: hidden; visibility: hidden; font-size: 10.5px; font-style: normal; line-height: 0; letter-spacing: .02em; font-variant-numeric: tabular-nums; }
 #globe .g-note { position: absolute; left: 50%; top: 45%; transform: translateX(-50%); margin: 0; font-size: 13px; color: var(--muted); }
 #globe .g-note[hidden] { display: none; }
 @media (max-width: 699px) {

@@ -113,14 +113,14 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   let RANKED = false, AX = null;
   const axisKey = (v) => (v?.axis === 'scale' ? 'scale:' + v.id : v?.axis === 'rank' ? 'rank' : 'time');
   const isRanked = () => state.views.length > 0 && axisKey(viewById.get(state.views[0])) !== 'time';
-  function yearText(y) {
+  function yearText(y, short = false) {
     if (RANKED) return axisLabel(AX, y);
     if (y > 0) return y < 1000 ? y + ' CE' : String(y);
     const a = -y;
     if (a < 10000) return a + ' BCE';
     if (a < 1e5) return group(sig(a)) + ' BCE';
     // on a phone the deep-time words are short: 100k, 66M, 13.8B years ago (asked for, Nov 2026)
-    const ph = matchMedia(PHONE).matches;
+    const ph = short || matchMedia(PHONE).matches;
     if (a < 1e6) return (ph ? sig(a / 1e3) + 'k' : group(sig(a))) + ' years ago';
     if (a < 1e9) return sig(a / 1e6) + (ph ? 'M' : ' million') + ' years ago';
     return sig(a / 1e9) + (ph ? 'B' : ' billion') + ' years ago';
@@ -705,7 +705,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     }
     // A step of a plan with no end that starts after today still stands where it starts.
     const inSpan = (t) => (t.lead ?? t.born) < tMax && Math.max(t.end ?? NOW, t.born) >= tMin;
-    return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan };
+    // The first start and the last date of the entries in sight, for the year pill.
+    const seen = all.filter(inSpan), first = seen.length ? Math.min(...seen.map((t) => t.born)) : null;
+    const lastIn = seen.length ? Math.max(...seen.map((t) => Math.max(t.end ?? NOW, t.born))) : null;
+    return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan, first, lastIn };
   }
   // ---------------------------------------------------------------- render
   function render() {
@@ -802,7 +805,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   const camAtEnd = () => { const [lo, hi] = camLimits(); return camDir() > 0 ? road.t >= hi - L.D * 0.01 : road.t <= lo + L.D * 0.01; };
 
   function roadLayout() {
-    const { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan } = chosen();
+    const { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan, first, lastIn } = chosen();
     const box = $('road'), G = stageOf(box.clientWidth, box.clientHeight, TOP, ($('axisbar')?.offsetWidth || 0) / 2);
     $('road-views').style.left = G.vx + 'px';
     const lanes = [];
@@ -846,7 +849,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const own = state.views.some((id) => viewById.get(id)?.stored) || shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
     // The latest start on the road: turned round, the reader opens just before it, even when it stands close to the end.
     const lastA = shown.reduce((m, p) => (p.a <= tMax && p.a > m ? p.a : m), -Infinity);
-    L = { eps: Math.min(0.01, (tMax - tMin) / 2000), own, tMin, tMax, lastA, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
+    L = { eps: Math.min(0.01, (tMax - tMin) / 2000), own, first, last: lastIn, tMin, tMax, lastA, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
   }
@@ -989,7 +992,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const t = p.t, P = roadPalette();
     return { id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
       imgs: t.image && !t.noImage ? [t.image, ...(t.media || []).filter((m) => m && m.src && (!m.type || m.type === 'image'))].map((m) => mediaUrl(m.src)).filter((u, i, a) => a.indexOf(u) === i).slice(0, 4) : [],
-      mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null };
+      mark: RANKED ? shortYear(writtenOf(t.born)) : yearText(writtenOf(t.born), true), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null };
   }
   function globeShow() {
     if (!globe) {
@@ -1981,7 +1984,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (document.activeElement !== $('y-from')) $('y-from').value = pos(lo);
     if (document.activeElement !== $('y-to')) $('y-to').value = pos(hi);
     const last = hi >= NOW - 0.5 ? 'today' : yearText(writtenOf(hi - 1e-9));
-    $('years-out').textContent = `${yearText(writtenOf(lo))} – ${last}`;
+    // The pill names the years of the entries themselves, not the room the road leaves before the first
+    // (Japan read "801 BCE" for a first entry of 660 BCE); a range the reader narrowed is named as chosen.
+    const said = (t) => yearText(writtenOf(t));
+    const out = !L || state.span ? [said(lo), last] : [said(Math.max(lo, L.first ?? lo)), L.last != null && L.last < hi && L.last < NOW - 0.5 ? said(L.last) : last];
+    $('years-out').textContent = `${out[0]} – ${out[1]}`;
     $('y-from').setAttribute('aria-valuetext', yearText(writtenOf(lo)));
     $('y-to').setAttribute('aria-valuetext', last);
     // Reset a narrowed range; or, when the timeline opened on its busy part, reach back to the first entry.

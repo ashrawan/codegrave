@@ -231,13 +231,15 @@ export function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
         c.font = font(!s.place && globe);
         const nm = s.name.length > 36 ? s.name.slice(0, 34) + '…' : s.name, w = px(18) + c.measureText(nm).width;
         const o = { x, nm, w, yr: s.mark && s.mark !== said ? s.mark : '', it: !s.place && globe }; if (o.yr) said = s.mark;
-        x += w + gap; return o;
+        // A year wider than its name keeps the next name clear of it, as on the page.
+        if (o.yr) { c.font = `500 ${ys}px ${sans}`; o.w = Math.max(o.w, c.measureText(o.yr).width + px(6)); }
+        x += o.w + gap; return o;
       });
     }
     // As on the page: the marker stands on the dot of the entry in front, what has passed at its
     // left, and what is still to come shows only its dot until its turn (asked for, Nov 2026).
     const pos = posAt(scenes, t), k = Math.min(strip.length - 1, Math.max(0, Math.floor(pos))), nx = strip[k + 1];
-    const at = pos < 0 ? strip[0].x + px(40) * pos : nx ? strip[k].x + (nx.x - strip[k].x) * (pos - k) : strip[k].x;
+    const at = pos < 0 ? strip[0].x : nx ? strip[k].x + (nx.x - strip[k].x) * (pos - k) : strip[k].x;
     const xm = x1 - px(lay.wide ? 380 : 300), off = xm - px(5) - at, acc = steps[now].rgb || '#e8b04a';
     c.save(); c.textBaseline = 'alphabetic'; c.textAlign = 'left';
     strip.forEach((o, n) => {

@@ -67,7 +67,7 @@ const PHONE = '(max-width: 699px)';
 const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt', FAILED = 'cg-ai-failed';
 // An account's share of the server voice a month, in characters (the function `voiceover` holds the same
 // numbers and is the one that counts), and about how many characters make a minute of speech.
-export const SPEECH = { free: 30000, pro: 500000 }, CHARS_A_MINUTE = 900;
+export const SPEECH = { free: 5000, pro: 500000 }, CHARS_A_MINUTE = 900;
 const AI_PER_DAY = 20;      // the allowance until the account's row is read (`profiles.ai_daily`)
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),
@@ -128,7 +128,7 @@ export function createAccount(app) {
   async function refreshList() {
     if (!user) return;
     const [p, l] = await Promise.all([
-      api(`/rest/v1/profiles?id=eq.${user.id}&select=username,ai_daily,plan`),
+      api(`/rest/v1/profiles?id=eq.${user.id}&select=username,ai_daily,plan,voice_monthly`),
       api(`/rest/v1/timelines?owner=eq.${user.id}&select=id,slug,title,visibility,entries,updated_at&order=updated_at.desc`),
     ]);
     profile = p[0] || { username: null };
@@ -259,6 +259,7 @@ export function createAccount(app) {
     } catch (e) { a.fail(e.message); }
   }
   async function patch(row, body) {
+    const said = (t) => { const v = t && JSON.parse(t).voice; return v ? JSON.stringify([v.voice, v.lines]) : ''; }, before = said(row.text);
     const got = await api(`/rest/v1/timelines?id=eq.${row.id}&select=id,slug,title,description,visibility,entries,updated_at`, { method: 'PATCH', headers: { Prefer: 'return=representation' }, body });
     if (!got[0]) throw new Error('That timeline is no longer there.');
     Object.assign(row, got[0]);
@@ -266,6 +267,28 @@ export function createAccount(app) {
     app.replace(payloadOf(row));
     if (editor.row() === row) editor.reload();
     await refreshList();
+    // Published, or taken down, or its voiceover changed while published: the one file on the server follows.
+    if (body.visibility || (body.data && row.visibility !== 'private' && said(row.text) !== before)) voiceFile(row);
+  }
+  // A published timeline's voiceover is one MP3 made on the server, kept under the username like a wiki view's
+  // (asked for, Nov 2026); a private one keeps its voice on this device only, and the server deletes its file.
+  // The answer (`audio`: where the file is and where each line starts) goes on the row, so every reader plays
+  // from that one file. Nothing waits for it: until it is there, the lines are said one by one as before.
+  const filing = new Map();
+  function voiceFile(row) {
+    if (filing.get(row.id)) return filing.get(row.id).again = true;
+    const job = { again: false };
+    filing.set(row.id, job);
+    voiceFn({ record: { id: row.id } }).then(async (d) => {
+      const data = JSON.parse(row.text), v = data.voice, had = JSON.stringify(v?.audio || null);
+      if (!v || had === JSON.stringify(d.audio || null)) return;
+      if (d.audio && (d.audio.voice !== v.voice || d.audio.cues.length !== v.lines.length)) return;
+      if (d.audio) v.audio = d.audio; else delete v.audio;
+      await api(`/rest/v1/timelines?id=eq.${row.id}`, { method: 'PATCH', body: { data } });
+      row.text = JSON.stringify(data);
+      app.replace(payloadOf(row));
+    }).catch((x) => { if (row.visibility !== 'private') toast('The voiceover file could not be made: ' + x.message); })
+      .finally(() => { filing.delete(row.id); if (job.again) voiceFile(row); });
   }
   async function ensureRow(uuid) { if (!rows.has(uuid)) await fetchView('t/' + uuid); return rows.get(uuid); }
   async function rawEntry(id) {
@@ -624,7 +647,12 @@ export function createAccount(app) {
   // other single view, this browser (asked for, Nov 2026: Generate voiceover on the existing views too).
   function holder() {
     const cur = current();
-    if (cur) return { own: true, title: cur.title, description: cur.description || '', get: () => JSON.parse(cur.text).voice, set: (v) => { const data = JSON.parse(cur.text); if (v) data.voice = v; else delete data.voice; return patch(cur, { data }); } };
+    if (cur) return { own: true, title: cur.title, description: cur.description || '', get: () => JSON.parse(cur.text).voice, set: (v) => {
+      // The file of the voice before is kept only while the voice and its words are the same.
+      const data = JSON.parse(cur.text), was = data.voice;
+      if (v) { data.voice = { ...v }; delete data.voice.audio; if (was?.audio && was.voice === v.voice && JSON.stringify(was.lines) === JSON.stringify(v.lines)) data.voice.audio = was.audio; } else delete data.voice;
+      return patch(cur, { data });
+    } };
     const o = app.one();
     // `fixed`: a built view's default voiceover, which is told as it is (Make it your own to change it).
     return o ? { own: false, fixed: !!o.voice?.base, title: o.title, description: o.description, get: () => app.one()?.voice, set: async (v) => app.keepVoice(v) } : null;
@@ -1366,7 +1394,7 @@ export function createAccount(app) {
         // the characters said; `SPEECH` here only says how large the share is, to draw it).
         api(`/rest/v1/speech_use?select=chars&month=eq.${new Date().toISOString().slice(0, 7)}-01`).then((got) => {
           const box = d.querySelector('#me-say'); if (!box) return;
-          const most = SPEECH[isPro() ? 'pro' : 'free'], left = Math.max(0, most - (got?.[0]?.chars || 0));
+          const most = Number(profile?.voice_monthly) || SPEECH[isPro() ? 'pro' : 'free'], left = Math.max(0, most - (got?.[0]?.chars || 0));
           box.querySelector('span').textContent = `${Math.round(left / CHARS_A_MINUTE).toLocaleString('en-US')} of ${Math.round(most / CHARS_A_MINUTE).toLocaleString('en-US')} min left`;
           box.querySelector('u').style.width = (100 * left / most) + '%';
           box.classList.toggle('none', !left);

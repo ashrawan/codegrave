@@ -61,11 +61,20 @@ test('the server sends 16-bit samples, low byte first, and the page plays floats
   assert.deepEqual([...out].map((x) => Math.round(x * 1000) / 1000), [0, 0.5, -1, 1]);
 });
 
-test('a line has one name in the store, whoever asks', async () => {
-  const { storeKey, sayText } = await import('../site/voice.js');
-  const a = await storeKey('af_heart', 'Hello  there ');
-  assert.equal(a, await storeKey('af_heart', 'Hello there'));
-  assert.notEqual(a, await storeKey('bm_george', 'Hello there'));
-  assert.match(a, /^v1\/af_heart\/[0-9a-f]{64}\.pcm$/);
+test('words are said as written, with their spaces made plain', async () => {
+  const { sayText } = await import('../site/voice.js');
   assert.equal(sayText(' a \n b '), 'a b');
+});
+
+test('a published timeline\'s lines are joined into one MP3, frame by frame, with silence between', async () => {
+  const { joinMp3, framesOf, silentFrame } = await import('../supabase/functions/voiceover/mp3.js');
+  // MPEG-2 Layer III, 24 kHz, one channel: frames of 576 samples, 0.024 s each.
+  const frame = silentFrame(new Uint8Array([0xff, 0xf3, 0x64, 0xc4]));
+  assert.equal(frame.length, 24);
+  const file = (n, tag = false) => { const out = new Uint8Array((tag ? 10 : 0) + n * frame.length); if (tag) out.set([0x49, 0x44, 0x33, 3, 0, 0, 0, 0, 0, 0]); for (let k = 0; k < n; k++) out.set(frame, (tag ? 10 : 0) + k * frame.length); return out; };
+  assert.equal(framesOf(file(5, true)).frames.length, 5);
+  const { mp3, secs, cues } = joinMp3([file(50, true), file(25)], 0.24);
+  assert.deepEqual(cues, [[0, 1.2], [1.44, 2.04]]);
+  assert.equal(secs, 2.28);
+  assert.equal(framesOf(mp3).frames.length, 95);
 });

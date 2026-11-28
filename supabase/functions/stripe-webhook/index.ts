@@ -31,7 +31,10 @@ export const planOf = (status: string) => (status === "active" || status === "tr
 const rows = (query: string, fields: Record<string, unknown>) =>
   fetch(`${URL_}/rest/v1/profiles?${query}`, { method: "PATCH", headers: { apikey: SERVICE, Authorization: "Bearer " + SERVICE, "Content-Type": "application/json", Prefer: "return=representation" }, body: JSON.stringify(fields) })
     .then(async (r) => (r.ok ? (await r.json()).length : (console.error("profiles", r.status, await r.text()), -1)));
-const fieldsFor = (plan: string) => ({ plan, ai_daily: plan === "pro" ? PRO_DAILY : FREE_DAILY });
+// What a plan allows, written on the account's row (each can then be changed for one account by hand).
+const fieldsFor = (plan: string) => plan === "pro"
+  ? { plan, ai_daily: PRO_DAILY, publish_max: 1000, voice_monthly: 500000 }
+  : { plan, ai_daily: FREE_DAILY, publish_max: 10, voice_monthly: 5000 };
 const uuid = (s: unknown) => (typeof s === "string" && /^[0-9a-f-]{36}$/i.test(s) ? s : "");
 
 Deno.serve(async (req) => {

@@ -284,8 +284,23 @@ the function `voiceover` (`{ speak }`). There is nothing to download, so it star
 works on a phone. Nothing is stored on the server: the sound goes to the reader's browser, which
 keeps each line (`server()` in `site/voice.js`, `speak()` in `site/account.js`).
 
+**A published timeline's voiceover is one file.** When a timeline with a voiceover is published, or its
+voiceover changes while it is published, the function `voiceover` (`{ record: { id } }`) has every line said
+as an MP3, side by side, joins them into one file with a short silence between lines, and keeps it in the
+public store at `views/<username>/<slug>/<voice>/<v>.mp3`, the same shape as a wiki view's. Where each line
+starts goes on the row (`voice.audio`), so every reader plays the one file. The same words in the same voice
+are made once; the characters count against the owner's month. Taking the timeline down deletes the file: an
+unpublished timeline's voice stays on the reader's device.
+
+**An account's limits are on its own row**, so each can be changed without new code, for every account by
+plan (`stripe-webhook` writes them) or for one account by hand: `ai_daily` (AI requests a day: 20 free, 200
+pro), `publish_max` (timelines published at once: 10 free, 1,000 pro; the database refuses one more, and the
+publish dialog says to make one private or delete one first) and `voice_monthly` (characters of the server
+voice a month: 5,000 free, 500,000 pro). The real guarantee on the bill is the spending limit on the voice's
+own OpenRouter key (`VOICE_API_KEY`): whatever the accounts do, it stops there.
+
 Every signed-in account has a share of it a month, counted in characters by the server: a taste
-for a free account (30,000, about half an hour of speech) and far more for pro (500,000, about
+for a free account (5,000, about five minutes of speech, half a cent, so even a thousand free accounts cost at most about $5 a month) and far more for pro (500,000, about
 nine hours). The account menu shows what is left. When the share is used up, and for a reader who
 is not signed in, the browser's own voice says the lines.
 
