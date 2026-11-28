@@ -7,7 +7,7 @@ repository into static files, exactly as before.
 
 ## What a reader can do
 
-- **Sign in** with Google, GitHub or a link sent by email. Nothing asks for
+- **Sign in** with Google, GitHub or a link or code sent by email. Nothing asks for
   it until they press "New timeline" or "Sign in".
 - **New timeline**: say what it is about and a model writes it (see
   "Create with AI" below), or start from a private copy of the view on the
@@ -244,6 +244,21 @@ is not offered the editor.
 3. **Email**: the built-in sender only reaches the project's own team and
    a few messages an hour. For links to anyone, add an SMTP sender
    (Resend's free plan is enough to start).
+4. **Authentication → Email Templates**: by default the email's link goes
+   to the sign-in service's own address, which some readers (and browser
+   agents) rightly will not open. Make "Magic Link" and "Confirm signup"
+   both send a link to codegrave.com and the code itself, for example:
+
+   ```html
+   <h2>Sign in to codegrave</h2>
+   <p><a href="{{ .RedirectTo }}#token_hash={{ .TokenHash }}&type=email">Sign in to codegrave</a></p>
+   <p>Or type this code on the page: <b>{{ .Token }}</b></p>
+   ```
+
+   The page trades the key after `#` for a session (`readAuthHash()` and
+   `verify()` in `site/account.js`), and the "Check your inbox" dialog
+   takes the code. Since the key is after `#`, it never reaches a server,
+   and a mail scanner that fetches the link does not use it up.
 
 ## Limits known today
 
