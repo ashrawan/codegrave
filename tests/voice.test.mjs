@@ -53,3 +53,28 @@ test('speech is made quicker or slower to length, and left alone at 1x', () => {
   assert.ok(Math.abs(hz - 220) < 8, 'pitch ' + hz);
   assert.equal(voiceRate(2), 1.6); assert.equal(voiceRate(0.25), 0.7); assert.equal(voiceRate(1), 1);
 });
+
+test('the server sends 16-bit samples, low byte first, and the page plays floats', async () => {
+  const { pcmToFloat } = await import('../site/voice.js');
+  const out = pcmToFloat(new Uint8Array([0, 0, 0, 64, 0, 128, 255, 127, 9]).buffer);
+  assert.equal(out.length, 4);
+  assert.deepEqual([...out].map((x) => Math.round(x * 1000) / 1000), [0, 0.5, -1, 1]);
+});
+
+test('words are said as written, with their spaces made plain', async () => {
+  const { sayText } = await import('../site/voice.js');
+  assert.equal(sayText(' a \n b '), 'a b');
+});
+
+test('a published timeline\'s lines are joined into one MP3, frame by frame, with silence between', async () => {
+  const { joinMp3, framesOf, silentFrame } = await import('../supabase/functions/voiceover/mp3.js');
+  // MPEG-2 Layer III, 24 kHz, one channel: frames of 576 samples, 0.024 s each.
+  const frame = silentFrame(new Uint8Array([0xff, 0xf3, 0x64, 0xc4]));
+  assert.equal(frame.length, 24);
+  const file = (n, tag = false) => { const out = new Uint8Array((tag ? 10 : 0) + n * frame.length); if (tag) out.set([0x49, 0x44, 0x33, 3, 0, 0, 0, 0, 0, 0]); for (let k = 0; k < n; k++) out.set(frame, (tag ? 10 : 0) + k * frame.length); return out; };
+  assert.equal(framesOf(file(5, true)).frames.length, 5);
+  const { mp3, secs, cues } = joinMp3([file(50, true), file(25)], 0.24);
+  assert.deepEqual(cues, [[0, 1.2], [1.44, 2.04]]);
+  assert.equal(secs, 2.28);
+  assert.equal(framesOf(mp3).frames.length, 95);
+});

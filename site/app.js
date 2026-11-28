@@ -12,7 +12,7 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
-import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk, voiceLabel } from './voice.js';
+import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk, voiceLabel, offlineOn } from './voice.js';
 import { exportFilm, canExport, canSize, canFast } from './export.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
@@ -113,14 +113,14 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   let RANKED = false, AX = null;
   const axisKey = (v) => (v?.axis === 'scale' ? 'scale:' + v.id : v?.axis === 'rank' ? 'rank' : 'time');
   const isRanked = () => state.views.length > 0 && axisKey(viewById.get(state.views[0])) !== 'time';
-  function yearText(y) {
+  function yearText(y, short = false) {
     if (RANKED) return axisLabel(AX, y);
     if (y > 0) return y < 1000 ? y + ' CE' : String(y);
     const a = -y;
     if (a < 10000) return a + ' BCE';
     if (a < 1e5) return group(sig(a)) + ' BCE';
     // on a phone the deep-time words are short: 100k, 66M, 13.8B years ago (asked for, Nov 2026)
-    const ph = matchMedia(PHONE).matches;
+    const ph = short || matchMedia(PHONE).matches;
     if (a < 1e6) return (ph ? sig(a / 1e3) + 'k' : group(sig(a))) + ' years ago';
     if (a < 1e9) return sig(a / 1e6) + (ph ? 'M' : ' million') + ' years ago';
     return sig(a / 1e9) + (ph ? 'B' : ' billion') + ' years ago';
@@ -705,7 +705,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     }
     // A step of a plan with no end that starts after today still stands where it starts.
     const inSpan = (t) => (t.lead ?? t.born) < tMax && Math.max(t.end ?? NOW, t.born) >= tMin;
-    return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan };
+    // The first start and the last date of the entries in sight, for the year pill.
+    const seen = all.filter(inSpan), first = seen.length ? Math.min(...seen.map((t) => t.born)) : null;
+    const lastIn = seen.length ? Math.max(...seen.map((t) => Math.max(t.end ?? NOW, t.born))) : null;
+    return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan, first, lastIn };
   }
   // ---------------------------------------------------------------- render
   function render() {
@@ -795,13 +798,14 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   const PASSED = 0.05;                         // focal lengths behind the reader at which the selected card is passed
   function camLimits() {
     const m = 0.22 * L.D;
-    return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), L.tMax];
+    // Turned round, the reader may stand a little past the end, so the latest start can be the first in front.
+    return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), Math.max(L.tMax, (L.lastA ?? -Infinity) + (AHEAD - 1e-4) * L.D)];
   }
   const camClamp = (t) => { const [lo, hi] = camLimits(); return clamp(t, lo, hi); };
   const camAtEnd = () => { const [lo, hi] = camLimits(); return camDir() > 0 ? road.t >= hi - L.D * 0.01 : road.t <= lo + L.D * 0.01; };
 
   function roadLayout() {
-    const { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan } = chosen();
+    const { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan, first, lastIn } = chosen();
     const box = $('road'), G = stageOf(box.clientWidth, box.clientHeight, TOP, ($('axisbar')?.offsetWidth || 0) / 2);
     $('road-views').style.left = G.vx + 'px';
     const lanes = [];
@@ -843,7 +847,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // other subjects (reported, Nov 2026: "it was showing all other images from previous loaded view").
     // A stored timeline counts even while it is still empty, being made, so no stand-in shows behind it.
     const own = state.views.some((id) => viewById.get(id)?.stored) || shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
-    L = { eps: Math.min(0.01, (tMax - tMin) / 2000), own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
+    // The latest start on the road: turned round, the reader opens just before it, even when it stands close to the end.
+    const lastA = shown.reduce((m, p) => (p.a <= tMax && p.a > m ? p.a : m), -Infinity);
+    L = { eps: Math.min(0.01, (tMax - tMin) / 2000), own, first, last: lastIn, tMin, tMax, lastA, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
   }
@@ -887,7 +893,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!L) return;
     const to = camClamp(x - camDir() * 0.2 * L.D);
     if (play.on) pausePlay();
-    road.vel = 0; turnsOver();
+    road.vel = 0; road.skipI = null; turnsOver();
     if (smooth && !calm()) { road.target = to; road.rate = 6; } else { road.t = road.prev = to; road.target = null; }
     roadKick();
   }
@@ -953,7 +959,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       let want = !play.on || (play.step && !stepping) ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
       // With a voiceover, the reader stops at each card until its line is said, then goes on, like Arrow keys
       // play (asked for, Nov 2026: "we need to stop in the card").
-      if (want && !play.step && telling() && voice.busy()) { want = 0; road.vel = 0; }
+      // The move to the next card starts as the line nears its end, so the next line begins a moment after this
+      // one ends, not after the whole way between them (asked for, Nov 2026: "only a little gap in between").
+      if (want && !play.step && telling() && voice.busy() && !(told.at === told.cue && !told.then && voice.left() <= leadSecs())) { want = 0; road.vel = 0; }
       if (road.intro) { if (performance.now() < road.intro) { want = 0; road.vel = 0; } else road.intro = 0; }
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
@@ -984,13 +992,13 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const t = p.t, P = roadPalette();
     return { id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
       imgs: t.image && !t.noImage ? [t.image, ...(t.media || []).filter((m) => m && m.src && (!m.type || m.type === 'image'))].map((m) => mediaUrl(m.src)).filter((u, i, a) => a.indexOf(u) === i).slice(0, 4) : [],
-      mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null };
+      mark: RANKED ? shortYear(writtenOf(t.born)) : yearText(writtenOf(t.born), true), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null };
   }
   function globeShow() {
     if (!globe) {
       document.body.classList.add('globe');
       $('globe').hidden = false;
-      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => roadToThing(id), seek: globeSeek, credit: document.querySelector('.dock-tools') });
+      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => playTo(id), seek: globeSeek, credit: document.querySelector('.dock-tools') });
     }
     const dir = camDir(), P = roadPalette(), seen = new Set(), steps = [];
     road.gorder = L.shown.filter((p) => p.a >= L.tMin && p.a <= L.tMax && L.at.get(p.t.id) === p).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
@@ -1048,7 +1056,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const from = i < 0 ? (dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D) : road.gorder[i].a, next = road.gorder[j];
     const edge = next ? from + (next.a - from) * clamp(frac, 0, 1) : from;
     road.gfree = state.open || null;
-    road.target = null; road.vel = 0;
+    road.target = null; road.vel = 0; road.skipI = null;
+    // Pulled to another entry: what was being said stops, and that entry's line starts (asked for, Nov 2026).
+    if (telling() && (id ?? 'intro') !== told.at) { voice.stop(); told.cue = undefined; }
     road.t = camClamp(edge - dir * AHEAD * L.D + dir * 1e-6 * L.D);
     roadKick();
   }
@@ -1974,7 +1984,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (document.activeElement !== $('y-from')) $('y-from').value = pos(lo);
     if (document.activeElement !== $('y-to')) $('y-to').value = pos(hi);
     const last = hi >= NOW - 0.5 ? 'today' : yearText(writtenOf(hi - 1e-9));
-    $('years-out').textContent = `${yearText(writtenOf(lo))} – ${last}`;
+    // The pill names the years of the entries themselves, not the room the road leaves before the first
+    // (Japan read "801 BCE" for a first entry of 660 BCE); a range the reader narrowed is named as chosen.
+    const said = (t) => yearText(writtenOf(t));
+    const out = !L || state.span ? [said(lo), last] : [said(Math.max(lo, L.first ?? lo)), L.last != null && L.last < hi && L.last < NOW - 0.5 ? said(L.last) : last];
+    $('years-out').textContent = `${out[0]} – ${out[1]}`;
     $('y-from').setAttribute('aria-valuetext', yearText(writtenOf(lo)));
     $('y-to').setAttribute('aria-valuetext', last);
     // Reset a narrowed range; or, when the timeline opened on its busy part, reach back to the first entry.
@@ -2454,10 +2468,23 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     while (j >= 0 && j < o.length && i >= 0 && o[j].t.id === o[i].t.id) j += n;
     j = clamp(j, 0, o.length - 1);
     if (j === i) return;
+    glideTo(j);
+  }
+  // During play: glide to the entry at `j` of the play order and go on playing from there; its line starts on
+  // arrival (what was being said stops, since the reader chose to move on).
+  function glideTo(j) {
+    const o = road.gorder, dir = camDir();
+    if (telling()) { voice.stop(); told.cue = undefined; }
     road.intro = 0; road.vel = 0; road.skipI = j;
     road.target = camClamp(o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D); road.rate = 4;
     if (calm()) { road.t = road.prev = road.target; road.target = null; }
     roadKick();
+  }
+  // A name on the time line was pressed: while play travels the reader glides there and play goes on
+  // (asked for, Nov 2026: "it doesn't need to pause"); standing still it goes there as before.
+  function playTo(id) {
+    const j = play.on && road.gorder ? road.gorder.findIndex((p) => p.t.id === id) : -1;
+    if (j >= 0) glideTo(j); else roadToThing(id);
   }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
@@ -2521,7 +2548,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // when play is first pressed with the sound on, it eases in and out so nothing starts or stops with a
   // jolt, and pausing keeps its place. Showing another view, or playing again from the beginning, starts
   // the track from its beginning too. The sound button silences it.
-  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.14;   // under a voiceover the music is only a background
+  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.05;   // under a voiceover the music is only a background
   const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
   // The track for what is on the road: the view's own when its play was pressed, else the house track.
   function trackNow() {
@@ -2567,7 +2594,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (Number.isInteger(o.from) && Number.isInteger(o.to)) { steps.splice(o.to + 1); steps.splice(0, o.from); }
     const css = getComputedStyle(document.documentElement);
     return exportFilm({
-      kind: o.kind, shape: o.shape, short: o.short, scene: o.scene, subs: !!o.subs, steps, step, stop, speaker, voice: voiceNow(),
+      kind: o.kind, shape: o.shape, short: o.short, scene: o.scene, subs: !!o.subs, steps, step, stop, speaker, clip: (id) => voice.clip(id), voice: voiceNow(),
       makeGlobe: (host, opts) => createGlobe(host, { esc, calm: () => false, open() {}, goTo() {}, seek() {}, credit: null, ...opts }),
       title: L && L.lanes.length ? L.lanes.map((ln) => ln.view.name).join(' and ') : 'timeline',
       music: new URL(trackNow() || MUSIC, document.baseURI).href,
@@ -2575,7 +2602,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     });
   }
   const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '', wait: false, load: null };
-  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); if (s.engine) drawTold(); if (s.made) keptSoon(); drawSubs(); });
+  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); if (s.engine || 'offline' in s) drawTold(); if (s.plain) account.plainVoice(); if (s.made) keptSoon(); drawSubs(); });
   told.slow = isSlow();
   gpuOk().then((ok) => { told.gpuOk = ok; drawTold(); });
   const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), speaker, said: (text, wait = false) => { told.text = text; told.wait = wait; drawSubs(); } });
@@ -2590,7 +2617,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (state.views.length !== 1) return null;
     const v = viewById.get(state.views[0]);
     if (v?.stored) return v.voice || null;
-    return localVoice(state.views[0]) || (v?.voice ? { ...v.voice, base: true } : null);
+    // A built view with a default voiceover always tells that one, and it cannot be rewritten or voiced again
+    // here (asked for, Nov 2026: to change it, the reader makes the timeline their own first).
+    if (v?.voice) return { ...v.voice, base: true };
+    return localVoice(state.views[0]);
   };
   function keepLocalVoice(v) {
     if (state.views.length !== 1) return;
@@ -2613,13 +2643,23 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     el.classList.toggle('wait', wait);
   }
   // Called whenever the reader moves: `id` is the entry in front (null before the first), `next` the one after.
+  // How long before the end of a line the reader sets off for the next card: the time the way takes at this
+  // speed, plus `EASE_SECS` because play eases up to speed from a stand, less `TOLD_GAP`, the pause wanted
+  // between two lines. Arriving early does no harm: the last words are let finish first.
+  const TOLD_GAP = 1.1, EASE_SECS = 0.9;
+  const leadSecs = () => (globe ? Math.max(0, globe.legSecs() / play.speed + EASE_SECS - TOLD_GAP) : 0);
   function tell(id, next) {
     if (!telling()) { if (told.cue !== undefined) { voice.stop(); told.cue = undefined; } return; }
     const key = id ?? 'intro';
     // Standing still, a line that was being said belongs to where the reader was: moving on ends it.
     if (!play.on) { if (told.cue !== undefined && key !== told.cue && told.cue !== 'outro') { voice.stop(); told.cue = undefined; } return; }
     if (told.cue === 'outro') return;
+    // Gliding to an entry the reader pressed: nothing on the way is said; its line starts on arrival.
+    if (road.target != null && road.skipI != null) return;
     const after = next ? next.t.id : 'outro';
+    told.at = key;
+    // Arrived while the last line still has its last words: they are let finish, and this line follows them.
+    if (key !== told.cue && told.cue !== undefined && voice.busy() && voice.left() < Infinity) return;
     if (key !== told.cue) {
       told.cue = key; told.then = null;
       // The opening is said on the first entry that has a line and the closing after the last that has one:
@@ -2633,7 +2673,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // The chip by play: how many of this timeline's lines this browser has already made in its voice.
   let keptAt = 0;
   function keptSoon() { clearTimeout(keptAt); keptAt = setTimeout(async () => {
-    const texts = voice.texts(), n = !texts.length ? 0 : voice.device() ? texts.length : await speaker.kept(texts, voice.name());
+    const texts = voice.texts(), n = !texts.length ? 0 : voice.device() || voice.whole() ? texts.length : await speaker.kept(texts, voice.name());
     told.kept = n; told.lines = texts.length; drawChip();
   }, 300); }
   function drawChip() {
@@ -2647,14 +2687,19 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   function drawTold() {
     const any = voice.any();
-    $('voice-row').hidden = $('subs-row').hidden = $('pick-row').hidden = !any;
+    $('voice-row').hidden = $('subs-row').hidden = !any;
+    $('pick-row').hidden = !any || !!voiceNow()?.base;
     // With no voiceover yet, the menu by play offers to make one there and then (asked for, Nov 2026: "the user
     // doesn't even need to go over click on the 3 dot").
     $('gen-row').hidden = any || state.views.length !== 1;
     if (any) $('vo-name').textContent = voiceLabel(voice.name());
+    $('vo-grp').hidden = !any && state.views.length !== 1;
+    $('vo-by').textContent = any ? 'Told by ' + voiceLabel(voice.name()) : state.views.length === 1 ? 'No voiceover yet' : '';
     drawChip(); keptSoon();
     // Offered where the device has a graphics card; off until the reader turns it on (asked for, Nov 2026).
-    $('gpu-row').hidden = !told.gpuOk;
+    // Offline mode (asked for, Nov 2026): the voice made on this computer, off unless the reader turns it on,
+    // and not offered on a phone. The GPU voice is a way of making it here, so it shows only with it.
+    $('gpu-row').hidden = !told.gpuOk || !offlineOn();
     for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
     for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
     for (const b of $('subs-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.subs));
@@ -2812,7 +2857,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // The settings are in groups that fold (asked for, Nov 2026: "collapsible, like for the globe", so the menu
     // stays quiet however many settings come). A folded group says what is chosen in it; Globe opens folded.
     const groupsSay = () => { for (const g of $('more-menu').querySelectorAll('details.grp')) g.querySelector('summary small').textContent = [...g.querySelectorAll('.set:not([hidden]) .seg button[aria-pressed="true"]')].map((b) => b.textContent).join(' · '); };
-    const more = (on) => { if (on) groupsSay(); $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
+    const more = (on) => { if (on) { groupsSay(); $('app-grp').hidden = account.signedIn(); } $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
     $('more-menu').addEventListener('click', (e) => { e.stopPropagation(); setTimeout(groupsSay); });
     $('more-btn').addEventListener('click', (e) => { e.stopPropagation(); more($('more-menu').hidden); });
     document.addEventListener('click', () => more(false));
@@ -2838,7 +2883,14 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (e.key === 'Home' || e.key === 'End') { road.target = null; road.vel = 0; road.t = road.prev = (e.key === 'Home') === fwd ? lo : hi; if (play.on) pausePlay(); return roadKick(); }
       roadBy((e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1) * Math.max(0.3, (L.tMax - L.tMin) / L.D / 100), 8);
     });
-    $('reverse').addEventListener('click', () => { state.order = state.order === 'new' ? 'old' : 'new'; drawReverse(); changed(); });
+    $('reverse').addEventListener('click', () => {
+      // Turned round, the timeline starts again from its new beginning, ready to play (reported, Nov 2026: it was
+      // left at the far end, and the reader had to drag all the way back).
+      if (play.on) pausePlay();
+      state.order = state.order === 'new' ? 'old' : 'new';
+      road.t = road.prev = null; road.target = null;
+      drawReverse(); changed();
+    });
     $('info-btn').addEventListener('click', () => {
       const on = $('info').hidden;
       if (on) drawInfo();
@@ -2863,9 +2915,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // How much the map says (Less, Medium, Full; cg-detail in this browser, kept by the globe).
     const detailShow = (v) => { for (const b of $('detail').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
     { const d = store.get('cg-detail'); detailShow(d === 'medium' || d === 'full' ? d : 'less'); }
-    // The look of the globe (Atlas, Day, Dots; cg-look in this browser, kept by the globe).
+    // The look of the globe (Atlas, Day, Dots; cg-look in this browser, kept by the globe). Day is the default
+    // (asked for, Nov 2026; Atlas was before).
     const lookShow = (v) => { for (const b of $('look').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
-    { const l = store.get('cg-look'); lookShow(l === 'day' || l === 'dots' ? l : 'atlas'); }
+    { const l = store.get('cg-look'); lookShow(l === 'atlas' || l === 'dots' ? l : 'day'); }
     $('look-row').addEventListener('click', (e) => {
       e.stopPropagation();
       const b = e.target.closest('button[data-v]');
@@ -2902,16 +2955,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!b) return;
       told.subs = b.dataset.v === 'on'; store.set('cg-subs', told.subs ? '1' : '0'); drawTold();
     });
-    // Play: by itself, or one entry at a time by the arrow keys.
-    const stepShow = () => { for (const b of $('step').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'keys') === play.step)); };
-    play.step = store.get('cg-step') === 'keys'; stepShow();
-    $('step-row').addEventListener('click', (e) => {
-      e.stopPropagation();
-      const b = e.target.closest('button[data-v]');
-      if (!b) return;
-      play.step = b.dataset.v === 'keys'; store.set('cg-step', b.dataset.v); stepShow();
-      if (play.on) roadKick();
-    });
+    // "Advance: Auto / Arrow keys" was removed from the settings on request (Nov 2026): the arrows already go from
+    // entry to entry while play travels (`playSkip()`), so play is always automatic.
+    play.step = false;
     // In full screen a click on the stage brings the search and the menu button back for a moment.
     let peekT = null;
     $('stage').addEventListener('click', (e) => {
@@ -3264,6 +3310,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), mark: stepOf(p).mark || '', summary: p.t.summary || '' })) }; },
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
   });
+  // A pro account's voiceover is said by the server (site/voice.js, `server()`); everyone else's by their own device.
+  speaker.server(account.speak, account.hasSpeak);
   const authFailed = account.boot();      // before the address is read: a returning sign-in leaves its tokens after "#"
   // Only a link with ?film=1 fetches site/film/, and without its key that does nothing and the page starts as ever.
   if (/[?&]film=1(&|$)/.test(location.search)) import('./film/boot.js').then((m) => m.default({ esc, loadView, useView, viewById, stepOf, picturesOf, createGlobe, api: account.api, ask: account.ask, replaceView, boot: () => (bootReady = getJSON('boot.json').then(useBoot)) })).then((on) => on || start(), start);

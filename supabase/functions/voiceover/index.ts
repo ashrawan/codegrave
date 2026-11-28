@@ -12,12 +12,31 @@
 //
 // Only the words come from here. The page keeps them on the timeline's row, and the reader's own browser
 // speaks them while play goes (site/voice.js: Kokoro, a free voice model that runs on the device, or the
-// device's own voice; asked for, Nov 2026: no sound files on the server, and a cost that does not grow with
-// the hours people listen).
+// device's own voice, or the server voice below). A published timeline's voice is one file in the store (`record`).
+//
+//   { speak: { text, voice } }
+//       One line said by a hosted copy of the same voice. Answer: the sound itself,
+//       16-bit samples at the rate in the header `x-rate`. Nothing is kept here: the reader's browser keeps it.
+//
+//   { record: { id } }
+//       A published timeline of the reader's own gets its voiceover as one MP3, as a wiki view has (asked for,
+//       Nov 2026): every line is said by the server voice as an MP3, side by side, and the lines are joined
+//       frame by frame with a short silence between them (mp3.js). The file goes to the public store at
+//       views/<username>/<slug>/<voice>/<v>.mp3 (`v` from the voice and the words, as tools/voice/version.mjs
+//       makes it for the wiki), the older files of that timeline are deleted, and the words and cues are kept
+//       in the same table as the wiki's. A private timeline, or one with no voiceover, has its file deleted:
+//       an unpublished timeline's voice stays on the reader's device. Answer: { audio } to keep on the row
+//       ({ voice, v, secs, cues, src }), or { audio: null }. The characters count against the account's month.
 //
 // Secrets (Supabase → Edge Functions → Secrets):
 //   OPENROUTER_API_KEY   required: the same one Create with AI uses
+//   VOICE_API_KEY        optional: an OpenRouter key of its own for the server voice, with a spending limit
+//   SPEECH_FREE          optional: the share of a free account whose row says none (5000)
+//   SPEECH_PRO           optional: the same for a pro account (500000)
 //   VOICE_SCRIPT_MODEL   optional: the OpenRouter model that writes the script
+
+import { AwsClient } from "npm:aws4fetch@1.0.20";
+import { joinMp3 } from "./mp3.js";
 
 const WRITER = Deno.env.get("VOICE_SCRIPT_MODEL") ?? "deepseek/deepseek-v4.1-flash";
 // A long timeline is written in parts of PART entries, side by side, so the last entries get their lines too
@@ -28,11 +47,157 @@ const URL_ = Deno.env.get("SUPABASE_URL")!;
 const ANON = Deno.env.get("SUPABASE_ANON_KEY")!;
 const SERVICE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
+// The server voice (asked for, Nov 2026: voiceover made on a server, each account with its own limit): the same Kokoro voices the
+// browser runs, said by a hosted copy and paid for by the character, about a dollar a million. What keeps
+// the bill within a known most: the key's own spending limit at OpenRouter (set VOICE_API_KEY to a key made
+// for this, with a limit), the most characters a month for each account (SPEECH_FREE, SPEECH_PRO), and the reader's
+// browser, which keeps every line it was sent so that hearing it again costs nothing. The host is named, since
+// the same model costs four times as much at another.
+const SPEECH_MODEL = Deno.env.get("SPEECH_MODEL") ?? "hexgrad/kokoro-82m";
+const SPEECH_HOST = Deno.env.get("SPEECH_HOST") ?? "deepinfra";
+// The most characters a month an account may have said, when its row does not say (`voice_monthly` there is
+// what counts): for a free account about five minutes of speech, half a cent, so even a thousand free accounts
+// stay within about five dollars a month (asked for, Nov 2026), and far more for pro (about nine hours, fifty cents).
+const SPEECH_FREE = Number(Deno.env.get("SPEECH_FREE")) || 5_000;
+const SPEECH_PRO = Number(Deno.env.get("SPEECH_PRO")) || 500_000;
+const SPEECH_VOICES = ["af_heart", "am_michael", "af_bella", "af_nicole", "bf_emma", "bm_george"];
+const SPEECH_RATE = 24000;   // Kokoro's own: the sound comes back as plain 16-bit samples at this rate
+
+// Where a published timeline's voiceover is kept (asked for, Nov 2026: Cloudflare R2, the same store and the
+// same shape of address as the wiki's, "for consistency"). One file a timeline; the lines on their own are
+// not kept anywhere on the server: the reader's browser keeps what it was sent. Without the secrets nothing is kept.
+//   R2_ENDPOINT, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY   the bucket, written with the S3 API
+//   VOICE_PUBLIC_URL                                                 its public address, no slash at the end
+const R2 = { at: Deno.env.get("R2_ENDPOINT"), bucket: Deno.env.get("R2_BUCKET"), id: Deno.env.get("R2_ACCESS_KEY_ID"), secret: Deno.env.get("R2_SECRET_ACCESS_KEY"), open: Deno.env.get("VOICE_PUBLIC_URL") };
+const r2 = R2.at && R2.bucket && R2.id && R2.secret ? new AwsClient({ accessKeyId: R2.id, secretAccessKey: R2.secret, service: "s3", region: "auto" }) : null;
+const r2Url = (key: string) => `${R2.at!.replace(/\/+$/, "")}/${R2.bucket}/${key}`;
+const sound = (buf: ArrayBuffer, left: number | null, from: string) => new Response(buf, { headers: { ...cors, "Content-Type": "application/octet-stream", "x-rate": String(SPEECH_RATE), ...(left === null ? {} : { "x-left": String(left) }), "x-from": from, "Access-Control-Expose-Headers": "x-rate, x-left, x-from", "Cache-Control": "no-store" } });
+const sayText = (t: unknown) => String(t ?? "").replace(/\s+/g, " ").trim().slice(0, 700);
+// The same as versionOf() in tools/voice/version.mjs: a new file whenever the voice or a word changes.
+async function versionOf(voice: string, lines: { id: string; text: string }[]) {
+  const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(voice + "\n" + lines.map((l) => l.id + "\t" + sayText(l.text)).join("\n")));
+  return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 12);
+}
+const GAP = 0.35;            // seconds of silence after each line, as in the wiki's files
+const AT_ONCE = 12;          // lines asked of the server voice side by side
+
+// The month's share of the server voice, as `speak` counts it: answers the running total, -1 past the share,
+// -2 when it could not be counted.
+async function share(account: string) {
+  // The share is on the account's own row (`voice_monthly`), so it can be changed without new code.
+  const own = await service(`/rest/v1/profiles?id=eq.${account}&select=plan,voice_monthly`).then((r) => (r.ok ? r.json() : [])).catch(() => []);
+  const most = Number.isFinite(Number(own[0]?.voice_monthly)) ? Number(own[0].voice_monthly) : own[0]?.plan === "pro" ? SPEECH_PRO : SPEECH_FREE;
+  const count = (n: number): Promise<number> => service("/rest/v1/rpc/speech_add", { method: "POST", body: JSON.stringify({ who: account, n, most }) }).then((r) => (r.ok ? r.json() : -2)).catch(() => -2);
+  return { most, count };
+}
+
+// Deletes every file kept for a timeline but `keep`.
+async function sweep(dir: string, keep = "") {
+  const list = await r2!.fetch(`${r2Url("")}?list-type=2&prefix=${encodeURIComponent(dir)}`).catch(() => null);
+  const old = list?.ok ? [...(await list.text()).matchAll(/<Key>([^<]+)<\/Key>/g)].map((m) => m[1]).filter((k) => k !== keep) : [];
+  await Promise.all(old.map((k) => r2!.fetch(r2Url(k), { method: "DELETE" }).catch(() => null)));
+  return old.length;
+}
+
+async function record(account: string, ask: any): Promise<Response> {
+  if (!r2) return json({ error: "The store is not set up.", code: "not_configured" }, 503);
+  const id = String(ask?.id ?? "");
+  if (!/^[0-9a-f-]{36}$/.test(id)) return json({ error: "That request could not be read." }, 400);
+  const rows = await service(`/rest/v1/timelines?id=eq.${id}&owner=eq.${account}&select=slug,visibility,data,profiles(username)`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  if (!rows) return json({ error: "The timeline could not be read. Try again." }, 502);
+  if (!rows.length) return json({ error: "That timeline is not yours." }, 404);
+  const t = rows[0], username = String(t.profiles?.username ?? ""), slug = String(t.slug ?? "");
+  if (!username || !slug) return json({ audio: null });
+  const dir = `views/${username}/${slug}/`, vo = t.data?.voice;
+  const lines = (Array.isArray(vo?.lines) ? vo.lines : []).map((l: any) => ({ id: String(l?.id ?? ""), text: sayText(l?.text) })).filter((l: any) => l.id && l.text);
+  // Not published, or nothing to say in a server voice: nothing of it stays on the server.
+  if (t.visibility === "private" || !lines.length || !SPEECH_VOICES.includes(vo?.voice)) {
+    await sweep(dir);
+    await service(`/rest/v1/view_voices?owner=eq.${encodeURIComponent(username)}&view=eq.${encodeURIComponent(slug)}`, { method: "DELETE" }).catch(() => null);
+    return json({ audio: null });
+  }
+  const voice = vo.voice as string, v = await versionOf(voice, lines), at = `${dir}${voice}/${v}.mp3`;
+  // Made already: the same words in the same voice are not paid for twice.
+  const had = await service(`/rest/v1/view_voices?owner=eq.${encodeURIComponent(username)}&view=eq.${encodeURIComponent(slug)}&select=audio`).then((r) => (r.ok ? r.json() : [])).catch(() => []);
+  const was = had[0]?.audio;
+  if (was?.v === v && was?.voice === voice && Array.isArray(was?.cues) && was.cues.length === lines.length) return json({ audio: { voice, v, secs: was.secs, cues: was.cues, src: was.path } });
+
+  const key = Deno.env.get("VOICE_API_KEY") ?? Deno.env.get("OPENROUTER_API_KEY");
+  if (!key) return json({ error: "The server voice is not switched on yet.", code: "not_configured" }, 503);
+  const chars = lines.reduce((n: number, l: any) => n + l.text.length, 0), { most, count } = await share(account);
+  const total = await count(chars);
+  if (total === -2) return json({ error: "The server voice could not be reached. Try again." }, 502);
+  if (total < 0) return json({ error: "That is more than is left of this month's voice.", code: "limit" }, 429);
+  const say = async (text: string) => {
+    for (let go = 0; go < 2; go++) {
+      const r = await fetch("https://openrouter.ai/api/v1/audio/speech", {
+        method: "POST",
+        headers: { Authorization: "Bearer " + key, "Content-Type": "application/json", "HTTP-Referer": "https://codegrave.com", "X-Title": "codegrave" },
+        body: JSON.stringify({ model: SPEECH_MODEL, input: text, voice, response_format: "mp3", provider: { only: [SPEECH_HOST] } }),
+        signal: AbortSignal.timeout(60_000),
+      }).catch(() => null);
+      if (r?.ok) return new Uint8Array(await r.arrayBuffer());
+      console.error("record", r?.status, r ? (await r.text().catch(() => "")).slice(0, 300) : "no answer");
+    }
+    throw new Error("a line was not said");
+  };
+  try {
+    const parts: Uint8Array[] = new Array(lines.length);
+    let next = 0;
+    await Promise.all(Array.from({ length: Math.min(AT_ONCE, lines.length) }, async () => {
+      while (next < lines.length) { const k = next++; parts[k] = await say(lines[k].text); }
+    }));
+    const { mp3, secs, cues } = joinMp3(parts, GAP);
+    const put = await r2.fetch(r2Url(at), { method: "PUT", body: mp3, headers: { "Content-Type": "audio/mpeg", "Cache-Control": "public, max-age=31536000, immutable" } });
+    if (!put.ok) throw new Error("the store said " + put.status);
+    await sweep(dir, at);
+    const audio = { voice, v, secs, cues, path: at };
+    const row = await service("/rest/v1/view_voices?on_conflict=owner,view", { method: "POST", headers: { Prefer: "resolution=merge-duplicates" }, body: JSON.stringify({ owner: username, view: slug, script: { style: String(vo.style ?? ""), lines }, audio, updated_at: new Date().toISOString() }) });
+    if (!row.ok) console.error("record row", row.status, (await row.text()).slice(0, 300));
+    return json({ audio: { voice, v, secs, cues, src: at }, left: Math.max(0, most - total) });
+  } catch (e) {
+    console.error("record", String(e)); await count(-chars);
+    return json({ error: "The voiceover file could not be made. Try again." }, 502);
+  }
+}
+
+async function speak(account: string, ask: any): Promise<Response> {
+  const text = String(ask?.text ?? "").replace(/\s+/g, " ").trim().slice(0, 700), voice = String(ask?.voice ?? "");
+  if (!text || !SPEECH_VOICES.includes(voice)) return json({ error: "That request could not be read." }, 400);
+  const key = Deno.env.get("VOICE_API_KEY") ?? Deno.env.get("OPENROUTER_API_KEY");
+  if (!key) return json({ error: "The server voice is not switched on yet.", code: "not_configured" }, 503);
+  const { most: SPEECH_MONTHLY, count } = await share(account);
+  const total = await count(text.length);
+  if (total === -2) return json({ error: "The server voice could not be reached. Try again." }, 502);
+  if (total < 0) return json({ error: "That is this month's voice used up.", code: "limit" }, 429);
+  try {
+    const r = await fetch("https://openrouter.ai/api/v1/audio/speech", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + key, "Content-Type": "application/json", "HTTP-Referer": "https://codegrave.com", "X-Title": "codegrave" },
+      body: JSON.stringify({ model: SPEECH_MODEL, input: text, voice, response_format: "pcm", provider: { only: [SPEECH_HOST] } }),
+      signal: AbortSignal.timeout(60_000),
+    });
+    if (!r.ok) { console.error("speak", r.status, (await r.text().catch(() => "")).slice(0, 400)); await count(-text.length); return json({ error: "The server voice is busy just now." }, 502); }
+    const buf = await r.arrayBuffer();
+    return sound(buf, Math.max(0, SPEECH_MONTHLY - total), "made");
+  } catch (e) {
+    console.error("speak", String(e)); await count(-text.length);
+    return json({ error: "The server voice took too long." }, 504);
+  }
+}
+
 const cors = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, apikey, content-type, x-client-info",
+  "Access-Control-Allow-Headers": "authorization, apikey, content-type, x-client-info, x-admin-key",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
+// The editors' key, as the function `voice-store` checks it: its hash is on the list and has not run out.
+async function editorKey(key: string) {
+  if (key.length < 32) return false;
+  const d = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(key)))].map((b) => b.toString(16).padStart(2, "0")).join("");
+  const ok = await service(`/rest/v1/admin_keys?hash=eq.${d}&expires_at=gt.${new Date().toISOString()}&select=hash`).then((r) => (r.ok ? r.json() : [])).catch(() => []);
+  return ok.length > 0;
+}
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json" } });
 const service = (path: string, init: RequestInit = {}) =>
   fetch(URL_ + path, { ...init, headers: { apikey: SERVICE, Authorization: "Bearer " + SERVICE, "Content-Type": "application/json", ...(init.headers ?? {}) } });
@@ -93,13 +258,23 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   if (req.method !== "POST") return json({ error: "Send a POST." }, 405);
 
-  const auth = req.headers.get("Authorization") ?? "";
-  const who = await fetch(URL_ + "/auth/v1/user", { headers: { apikey: ANON, Authorization: auth } });
-  if (!who.ok) return json({ error: "Sign in to make a voiceover." }, 401);
-  const user = await who.json();
+  // An editor writing the default voiceover of a built view (scripts/voices.mjs) carries the editors' key
+  // instead of a reader's sign-in: only scripts, and nothing is counted against an account.
+  const editor = await editorKey(req.headers.get("x-admin-key") ?? "");
+  let user: { id: string } = { id: "" };
+  if (!editor) {
+    const auth = req.headers.get("Authorization") ?? "";
+    const who = await fetch(URL_ + "/auth/v1/user", { headers: { apikey: ANON, Authorization: auth } });
+    if (!who.ok) return json({ error: "Sign in to make a voiceover." }, 401);
+    user = await who.json();
+  }
 
   let body: Record<string, any>;
   try { body = await req.json(); } catch (_e) { return json({ error: "That request could not be read." }, 400); }
+
+  // ---- a line said by the server, within the account's share of the month
+  if (body.speak) return editor ? json({ error: "Not for the editors' key." }, 400) : speak(user.id, body.speak);
+  if (body.record) return editor ? json({ error: "Not for the editors' key." }, 400) : record(user.id, body.record);
 
   const router = Deno.env.get("OPENROUTER_API_KEY");
   if (!router) return json({ error: "Voiceover is not switched on yet.", code: "not_configured" }, 503);
@@ -122,14 +297,14 @@ Deno.serve(async (req) => {
 
   // The day's allowance, the same one Create with AI counts against: a voiceover is one request.
   const since = new Date(Date.now() - 864e5).toISOString();
-  const [used, own] = await Promise.all([
+  const [used, own] = editor ? [null, []] : await Promise.all([
     service(`/rest/v1/ai_requests?owner=eq.${user.id}&created_at=gte.${since}&select=id`, { headers: { Prefer: "count=exact", Range: "0-0" } }),
     service(`/rest/v1/profiles?id=eq.${user.id}&select=ai_daily`).then((r) => (r.ok ? r.json() : [])).catch(() => []),
   ]);
-  const count = Number((used.headers.get("content-range") ?? "*/0").split("/")[1] || 0);
-  const daily = Number.isFinite(Number(own[0]?.ai_daily)) ? Number(own[0].ai_daily) : DAILY;
+  const count = used ? Number((used.headers.get("content-range") ?? "*/0").split("/")[1] || 0) : 0;
+  const daily = editor ? 1e9 : Number.isFinite(Number(own[0]?.ai_daily)) ? Number(own[0].ai_daily) : DAILY;
   if (count >= daily) return json({ error: `That is ${daily} requests today, the most for now. Try again tomorrow.`, code: "limit" }, 429);
-  const log = (ok: boolean, usage: Record<string, number> = {}) =>
+  const log = (ok: boolean, usage: Record<string, number> = {}) => editor ? Promise.resolve() :
     service("/rest/v1/ai_requests", { method: "POST", body: JSON.stringify({ owner: user.id, model: WRITER, kind: "voice", prompt: ("Voiceover: " + title).slice(0, 600), ok, tokens_in: usage.prompt_tokens ?? 0, tokens_out: usage.completion_tokens ?? 0 }) }).catch(() => {});
 
   try {

@@ -7,6 +7,7 @@
 //   OPENROUTER_API_KEY=... node scripts/voices.mjs dinosaurs japan  only these
 //   ... --again        write those that have one again
 //   ... --owner <name> another community folder than wiki
+//   VOICE_ADMIN_KEY=... node scripts/voices.mjs   the same, written by the function `voiceover` (editors' key)
 //
 // Run `node scripts/build.mjs` first: the entries are read from site/data/, as the page shows them.
 
@@ -70,10 +71,34 @@ async function part(view, entries, k, n, total, before) {
   return null;
 }
 
+// With an editors' key instead of a model key, the function `voiceover` writes it: the same writer and the
+// same instructions as a voiceover made on the page, and the model key stays on the server.
+const admin = process.env.VOICE_ADMIN_KEY;
+const FN = process.env.VOICE_URL || 'https://wwgmelafchslapxiccot.supabase.co/functions/v1/voiceover';
+async function viaFunction(view, entries) {
+  for (let go = 0; go < 3; go++) {
+    try {
+      const r = await fetch(FN, { method: 'POST', headers: { 'x-admin-key': admin, 'Content-Type': 'application/json' }, body: JSON.stringify({ script: { title: view.name, description: view.description || '', entries } }), signal: AbortSignal.timeout(300_000) });
+      if (r.ok) return r.json();
+      console.error('  ', view.id, r.status, (await r.text()).slice(0, 200));
+    } catch (e) { console.error('  ', view.id, String(e.message || e)); }
+  }
+  return null;
+}
+
 async function write(id) {
   const file = JSON.parse(readFileSync(join(root, 'site/data/v', owner, id + '.json'), 'utf8'));
   const entries = toldOf(file);
   if (!entries.length) return console.log('nothing to tell:', id);
+  if (admin) {
+    const got = await viaFunction(file.view, entries);
+    if (!got?.lines?.length) return console.error('FAILED:', id);
+    const lines = got.lines.map((l) => ({ id: l.id, text: clean(l.text) })).filter((l) => l.text);
+    const out = join(root, 'data/community', owner, 'voices', id + '.json');
+    mkdirSync(dirname(out), { recursive: true });
+    writeFileSync(out, '{\n  "style": ' + JSON.stringify(String(got.style || '').slice(0, 80)) + ',\n  "lines": [\n' + lines.map((l) => `    { "id": ${JSON.stringify(l.id)}, "text": ${JSON.stringify(l.text)} }`).join(',\n') + '\n  ]\n}\n');
+    return console.log('wrote', id, lines.length, 'lines');
+  }
   const parts = [];
   for (let i = 0; i < entries.length; i += PART) parts.push(entries.slice(i, i + PART));
   const wrote = await Promise.all(parts.map((p, k) => part(file.view, p, k, parts.length, entries.length, k ? entries[k * PART - 1].name : '')));
@@ -90,7 +115,7 @@ async function write(id) {
 }
 
 if (import.meta.url === 'file://' + process.argv[1]) {
-  if (!key) { console.error('Set OPENROUTER_API_KEY.'); process.exit(1); }
+  if (!key && !admin) { console.error('Set OPENROUTER_API_KEY, or VOICE_ADMIN_KEY to write through the function.'); process.exit(1); }
   const dir = join(root, 'site/data/v', owner);
   if (!existsSync(dir)) { console.error('Run node scripts/build.mjs first.'); process.exit(1); }
   const have = (id) => existsSync(join(root, 'data/community', owner, 'voices', id + '.json'));

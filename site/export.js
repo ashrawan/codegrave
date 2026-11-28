@@ -113,7 +113,7 @@ async function mix({ total, cues, sounds, music, voiced }) {
   if (music) {
     try {
       const data = await ctx.decodeAudioData(await (await fetch(music)).arrayBuffer());
-      const src = ctx.createBufferSource(), g = ctx.createGain(), vol = voiced ? 0.16 : 0.45;
+      const src = ctx.createBufferSource(), g = ctx.createGain(), vol = voiced ? 0.06 : 0.45;
       src.buffer = data; src.loop = true;
       g.gain.setValueAtTime(0, 0); g.gain.linearRampToValueAtTime(vol, 1.2);
       g.gain.setValueAtTime(vol, Math.max(1.2, total - 1.6)); g.gain.linearRampToValueAtTime(0, total);
@@ -231,27 +231,30 @@ export function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
         c.font = font(!s.place && globe);
         const nm = s.name.length > 36 ? s.name.slice(0, 34) + '…' : s.name, w = px(18) + c.measureText(nm).width;
         const o = { x, nm, w, yr: s.mark && s.mark !== said ? s.mark : '', it: !s.place && globe }; if (o.yr) said = s.mark;
-        x += w + gap; return o;
+        // A year wider than its name keeps the next name clear of it, as on the page.
+        if (o.yr) { c.font = `500 ${ys}px ${sans}`; o.w = Math.max(o.w, c.measureText(o.yr).width + px(6)); }
+        x += o.w + gap; return o;
       });
     }
-    // As on the page: the marker stands at the right, the entry in front just before it, what has passed at its
-    // left, and what is still to come is not drawn until its turn (asked for, Nov 2026).
+    // As on the page: the marker stands on the dot of the entry in front, what has passed at its
+    // left, and what is still to come shows only its dot until its turn (asked for, Nov 2026).
     const pos = posAt(scenes, t), k = Math.min(strip.length - 1, Math.max(0, Math.floor(pos))), nx = strip[k + 1];
-    const end = (o) => o.x + o.w;
-    const at = pos < 0 ? end(strip[0]) + px(40) * pos : nx ? end(strip[k]) + (end(nx) - end(strip[k])) * (pos - k) : end(strip[k]);
-    const off = x1 - px(16) - at, acc = steps[now].rgb || '#e8b04a';
+    const at = pos < 0 ? strip[0].x : nx ? strip[k].x + (nx.x - strip[k].x) * (pos - k) : strip[k].x;
+    const xm = x1 - px(lay.wide ? 380 : 300), off = xm - px(5) - at, acc = steps[now].rgb || '#e8b04a';
     c.save(); c.textBaseline = 'alphabetic'; c.textAlign = 'left';
     strip.forEach((o, n) => {
-      const x = o.x + off; if (n > now || x + o.w < 0 || x > W) return;
+      const x = o.x + off; if (x + o.w < 0 || x > W) return;
       // What has passed goes out at the left edge.
       const edge = Math.min(1, Math.max(0, (x + o.w * 0.5) / (x0 + px(120))));
       const st = n === now ? 1 : 0.4;
+      // What is still to come shows its dot only, an empty ring, as on the page.
+      if (n > now) { c.globalAlpha = edge * 0.55; c.strokeStyle = '#aab1c0'; c.lineWidth = px(1.2); c.beginPath(); c.arc(x + px(5), yn - fs * 0.32, px(3.5), 0, 6.3); c.stroke(); return; }
       c.globalAlpha = edge * st; c.font = font(o.it);
-      c.fillStyle = n === now ? (steps[n].rgb || '#e8b04a') : '#aab1c0'; c.beginPath(); c.arc(x + o.w - px(5), yn - fs * 0.32, px(n === now ? 5 : 3.5), 0, 6.3); c.fill();
-      c.fillStyle = n === now ? '#f4efe6' : '#c9ced9'; c.fillText(o.nm, x, yn);
-      if (o.yr) { c.font = `400 ${ys}px ${sans}`; c.fillStyle = n === now ? '#ece7dc' : '#8f97a8'; c.fillText(o.yr, x, yn + ys + px(10)); }
+      c.fillStyle = n === now ? (steps[n].rgb || '#e8b04a') : '#aab1c0'; c.beginPath(); c.arc(x + px(5), yn - fs * 0.32, px(n === now ? 5 : 3.5), 0, 6.3); c.fill();
+      c.fillStyle = n === now ? '#f4efe6' : '#c9ced9'; c.fillText(o.nm, x + px(18), yn);
+      if (o.yr) { c.font = `400 ${ys}px ${sans}`; c.fillStyle = n === now ? '#ece7dc' : '#8f97a8'; c.fillText(o.yr, x + px(18), yn + ys + px(10)); }
     });
-    c.globalAlpha = 1; c.shadowColor = acc; c.shadowBlur = px(10); c.fillStyle = acc; c.fillRect(x1 - 1, yn - fs, 2, Math.round(fs * 1.3));
+    c.globalAlpha = 1; c.shadowColor = acc; c.shadowBlur = px(10); c.fillStyle = acc; c.fillRect(xm - 1, yn - fs, 2, Math.round(fs * 1.3));
     c.restore();
     return yn - fs;
   }
@@ -363,7 +366,7 @@ async function stageGlobe(make, steps, w, h, lay) {
 // line's sound; `step(what, part)` is told how far it has come (what: 'voice', 'sound', 'pictures', 'video',
 // 'saving'; part 0 to 1); `stop()` says the reader gave up. Returns the name of the file saved.
 // `shape` is 'wide', 'tall' or 'square' and `short` 1080 or 720; `scene` is 'globe' or 'full'; `makeGlobe` is lent by the page.
-export async function exportFilm({ kind, title, steps, voice, speaker, music, fonts, subs = false, shape = 'wide', short = 1080, scene = 'full', makeGlobe = null, step = () => {}, stop = () => false }) {
+export async function exportFilm({ kind, title, steps, voice, speaker, clip = null, music, fonts, subs = false, shape = 'wide', short = 1080, scene = 'full', makeGlobe = null, step = () => {}, stop = () => false }) {
   const { w: W, h: H } = sizeOf(shape, short);
   if (!steps.length) throw new Error('There is nothing on the timeline to export.');
   const voiced = kind !== 'video' && !!voice && voice.voice !== 'device' && voice.lines.length > 0;
@@ -375,7 +378,8 @@ export async function exportFilm({ kind, title, steps, voice, speaker, music, fo
     let n = 0;
     for (const l of voice.lines) {
       gone(); step('voice', n++ / voice.lines.length);
-      const s = await speaker.line(l.text, voice.voice).catch(() => null);
+      // `clip(id)`, where the page gives one, takes the line from the view's one file (a built view's default).
+      const s = await (clip ? clip(l.id) : speaker.line(l.text, voice.voice)).catch(() => null);
       if (s) { sounds.set(l.id, s); secs[l.id] = s.audio.length / s.rate; texts.set(l.id, l.text); }
     }
   }

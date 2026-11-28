@@ -193,3 +193,11 @@ follow the same rule as a summary: your own, and nothing the entries do not say.
 view's own file; the reader's browser makes the sound. A reader who writes their own voiceover for the view
 hears theirs instead. `node scripts/voices.mjs` writes these files with a model (it needs
 `OPENROUTER_API_KEY`); read what it wrote before you commit it.
+
+Its sound is made once, for everyone, by `tools/voice/make.mjs` (Kokoro, the voice the page uses, run on a
+computer; `cd tools/voice && npm install --onnxruntime-node-install-cuda=skip` first, and ffmpeg). It writes one
+MP3 for the view and voice and adds `audio` to the voices file: the voice, a version (a hash of the voice and the
+words) and where each line starts and ends. `tools/voice/publish.mjs` sends the MP3 to the public store, with the
+words, through the function `voice-store` (an editor's key is needed). The page fetches the one file when play
+starts and plays each card's part of it; if the file cannot be had, the lines are made as for any voiceover. New
+words are a new version: run both again, and the old file is removed.

@@ -42,13 +42,6 @@ export function speedOf(gpu = gpuOn()) { try { const v = Number(localStorage.get
 // download, only when the user clicks download"). If it fails to load, the voice goes back to the processor.
 export const GPU_MB = 326;
 const GPU = 'cg-voice-gpu';
-// A phone or a tablet never loads the model (asked for, Nov 2026, after the page crashed on a phone: "avoid
-// those heavy gpu usage and voiceover downloads for phone"): there a voiceover is said by the device's own
-// voice, whichever voice the timeline names, the graphics card is never asked for and the GPU voice is not
-// offered. `light()` is a narrow screen, or one worked by touch alone.
-export function light() {
-  try { return typeof matchMedia === 'function' && (matchMedia('(max-width: 699px)').matches || matchMedia('(hover: none) and (pointer: coarse)').matches); } catch (e) { return false; }
-}
 export function gpuOn() { try { return !light() && localStorage.getItem(GPU) === '1'; } catch (e) { return false; } }
 let gpuAsk = null;
 export function gpuOk() {
@@ -60,6 +53,24 @@ export function gpuOk() {
     } catch (e) { return false; }
   })());
 }
+// Offline mode (asked for, Nov 2026: the voice is made on the server, within each account's share of the month;
+// "if its expires, the user can still download on their device and go with that. This is offline mode", "not
+// selected by default. And also not available in mobile devices"). Off, nothing is ever downloaded: a line the
+// server does not give is said by the browser's own voice. On, the model is fetched once and lines are made here.
+const OFFLINE = 'cg-voice-offline';
+export function isMobile(n = typeof navigator === 'undefined' ? null : navigator) {
+  if (!n) return false;
+  return !!n.userAgentData?.mobile || /Android|iPhone|iPad|iPod|Mobile/i.test(n.userAgent || '') || (/Mac/i.test(n.platform || '') && n.maxTouchPoints > 1);
+}
+// A phone or a tablet never loads the model and never asks for the graphics card (asked for, Nov 2026, after the
+// page crashed on a phone: "avoid those heavy gpu usage and voiceover downloads for phone"). `light()` is a
+// device `isMobile()` names, or a screen worked by touch alone; there the voice is the server's (or a view's own
+// file), else the device's own, and Offline and the GPU voice are never offered.
+export function light() {
+  if (isMobile()) return true;
+  try { return typeof matchMedia === 'function' && matchMedia('(hover: none) and (pointer: coarse)').matches; } catch (e) { return false; }
+}
+export function offlineOn() { try { return !light() && localStorage.getItem(OFFLINE) === '1'; } catch (e) { return false; } }
 export const isSlow = (r = speedOf()) => r != null && r > SLOW;
 
 export const isVoice = (v) => VOICES.some(([id]) => id === v);
@@ -78,6 +89,11 @@ export function lineKey(voice, text) {
   for (let i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
   return `https://voice.codegrave.invalid/${voice}/${(h >>> 0).toString(36)}-${text.length}`;
 }
+
+// The public store (Cloudflare R2) where a timeline's voiceover is kept as one file: a wiki view's, and a
+// published timeline's (asked for, Nov 2026). Lines on their own are not kept there; this browser keeps them.
+export const STORE = 'https://pub-f5afdcf4890045a5ab305d4297af0129.r2.dev';
+export const sayText = (s) => String(s ?? '').replace(/\s+/g, ' ').trim().slice(0, 700);
 
 // The lines in the order they are made: the one asked for now first, then those after it, then the rest.
 export function madeOrder(ids, from) {
@@ -115,6 +131,14 @@ export function stretch(x, rate, sr = 24000) {
     for (let i = 0; i < win && at + i < x.length; i++) out[o + i] += x[at + i] * w[i];
   }
   return out.subarray(0, n);
+}
+
+// The server's sound is 16-bit samples, low byte first; the page plays floats between -1 and 1.
+export const FAR_AT_ONCE = 3;
+export function pcmToFloat(buf) {
+  const v = new DataView(buf), out = new Float32Array(buf.byteLength >> 1);
+  for (let i = 0; i < out.length; i++) out[i] = v.getInt16(i * 2, true) / 32768;
+  return out;
 }
 
 // ---- making the sound. One worker holds Kokoro and makes one line at a time; a line asked for `now` goes to
@@ -175,7 +199,6 @@ export function createSpeaker(status = () => {}) {
   let n = 0;
   // The sound of one line, as { audio: Float32Array, rate }. Asked for again, it is the same promise.
   function line(text, voice, now = false) {
-    if (light()) return Promise.reject(new Error('On a phone the voice is the phone’s own.'));
     const key = lineKey(voice, text);
     if (made.has(key)) {
       if (now) { const j = queue.find((x) => x.key === key); if (j && queue.indexOf(j) > (busy ? 1 : 0)) { queue.splice(queue.indexOf(j), 1); queue.splice(busy ? 1 : 0, 0, j); } }
@@ -183,6 +206,14 @@ export function createSpeaker(status = () => {}) {
     }
     const p = opened().then((c) => c?.match(key)).then(async (r) => {
       if (r) return { audio: new Float32Array(await r.arrayBuffer()), rate: Number(r.headers.get('x-rate')) || 24000 };
+      // A pro account's line is said by the server (nothing to download); if that cannot be, by this device.
+      // Two plain modes (asked for, Nov 2026: "clearly know whether it is the online active or it is the offline"):
+      // online, the server says the line; offline, this computer makes it and the server is not asked.
+      const far = offlineOn() ? null : await fromServer(key, text, voice, now);
+      if (far) return far;
+      // Not from the server and offline mode is off: nothing is downloaded, and whoever asked says the line
+      // with the browser's own voice.
+      if (!offlineOn()) { status({ plain: true }); throw new Error('no server'); }
       boot();
       return new Promise((ok, no) => {
         const j = { id: ++n, key, text, voice, ok, no };
@@ -192,6 +223,29 @@ export function createSpeaker(status = () => {}) {
     }).catch((e) => { made.delete(key); throw e; });
     made.set(key, p);
     return p;
+  }
+  // The server voice (asked for, Nov 2026: voiceover made on a server for pro accounts). `remote(text, voice)`
+  // is lent by the page: it answers the sound as 16-bit samples ({ pcm: ArrayBuffer, rate }), or null when this
+  // reader has no server voice. A few lines are asked for at a time, the one play needs now first. A line that
+  // cannot be had is made on the device like any other. `on()` says whether this reader has the server voice now.
+  let remote = null, has = () => false, asking = 0;
+  const waiting = [];
+  function server(fn, on) { remote = fn; has = on; }
+  function pump() {
+    while (asking < FAR_AT_ONCE && waiting.length) {
+      const w = waiting.shift(); asking++;
+      Promise.resolve().then(() => (remote ? remote(w.text, w.voice) : null)).then((got) => {
+        if (!got) return w.ok(null);
+        const out = { audio: pcmToFloat(got.pcm), rate: got.rate || 24000 };
+        status({ made: true });
+        opened().then((c) => c?.put(w.key, new Response(out.audio.slice(), { headers: { 'x-rate': String(out.rate) } }))).catch(() => {});
+        w.ok(out);
+      }).catch(() => w.ok(null)).finally(() => { asking--; pump(); });
+    }
+  }
+  function fromServer(key, text, voice, now) {
+    if (!remote || !has()) return Promise.resolve(null);
+    return new Promise((ok) => { const w = { key, text, voice, ok }; if (now) waiting.unshift(w); else waiting.push(w); pump(); });
   }
   // How fast this device makes speech: seconds to make one second of it, kept in this browser so the voice
   // dialog can warn before the next time. The first line is left out: it is slow while the engine warms up.
@@ -205,12 +259,12 @@ export function createSpeaker(status = () => {}) {
   }
   // Have the model ready before anything is said: when a timeline with a voiceover is opened.
   let warmed = false;
-  function warm() { if (warmed || booted || light()) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
+  function warm() { if (warmed || booted || has() || !offlineOn() || light()) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
   // Change between the processor and the graphics card: the worker starts again on the other model; lines
   // waiting to be made are made by it. `failed` is set when the graphics card could not load it.
   function engine(on, failed = false) {
     on = !!on;
-    try { localStorage.setItem(GPU, on ? '1' : '0'); } catch (e) {}
+    try { localStorage.setItem(GPU, on ? '1' : '0'); if (on) localStorage.setItem(OFFLINE, '1'); } catch (e) {}
     if (on === gpu && !failed) return;
     gpu = on;
     const was = warmed || booted;
@@ -227,14 +281,39 @@ export function createSpeaker(status = () => {}) {
     for (const t of texts) if (await c.match(lineKey(voice, t)).catch(() => null)) n++;
     return n;
   }
-  return { line, warm, engine, kept, gpu: () => gpu, ready: () => booted };
+  // Offline mode on or off. A line that failed for want of it is asked for afresh next time.
+  function offline(on) {
+    try { localStorage.setItem(OFFLINE, on ? '1' : '0'); } catch (e) {}
+    status({ offline: offlineOn() });
+  }
+  return { line, warm, engine, kept, server, offline, far: () => has(), gpu: () => gpu, ready: () => booted };
+}
+
+// A built view's default voiceover can come as one file (asked for, Nov 2026: one MP3 a view and voice in the
+// public store, fetched all at once when play starts, since it is only a few megabytes). `audio` on the voiceover
+// names it ({ voice, src, cues }: one [start, end] in seconds for each line, in order); a line is cut from it.
+function fileOf(v) {
+  const a = v?.audio;
+  if (!STORE || !a || typeof a.src !== 'string' || !Array.isArray(a.cues) || a.cues.length !== v.lines.length) return null;
+  return { voice: a.voice, url: STORE + '/' + a.src, at: new Map(v.lines.map((l, i) => [l.id, a.cues[i]])), got: null, buf: null };
+}
+let decoder = null;
+function whole(f) {
+  return (f.got ??= fetch(f.url).then((r) => { if (!r.ok) throw new Error('no file'); return r.arrayBuffer(); })
+    .then((b) => (decoder ??= new OfflineAudioContext(1, 1, 24000)).decodeAudioData(b))
+    .then((buf) => { f.buf = buf; return buf; })
+    .catch((e) => { f.got = null; f.fail = (f.fail || 0) + 1; if (f.fail >= 2) f.at = new Map(); throw e; }));
+}
+async function part(f, id) {
+  const buf = await whole(f), [a, b] = f.at.get(id), r = buf.sampleRate;
+  return { audio: buf.getChannelData(0).slice(Math.floor(a * r), Math.min(buf.length, Math.ceil(b * r))), rate: r };
 }
 
 // ---- playing it. `ctx()` gives the page's audio context once the reader has pressed play (null: no sound);
 // `said(text, waiting)` is told the line being spoken ('' when none), or that the voice is being got ready.
 export function createVoice({ ctx, said, speaker }) {
-  const S = { sig: '', lines: new Map(), order: [], voice: DEFAULT_VOICE, cur: null, src: null, gain: null, t0: 0, off: 0, held: false, utter: null, rate: 1 };
-  const device = () => S.voice === 'device' || light();
+  const S = { sig: '', lines: new Map(), order: [], file: null, voice: DEFAULT_VOICE, cur: null, src: null, gain: null, t0: 0, off: 0, held: false, utter: null, rate: 1 };
+  const device = () => S.voice === 'device';
   function quit() {
     const s = S.src; S.src = null;
     if (s) { s.onended = null; try { s.stop(); } catch (e) { /* not started */ } }
@@ -266,17 +345,19 @@ export function createVoice({ ctx, said, speaker }) {
   return {
     // The voiceover of the timeline on show (null: none).
     set(v) {
-      const sig = v ? v.at + v.voice + v.lines.length : '';
+      const sig = v ? v.at + v.voice + v.lines.length + (v.audio?.src || '') : '';
       if (sig === S.sig) return;
       this.stop();
       S.sig = sig; S.voice = v ? v.voice : DEFAULT_VOICE;
       S.lines = new Map(v ? v.lines.map((l) => [l.id, l]) : []); S.order = v ? v.lines.map((l) => l.id) : [];
+      S.file = fileOf(v);
     },
     any: () => S.lines.size > 0,
     has: (id) => S.lines.has(id),
     // Have every line made, from `from` on, while play goes; a line already made is only looked up.
     prepare(from) {
       if (device() || !S.order.length || !ctx()) return;
+      if (S.file && S.file.voice === S.voice) { whole(S.file).catch(() => {}); return; }
       for (const id of madeOrder(S.order, from ?? S.order[0])) speaker.line(S.lines.get(id).text, S.voice).catch(() => {});
     },
     // Start the line of this entry; whatever was being said stops.
@@ -289,7 +370,8 @@ export function createVoice({ ctx, said, speaker }) {
       if (device()) { speakDevice(cur); return true; }
       if (!speaker.ready()) said('', true);
       // A line that cannot be made is passed over, so play never waits for nothing.
-      speaker.line(l.text, S.voice, true).then(({ audio, rate }) => {
+      const fromFile = S.file && S.file.voice === S.voice && S.file.at.has(id);
+      (fromFile ? part(S.file, id).catch(() => speaker.line(l.text, S.voice, true)) : speaker.line(l.text, S.voice, true)).then(({ audio, rate }) => {
         if (S.cur !== cur || cur.done) return;
         const a = stretch(audio, S.rate, rate), buf = c.createBuffer(1, a.length, rate);
         buf.copyToChannel(a, 0);
@@ -299,11 +381,27 @@ export function createVoice({ ctx, said, speaker }) {
       if (!cur.buf) said('', true);
       return true;
     },
+    // A line's sound as made, from the view's one file where there is one, else made or kept as any line (for
+    // an export, which must have the very words the page tells).
+    clip(id) {
+      const l = S.lines.get(id);
+      if (!l) return Promise.reject(new Error('no line'));
+      if (S.file && S.file.voice === S.voice && S.file.at.has(id)) return part(S.file, id).catch(() => speaker.line(l.text, S.voice));
+      return speaker.line(l.text, S.voice);
+    },
     // A line is being said, or is being made.
     busy: () => !!S.cur && !S.cur.done,
+    // Seconds left of the line being said (Infinity while it is still being made, held, or said by the device).
+    left() {
+      const c = ctx();
+      if (!S.cur || S.cur.done || !S.src || !S.cur.buf || !c) return Infinity;
+      return Math.max(0, S.cur.buf.duration - (c.currentTime - S.t0));
+    },
     device,
     // Play speed: lines begun from now on are said this much quicker (1 is as made), at the same pitch.
     rate(r) { S.rate = voiceRate(r); },
+    // Every line is in hand: the view's one file has come, so nothing is left to make.
+    whole: () => !!S.file?.buf,
     name: () => S.voice,
     texts: () => [...S.lines.values()].map((l) => l.text),
     now: () => (S.cur && !S.cur.done ? S.cur.id : null),
@@ -337,7 +435,7 @@ export function listen(speaker, voice, ctx, done, fail, text = SAMPLE, began = (
   const say = (k) => {
     if (stopped) return;
     if (k >= lines.length) return done();
-    if (voice === 'device' || light()) {
+    if (voice === 'device') {
       if (typeof speechSynthesis === 'undefined') return fail(new Error('This browser has no voice of its own.'));
       u = new SpeechSynthesisUtterance(lines[k]);
       const en = speechSynthesis.getVoices().filter((v) => /^en/i.test(v.lang));
