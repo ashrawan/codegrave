@@ -10,7 +10,7 @@ import { EFFORTS, MAX_ENTRIES, MODELS, findPictures, partialSpec, specToView, vi
 import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
-import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, isSlow, gpuOk, GPU_MB, MODEL_MB, isMobile, offlineOn, listen as hear } from './voice.js';
+import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, isSlow, gpuOk, GPU_MB, MODEL_MB, light, offlineOn, listen as hear } from './voice.js';
 export const CONFIG = {
   url: 'https://wwgmelafchslapxiccot.supabase.co',
   key: 'sb_publishable_IykysSfgNLw4CfaqxP2CqA_YNcfq0SW',
@@ -166,7 +166,7 @@ export function createAccount(app) {
   // may turn on Offline voice, which downloads the model and makes the voice there.
   let spent = false, plainSaid = false;
   const hasSpeak = () => !!user && !spent;
-  const offlineHint = () => (isMobile() ? '' : ' Or switch the voice to Offline where you choose it.');
+  const offlineHint = () => (light() ? '' : ' Or switch the voice to Offline where you choose it.');
   function plainVoice() {
     if (plainSaid) return; plainSaid = true;
     if (!user) toast('This is your browser’s own voice. Sign in to hear the full voice.' + offlineHint());
@@ -955,7 +955,7 @@ export function createAccount(app) {
     const HAVE = 'cg-voice-have', have = () => { try { return localStorage.getItem(HAVE) === '1'; } catch (e) { return false; } };
     let getting = false;
     const drawMode = () => {
-      const on = offlineOn(), ok = !isMobile(), v = pick(), [, name, w] = VOICES.find(([id]) => id === v) || VOICES[0];
+      const on = offlineOn(), ok = !light(), v = pick(), [, name, w] = VOICES.find(([id]) => id === v) || VOICES[0];
       tabsEl.hidden = !ok;
       tabsEl.querySelectorAll('[data-mode]').forEach((b) => b.setAttribute('aria-selected', String((b.dataset.mode === 'off') === on)));
       if (sp.ready() && !have()) { try { localStorage.setItem(HAVE, '1'); } catch (e) {} }
@@ -977,7 +977,7 @@ export function createAccount(app) {
     const drawPick = () => { drawMode(); gp.hidden = !gpuFine || !kokoro() || !offlineOn(); drawGpu(); if (kokoro() && offlineOn() && (have() || getting)) sp.warm(); };
     tabsEl.addEventListener('click', (e) => { const b = e.target.closest('[data-mode]'); if (!b) return; e.preventDefault(); sp.offline(b.dataset.mode === 'off'); drawPick(); });
     mode.querySelector('[data-get]').addEventListener('click', (e) => { e.preventDefault(); getting = true; sp.warm(); drawPick(); });
-    gpuOk().then((ok) => { gpuFine = ok && !isMobile(); drawPick(); });
+    gpuOk().then((ok) => { gpuFine = ok && !light(); drawPick(); });
     gp.querySelector('button').addEventListener('click', () => { getting = true; sp.engine(!sp.gpu()); drawGpu(); drawSlow(); sp.warm(); });
     d.addEventListener('change', (e) => { if (e.target.name === 'voice') drawPick(); });
     const ld = d.querySelector('.vo-load'), tick = setInterval(() => {

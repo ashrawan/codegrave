@@ -42,12 +42,12 @@ export function speedOf(gpu = gpuOn()) { try { const v = Number(localStorage.get
 // download, only when the user clicks download"). If it fails to load, the voice goes back to the processor.
 export const GPU_MB = 326;
 const GPU = 'cg-voice-gpu';
-export function gpuOn() { try { return localStorage.getItem(GPU) === '1'; } catch (e) { return false; } }
+export function gpuOn() { try { return !light() && localStorage.getItem(GPU) === '1'; } catch (e) { return false; } }
 let gpuAsk = null;
 export function gpuOk() {
   return (gpuAsk ??= (async () => {
     try {
-      if (typeof navigator === 'undefined' || !navigator.gpu) return false;
+      if (typeof navigator === 'undefined' || !navigator.gpu || light()) return false;
       const a = await navigator.gpu.requestAdapter({ powerPreference: 'high-performance' });
       return !!a && !(a.isFallbackAdapter || a.info?.isFallbackAdapter);
     } catch (e) { return false; }
@@ -62,7 +62,15 @@ export function isMobile(n = typeof navigator === 'undefined' ? null : navigator
   if (!n) return false;
   return !!n.userAgentData?.mobile || /Android|iPhone|iPad|iPod|Mobile/i.test(n.userAgent || '') || (/Mac/i.test(n.platform || '') && n.maxTouchPoints > 1);
 }
-export function offlineOn() { try { return !isMobile() && localStorage.getItem(OFFLINE) === '1'; } catch (e) { return false; } }
+// A phone or a tablet never loads the model and never asks for the graphics card (asked for, Nov 2026, after the
+// page crashed on a phone: "avoid those heavy gpu usage and voiceover downloads for phone"). `light()` is a
+// device `isMobile()` names, or a screen worked by touch alone; there the voice is the server's (or a view's own
+// file), else the device's own, and Offline and the GPU voice are never offered.
+export function light() {
+  if (isMobile()) return true;
+  try { return typeof matchMedia === 'function' && matchMedia('(hover: none) and (pointer: coarse)').matches; } catch (e) { return false; }
+}
+export function offlineOn() { try { return !light() && localStorage.getItem(OFFLINE) === '1'; } catch (e) { return false; } }
 export const isSlow = (r = speedOf()) => r != null && r > SLOW;
 
 export const isVoice = (v) => VOICES.some(([id]) => id === v);
@@ -251,7 +259,7 @@ export function createSpeaker(status = () => {}) {
   }
   // Have the model ready before anything is said: when a timeline with a voiceover is opened.
   let warmed = false;
-  function warm() { if (warmed || booted || has() || !offlineOn()) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
+  function warm() { if (warmed || booted || has() || !offlineOn() || light()) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
   // Change between the processor and the graphics card: the worker starts again on the other model; lines
   // waiting to be made are made by it. `failed` is set when the graphics card could not load it.
   function engine(on, failed = false) {
