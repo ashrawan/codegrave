@@ -244,16 +244,16 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       map.addLayer({ id: 'head', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 3.2, 'circle-color': '#fff6e2' } });
       map.addSource('pins', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       const now = ['==', ['get', 'st'], 'now'];
-      map.addLayer({ id: 'halo', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 26, 'circle-color': ['get', 'c'], 'circle-opacity': 0.12, 'circle-blur': 0.8, 'circle-pitch-alignment': 'map' } });
-      map.addLayer({ id: 'ring', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 12, 'circle-color': 'rgba(0,0,0,0)', 'circle-stroke-color': ['get', 'c'], 'circle-stroke-width': 1.3, 'circle-stroke-opacity': 0.8, 'circle-pitch-alignment': 'map' } });
+      map.addLayer({ id: 'halo', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 26, 'circle-color': ['get', 'c'], 'circle-opacity': 0.07, 'circle-blur': 0.8, 'circle-pitch-alignment': 'map' } });
+      // One quiet mark for the entry in front, no second ring round it (asked for, Nov 2026: two circles were too strong).
       // What has happened is a filled point, what is ahead an empty ring, the one in front is lit.
       map.addLayer({ id: 'pin', type: 'circle', source: 'pins', paint: {
         'circle-radius': ['match', ['get', 'st'], 'now', 5.5, 'past', 3.6, 3.2],
         'circle-color': ['match', ['get', 'st'], 'next', 'rgba(0,0,0,.25)', ['get', 'c']],
         // The one in front is see-through, so the map's own names under it can be read (asked for, Nov 2026).
-        'circle-opacity': ['match', ['get', 'st'], 'past', 0.75, 'now', 0.28, 1],
+        'circle-opacity': ['match', ['get', 'st'], 'past', 0.75, 'now', 0.14, 1],
         // The edge of the pin in front is its own colour, not a dark ring (asked for, Nov 2026: the black did not match).
-        'circle-stroke-color': ['match', ['get', 'st'], 'next', 'rgba(255,255,255,.75)', 'now', ['get', 'c'], 'rgba(5,8,15,.7)'], 'circle-stroke-width': 1, 'circle-stroke-opacity': ['match', ['get', 'st'], 'now', 0.85, 1] } });
+        'circle-stroke-color': ['match', ['get', 'st'], 'next', 'rgba(255,255,255,.75)', 'now', ['get', 'c'], 'rgba(5,8,15,.7)'], 'circle-stroke-width': 1, 'circle-stroke-opacity': ['match', ['get', 'st'], 'now', 0.5, 1] } });
       map.addLayer({ id: 'pin-name', type: 'symbol', source: 'pins', filter: ['all', ['get', 'near'], ['!=', ['get', 'st'], 'now']],
         layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-anchor': 'left', 'text-offset': [0.8, 0], 'text-max-width': 14, 'text-optional': true },
         paint: { 'text-color': ['match', ['get', 'st'], 'past', '#ffffff', 'rgba(255,255,255,.72)'], 'text-halo-color': 'rgba(5,8,15,.85)', 'text-halo-width': 1.4 } });
